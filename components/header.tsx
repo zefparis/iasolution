@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
   AnimatePresence,
@@ -63,27 +62,27 @@ export function Header() {
               }
         }
       >
-        <Link href="#hero" className="text-base font-semibold text-white">
+        <a href="#hero" className="text-base font-semibold text-white">
           IA-Solution
-        </Link>
+        </a>
         <nav className="hidden items-center gap-8 text-slate-200 md:flex">
           {navigation.map((item) => (
-            <Link
+            <a
               key={item.href}
               href={item.href}
               className="transition-colors duration-300 hover:text-white"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <Link
+          <a
             href="#contact"
             className="hidden rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white shadow-glow transition hover:bg-white/20 md:inline-flex"
           >
             Travaillons ensemble
-          </Link>
+          </a>
           <button
             type="button"
             onClick={() => setOpen((prev) => !prev)}
@@ -108,22 +107,22 @@ export function Header() {
           >
             <div className="flex flex-col gap-4">
               {navigation.map((item) => (
-                <Link
+                <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className="rounded-full border border-transparent px-4 py-2 transition hover:border-white/10 hover:text-white"
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
-              <Link
+              <a
                 href="#contact"
                 onClick={() => setOpen(false)}
                 className="rounded-full bg-white/10 px-4 py-2 font-semibold text-white transition hover:bg-white/20"
               >
                 Travaillons ensemble
-              </Link>
+              </a>
             </div>
           </motion.nav>
         )}
