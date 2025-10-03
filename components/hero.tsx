@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import { heroContent } from "@/lib/content";
+import bannerImage from "../banner-8192025_1280.png";
 
 const headlineVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -31,6 +33,16 @@ const stats = [
 export function Hero() {
   return (
     <section id="hero" className="relative flex min-h-[90vh] items-center justify-center pt-28">
+      <div className="absolute inset-0 -z-20">
+        <Image
+          src={bannerImage}
+          alt="Vue panoramique illustrant IA-Solution"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
+      <div className="absolute inset-0 -z-15 bg-gradient-to-b from-midnight/85 via-midnight/75 to-midnight/60" />
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div
           className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-aurora-blue/20 blur-3xl"
