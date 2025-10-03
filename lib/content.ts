@@ -102,8 +102,8 @@ export const contact = {
   email: "contact@ia-solution.fr",
   phone: "07 58 06 05 56",
   socials: [
-    { name: "LinkedIn", url: "https://www.linkedin.com", handle: "IA-Solution" },
-    { name: "Twitter", url: "https://twitter.com", handle: "@ia_solution" },
-    { name: "GitHub", url: "https://github.com", handle: "ia-solution" },
+    { name: "Site", url: "https://ia-solution.fr", handle: "ia-solution.fr" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/ia-cyber", handle: "ia-cyber" },
+    { name: "GitHub", url: "https://github.com/zefparis", handle: "zefparis" },
   ],
 };
