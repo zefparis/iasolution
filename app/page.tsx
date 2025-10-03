@@ -1,0 +1,21 @@
+import { Hero } from "@/components/hero";
+import { ServicesSection } from "@/components/services";
+import { ProjectsSection } from "@/components/projects";
+import { AboutSection } from "@/components/about";
+import { ContactSection } from "@/components/contact";
+import { Footer } from "@/components/footer";
+
+export default function Home() {
+  return (
+    <div className="relative overflow-hidden">
+      <main className="flex flex-col gap-12 pb-20 pt-20 md:pt-28">
+        <Hero />
+        <ServicesSection />
+        <ProjectsSection />
+        <AboutSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
+  );
+}
