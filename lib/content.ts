@@ -1,4 +1,5 @@
 import { Code2, Cpu, Grid, MessageSquare, Rocket, Sparkles } from "lucide-react";
+import type { Route } from "next";
 
 export const heroContent = {
   title: "L'IA au service de vos projets numériques",
@@ -55,27 +56,31 @@ export const services = [
   },
 ];
 
-export const projects = [
+type Project = {
+  name: string;
+  description: string;
+  tags: string[];
+  href?: Route;
+};
+
+export const projects: Project[] = [
   {
     name: "Projet Nova — Plateforme SaaS", // placeholder
     description:
       "Dashboard analytique temps réel pour une startup fintech. Architecture serverless, automatisations et IA prédictive.",
     tags: ["Next.js", "TypeScript", "AWS", "Machine Learning"],
-    link: "#",
   },
   {
     name: "Aura Retail — Expérience e-commerce",
     description:
       "Refonte immersive d'une boutique en ligne haut de gamme avec personnalisation par IA et intégration CRM.",
     tags: ["React", "Tailwind", "Shopify", "Personalisation IA"],
-    link: "#",
   },
   {
     name: "PulseOps — Automatisation IT",
     description:
       "Suite d'automations et d'alerting pour une ESN européenne. Gain de 40% de productivité sur les opérations.",
     tags: ["Node.js", "API", "Zapier", "RPA"],
-    link: "#",
   },
 ];
 

@@ -43,13 +43,20 @@ export function ProjectsSection() {
               </div>
               <div className="relative mt-auto flex items-center justify-between pt-4 text-xs text-slate-400">
                 <span>Étude de cas à venir</span>
-                <Link
-                  href={project.link}
-                  className="inline-flex items-center gap-1 text-aurora-blue transition group-hover:text-aurora-pink"
-                >
-                  Voir le projet
-                  <span aria-hidden>→</span>
-                </Link>
+                {project.href ? (
+                  <Link
+                    href={project.href}
+                    className="inline-flex items-center gap-1 text-aurora-blue transition group-hover:text-aurora-pink"
+                  >
+                    Voir le projet
+                    <span aria-hidden>→</span>
+                  </Link>
+                ) : (
+                  <span className="inline-flex items-center gap-1 text-slate-500">
+                    Voir le projet
+                    <span aria-hidden>→</span>
+                  </span>
+                )}
               </div>
             </motion.article>
           ))}
