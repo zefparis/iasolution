@@ -60,6 +60,22 @@ export function ContactSection() {
                 ))}
               </ul>
             </div>
+            {contact.externalCta && (
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4">
+                <p className="text-sm font-semibold text-white">
+                  {contact.externalCta.description}
+                </p>
+                <a
+                  href={contact.externalCta.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-aurora-blue to-aurora-violet px-5 py-2.5 text-sm font-semibold text-white shadow-neon transition hover:from-aurora-pink hover:to-aurora-violet"
+                >
+                  {contact.externalCta.label}
+                  <span aria-hidden>→</span>
+                </a>
+              </div>
+            )}
           </motion.div>
           <motion.form
             onSubmit={handleSubmit}

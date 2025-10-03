@@ -46,6 +46,46 @@ export function AboutSection() {
             ))}
           </motion.ul>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="grid gap-6 md:grid-cols-2"
+        >
+          <div className="glass-card flex flex-col gap-4 p-6">
+            <h3 className="text-lg font-semibold text-white">Leadership</h3>
+            <p className="text-sm text-slate-300">
+              Une équipe senior qui combine stratégie, engineering et cybersécurité pour piloter vos programmes les plus sensibles.
+            </p>
+            <ul className="flex flex-col gap-4">
+              {about.team.map((member) => (
+                <li key={member.name} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-left">
+                  <p className="text-sm font-semibold text-white">{member.name}</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-aurora-blue/80">{member.role}</p>
+                  <p className="mt-2 text-sm text-slate-300">{member.bio}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="glass-card flex flex-col gap-4 p-6">
+            <h3 className="text-lg font-semibold text-white">Certifications & partenaires</h3>
+            <p className="text-sm text-slate-300">
+              Nous travaillons main dans la main avec les leaders cloud et IA pour garantir la conformité et la performance de vos solutions.
+            </p>
+            <ul className="grid gap-3">
+              {about.certifications.map((cert) => (
+                <li
+                  key={cert.name}
+                  className="flex items-center justify-between rounded-2xl border border-white/10 bg-midnight/40 px-4 py-2 text-sm text-white/80"
+                >
+                  <span>{cert.name}</span>
+                  <span className="text-xs uppercase tracking-[0.28em] text-white/50">{cert.issuer}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

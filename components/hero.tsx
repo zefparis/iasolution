@@ -32,7 +32,7 @@ const stats = [
 
 export function Hero() {
   return (
-    <section id="hero" className="relative flex min-h-[90vh] items-center justify-center pt-28">
+    <section id="hero" className="relative flex min-h-[85vh] items-center justify-center px-4 pb-20 pt-24 md:px-6 md:pt-32">
       <div className="absolute inset-0 -z-20">
         <Image
           src={bannerImage}
@@ -42,7 +42,13 @@ export function Hero() {
           className="object-cover"
         />
       </div>
-      <div className="absolute inset-0 -z-15 bg-gradient-to-b from-midnight/85 via-midnight/75 to-midnight/60" />
+      <motion.div
+        className="absolute inset-0 -z-15 bg-gradient-to-b from-midnight/90 via-midnight/75 to-midnight/65"
+        style={{ backgroundSize: "200% 200%" }}
+        animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <div className="pointer-events-none absolute inset-x-4 top-10 bottom-8 z-0 rounded-[44px] border border-white/10 bg-white/10 backdrop-blur-2xl opacity-60 md:inset-x-8 md:top-16 md:bottom-12" />
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div
           className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-aurora-blue/20 blur-3xl"
@@ -61,7 +67,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center gap-12 text-center">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center gap-12 rounded-[40px] border border-white/5 bg-midnight/50 px-6 py-12 text-center shadow-[0_0_80px_rgba(63,94,251,0.2)] backdrop-blur-xl md:px-12 md:py-16">
         <motion.div
           initial="hidden"
           animate="visible"

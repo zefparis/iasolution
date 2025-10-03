@@ -19,7 +19,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <motion.article
               key={project.name}
-              className="glass-card group relative flex h-full flex-col gap-4 overflow-hidden p-6"
+              className="glass-card group relative flex h-full flex-col gap-5 overflow-hidden p-6"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
@@ -27,9 +27,17 @@ export function ProjectsSection() {
               whileHover={{ translateY: -6 }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-aurora-blue/0 via-aurora-pink/5 to-aurora-violet/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <div className="relative flex flex-col gap-3">
-                <h3 className="text-lg font-semibold text-white">{project.name}</h3>
+              <div className="relative flex flex-col gap-4">
+                <div className="flex flex-wrap items-center gap-3">
+                  <h3 className="text-lg font-semibold text-white">{project.name}</h3>
+                  <span className="rounded-full border border-aurora-blue/30 bg-aurora-blue/10 px-3 py-1 text-xs font-medium text-aurora-blue">
+                    {project.kpi}
+                  </span>
+                </div>
                 <p className="text-sm text-slate-300">{project.description}</p>
+                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
+                  {project.result}
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
@@ -40,9 +48,22 @@ export function ProjectsSection() {
                     </span>
                   ))}
                 </div>
+                <div className="flex flex-wrap gap-2">
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-white/10 bg-midnight/40 px-3 py-1 text-xs text-white/70"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="relative mt-auto flex items-center justify-between pt-4 text-xs text-slate-400">
-                <span>Étude de cas à venir</span>
+              <blockquote className="relative rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm italic text-slate-200">
+                {project.testimonial}
+              </blockquote>
+              <div className="relative mt-auto flex items-center justify-between pt-2 text-xs text-slate-400">
+                <span>Étude de cas détaillée sur demande</span>
                 {project.href ? (
                   <Link
                     href={project.href}

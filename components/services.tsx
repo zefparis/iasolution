@@ -27,20 +27,26 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <motion.article
               key={service.title}
-              className="glass-card group flex h-full flex-col gap-4 p-6 transition-transform duration-300"
+              className="glass-card group flex h-full flex-col gap-5 p-6 transition-transform duration-300"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.6, delay: index * 0.05, ease: "easeOut" }}
               whileHover={{ translateY: -6 }}
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 shadow-neon">
-                <service.icon className="h-5 w-5 text-aurora-blue" />
+              <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 shadow-neon">
+                <div className="absolute inset-0 rounded-2xl bg-aurora-blue/0 blur-xl transition group-hover:bg-aurora-blue/30" />
+                <service.icon className="relative h-5 w-5 text-aurora-blue" />
               </div>
               <div className="flex flex-col gap-2">
                 <h3 className="text-lg font-semibold text-white">{service.title}</h3>
                 <p className="text-sm text-slate-300">{service.description}</p>
               </div>
+              {service.benefit && (
+                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 transition group-hover:border-white/20 group-hover:text-white">
+                  {service.benefit}
+                </div>
+              )}
               <div className="mt-auto h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </motion.article>
           ))}
