@@ -1,348 +1,111 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mentions légales de IAS Solution - Informations juridiques obligatoires">
-    <title>Mentions légales | IAS Solution</title>
+    <title>Legal Notice | IAS Solution</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #ffffff;
-            min-height: 100vh;
-        }
-
-        header {
-            border-bottom: 3px solid #2563eb;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            color: #1e40af;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .last-updated {
-            color: #6b7280;
-            font-size: 0.95rem;
-            font-style: italic;
-        }
-
-        h2 {
-            color: #1e40af;
-            font-size: 1.75rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-left: 4px solid #2563eb;
-            padding-left: 15px;
-        }
-
-        h3 {
-            color: #374151;
-            font-size: 1.25rem;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        ul {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .info-box {
-            background-color: #f3f4f6;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
-            border-left: 4px solid #2563eb;
-        }
-
-        .info-box p {
-            margin-bottom: 10px;
-        }
-
-        .info-box strong {
-            color: #1e40af;
-            display: inline-block;
-            min-width: 180px;
-        }
-
-        .highlight-box {
-            background-color: #eff6ff;
-            border-left: 4px solid #2563eb;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
-        }
-
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 2px solid #e5e7eb;
-            text-align: center;
-            color: #6b7280;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            .container {
-                padding: 20px 15px;
-            }
-
-            .info-box strong {
-                display: block;
-                margin-bottom: 5px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); min-height: 100vh; }
+        .top-nav { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); padding: 15px 0; border-bottom: 1px solid rgba(37, 99, 235, 0.3); position: sticky; top: 0; z-index: 100; }
+        .top-nav-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px; }
+        .logo-text { color: white; font-size: 1.2rem; font-weight: 600; }
+        .lang-switcher { display: flex; gap: 10px; }
+        .lang-btn { padding: 8px 16px; border: 2px solid #2563eb; background: transparent; color: #93c5fd; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; text-decoration: none; }
+        .lang-btn:hover { background: #2563eb; color: white; transform: translateY(-2px); }
+        .lang-btn.active { background: #2563eb; color: white; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .content-card { background: white; border-radius: 16px; padding: 50px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); }
+        header { border-bottom: 3px solid #2563eb; padding-bottom: 30px; margin-bottom: 40px; text-align: center; }
+        h1 { background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 2.8rem; margin-bottom: 15px; font-weight: 700; }
+        .last-updated { color: #6b7280; font-size: 0.95rem; font-style: italic; }
+        h2 { color: #1e40af; font-size: 1.75rem; margin-top: 40px; margin-bottom: 20px; border-left: 4px solid #2563eb; padding-left: 15px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        ul { margin-left: 30px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .info-box { background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); padding: 20px; border-radius: 8px; margin: 25px 0; border-left: 4px solid #2563eb; }
+        .info-box p { margin-bottom: 10px; }
+        .info-box strong { color: #1e40af; }
+        .highlight-box { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-left: 4px solid #2563eb; padding: 20px; margin: 25px 0; border-radius: 8px; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { margin-top: 60px; padding: 30px 0; border-top: 2px solid #e5e7eb; text-align: center; color: #6b7280; font-size: 0.9rem; }
+        @media (max-width: 768px) { h1 { font-size: 2rem; } .content-card { padding: 30px 20px; } .top-nav-content { flex-direction: column; gap: 15px; } }
     </style>
 </head>
 <body>
+    <nav class="top-nav">
+        <div class="top-nav-content">
+            <a href="https://ia-solution.fr" class="logo">
+                <div class="logo-icon">IA</div>
+                <span class="logo-text">IAS Solution</span>
+            </a>
+            <div class="lang-switcher">
+                <a href="/mentions-legales.html" class="lang-btn">🇫🇷 FR</a>
+                <a href="/legal-notice.html" class="lang-btn active">🇬🇧 EN</a>
+            </div>
+        </div>
+    </nav>
     <div class="container">
-        <header>
-            <h1>Mentions légales</h1>
-            <p class="last-updated">Dernière mise à jour : 26 octobre 2025</p>
-        </header>
-
-        <main>
-            <section>
-                <p>
-                    Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance 
-                    dans l'économie numérique, il est précisé aux utilisateurs du site 
-                    <a href="https://ia-solution.fr">ia-solution.fr</a> l'identité des différents intervenants 
-                    dans le cadre de sa réalisation et de son suivi.
-                </p>
-            </section>
-
-            <section>
-                <h2>1. Éditeur du site</h2>
-                <div class="info-box">
-                    <p><strong>Dénomination :</strong> IAS Solution</p>
-                    <p><strong>Responsable de publication :</strong> Benji</p>
-                    <p><strong>Adresse email :</strong> <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a></p>
-                    <p><strong>Site web :</strong> <a href="https://ia-solution.fr">https://ia-solution.fr</a></p>
-                </div>
-                <p>
-                    Le responsable de publication est une personne physique ou morale chargée de la 
-                    validation éditoriale du contenu du site.
-                </p>
-            </section>
-
-            <section>
-                <h2>2. Hébergement</h2>
-                <div class="info-box">
-                    <p><strong>Hébergeur :</strong> [Nom de l'hébergeur]</p>
-                    <p><strong>Adresse :</strong> [Adresse de l'hébergeur]</p>
-                    <p><strong>Contact :</strong> [Contact de l'hébergeur]</p>
-                </div>
-                <p>
-                    Le site ia-solution.fr est hébergé par un prestataire d'hébergement professionnel 
-                    garantissant la sécurité et la disponibilité du service.
-                </p>
-            </section>
-
-            <section>
-                <h2>3. Contact</h2>
-                <p>Pour toute question ou demande d'information concernant le site, vous pouvez nous contacter :</p>
-                <div class="info-box">
-                    <p><strong>Par email :</strong> <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a></p>
-                </div>
-            </section>
-
-            <section>
-                <h2>4. Propriété intellectuelle</h2>
-                <p>
-                    L'ensemble de ce site (structure générale, textes, images, sons, vidéos, logotypes, 
-                    marques, base de données, etc.) relève de la législation française et internationale 
-                    sur le droit d'auteur et la propriété intellectuelle.
-                </p>
-                <p>
-                    Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables 
-                    et les représentations iconographiques et photographiques. Les marques et logos figurant 
-                    sur le site sont des marques déposées.
-                </p>
-                <div class="highlight-box">
-                    <strong>Toute reproduction, représentation, modification, publication, transmission, 
-                    dénaturation, totale ou partielle du site ou de son contenu, par quelque procédé que ce 
-                    soit, et sur quelque support que ce soit est interdite sans l'autorisation expresse de IAS Solution.</strong>
-                </div>
-                <p>
-                    Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient 
-                    sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux 
-                    dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.
-                </p>
-            </section>
-
-            <section>
-                <h2>5. Applications mobiles</h2>
-                <p>
-                    IAS Solution édite et publie des applications mobiles disponibles sur les différentes 
-                    plateformes de téléchargement, notamment :
-                </p>
-                <ul>
-                    <li><strong>Equi Saddles</strong> - Application disponible sur Google Play Store</li>
-                    <li>Autres applications développées sous la marque IAS Solution</li>
-                </ul>
-                <p>
-                    Ces applications sont régies par les présentes mentions légales ainsi que par leurs 
-                    politiques de confidentialité respectives accessibles depuis les applications elles-mêmes 
-                    et sur ce site.
-                </p>
-            </section>
-
-            <section>
-                <h2>6. Liens hypertextes</h2>
-                <p>
-                    Le site ia-solution.fr peut contenir des liens hypertextes vers d'autres sites. 
-                    IAS Solution n'exerce aucun contrôle sur ces sites et décline toute responsabilité 
-                    quant à leur contenu.
-                </p>
-                <p>
-                    La création de liens hypertextes vers le site ia-solution.fr est soumise à l'accord 
-                    préalable de IAS Solution. Les demandes d'autorisation doivent être adressées à 
-                    <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a>.
-                </p>
-            </section>
-
-            <section>
-                <h2>7. Protection des données personnelles</h2>
-                <p>
-                    IAS Solution s'engage à respecter la vie privée de ses utilisateurs et la 
-                    confidentialité de leurs données personnelles conformément au Règlement Général sur 
-                    la Protection des Données (RGPD - UE 2016/679) et à la loi Informatique et Libertés 
-                    du 6 janvier 1978 modifiée.
-                </p>
-                <p>
-                    Pour en savoir plus sur la collecte, l'utilisation et la protection de vos données 
-                    personnelles, veuillez consulter notre 
-                    <a href="/privacy-policy.html">Politique de confidentialité</a>.
-                </p>
-                <p>
-                    Conformément à la réglementation, vous disposez d'un droit d'accès, de rectification, 
-                    de suppression et d'opposition aux données vous concernant. Vous pouvez exercer ces droits 
-                    en nous contactant à l'adresse : <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a>.
-                </p>
-            </section>
-
-            <section>
-                <h2>8. Cookies</h2>
-                <p>
-                    Le site ia-solution.fr utilise des cookies pour améliorer l'expérience utilisateur 
-                    et réaliser des statistiques de visites. Pour plus d'informations sur l'utilisation 
-                    des cookies et la gestion de vos préférences, veuillez consulter notre 
-                    <a href="/cookies-policy.html">Politique relative aux cookies</a>.
-                </p>
-            </section>
-
-            <section>
-                <h2>9. Limitation de responsabilité</h2>
-                <p>
-                    IAS Solution s'efforce d'assurer l'exactitude et la mise à jour des informations 
-                    diffusées sur ce site. Toutefois, IAS Solution ne peut garantir l'exactitude, 
-                    la précision ou l'exhaustivité des informations mises à disposition sur ce site.
-                </p>
-                <p>
-                    En conséquence, IAS Solution décline toute responsabilité :
-                </p>
-                <ul>
-                    <li>Pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur le site</li>
-                    <li>Pour tout dommage résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations</li>
-                    <li>Pour tout dommage direct ou indirect causé aux utilisateurs, quelle qu'en soit la nature</li>
-                    <li>Pour l'indisponibilité temporaire ou totale du site</li>
-                </ul>
-                <p>
-                    IAS Solution ne saurait être tenu responsable des virus qui pourraient infecter 
-                    l'ordinateur ou tout matériel informatique de l'utilisateur, suite à une utilisation 
-                    ou accès au site ou à ses services.
-                </p>
-            </section>
-
-            <section>
-                <h2>10. Droit applicable et juridiction compétente</h2>
-                <p>
-                    Les présentes mentions légales sont régies par le droit français. 
-                    Tout litige relatif à l'interprétation et/ou l'exécution des présentes 
-                    sera de la compétence exclusive des tribunaux français.
-                </p>
-                <p>
-                    En cas de litige, une tentative de règlement amiable sera recherchée avant toute action 
-                    judiciaire. À défaut d'accord amiable, les tribunaux français seront seuls compétents.
-                </p>
-            </section>
-
-            <section>
-                <h2>11. Modifications</h2>
-                <p>
-                    IAS Solution se réserve le droit de modifier les présentes mentions légales à tout moment. 
-                    Les utilisateurs sont invités à les consulter régulièrement. La date de dernière mise à jour 
-                    est indiquée en haut de ce document.
-                </p>
-            </section>
-
-            <section>
-                <h2>12. Crédits</h2>
-                <p>
-                    Le site ia-solution.fr et les applications mobiles IAS Solution ont été conçus et 
-                    développés par l'équipe IAS Solution.
-                </p>
-                <ul>
-                    <li><strong>Conception et développement :</strong> IAS Solution</li>
-                    <li><strong>Design et graphisme :</strong> IAS Solution</li>
-                    <li><strong>Contenu éditorial :</strong> IAS Solution</li>
-                </ul>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 IAS Solution - Tous droits réservés</p>
-            <p>
-                <a href="/legal-notice.html">Mentions légales</a> | 
-                <a href="/cookies-policy.html">Politique cookies</a> | 
-                <a href="/privacy-policy.html">Confidentialité</a>
-            </p>
-        </footer>
+        <div class="content-card">
+            <header>
+                <h1>Legal Notice</h1>
+                <p class="last-updated">Last updated: October 26, 2025</p>
+            </header>
+            <main>
+                <section>
+                    <p>In accordance with French law n° 2004-575 of June 21, 2004, for confidence in the digital economy, users of the site <a href="https://ia-solution.fr">ia-solution.fr</a> are informed of the identity of the various parties involved.</p>
+                </section>
+                <section>
+                    <h2>1. Publisher</h2>
+                    <div class="info-box">
+                        <p><strong>Company:</strong> IAS Solution</p>
+                        <p><strong>Publication Manager:</strong> Benji</p>
+                        <p><strong>Email:</strong> <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a></p>
+                        <p><strong>Website:</strong> <a href="https://ia-solution.fr">https://ia-solution.fr</a></p>
+                    </div>
+                </section>
+                <section>
+                    <h2>2. Hosting</h2>
+                    <div class="info-box">
+                        <p><strong>Host:</strong> [Host name]</p>
+                        <p><strong>Address:</strong> [Host address]</p>
+                        <p><strong>Contact:</strong> [Host contact]</p>
+                    </div>
+                </section>
+                <section>
+                    <h2>3. Intellectual Property</h2>
+                    <p>All content on this site (general structure, texts, images, sounds, videos, logos, trademarks, databases, etc.) is subject to French and international copyright and intellectual property law.</p>
+                    <div class="highlight-box"><strong>Any reproduction, representation, modification, publication, transmission or distortion, in whole or in part, of the site or its content, by any means whatsoever, and on any medium whatsoever, is prohibited without the express authorization of IAS Solution.</strong></div>
+                </section>
+                <section>
+                    <h2>4. Mobile Applications</h2>
+                    <p>IAS Solution publishes mobile applications available on various download platforms, including:</p>
+                    <ul>
+                        <li><strong>Equi Saddles</strong> - Available on Google Play Store</li>
+                        <li>Other applications developed under the IAS Solution brand</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>5. Personal Data Protection</h2>
+                    <p>IAS Solution is committed to respecting user privacy and the confidentiality of their personal data in accordance with GDPR. For more information, please see our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+                </section>
+                <section>
+                    <h2>6. Limitation of Liability</h2>
+                    <p>IAS Solution strives to ensure the accuracy and updating of information on this site. However, IAS Solution disclaims all responsibility for any inaccuracy, error or omission in information available on the site, or for temporary or total unavailability of the site.</p>
+                </section>
+                <section>
+                    <h2>7. Applicable Law</h2>
+                    <p>These legal notices are governed by French law. Any dispute relating to the interpretation and/or execution of these notices shall be subject to the exclusive jurisdiction of French courts.</p>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2025 IAS Solution - All rights reserved</p>
+                <p><a href="/legal-notice.html">Legal Notice</a> | <a href="/cookies-policy.html">Cookie Policy</a> | <a href="/privacy-policy.html">Privacy</a></p>
+            </footer>
+        </div>
     </div>
 </body>
 </html>

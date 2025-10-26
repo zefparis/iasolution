@@ -1,336 +1,165 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Politique de confidentialité de IAS Solution - Protection de vos données personnelles conformément au RGPD">
-    <title>Politique de confidentialité | IAS Solution</title>
+    <meta name="description" content="IAS Solution Privacy Policy - GDPR compliant personal data protection">
+    <title>Privacy Policy | IAS Solution</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #ffffff;
-            min-height: 100vh;
-        }
-
-        header {
-            border-bottom: 3px solid #2563eb;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            color: #1e40af;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .last-updated {
-            color: #6b7280;
-            font-size: 0.95rem;
-            font-style: italic;
-        }
-
-        h2 {
-            color: #1e40af;
-            font-size: 1.75rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-left: 4px solid #2563eb;
-            padding-left: 15px;
-        }
-
-        h3 {
-            color: #374151;
-            font-size: 1.25rem;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .highlight-box {
-            background-color: #eff6ff;
-            border-left: 4px solid #2563eb;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
-        }
-
-        .contact-info {
-            background-color: #f3f4f6;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-
-        .contact-info strong {
-            color: #1e40af;
-        }
-
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 2px solid #e5e7eb;
-            text-align: center;
-            color: #6b7280;
-            font-size: 0.9rem;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); min-height: 100vh; }
+        .top-nav { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); padding: 15px 0; border-bottom: 1px solid rgba(37, 99, 235, 0.3); position: sticky; top: 0; z-index: 100; }
+        .top-nav-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px; }
+        .logo-text { color: white; font-size: 1.2rem; font-weight: 600; }
+        .lang-switcher { display: flex; gap: 10px; }
+        .lang-btn { padding: 8px 16px; border: 2px solid #2563eb; background: transparent; color: #93c5fd; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; text-decoration: none; }
+        .lang-btn:hover { background: #2563eb; color: white; transform: translateY(-2px); }
+        .lang-btn.active { background: #2563eb; color: white; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .content-card { background: white; border-radius: 16px; padding: 50px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); }
+        header { border-bottom: 3px solid #2563eb; padding-bottom: 30px; margin-bottom: 40px; text-align: center; }
+        h1 { background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 2.8rem; margin-bottom: 15px; font-weight: 700; }
+        .last-updated { color: #6b7280; font-size: 0.95rem; font-style: italic; }
+        h2 { color: #1e40af; font-size: 1.75rem; margin-top: 40px; margin-bottom: 20px; border-left: 4px solid #2563eb; padding-left: 15px; }
+        h3 { color: #374151; font-size: 1.25rem; margin-top: 25px; margin-bottom: 15px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        ul { margin-left: 30px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .highlight-box { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-left: 4px solid #2563eb; padding: 20px; margin: 25px 0; border-radius: 8px; }
+        .contact-info { background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 30px 0; }
+        .contact-info strong { color: #1e40af; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { margin-top: 60px; padding: 30px 0; border-top: 2px solid #e5e7eb; text-align: center; color: #6b7280; font-size: 0.9rem; }
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            .container {
-                padding: 20px 15px;
-            }
+            h1 { font-size: 2rem; }
+            .content-card { padding: 30px 20px; }
+            .top-nav-content { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
 <body>
+    <nav class="top-nav">
+        <div class="top-nav-content">
+            <a href="https://ia-solution.fr" class="logo">
+                <div class="logo-icon">IA</div>
+                <span class="logo-text">IAS Solution</span>
+            </a>
+            <div class="lang-switcher">
+                <a href="/politique-confidentialite.html" class="lang-btn">🇫🇷 FR</a>
+                <a href="/privacy-policy.html" class="lang-btn active">🇬🇧 EN</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <header>
-            <h1>Politique de confidentialité</h1>
-            <p class="last-updated">Dernière mise à jour : 26 octobre 2025</p>
-        </header>
+        <div class="content-card">
+            <header>
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last updated: October 26, 2025</p>
+            </header>
 
-        <main>
-            <section>
+            <main>
+                <section>
+                    <p>IAS Solution places great importance on protecting your personal data. This privacy policy informs you about how we collect, use and protect your information in accordance with the General Data Protection Regulation (GDPR) and applicable French legislation.</p>
+                </section>
+
+                <section>
+                    <h2>1. Data Controller</h2>
+                    <div class="contact-info">
+                        <p><strong>Company:</strong> IAS Solution</p>
+                        <p><strong>Contact:</strong> <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a></p>
+                        <p><strong>Website:</strong> <a href="https://ia-solution.fr">https://ia-solution.fr</a></p>
+                    </div>
+                    <p>IAS Solution is the data controller for your personal data collected through our website and mobile applications (including Equi Saddles).</p>
+                </section>
+
+                <section>
+                    <h2>2. Data Collected and Purposes</h2>
+                    
+                    <h3>2.1 Data Collected via Mobile Applications</h3>
+                    <p>Our mobile applications (Equi Saddles and others) are designed to respect your privacy. By default, <strong>no personal data is automatically collected</strong> by the application.</p>
+                    
+                    <div class="highlight-box">
+                        <strong>Important:</strong> IAS Solution applications operate autonomously and do not transmit any personal information to our servers without your explicit consent.
+                    </div>
+
+                    <h3>2.2 Data Collected via the Website</h3>
+                    <p>When you visit our website <a href="https://ia-solution.fr">ia-solution.fr</a>, we may collect the following information:</p>
+                    <ul>
+                        <li><strong>Browsing data:</strong> IP address, browser type, pages visited, visit duration</li>
+                        <li><strong>Contact data:</strong> If you contact us (name, email, message)</li>
+                        <li><strong>Technical cookies:</strong> Necessary for proper website functioning</li>
+                    </ul>
+
+                    <h3>2.3 Processing Purposes</h3>
+                    <p>Your data is collected for the following purposes:</p>
+                    <ul>
+                        <li>Improve user experience on our site</li>
+                        <li>Respond to your contact requests</li>
+                        <li>Ensure security and stability of our services</li>
+                        <li>Comply with legal obligations</li>
+                        <li>Conduct anonymized visitor statistics</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. Legal Basis for Processing</h2>
+                    <p>Personal data processing by IAS Solution is based on:</p>
+                    <ul>
+                        <li><strong>Your consent:</strong> For non-essential cookies and communications</li>
+                        <li><strong>Legitimate interest:</strong> For site security and service improvement</li>
+                        <li><strong>Contract execution:</strong> For providing our services</li>
+                        <li><strong>Legal obligations:</strong> For data retention required by law</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>4. Your Rights (GDPR)</h2>
+                    <p>In accordance with GDPR, you have the following rights regarding your personal data:</p>
+                    <ul>
+                        <li><strong>Right of access:</strong> Obtain a copy of your personal data</li>
+                        <li><strong>Right of rectification:</strong> Correct inaccurate or incomplete data</li>
+                        <li><strong>Right to erasure:</strong> Request deletion of your data</li>
+                        <li><strong>Right to restriction:</strong> Limit processing of your data</li>
+                        <li><strong>Right to object:</strong> Object to processing of your data</li>
+                        <li><strong>Right to portability:</strong> Receive your data in a structured format</li>
+                        <li><strong>Right to withdraw consent:</strong> At any time</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <strong>How to exercise your rights?</strong><br>
+                        To exercise any of these rights, contact us at: <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a><br>
+                        We will respond within one month.
+                    </div>
+                </section>
+
+                <section>
+                    <h2>5. Cookies and Similar Technologies</h2>
+                    <p>Our website uses cookies and similar technologies. For more information about our use of cookies, please consult our <a href="/cookies-policy.html">Cookie Policy</a>.</p>
+                </section>
+
+                <section>
+                    <h2>6. Contact</h2>
+                    <div class="contact-info">
+                        <p>For any questions concerning this privacy policy or exercising your rights, you can contact us at:</p>
+                        <p><strong>Email:</strong> <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a></p>
+                        <p><strong>Website:</strong> <a href="https://ia-solution.fr">https://ia-solution.fr</a></p>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2025 IAS Solution - All rights reserved</p>
                 <p>
-                    IAS Solution accorde une grande importance à la protection de vos données personnelles. 
-                    Cette politique de confidentialité vous informe de la manière dont nous collectons, 
-                    utilisons et protégeons vos informations conformément au Règlement Général sur la 
-                    Protection des Données (RGPD) et à la législation française en vigueur.
+                    <a href="/legal-notice.html">Legal Notice</a> | 
+                    <a href="/cookies-policy.html">Cookie Policy</a> | 
+                    <a href="/privacy-policy.html">Privacy</a>
                 </p>
-            </section>
-
-            <section>
-                <h2>1. Responsable du traitement des données</h2>
-                <div class="contact-info">
-                    <p><strong>Dénomination :</strong> IAS Solution</p>
-                    <p><strong>Contact :</strong> <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a></p>
-                    <p><strong>Site web :</strong> <a href="https://ia-solution.fr">https://ia-solution.fr</a></p>
-                </div>
-                <p>
-                    IAS Solution est le responsable du traitement de vos données personnelles collectées 
-                    via notre site web et nos applications mobiles (notamment Equi Saddles).
-                </p>
-            </section>
-
-            <section>
-                <h2>2. Données collectées et finalités</h2>
-                
-                <h3>2.1 Données collectées via nos applications mobiles</h3>
-                <p>
-                    Nos applications mobiles (Equi Saddles et autres) sont conçues pour respecter votre vie privée. 
-                    Par défaut, <strong>aucune donnée personnelle n'est collectée automatiquement</strong> par l'application.
-                </p>
-                
-                <div class="highlight-box">
-                    <strong>Important :</strong> Les applications IAS Solution fonctionnent de manière autonome 
-                    et ne transmettent aucune information personnelle à nos serveurs sans votre consentement explicite.
-                </div>
-
-                <h3>2.2 Données collectées via le site web</h3>
-                <p>Lorsque vous visitez notre site web <a href="https://ia-solution.fr">ia-solution.fr</a>, 
-                   nous pouvons collecter les informations suivantes :</p>
-                <ul>
-                    <li><strong>Données de navigation :</strong> Adresse IP, type de navigateur, pages visitées, durée de visite</li>
-                    <li><strong>Données de contact :</strong> Si vous nous contactez (nom, email, message)</li>
-                    <li><strong>Cookies techniques :</strong> Nécessaires au bon fonctionnement du site</li>
-                </ul>
-
-                <h3>2.3 Finalités du traitement</h3>
-                <p>Vos données sont collectées pour les finalités suivantes :</p>
-                <ul>
-                    <li>Améliorer l'expérience utilisateur sur notre site</li>
-                    <li>Répondre à vos demandes de contact</li>
-                    <li>Assurer la sécurité et la stabilité de nos services</li>
-                    <li>Respecter nos obligations légales</li>
-                    <li>Réaliser des statistiques anonymisées de fréquentation</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>3. Base légale du traitement</h2>
-                <p>Les traitements de données personnelles effectués par IAS Solution reposent sur :</p>
-                <ul>
-                    <li><strong>Votre consentement :</strong> Pour les cookies non essentiels et l'envoi de communications</li>
-                    <li><strong>L'intérêt légitime :</strong> Pour la sécurité du site et l'amélioration de nos services</li>
-                    <li><strong>L'exécution d'un contrat :</strong> Pour la fourniture de nos services</li>
-                    <li><strong>Les obligations légales :</strong> Pour la conservation de certaines données requises par la loi</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>4. Destinataires des données</h2>
-                <p>
-                    Vos données personnelles sont destinées à IAS Solution et ne sont jamais vendues à des tiers. 
-                    Toutefois, nous pouvons partager certaines données avec :
-                </p>
-                <ul>
-                    <li><strong>Prestataires techniques :</strong> Hébergement, maintenance, services cloud (sous contrat de confidentialité)</li>
-                    <li><strong>Autorités légales :</strong> Sur demande judiciaire ou administrative dans le cadre légal</li>
-                </ul>
-                <p>
-                    Tous nos prestataires sont situés dans l'Union Européenne ou garantissent un niveau de 
-                    protection adéquat selon le RGPD.
-                </p>
-            </section>
-
-            <section>
-                <h2>5. Durée de conservation des données</h2>
-                <p>Nous conservons vos données personnelles uniquement pour la durée nécessaire aux finalités poursuivies :</p>
-                <ul>
-                    <li><strong>Données de navigation :</strong> 13 mois maximum</li>
-                    <li><strong>Données de contact :</strong> 3 ans après le dernier contact</li>
-                    <li><strong>Données de cookies :</strong> Selon la durée définie dans notre politique cookies (maximum 13 mois)</li>
-                </ul>
-                <p>
-                    À l'issue de ces délais, vos données sont supprimées ou anonymisées de manière irréversible.
-                </p>
-            </section>
-
-            <section>
-                <h2>6. Sécurité et protection des données</h2>
-                <p>
-                    IAS Solution met en œuvre toutes les mesures techniques et organisationnelles appropriées 
-                    pour protéger vos données personnelles contre :
-                </p>
-                <ul>
-                    <li>La destruction accidentelle ou illicite</li>
-                    <li>La perte accidentelle</li>
-                    <li>L'altération, la diffusion ou l'accès non autorisé</li>
-                </ul>
-                <p>
-                    Nos mesures de sécurité incluent notamment : chiffrement des données en transit (HTTPS), 
-                    sauvegardes régulières, contrôles d'accès stricts, et mises à jour de sécurité permanentes.
-                </p>
-            </section>
-
-            <section>
-                <h2>7. Vos droits (RGPD)</h2>
-                <p>
-                    Conformément au RGPD et à la loi Informatique et Libertés, vous disposez des droits suivants 
-                    concernant vos données personnelles :
-                </p>
-                <ul>
-                    <li><strong>Droit d'accès :</strong> Obtenir une copie de vos données personnelles</li>
-                    <li><strong>Droit de rectification :</strong> Corriger vos données inexactes ou incomplètes</li>
-                    <li><strong>Droit à l'effacement :</strong> Demander la suppression de vos données</li>
-                    <li><strong>Droit à la limitation :</strong> Limiter le traitement de vos données</li>
-                    <li><strong>Droit d'opposition :</strong> Vous opposer au traitement de vos données</li>
-                    <li><strong>Droit à la portabilité :</strong> Recevoir vos données dans un format structuré</li>
-                    <li><strong>Droit de retirer votre consentement :</strong> À tout moment, sans affecter la licéité du traitement antérieur</li>
-                </ul>
-
-                <div class="highlight-box">
-                    <strong>Comment exercer vos droits ?</strong><br>
-                    Pour exercer l'un de ces droits, contactez-nous à l'adresse : 
-                    <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a><br>
-                    Nous vous répondrons dans un délai maximum d'un mois.
-                </div>
-
-                <p>
-                    Vous disposez également du droit d'introduire une réclamation auprès de la Commission 
-                    Nationale de l'Informatique et des Libertés (CNIL) si vous estimez que vos droits ne sont pas respectés : 
-                    <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>
-                </p>
-            </section>
-
-            <section>
-                <h2>8. Cookies et technologies similaires</h2>
-                <p>
-                    Notre site web utilise des cookies et technologies similaires. Pour en savoir plus sur 
-                    notre utilisation des cookies, veuillez consulter notre 
-                    <a href="/cookies-policy.html">Politique relative aux cookies</a>.
-                </p>
-            </section>
-
-            <section>
-                <h2>9. Transferts de données hors UE</h2>
-                <p>
-                    IAS Solution privilégie les prestataires européens. Dans le cas exceptionnel où vos données 
-                    seraient transférées hors de l'Union Européenne, nous nous assurons que le pays destinataire 
-                    offre un niveau de protection adéquat ou que des garanties appropriées sont mises en place 
-                    (clauses contractuelles types approuvées par la Commission Européenne).
-                </p>
-            </section>
-
-            <section>
-                <h2>10. Modifications de la politique de confidentialité</h2>
-                <p>
-                    Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment 
-                    pour refléter les évolutions légales, techniques ou organisationnelles. La date de dernière 
-                    mise à jour est indiquée en haut de ce document.
-                </p>
-                <p>
-                    En cas de modification substantielle, nous vous informerons par un avis visible sur notre 
-                    site web ou par email si nous disposons de votre adresse.
-                </p>
-            </section>
-
-            <section>
-                <h2>11. Contact</h2>
-                <div class="contact-info">
-                    <p>
-                        Pour toute question concernant cette politique de confidentialité ou l'exercice de vos droits, 
-                        vous pouvez nous contacter à :
-                    </p>
-                    <p><strong>Email :</strong> <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a></p>
-                    <p><strong>Site web :</strong> <a href="https://ia-solution.fr">https://ia-solution.fr</a></p>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 IAS Solution - Tous droits réservés</p>
-            <p>
-                <a href="/legal-notice.html">Mentions légales</a> | 
-                <a href="/cookies-policy.html">Politique cookies</a> | 
-                <a href="/privacy-policy.html">Confidentialité</a>
-            </p>
-        </footer>
+            </footer>
+        </div>
     </div>
 </body>
 </html>
