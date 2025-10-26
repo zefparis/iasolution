@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politique relative aux cookies de IAS Solution">
+    <title>Politique relative aux cookies | IAS Solution</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; background-color: #ffffff; min-height: 100vh; }
+        header { border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { color: #1e40af; font-size: 2.5rem; margin-bottom: 10px; }
+        .last-updated { color: #6b7280; font-size: 0.95rem; font-style: italic; }
+        h2 { color: #1e40af; font-size: 1.75rem; margin-top: 40px; margin-bottom: 20px; border-left: 4px solid #2563eb; padding-left: 15px; }
+        h3 { color: #374151; font-size: 1.25rem; margin-top: 25px; margin-bottom: 15px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        ul { margin-left: 30px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        th { background-color: #2563eb; color: white; font-weight: 600; }
+        tr:hover { background-color: #f9fafb; }
+        .highlight-box { background-color: #eff6ff; border-left: 4px solid #2563eb; padding: 20px; margin: 25px 0; border-radius: 4px; }
+        .preferences-box { background-color: #f3f4f6; padding: 25px; border-radius: 8px; margin: 30px 0; text-align: center; }
+        .btn { display: inline-block; padding: 12px 30px; margin: 10px; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .btn-primary { background-color: #2563eb; color: white; }
+        .btn-primary:hover { background-color: #1e40af; transform: translateY(-2px); }
+        .btn-secondary { background-color: #6b7280; color: white; }
+        .btn-secondary:hover { background-color: #4b5563; transform: translateY(-2px); }
+        .current-preference { margin-top: 15px; padding: 10px; background-color: #d1fae5; border-radius: 4px; font-weight: 600; color: #065f46; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { margin-top: 60px; padding-top: 30px; border-top: 2px solid #e5e7eb; text-align: center; color: #6b7280; font-size: 0.9rem; }
+        #cookieBanner { position: fixed; bottom: 0; left: 0; right: 0; background-color: #1f2937; color: white; padding: 20px; box-shadow: 0 -4px 6px rgba(0,0,0,0.1); z-index: 9999; display: none; }
+        #cookieBanner.show { display: block; animation: slideUp 0.4s ease-out; }
+        @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+        .banner-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .banner-text { flex: 1; min-width: 300px; }
+        .banner-text p { margin: 0; text-align: left; }
+        .banner-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .banner-btn { padding: 10px 24px; border: none; border-radius: 6px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .banner-btn-accept { background-color: #10b981; color: white; }
+        .banner-btn-accept:hover { background-color: #059669; }
+        .banner-btn-refuse { background-color: transparent; color: white; border: 2px solid white; }
+        .banner-btn-refuse:hover { background-color: rgba(255,255,255,0.1); }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .container { padding: 20px 15px; }
+            .banner-content { flex-direction: column; align-items: stretch; }
+            .banner-buttons { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <div id="cookieBanner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <p>🍪 Nous utilisons des cookies pour améliorer votre expérience. <a href="/cookies-policy.html" style="color: #93c5fd; text-decoration: underline;">En savoir plus</a></p>
+            </div>
+            <div class="banner-buttons">
+                <button class="banner-btn banner-btn-accept" onclick="acceptCookies()">Accepter</button>
+                <button class="banner-btn banner-btn-refuse" onclick="refuseCookies()">Refuser</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Politique relative aux cookies</h1>
+            <p class="last-updated">Dernière mise à jour : 26 octobre 2025</p>
+        </header>
+
+        <main>
+            <section>
+                <p>Cette politique explique comment IAS Solution utilise les cookies sur <a href="https://ia-solution.fr">ia-solution.fr</a> conformément au RGPD et à la directive ePrivacy.</p>
+            </section>
+
+            <section>
+                <h2>1. Qu'est-ce qu'un cookie ?</h2>
+                <p>Un cookie est un petit fichier texte déposé sur votre appareil lorsque vous visitez un site web. Il permet de mémoriser vos actions et préférences.</p>
+                <div class="highlight-box"><strong>Important :</strong> Les cookies ne contiennent pas de virus et ne peuvent pas accéder aux informations de votre appareil.</div>
+            </section>
+
+            <section>
+                <h2>2. Types de cookies utilisés</h2>
+                <h3>2.1 Cookies strictement nécessaires</h3>
+                <p>Essentiels au fonctionnement du site, ils ne peuvent pas être désactivés.</p>
+                <h3>2.2 Cookies analytiques</h3>
+                <p>Permettent d'évaluer les performances du site et comprendre la navigation des visiteurs.</p>
+                <h3>2.3 Cookies de fonctionnalité</h3>
+                <p>Mémorisent vos choix (langue, région) pour une expérience personnalisée.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Cookie</th><th>Type</th><th>Durée</th><th>Finalité</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>ias_cookie_consent</td><td>Technique</td><td>13 mois</td><td>Mémorise votre choix cookies</td></tr>
+                        <tr><td>ias_session</td><td>Technique</td><td>Session</td><td>Maintient votre session</td></tr>
+                        <tr><td>ias_lang</td><td>Fonctionnel</td><td>6 mois</td><td>Préférence de langue</td></tr>
+                        <tr><td>_ga, _gid</td><td>Analytique</td><td>13 mois / 24h</td><td>Google Analytics (si accepté)</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>3. Gestion de vos préférences</h2>
+                <div class="preferences-box">
+                    <h3>Gérer vos cookies</h3>
+                    <button class="btn btn-primary" onclick="acceptCookies()">Accepter tous les cookies</button>
+                    <button class="btn btn-secondary" onclick="refuseCookies()">Refuser les cookies non essentiels</button>
+                    <div id="currentPreference" class="current-preference" style="display:none;"></div>
+                </div>
+                <p>Pour gérer les cookies via votre navigateur : <a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser" target="_blank">Guide CNIL</a></p>
+            </section>
+
+            <section>
+                <h2>4. Contact</h2>
+                <p>Pour toute question : <a href="mailto:support@ia-solution.fr">support@ia-solution.fr</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 IAS Solution - Tous droits réservés</p>
+            <p><a href="/legal-notice.html">Mentions légales</a> | <a href="/cookies-policy.html">Politique cookies</a> | <a href="/privacy-policy.html">Confidentialité</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Cookie consent management
+        const COOKIE_NAME = 'ias_cookie_consent';
+        const COOKIE_EXPIRY = 365;
+
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + '=';
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function acceptCookies() {
+            setCookie(COOKIE_NAME, 'accepted', COOKIE_EXPIRY);
+            document.getElementById('cookieBanner').classList.remove('show');
+            updatePreferenceDisplay('accepted');
+        }
+
+        function refuseCookies() {
+            setCookie(COOKIE_NAME, 'refused', COOKIE_EXPIRY);
+            document.getElementById('cookieBanner').classList.remove('show');
+            updatePreferenceDisplay('refused');
+        }
+
+        function updatePreferenceDisplay(status) {
+            const prefDiv = document.getElementById('currentPreference');
+            if (prefDiv) {
+                prefDiv.style.display = 'block';
+                if (status === 'accepted') {
+                    prefDiv.textContent = '✓ Préférence enregistrée : Tous les cookies acceptés';
+                    prefDiv.style.backgroundColor = '#d1fae5';
+                    prefDiv.style.color = '#065f46';
+                } else {
+                    prefDiv.textContent = '✓ Préférence enregistrée : Cookies non essentiels refusés';
+                    prefDiv.style.backgroundColor = '#fee2e2';
+                    prefDiv.style.color = '#991b1b';
+                }
+            }
+        }
+
+        // Check on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = getCookie(COOKIE_NAME);
+            if (!consent) {
+                setTimeout(function() {
+                    document.getElementById('cookieBanner').classList.add('show');
+                }, 1000);
+            } else {
+                updatePreferenceDisplay(consent);
+            }
+        });
+    </script>
+</body>
+</html>
