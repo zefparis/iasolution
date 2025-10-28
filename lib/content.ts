@@ -182,7 +182,7 @@ type PortfolioProject = {
   category: string;
   link: {
     label: string;
-    url: string;
+    url: Route;
   };
 };
 
