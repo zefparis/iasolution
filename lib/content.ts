@@ -175,6 +175,53 @@ export const processSteps = [
   },
 ];
 
+type PortfolioProject = {
+  name: string;
+  description: string;
+  stack: string[];
+  category: string;
+  link: {
+    label: string;
+    url: string;
+  };
+};
+
+export const portfolioProjects: PortfolioProject[] = [
+  {
+    name: "Equi Saddles",
+    description:
+      "Application Android native pour l'équitation, distribuée sur le Play Store. Solution TWA/PWA performante avec expérience utilisateur optimisée.",
+    stack: ["Android", "TWA", "PWA", "JavaScript", "Firebase"],
+    category: "Application Mobile",
+    link: {
+      label: "Voir sur Play Store",
+      url: "https://play.google.com/store/apps/details?id=com.equisaddles.app",
+    },
+  },
+  {
+    name: "IAS Solution",
+    description:
+      "Site corporate moderne et performant, conçu avec Next.js 14 et TailwindCSS. Design élégant avec animations fluides et optimisé pour le SEO.",
+    stack: ["Next.js 14", "TypeScript", "TailwindCSS", "Framer Motion", "Vercel"],
+    category: "Site Web Corporate",
+    link: {
+      label: "Visiter le site",
+      url: "https://ia-solution.fr",
+    },
+  },
+  {
+    name: "Bot d'automatisation IA",
+    description:
+      "Solution RPA intelligente combinant automatisation des processus et API GPT pour orchestrer des workflows complexes et éliminer les tâches répétitives.",
+    stack: ["Python", "OpenAI API", "RPA", "Automation", "LangChain"],
+    category: "Intelligence Artificielle",
+    link: {
+      label: "En savoir plus",
+      url: "#contact",
+    },
+  },
+];
+
 export const contact = {
   title: "Prêts à accélérer votre transformation digitale ?",
   description:
