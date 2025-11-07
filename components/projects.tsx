@@ -3,16 +3,21 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { projects } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 import { SectionHeading } from "@/components/section-heading";
 
 export function ProjectsSection() {
+  const { language } = useLanguage();
+  const t = translations[language].projects;
+
   return (
     <section id="projets" className="relative">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 md:px-6">
         <SectionHeading
-          eyebrow="Réalisations"
-          title="Des projets qui allient design et performance"
-          description="Aperçu de collaborations menées avec des clients ambitieux. Nous concevons des expériences robustes, évolutives et centrées utilisateur."
+          eyebrow={t.eyebrow}
+          title={t.title}
+          description={t.description}
           align="center"
         />
         <div className="grid gap-6 md:grid-cols-2">
@@ -63,18 +68,18 @@ export function ProjectsSection() {
                 {project.testimonial}
               </blockquote>
               <div className="relative mt-auto flex items-center justify-between pt-2 text-xs text-slate-400">
-                <span>Étude de cas détaillée sur demande</span>
+                <span>{t.caseStudy}</span>
                 {project.href ? (
                   <Link
                     href={project.href}
                     className="inline-flex items-center gap-1 text-aurora-blue transition group-hover:text-aurora-pink"
                   >
-                    Voir le projet
+                    {t.viewProject}
                     <span aria-hidden>→</span>
                   </Link>
                 ) : (
                   <span className="inline-flex items-center gap-1 text-slate-500">
-                    Voir le projet
+                    {t.viewProject}
                     <span aria-hidden>→</span>
                   </span>
                 )}

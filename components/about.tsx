@@ -2,14 +2,19 @@
 
 import { motion } from "framer-motion";
 import { about } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 import { SectionHeading } from "@/components/section-heading";
 
 export function AboutSection() {
+  const { language } = useLanguage();
+  const t = translations[language].about;
+
   return (
     <section id="a-propos" className="relative">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 md:px-6">
         <SectionHeading
-          eyebrow="Agence"
+          eyebrow={t.eyebrow}
           title={about.title}
           description={about.content}
           align="center"
@@ -22,12 +27,12 @@ export function AboutSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="glass-card flex flex-col gap-4 p-6"
           >
-            <h3 className="text-lg font-semibold text-white">Notre approche</h3>
+            <h3 className="text-lg font-semibold text-white">{t.approachTitle}</h3>
             <p className="text-sm text-slate-300">
-              Nous intégrons design, développement et IA dans un processus agile et transparent. Chaque mission est pensée comme un partenariat long terme avec un objectif : transformer vos ambitions digitales en résultats concrets.
+              {t.approachText1}
             </p>
             <p className="text-sm text-slate-300">
-              Notre équipe pluridisciplinaire collabore étroitement avec vos parties prenantes pour concevoir des expériences premium, fiables et évolutives.
+              {t.approachText2}
             </p>
           </motion.div>
           <motion.ul
@@ -37,7 +42,7 @@ export function AboutSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="glass-card flex flex-col gap-4 p-6"
           >
-            <h3 className="text-lg font-semibold text-white">Ce qui nous distingue</h3>
+            <h3 className="text-lg font-semibold text-white">{t.highlightsTitle}</h3>
             {about.highlights.map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm text-slate-300">
                 <span className="mt-1 h-2.5 w-2.5 rounded-full bg-aurora-blue" />
@@ -54,9 +59,9 @@ export function AboutSection() {
           className="grid gap-6 md:grid-cols-2"
         >
           <div className="glass-card flex flex-col gap-4 p-6">
-            <h3 className="text-lg font-semibold text-white">Leadership</h3>
+            <h3 className="text-lg font-semibold text-white">{t.leadershipTitle}</h3>
             <p className="text-sm text-slate-300">
-              Une équipe senior qui combine stratégie, engineering et cybersécurité pour piloter vos programmes les plus sensibles.
+              {t.leadershipText}
             </p>
             <ul className="flex flex-col gap-4">
               {about.team.map((member) => (
@@ -69,9 +74,9 @@ export function AboutSection() {
             </ul>
           </div>
           <div className="glass-card flex flex-col gap-4 p-6">
-            <h3 className="text-lg font-semibold text-white">Certifications & partenaires</h3>
+            <h3 className="text-lg font-semibold text-white">{t.certificationsTitle}</h3>
             <p className="text-sm text-slate-300">
-              Nous travaillons main dans la main avec les leaders cloud et IA pour garantir la conformité et la performance de vos solutions.
+              {t.certificationsText}
             </p>
             <ul className="grid gap-3">
               {about.certifications.map((cert) => (

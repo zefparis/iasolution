@@ -4,9 +4,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { portfolioProjects } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 import { SectionHeading } from "@/components/section-heading";
 
 export function PortfolioSection() {
+  const { language } = useLanguage();
+  const t = translations[language].portfolio;
+
   return (
     <section id="portfolio" className="relative">
       {/* Gradient background effect */}
@@ -22,9 +27,9 @@ export function PortfolioSection() {
 
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 md:px-6">
         <SectionHeading
-          eyebrow="Portfolio"
-          title="Nos créations numériques"
-          description="Une sélection de projets développés par notre équipe. Chaque solution reflète notre expertise en design, développement et intelligence artificielle."
+          eyebrow={t.eyebrow}
+          title={t.title}
+          description={t.description}
           align="center"
         />
 

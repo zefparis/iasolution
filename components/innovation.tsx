@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ExternalLink, Brain, Cpu, Zap, Wifi } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 const innovationCards = [
   {
@@ -32,6 +34,9 @@ const innovationCards = [
 ];
 
 export default function Innovation() {
+  const { language } = useLanguage();
+  const t = translations[language].innovation;
+
   return (
     <section id="innovation" className="relative overflow-hidden">
       {/* Background gradient overlay */}
@@ -67,7 +72,7 @@ export default function Innovation() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl font-bold text-gray-100 md:text-5xl lg:text-6xl"
           >
-            <span className="text-gradient">Innovation & Robotics</span>
+            <span className="text-gradient">{t.title}</span>
           </motion.h2>
           
           <motion.p
@@ -77,7 +82,7 @@ export default function Innovation() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="max-w-2xl text-lg text-gray-100/90 md:text-xl"
           >
-            L'intelligence du code jusqu'au capteur
+            {t.subtitle}
           </motion.p>
 
           <motion.div
@@ -92,7 +97,7 @@ export default function Innovation() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-black shadow-neon transition-all duration-300 hover:bg-emerald-500 hover:shadow-glow"
             >
-              Découvrir IAS Glass
+              {t.ctaButton}
               <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
           </motion.div>

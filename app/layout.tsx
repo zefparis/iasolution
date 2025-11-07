@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import type { ReactNode } from "react";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
 const font = Plus_Jakarta_Sans({
@@ -71,7 +72,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr" dir="ltr" className="dark">
       <body className={`${font.variable} bg-midnight text-white`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

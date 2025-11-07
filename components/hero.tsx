@@ -5,6 +5,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import { heroContent } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 import bannerImage from "../banner-8192025_1280.png";
 
 const headlineVariants = {
@@ -12,25 +14,28 @@ const headlineVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const stats = [
-  {
-    value: "40+",
-    label: "Projets livrés",
-    description: "SaaS, e-commerce, plateformes internes",
-  },
-  {
-    value: "95%",
-    label: "Clients satisfaits",
-    description: "Process agile et accompagnement continu",
-  },
-  {
-    value: "-35%",
-    label: "Temps de cycle",
-    description: "Automatisation et IA intégrée",
-  },
-];
-
 export function Hero() {
+  const { language } = useLanguage();
+  const t = translations[language].hero;
+
+  const stats = [
+    {
+      value: t.stats.projectsValue,
+      label: t.stats.projectsLabel,
+      description: t.stats.projectsDesc,
+    },
+    {
+      value: t.stats.clientsValue,
+      label: t.stats.clientsLabel,
+      description: t.stats.clientsDesc,
+    },
+    {
+      value: t.stats.cycleValue,
+      label: t.stats.cycleLabel,
+      description: t.stats.cycleDesc,
+    },
+  ];
+
   return (
     <section id="hero" className="relative flex min-h-[85vh] items-center justify-center px-4 pb-20 pt-24 md:px-6 md:pt-32">
       <div className="absolute inset-0 -z-20">
@@ -136,10 +141,10 @@ export function Hero() {
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="max-w-md text-sm text-slate-300">
               <p className="text-white">
-                « Nous aidons les organisations ambitieuses à concevoir des produits numériques qui inspirent confiance et délivrent des résultats mesurables. »
+                {t.quote}
               </p>
               <p className="mt-2 text-xs uppercase tracking-[0.32em] text-white/60">
-                Expertise full-stack · IA · Automatisation · Design system
+                {t.expertise}
               </p>
             </div>
             <div className="grid w-full gap-4 md:grid-cols-3">

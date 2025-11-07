@@ -2,9 +2,14 @@
 
 import { motion } from "framer-motion";
 import { services } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 import { SectionHeading } from "@/components/section-heading";
 
 export function ServicesSection() {
+  const { language } = useLanguage();
+  const t = translations[language].services;
+
   return (
     <section id="services" className="relative">
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -18,9 +23,9 @@ export function ServicesSection() {
       </div>
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 md:px-6">
         <SectionHeading
-          eyebrow="Services"
-          title="Des solutions technologiques sur-mesure"
-          description="Nous associons design, développement et intelligence artificielle pour créer des expériences digitales performantes et élégantes."
+          eyebrow={t.eyebrow}
+          title={t.title}
+          description={t.description}
           align="center"
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

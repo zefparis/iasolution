@@ -3,9 +3,14 @@
 import { FormEvent } from "react";
 import { motion } from "framer-motion";
 import { contact } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 import { SectionHeading } from "@/components/section-heading";
 
 export function ContactSection() {
+  const { language } = useLanguage();
+  const t = translations[language].contact;
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
@@ -18,7 +23,7 @@ export function ContactSection() {
     <section id="contact" className="relative">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 md:px-6">
         <SectionHeading
-          eyebrow="Contact"
+          eyebrow={t.eyebrow}
           title={contact.title}
           description={contact.description}
           align="center"
@@ -32,7 +37,7 @@ export function ContactSection() {
             className="glass-card flex flex-col gap-6 p-6"
           >
             <div>
-              <h3 className="text-lg font-semibold text-white">Canaux directs</h3>
+              <h3 className="text-lg font-semibold text-white">{t.directChannels}</h3>
               <div className="mt-4 flex flex-col gap-2 text-sm text-slate-300">
                 <a href={`mailto:${contact.email}`} className="transition hover:text-white">
                   {contact.email}
@@ -43,7 +48,7 @@ export function ContactSection() {
               </div>
             </div>
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.32em] text-white/60">Réseaux</h4>
+              <h4 className="text-sm font-semibold uppercase tracking-[0.32em] text-white/60">{t.networks}</h4>
               <ul className="mt-3 flex flex-wrap gap-3 text-sm text-slate-300">
                 {contact.socials.map((social) => (
                   <li key={social.name}>
@@ -87,49 +92,49 @@ export function ContactSection() {
           >
             <div className="grid gap-4 md:grid-cols-2">
               <label className="flex flex-col gap-2 text-sm text-slate-200">
-                Nom et prénom
+                {t.formName}
                 <input
                   type="text"
                   name="name"
                   required
                   className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-aurora-blue/60 focus:bg-white/10"
-                  placeholder="Votre nom"
+                  placeholder={t.formNamePlaceholder}
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm text-slate-200">
-                Email professionnel
+                {t.formEmail}
                 <input
                   type="email"
                   name="email"
                   required
                   className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-aurora-blue/60 focus:bg-white/10"
-                  placeholder="vous@entreprise.fr"
+                  placeholder={t.formEmailPlaceholder}
                 />
               </label>
             </div>
             <label className="flex flex-col gap-2 text-sm text-slate-200">
-              Sujet
+              {t.formSubject}
               <input
                 type="text"
                 name="subject"
                 className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-aurora-blue/60 focus:bg-white/10"
-                placeholder="Parlez-nous de votre projet"
+                placeholder={t.formSubjectPlaceholder}
               />
             </label>
             <label className="flex flex-col gap-2 text-sm text-slate-200">
-              Message
+              {t.formMessage}
               <textarea
                 name="message"
                 rows={5}
                 className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-aurora-blue/60 focus:bg-white/10"
-                placeholder="Décrivez vos besoins, vos objectifs et vos contraintes."
+                placeholder={t.formMessagePlaceholder}
               />
             </label>
             <button
               type="submit"
               className="mt-2 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-midnight shadow-neon transition hover:bg-slate-100"
             >
-              Envoyer le message
+              {t.formSubmit}
             </button>
           </motion.form>
         </div>

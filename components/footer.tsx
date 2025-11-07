@@ -1,6 +1,12 @@
+"use client";
+
 import { contact } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export function Footer() {
+  const { language } = useLanguage();
+  const t = translations[language].footer;
   const year = new Date().getFullYear();
 
   return (
@@ -8,38 +14,38 @@ export function Footer() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-10 text-xs text-slate-400 md:flex-row md:items-start md:justify-between md:px-6">
         <div className="flex flex-col gap-2 text-center md:text-left">
           <span className="text-base font-semibold text-white">IA-Solution</span>
-          <p className="text-[11px] uppercase tracking-[0.32em] text-white/50">Agence IA & Digital</p>
+          <p className="text-[11px] uppercase tracking-[0.32em] text-white/50">{t.tagline}</p>
           <p>
-            {`© ${year} IA-Solution. Tous droits réservés.`}
+            {`© ${year} IA-Solution. ${t.rights}`}
           </p>
         </div>
         <div className="flex flex-col items-center gap-3 text-center md:items-start md:text-left">
-          <p className="text-white/70">Ressources</p>
+          <p className="text-white/70">{t.resources}</p>
           <div className="flex flex-wrap justify-center gap-3 md:justify-start">
             <a href="#services" className="transition hover:text-white">
-              Services
+              {t.services}
             </a>
             <a href="#projets" className="transition hover:text-white">
-              Réalisations
+              {t.projects}
             </a>
             <a href="#process" className="transition hover:text-white">
-              Processus
+              {t.process}
             </a>
             <a href="#contact" className="transition hover:text-white">
-              Contact
+              {t.contact}
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-3 text-white/60 md:justify-start">
             <a href="/mentions-legales" className="transition hover:text-white">
-              Mentions légales
+              {t.legal}
             </a>
             <a href="/politique-confidentialite" className="transition hover:text-white">
-              Politique RGPD
+              {t.privacy}
             </a>
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 text-center md:items-end md:text-right">
-          <p className="text-white/70">Suivez-nous</p>
+          <p className="text-white/70">{t.follow}</p>
           <div className="flex flex-wrap items-center justify-center gap-3 md:justify-end">
             {contact.socials.map((social) => (
               <a

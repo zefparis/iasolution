@@ -9,18 +9,24 @@ import {
   useTransform,
 } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSwitch } from "@/components/language-switch";
+import { translations } from "@/lib/translations";
 
-const navigation = [
-  { label: "Services", href: "#services" },
-  { label: "Projets", href: "#projets" },
-  { label: "À propos", href: "#a-propos" },
-  { label: "Contact", href: "#contact" },
+const getNavigation = (lang: "fr" | "en") => [
+  { label: translations[lang].nav.services, href: "#services" },
+  { label: translations[lang].nav.projects, href: "#projets" },
+  { label: translations[lang].nav.about, href: "#a-propos" },
+  { label: translations[lang].nav.contact, href: "#contact" },
 ];
 
 export function Header() {
   const { scrollY } = useScroll();
+  const { language } = useLanguage();
   const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
+  const navigation = getNavigation(language);
+  const t = translations[language].nav;
 
   useEffect(() => {
     setMounted(true);
@@ -76,18 +82,19 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <LanguageSwitch />
           <a
             href="#contact"
             className="hidden rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white shadow-glow transition hover:bg-white/20 md:inline-flex"
           >
-            Travaillons ensemble
+            {t.workTogether}
           </a>
           <button
             type="button"
             onClick={() => setOpen((prev) => !prev)}
             className="inline-flex rounded-full border border-white/10 bg-white/5 p-2 text-white/80 transition hover:text-white focus:outline-none md:hidden"
-            aria-label="Ouvrir le menu"
+            aria-label={t.openMenu}
             aria-expanded={open}
             aria-controls="menu-mobile"
           >
@@ -121,7 +128,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="rounded-full bg-white/10 px-4 py-2 font-semibold text-white transition hover:bg-white/20"
               >
-                Travaillons ensemble
+                {t.workTogether}
               </a>
             </div>
           </motion.nav>

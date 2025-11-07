@@ -2,16 +2,21 @@
 
 import { motion } from "framer-motion";
 import { processSteps } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 import { SectionHeading } from "@/components/section-heading";
 
 export function ProcessSection() {
+  const { language } = useLanguage();
+  const t = translations[language].process;
+
   return (
     <section id="process" className="relative">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 md:px-6">
         <SectionHeading
-          eyebrow="Processus"
-          title="Un accompagnement premium, de l'audit au support"
-          description="Notre méthode combine stratégie, design et ingénierie pour délivrer des expériences numériques fiables, sécurisées et orientées résultats."
+          eyebrow={t.eyebrow}
+          title={t.title}
+          description={t.description}
           align="center"
         />
         <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-10">
