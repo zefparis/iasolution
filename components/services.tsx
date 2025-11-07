@@ -1,14 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { services } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { getContent } from "@/lib/content-i18n";
 import { SectionHeading } from "@/components/section-heading";
 
 export function ServicesSection() {
   const { language } = useLanguage();
   const t = translations[language].services;
+  const content = getContent(language);
+  const services = content.services;
 
   return (
     <section id="services" className="relative">

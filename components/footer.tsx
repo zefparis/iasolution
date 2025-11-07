@@ -1,12 +1,14 @@
 "use client";
 
-import { contact } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { getContent } from "@/lib/content-i18n";
 
 export function Footer() {
   const { language } = useLanguage();
   const t = translations[language].footer;
+  const content = getContent(language);
+  const contact = content.contact;
   const year = new Date().getFullYear();
 
   return (

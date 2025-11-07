@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
-import { heroContent } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { getContent } from "@/lib/content-i18n";
 import bannerImage from "../banner-8192025_1280.png";
 
 const headlineVariants = {
@@ -17,6 +17,8 @@ const headlineVariants = {
 export function Hero() {
   const { language } = useLanguage();
   const t = translations[language].hero;
+  const content = getContent(language);
+  const heroContent = content.heroContent;
 
   const stats = [
     {
@@ -102,7 +104,7 @@ export function Hero() {
             variants={headlineVariants}
             className="flex flex-col gap-3 text-sm text-slate-300 md:flex-row md:gap-6"
           >
-            {heroContent.highlights.map((item) => (
+            {content.heroContent.highlights.map((item) => (
               <li key={item} className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur">
                 <CheckCircle2 className="h-4 w-4 text-aurora-blue" />
                 <span>{item}</span>

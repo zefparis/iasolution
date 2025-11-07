@@ -3,14 +3,16 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import { portfolioProjects } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { getContent } from "@/lib/content-i18n";
 import { SectionHeading } from "@/components/section-heading";
 
 export function PortfolioSection() {
   const { language } = useLanguage();
   const t = translations[language].portfolio;
+  const content = getContent(language);
+  const portfolioProjects = content.portfolioProjects;
 
   return (
     <section id="portfolio" className="relative">
@@ -76,25 +78,15 @@ export function PortfolioSection() {
               </div>
 
               {/* Link button */}
-              {typeof project.link.url === "string" && project.link.url.startsWith("http") ? (
-                <a
-                  href={project.link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-aurora-blue/50 hover:bg-aurora-blue/10 hover:text-aurora-blue hover:shadow-glow"
-                >
-                  {project.link.label}
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </a>
-              ) : (
-                <Link
-                  href={project.link.url}
-                  className="mt-auto flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-aurora-blue/50 hover:bg-aurora-blue/10 hover:text-aurora-blue hover:shadow-glow"
-                >
-                  {project.link.label}
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </Link>
-              )}
+              <a
+                href={project.link.url}
+                target={project.link.url.startsWith("http") ? "_blank" : undefined}
+                rel={project.link.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="mt-auto flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-aurora-blue/50 hover:bg-aurora-blue/10 hover:text-aurora-blue hover:shadow-glow"
+              >
+                {project.link.label}
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
 
               {/* Hover effect line */}
               <div className="absolute bottom-0 left-0 right-0 h-1 w-0 bg-gradient-to-r from-aurora-blue via-aurora-pink to-aurora-violet opacity-0 transition-all duration-500 group-hover:w-full group-hover:opacity-100" />

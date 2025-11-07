@@ -5,37 +5,13 @@ import Link from "next/link";
 import { ExternalLink, Brain, Cpu, Zap, Wifi } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
-
-const innovationCards = [
-  {
-    title: "IAS Glass",
-    description: "Lunettes IA autonomes. Vision augmentée, interaction vocale et analyse contextuelle en temps réel.",
-    icon: Brain,
-    gradient: "from-aurora-blue/20 to-aurora-pink/20",
-  },
-  {
-    title: "Robotics & Embedded AI",
-    description: "Robots de service, IA embarquée, edge computing. IAS intègre ROS2 et TensorFlow Lite pour créer des systèmes autonomes.",
-    icon: Cpu,
-    gradient: "from-aurora-violet/20 to-aurora-blue/20",
-  },
-  {
-    title: "Automation & RPA",
-    description: "Automatisation cognitive : agents IA capables d'interagir avec vos outils métiers, vos APIs et vos données.",
-    icon: Zap,
-    gradient: "from-aurora-pink/20 to-aurora-violet/20",
-  },
-  {
-    title: "IoT & Smart Systems",
-    description: "Connecter le monde physique et numérique : capteurs intelligents, monitoring, maintenance prédictive.",
-    icon: Wifi,
-    gradient: "from-emerald-400/20 to-aurora-blue/20",
-  },
-];
+import { getContent } from "@/lib/content-i18n";
 
 export default function Innovation() {
   const { language } = useLanguage();
   const t = translations[language].innovation;
+  const content = getContent(language);
+  const innovationCards = content.innovationCards;
 
   return (
     <section id="innovation" className="relative overflow-hidden">

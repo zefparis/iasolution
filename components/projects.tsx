@@ -2,14 +2,16 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { projects } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { getContent } from "@/lib/content-i18n";
 import { SectionHeading } from "@/components/section-heading";
 
 export function ProjectsSection() {
   const { language } = useLanguage();
   const t = translations[language].projects;
+  const content = getContent(language);
+  const projects = content.projects;
 
   return (
     <section id="projets" className="relative">

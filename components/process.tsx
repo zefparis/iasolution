@@ -1,14 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { processSteps } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { getContent } from "@/lib/content-i18n";
 import { SectionHeading } from "@/components/section-heading";
 
 export function ProcessSection() {
   const { language } = useLanguage();
   const t = translations[language].process;
+  const content = getContent(language);
+  const processSteps = content.processSteps;
 
   return (
     <section id="process" className="relative">

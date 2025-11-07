@@ -2,14 +2,16 @@
 
 import { FormEvent } from "react";
 import { motion } from "framer-motion";
-import { contact } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { getContent } from "@/lib/content-i18n";
 import { SectionHeading } from "@/components/section-heading";
 
 export function ContactSection() {
   const { language } = useLanguage();
   const t = translations[language].contact;
+  const content = getContent(language);
+  const contact = content.contact;
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
