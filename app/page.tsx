@@ -6,6 +6,7 @@ import { AboutSection } from "@/components/about";
 import { ProcessSection } from "@/components/process";
 import { ContactSection } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import Innovation from "@/components/innovation";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <ServicesSection />
         <ProjectsSection />
+        <Innovation />
         <PortfolioSection />
         <AboutSection />
         <ProcessSection />
