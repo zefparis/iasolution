@@ -48,9 +48,9 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center">
+    <header className="sticky top-0 z-50 w-full">
       <motion.div
-        className="mt-4 flex w-[92%] max-w-6xl items-center justify-between rounded-full border px-6 py-3 text-sm font-medium shadow-glow"
+        className="mx-auto flex max-w-7xl items-center justify-between border-b px-6 py-4 text-sm font-medium"
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -110,7 +110,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="absolute top-[88px] w-[90%] max-w-6xl rounded-3xl border border-white/10 bg-white/10 p-6 text-sm text-slate-200 backdrop-blur-xl shadow-neon md:hidden"
+            className="absolute left-0 right-0 top-full mx-4 mt-2 rounded-3xl border border-white/10 bg-white/10 p-6 text-sm text-slate-200 backdrop-blur-xl shadow-neon md:hidden"
           >
             <div className="flex flex-col gap-4">
               {navigation.map((item) => (
