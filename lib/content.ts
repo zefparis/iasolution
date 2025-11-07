@@ -111,6 +111,19 @@ export const projects: Project[] = [
     testimonial:
       "« Les équipes support interviennent plus vite et documentent automatiquement chaque incident. » — CTO, PulseOps",
   },
+  {
+    name: "IAS Glass — Vision augmentée autonome",
+    description:
+      "Développement d'un prototype de lunettes IA autonomes intégrant vision par ordinateur, traitement local et interaction vocale. Le système embarque un modèle IA spécialisé pour l'analyse contextuelle en temps réel — sans connexion cloud.",
+    tags: ["Computer Vision", "Edge AI", "Embedded Systems"],
+    kpi: "+100% autonomie cognitive embarquée",
+    result:
+      "Lunettes IA autonomes avec vision augmentée, interaction vocale et analyse contextuelle en temps réel sans dépendance cloud.",
+    stack: ["Computer Vision", "Edge AI", "Embedded Systems", "ROS2", "TensorFlow Lite", "WebRTC"],
+    testimonial:
+      "« Une symbiose parfaite entre design industriel et intelligence embarquée. » — CTO, IAS Solution",
+    href: "https://ias-glass.vercel.app/" as Route,
+  },
 ];
 
 export const about = {
