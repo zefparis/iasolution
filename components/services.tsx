@@ -23,18 +23,18 @@ export function ServicesSection() {
           transition={{ duration: 1, ease: "easeOut" }}
         />
       </div>
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 md:px-6">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:px-6 md:gap-12 md:py-20 lg:px-8">
         <SectionHeading
           eyebrow={t.eyebrow}
           title={t.title}
           description={t.description}
           align="center"
         />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.article
               key={service.title}
-              className="glass-card group flex h-full flex-col gap-5 p-6 transition-transform duration-300"
+              className="glass-card group flex h-full flex-col gap-4 p-4 transition-transform duration-300 sm:gap-5 sm:p-6"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
@@ -46,11 +46,11 @@ export function ServicesSection() {
                 <service.icon className="relative h-5 w-5 text-aurora-blue" />
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-semibold text-white">{service.title}</h3>
-                <p className="text-sm text-slate-300">{service.description}</p>
+                <h3 className="text-base font-semibold text-white sm:text-lg">{service.title}</h3>
+                <p className="text-xs text-slate-300 sm:text-sm">{service.description}</p>
               </div>
               {service.benefit && (
-                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 transition group-hover:border-white/20 group-hover:text-white">
+                <div className="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/80 transition group-hover:border-white/20 group-hover:text-white sm:px-4 sm:text-sm">
                   {service.benefit}
                 </div>
               )}

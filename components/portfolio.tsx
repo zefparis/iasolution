@@ -27,7 +27,7 @@ export function PortfolioSection() {
         />
       </div>
 
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 md:px-6">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:px-6 md:gap-12 md:py-20 lg:px-8">
         <SectionHeading
           eyebrow={t.eyebrow}
           title={t.title}
@@ -35,11 +35,11 @@ export function PortfolioSection() {
           align="center"
         />
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {portfolioProjects.map((project, index) => (
             <motion.article
               key={project.name}
-              className="glass-card group flex h-full flex-col gap-6 p-6 transition-transform duration-300"
+              className="glass-card group relative flex h-full flex-col gap-4 overflow-hidden p-4 transition-all duration-300 sm:gap-5 sm:p-6"
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
@@ -59,10 +59,8 @@ export function PortfolioSection() {
 
               {/* Project content */}
               <div className="flex flex-col gap-3">
-                <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-gradient">
-                  {project.name}
-                </h3>
-                <p className="text-sm leading-relaxed text-slate-300">{project.description}</p>
+                <h3 className="text-lg font-semibold text-white sm:text-xl">{project.name}</h3>
+                <p className="text-xs text-slate-300 sm:text-sm">{project.description}</p>
               </div>
 
               {/* Tech stack badges */}

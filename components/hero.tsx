@@ -39,7 +39,7 @@ export function Hero() {
   ];
 
   return (
-    <section id="hero" className="relative flex min-h-[85vh] items-center justify-center px-4 pb-20 pt-24 md:px-6 md:pt-32">
+    <section id="hero" className="relative flex min-h-screen items-center justify-center px-4 pb-16 pt-28 sm:px-6 md:pt-32 lg:px-8">
       <div className="absolute inset-0 -z-20">
         <Image
           src={bannerImage}
@@ -74,7 +74,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center gap-12 rounded-[40px] border border-white/5 bg-midnight/50 px-6 py-12 text-center shadow-[0_0_80px_rgba(63,94,251,0.2)] backdrop-blur-xl md:px-12 md:py-16">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center gap-8 rounded-3xl border border-white/5 bg-midnight/50 px-4 py-8 text-center shadow-[0_0_80px_rgba(63,94,251,0.2)] backdrop-blur-xl sm:gap-10 sm:px-8 sm:py-12 md:gap-12 md:px-12 md:py-16 lg:rounded-[40px]">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -90,22 +90,22 @@ export function Hero() {
           </motion.span>
           <motion.h1
             variants={headlineVariants}
-            className="text-balance text-4xl font-semibold leading-tight md:text-6xl"
+            className="text-balance text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl lg:text-6xl"
           >
             <span className="text-gradient">{heroContent.title}</span>
           </motion.h1>
           <motion.p
             variants={headlineVariants}
-            className="max-w-2xl text-pretty text-base text-slate-300 md:text-lg"
+            className="max-w-2xl text-pretty text-sm text-slate-300 sm:text-base md:text-lg"
           >
             {heroContent.subtitle}
           </motion.p>
           <motion.ul
             variants={headlineVariants}
-            className="flex flex-col gap-3 text-sm text-slate-300 md:flex-row md:gap-6"
+            className="flex flex-col gap-2 text-xs text-slate-300 sm:text-sm md:flex-row md:gap-4 lg:gap-6"
           >
             {content.heroContent.highlights.map((item) => (
-              <li key={item} className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur">
+              <li key={item} className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur sm:px-4 sm:py-2">
                 <CheckCircle2 className="h-4 w-4 text-aurora-blue" />
                 <span>{item}</span>
               </li>
@@ -117,21 +117,25 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col items-center gap-3 md:flex-row"
+          className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
         >
-          <Link
+          <motion.a
             href="#contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-midnight shadow-neon transition hover:bg-slate-100"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-midnight shadow-neon transition hover:bg-slate-100 sm:w-auto sm:px-6 sm:py-3"
           >
             {heroContent.ctaPrimary}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-          <Link
+          </motion.a>
+          <motion.a
             href="#services"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white/80 backdrop-blur-lg transition hover:border-white/30 hover:text-white"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20 sm:w-auto sm:px-6 sm:py-3"
           >
             {heroContent.ctaSecondary}
-          </Link>
+          </motion.a>
         </motion.div>
 
         <motion.div
@@ -149,7 +153,7 @@ export function Hero() {
                 {t.expertise}
               </p>
             </div>
-            <div className="grid w-full gap-4 md:grid-cols-3">
+            <div className="grid w-full grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3">
               {stats.map((stat) => (
                 <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center backdrop-blur">
                   <p className="text-3xl font-semibold text-white">{stat.value}</p>

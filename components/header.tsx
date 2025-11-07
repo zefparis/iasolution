@@ -50,7 +50,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full">
       <motion.div
-        className="mx-auto flex max-w-7xl items-center justify-between border-b px-6 py-4 text-sm font-medium"
+        className="mx-auto flex max-w-7xl items-center justify-between border-b px-4 py-3 text-sm font-medium sm:px-6 sm:py-4"
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -68,10 +68,10 @@ export function Header() {
               }
         }
       >
-        <a href="#hero" className="text-base font-semibold text-white">
+        <a href="#hero" className="text-sm font-semibold text-white sm:text-base">
           IA-Solution
         </a>
-        <nav className="hidden items-center gap-8 text-slate-200 md:flex">
+        <nav className="hidden items-center gap-4 text-slate-200 lg:gap-6 xl:gap-8 md:flex">
           {navigation.map((item) => (
             <a
               key={item.href}
@@ -86,19 +86,19 @@ export function Header() {
           <LanguageSwitch />
           <a
             href="#contact"
-            className="hidden rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white shadow-glow transition hover:bg-white/20 md:inline-flex"
+            className="hidden rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white shadow-glow transition hover:bg-white/20 sm:px-4 sm:py-2 md:inline-flex"
           >
             {t.workTogether}
           </a>
           <button
             type="button"
             onClick={() => setOpen((prev) => !prev)}
-            className="inline-flex rounded-full border border-white/10 bg-white/5 p-2 text-white/80 transition hover:text-white focus:outline-none md:hidden"
+            className="inline-flex rounded-full border border-white/10 bg-white/5 p-1.5 text-white/80 transition hover:text-white focus:outline-none sm:p-2 md:hidden"
             aria-label={t.openMenu}
             aria-expanded={open}
             aria-controls="menu-mobile"
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? <X className="h-4 w-4 sm:h-5 sm:w-5" /> : <Menu className="h-4 w-4 sm:h-5 sm:w-5" />}
           </button>
         </div>
       </motion.div>

@@ -23,14 +23,14 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="relative">
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 md:px-6">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:px-6 md:gap-12 md:py-20 lg:px-8">
         <SectionHeading
           eyebrow={t.eyebrow}
           title={contact.title}
           description={contact.description}
           align="center"
         />
-        <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-[1.1fr_0.9fr]">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,8 +39,8 @@ export function ContactSection() {
             className="glass-card flex flex-col gap-6 p-6"
           >
             <div>
-              <h3 className="text-lg font-semibold text-white">{t.directChannels}</h3>
-              <div className="mt-4 flex flex-col gap-2 text-sm text-slate-300">
+              <h3 className="text-base font-semibold text-white sm:text-lg">{t.directChannels}</h3>
+              <div className="mt-3 flex flex-col gap-2 text-xs text-slate-300 sm:mt-4 sm:text-sm">
                 <a href={`mailto:${contact.email}`} className="transition hover:text-white">
                   {contact.email}
                 </a>
@@ -50,8 +50,8 @@ export function ContactSection() {
               </div>
             </div>
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.32em] text-white/60">{t.networks}</h4>
-              <ul className="mt-3 flex flex-wrap gap-3 text-sm text-slate-300">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.32em] text-white/60 sm:text-sm">{t.networks}</h4>
+              <ul className="mt-2 flex flex-wrap gap-2 text-xs text-slate-300 sm:mt-3 sm:gap-3 sm:text-sm">
                 {contact.socials.map((social) => (
                   <li key={social.name}>
                     <a
@@ -90,9 +90,9 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            className="glass-card flex flex-col gap-4 p-6"
+            className="glass-card flex flex-col gap-3 p-4 sm:gap-4 sm:p-6"
           >
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
               <label className="flex flex-col gap-2 text-sm text-slate-200">
                 {t.formName}
                 <input

@@ -32,7 +32,7 @@ export default function Innovation() {
         />
       </div>
 
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 md:px-6">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-4 py-16 text-center sm:gap-10 sm:px-6 md:gap-12 md:py-20 lg:px-8 lg:py-24">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function Innovation() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl font-bold text-gray-100 md:text-5xl lg:text-6xl"
+            className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
           >
             <span className="text-gradient">{t.title}</span>
           </motion.h2>
@@ -56,7 +56,7 @@ export default function Innovation() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-2xl text-lg text-gray-100/90 md:text-xl"
+            className="max-w-2xl text-sm text-gray-100/90 sm:text-base md:text-lg lg:text-xl"
           >
             {t.subtitle}
           </motion.p>
@@ -71,7 +71,7 @@ export default function Innovation() {
               href="https://ias-glass.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-black shadow-neon transition-all duration-300 hover:bg-emerald-500 hover:shadow-glow"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-400 px-5 py-2.5 text-sm font-semibold text-black shadow-neon transition-all duration-300 hover:bg-emerald-500 hover:shadow-glow sm:w-auto sm:px-6 sm:py-3"
             >
               {t.ctaButton}
               <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -80,11 +80,11 @@ export default function Innovation() {
         </motion.div>
 
         {/* Innovation Cards Grid */}
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
           {innovationCards.map((card, index) => (
             <motion.article
               key={card.title}
-              className="glass-card group flex h-full flex-col gap-5 p-6 transition-all duration-300 hover:scale-105"
+              className="glass-card group flex h-full flex-col gap-4 p-4 transition-all duration-300 hover:scale-105 sm:gap-5 sm:p-6"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
@@ -102,12 +102,8 @@ export default function Innovation() {
 
               {/* Card Content */}
               <div className="flex flex-col gap-3">
-                <h3 className="text-xl font-semibold text-gray-100">
-                  {card.title}
-                </h3>
-                <p className="text-base leading-relaxed text-gray-100/80">
-                  {card.description}
-                </p>
+                <h3 className="text-lg font-bold text-white sm:text-xl">{card.title}</h3>
+                <p className="text-xs text-gray-300 sm:text-sm">{card.description}</p>
               </div>
 
               {/* Bottom border animation */}
