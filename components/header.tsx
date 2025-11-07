@@ -48,7 +48,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full">
       <motion.div
         className="mx-auto flex max-w-7xl items-center justify-between border-b px-6 py-4 text-sm font-medium"
         initial={{ y: -30, opacity: 0 }}
