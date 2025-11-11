@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden">
       <Header />
-      <main className="flex flex-col gap-8 pb-16 sm:gap-12 sm:pb-20 md:gap-16 md:pb-24">
+      <main className="flex flex-col gap-4 pb-12 sm:gap-6 sm:pb-16 md:gap-8 md:pb-20">
         <Hero />
         <ServicesSection />
         <ProjectsSection />

@@ -73,7 +73,7 @@ body::after {
 
 /* Section padding */
 section {
-  @apply py-16 md:py-24;
+  @apply py-8 md:py-12;
 }
 
 /* Glass cards */
@@ -96,6 +96,7 @@ section {
   );
   opacity: 0;
   transition: opacity 0.6s ease;
+  pointer-events: none;
 }
 
 .glass-card:hover::before {

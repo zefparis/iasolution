@@ -15,7 +15,7 @@ export function ProjectsSection() {
 
   return (
     <section id="projets" className="relative">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-16 sm:gap-10 sm:px-6 md:gap-12 md:py-20 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-8 sm:gap-10 sm:px-6 md:gap-12 md:py-12 lg:px-8">
         <SectionHeading
           eyebrow={t.eyebrow}
           title={t.title}
