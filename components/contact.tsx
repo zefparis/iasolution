@@ -1,7 +1,8 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
 import { getContent } from "@/lib/content-i18n";
@@ -12,13 +13,54 @@ export function ContactSection() {
   const t = translations[language].contact;
   const content = getContent(language);
   const contact = content.contact;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState('');
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    
     const form = event.currentTarget;
-    const data = Object.fromEntries(new FormData(form));
-    console.info("Formulaire contact soumis", data);
-    form.reset();
+
+    try {
+      // Configuration EmailJS depuis les variables d'environnement
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      // Vérifier que les variables d'environnement sont définies
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
+      }
+
+      // Envoyer l'email via EmailJS
+      await emailjs.sendForm(serviceId, templateId, form, publicKey);
+
+      setSubmitStatus('success');
+      setStatusMessage(
+        language === 'fr'
+          ? 'Message envoyé avec succès! Nous vous répondrons dans les plus brefs délais.'
+          : 'Message sent successfully! We will respond to you as soon as possible.'
+      );
+      form.reset();
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
+      setSubmitStatus('error');
+      setStatusMessage(
+        language === 'fr'
+          ? 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement.'
+          : 'An error occurred. Please try again or contact us directly.'
+      );
+    } finally {
+      setIsSubmitting(false);
+      // Réinitialiser le message après 5 secondes
+      setTimeout(() => {
+        setSubmitStatus('idle');
+        setStatusMessage('');
+      }, 5000);
+    }
   };
 
   return (
@@ -132,11 +174,45 @@ export function ContactSection() {
                 placeholder={t.formMessagePlaceholder}
               />
             </label>
+            {submitStatus !== 'idle' && (
+              <div
+                className={`rounded-2xl px-4 py-3 text-sm font-medium ${
+                  submitStatus === 'success'
+                    ? 'bg-green-500/20 text-green-300 border border-green-500/30'
+                    : 'bg-red-500/20 text-red-300 border border-red-500/30'
+                }`}
+              >
+                {statusMessage}
+              </div>
+            )}
             <button
               type="submit"
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-midnight shadow-neon transition hover:bg-slate-100"
+              disabled={isSubmitting}
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-midnight shadow-neon transition hover:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {t.formSubmit}
+              {isSubmitting ? (
+                <>
+                  <svg className="mr-2 h-4 w-4 animate-spin" viewBox="0 0 24 24">
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="none"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    />
+                  </svg>
+                  {language === 'fr' ? 'Envoi en cours...' : 'Sending...'}
+                </>
+              ) : (
+                t.formSubmit
+              )}
             </button>
           </motion.form>
         </div>
