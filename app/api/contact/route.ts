@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import * as SibApiV3Sdk from 'sib-api-v3-sdk';
 
 export async function POST(request: NextRequest) {
   try {
@@ -32,56 +31,70 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Configure Brevo API client
-    const defaultClient = SibApiV3Sdk.ApiClient.instance;
-    const apiKeyAuth = defaultClient.authentications['api-key'];
-    apiKeyAuth.apiKey = apiKey;
-
-    const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
-
     // Email 1: Auto-reply to user
-    const userEmail = new SibApiV3Sdk.SendSmtpEmail();
-    userEmail.sender = { email: 'contact@ia-solution.fr', name: 'IA-Solution' };
-    userEmail.to = [{ email, name }];
-    userEmail.subject = 'Nous avons bien reçu votre message - IA-Solution';
-    userEmail.htmlContent = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #4F46E5;">Merci pour votre message</h2>
-        <p>Bonjour <strong>${name}</strong>,</p>
-        <p>Merci de nous avoir contactés. Nous avons bien reçu votre message et reviendrons vers vous sous 48h.</p>
-        <br>
-        <p style="color: #64748b;">— L'équipe IA-Solution</p>
-        <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
-        <p style="font-size: 12px; color: #94a3b8;">Cet email est une confirmation automatique. Merci de ne pas y répondre.</p>
-      </div>
-    `;
+    const userEmailPayload = {
+      sender: { email: 'contact@ia-solution.fr', name: 'IA-Solution' },
+      to: [{ email, name }],
+      subject: 'Nous avons bien reçu votre message - IA-Solution',
+      htmlContent: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #4F46E5;">Merci pour votre message</h2>
+          <p>Bonjour <strong>${name}</strong>,</p>
+          <p>Merci de nous avoir contactés. Nous avons bien reçu votre message et reviendrons vers vous sous 48h.</p>
+          <br>
+          <p style="color: #64748b;">— L'équipe IA-Solution</p>
+          <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+          <p style="font-size: 12px; color: #94a3b8;">Cet email est une confirmation automatique. Merci de ne pas y répondre.</p>
+        </div>
+      `,
+    };
 
     // Email 2: Internal notification to contact@ia-solution.fr
-    const internalEmail = new SibApiV3Sdk.SendSmtpEmail();
-    internalEmail.sender = { email: 'contact@ia-solution.fr', name: 'IA-Solution Contact Form' };
-    internalEmail.to = [{ email: 'contact@ia-solution.fr', name: 'IA-Solution' }];
-    internalEmail.replyTo = { email, name };
-    internalEmail.subject = `Nouveau message depuis le formulaire IA-Solution${subject ? ` - ${subject}` : ''}`;
-    internalEmail.htmlContent = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8fafc; border-radius: 8px;">
-        <h2 style="color: #4F46E5; margin-bottom: 20px;">📧 Nouveau message depuis le formulaire</h2>
-        <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-          <p style="margin: 10px 0;"><strong style="color: #64748b;">Nom:</strong> ${name}</p>
-          <p style="margin: 10px 0;"><strong style="color: #64748b;">Email:</strong> <a href="mailto:${email}" style="color: #4F46E5;">${email}</a></p>
-          ${subject ? `<p style="margin: 10px 0;"><strong style="color: #64748b;">Sujet:</strong> ${subject}</p>` : ''}
-          <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 15px 0;">
-          <p style="margin: 10px 0;"><strong style="color: #64748b;">Message:</strong></p>
-          <div style="background-color: #f8fafc; padding: 15px; border-radius: 6px; border-left: 4px solid #4F46E5;">
-            <p style="white-space: pre-wrap; margin: 0;">${message}</p>
+    const internalEmailPayload = {
+      sender: { email: 'contact@ia-solution.fr', name: 'IA-Solution Contact Form' },
+      to: [{ email: 'contact@ia-solution.fr', name: 'IA-Solution' }],
+      replyTo: { email, name },
+      subject: `Nouveau message depuis le formulaire IA-Solution${subject ? ` - ${subject}` : ''}`,
+      htmlContent: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8fafc; border-radius: 8px;">
+          <h2 style="color: #4F46E5; margin-bottom: 20px;">📧 Nouveau message depuis le formulaire</h2>
+          <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+            <p style="margin: 10px 0;"><strong style="color: #64748b;">Nom:</strong> ${name}</p>
+            <p style="margin: 10px 0;"><strong style="color: #64748b;">Email:</strong> <a href="mailto:${email}" style="color: #4F46E5;">${email}</a></p>
+            ${subject ? `<p style="margin: 10px 0;"><strong style="color: #64748b;">Sujet:</strong> ${subject}</p>` : ''}
+            <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 15px 0;">
+            <p style="margin: 10px 0;"><strong style="color: #64748b;">Message:</strong></p>
+            <div style="background-color: #f8fafc; padding: 15px; border-radius: 6px; border-left: 4px solid #4F46E5;">
+              <p style="white-space: pre-wrap; margin: 0;">${message}</p>
+            </div>
           </div>
         </div>
-      </div>
-    `;
+      `,
+    };
 
-    // Send both emails
+    // Send both emails using Brevo REST API
+    const sendEmail = async (payload: any) => {
+      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'api-key': apiKey,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to send email');
+      }
+
+      return response.json();
+    };
+
     await Promise.all([
-      apiInstance.sendTransacEmail(userEmail),
-      apiInstance.sendTransacEmail(internalEmail)
+      sendEmail(userEmailPayload),
+      sendEmail(internalEmailPayload)
     ]);
 
     return NextResponse.json(
@@ -91,7 +104,7 @@ export async function POST(request: NextRequest) {
   } catch (error: any) {
     console.error('Brevo API Error:', error);
     
-    const errorMessage = error?.response?.text || error?.message || 'Failed to send email';
+    const errorMessage = error?.message || 'Failed to send email';
     
     return NextResponse.json(
       { error: 'Failed to send email', details: errorMessage },
