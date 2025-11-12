@@ -2,7 +2,6 @@
 
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
 import { getContent } from "@/lib/content-i18n";
@@ -23,27 +22,29 @@ export function ContactSection() {
     setSubmitStatus('idle');
     
     const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string,
+    };
 
     try {
-      // Configuration EmailJS depuis les variables d'environnement
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
-      console.log('EmailJS Config:', { 
-        serviceId: serviceId ? 'Defined' : 'Missing',
-        templateId: templateId ? 'Defined' : 'Missing',
-        publicKey: publicKey ? 'Defined' : 'Missing'
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       });
 
-      // Vérifier que les variables d'environnement sont définies
-      if (!serviceId || !templateId || !publicKey) {
-        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
-      }
+      const result = await response.json();
 
-      // Envoyer l'email via EmailJS
-      const result = await emailjs.sendForm(serviceId, templateId, form, publicKey);
-      console.log('EmailJS Success:', result);
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
 
       setSubmitStatus('success');
       setStatusMessage(
@@ -53,34 +54,15 @@ export function ContactSection() {
       );
       form.reset();
     } catch (error: any) {
-      console.error('Erreur complète EmailJS:', error);
-      console.error('Error details:', {
-        message: error?.message,
-        text: error?.text,
-        status: error?.status
-      });
-      
       setSubmitStatus('error');
       
-      // Message d'erreur plus détaillé
-      let errorMsg = language === 'fr'
-        ? 'Une erreur est survenue. '
-        : 'An error occurred. ';
-      
-      if (error?.text) {
-        errorMsg += error.text;
-      } else if (error?.message) {
-        errorMsg += error.message;
-      } else {
-        errorMsg += language === 'fr'
-          ? 'Veuillez réessayer ou nous contacter directement.'
-          : 'Please try again or contact us directly.';
-      }
+      const errorMsg = language === 'fr'
+        ? 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement.'
+        : 'An error occurred. Please try again or contact us directly.';
       
       setStatusMessage(errorMsg);
     } finally {
       setIsSubmitting(false);
-      // Réinitialiser le message après 5 secondes
       setTimeout(() => {
         setSubmitStatus('idle');
         setStatusMessage('');
