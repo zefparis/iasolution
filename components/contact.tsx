@@ -177,6 +177,7 @@ export function ContactSection() {
               <textarea
                 name="message"
                 rows={5}
+                required
                 className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-aurora-blue/60 focus:bg-white/10"
                 placeholder={t.formMessagePlaceholder}
               />
