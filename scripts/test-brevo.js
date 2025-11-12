@@ -23,7 +23,7 @@ if (!BREVO_API_KEY) {
     console.error('❌ Impossible de lire .env.local:', error.message);
   }
 }
-const SENDER_EMAIL = 'ia.solution.monde@gmail.com'; // Email validé utilisé dans le code
+const SENDER_EMAIL = 'contact@ia-solution.fr'; // Email professionnel utilisé dans le code
 
 console.log('\n🔍 === DIAGNOSTIC BREVO ===\n');
 

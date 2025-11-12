@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
 
     // Email 1: Auto-reply to user
     const userEmailPayload = {
-      sender: { email: 'ia.solution.monde@gmail.com', name: 'IA-Solution' },
+      sender: { email: 'contact@ia-solution.fr', name: 'IA-Solution' },
       to: [{ email, name }],
       subject: 'Nous avons bien reçu votre message - IA-Solution',
       htmlContent: `
@@ -49,10 +49,10 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    // Email 2: Internal notification to ia.solution.monde@gmail.com
+    // Email 2: Internal notification to contact@ia-solution.fr
     const internalEmailPayload = {
-      sender: { email: 'ia.solution.monde@gmail.com', name: 'IA-Solution Contact Form' },
-      to: [{ email: 'ia.solution.monde@gmail.com', name: 'IA-Solution' }],
+      sender: { email: 'contact@ia-solution.fr', name: 'IA-Solution Contact Form' },
+      to: [{ email: 'contact@ia-solution.fr', name: 'IA-Solution' }],
       replyTo: { email, name },
       subject: `Nouveau message depuis le formulaire IA-Solution${subject ? ` - ${subject}` : ''}`,
       htmlContent: `
