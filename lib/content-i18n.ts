@@ -265,7 +265,7 @@ export function getContent(lang: "fr" | "en") {
         ],
         externalCta: {
           label: "Réserver un appel exploratoire",
-          href: "https://cal.com/ia-solution/30min",
+          href: "https://cal.com/benjamin-barrere-q99lh1/30min",
           description: "15 minutes pour cadrer votre besoin et votre feuille de route.",
         },
       },
@@ -521,7 +521,7 @@ export function getContent(lang: "fr" | "en") {
         ],
         externalCta: {
           label: "Book an exploratory call",
-          href: "https://cal.com/ia-solution/30min",
+          href: "https://cal.com/benjamin-barrere-q99lh1/30min",
           description: "15 minutes to frame your needs and roadmap.",
         },
       },

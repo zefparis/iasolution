@@ -24,7 +24,10 @@ export async function POST(request: NextRequest) {
     // Check for Brevo API key
     const apiKey = process.env.BREVO_API_KEY;
     if (!apiKey) {
-      console.error('BREVO_API_KEY is not configured');
+      // Log only in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('[Contact API] BREVO_API_KEY is not configured');
+      }
       return NextResponse.json(
         { error: 'Email service is not configured' },
         { status: 500 }
@@ -102,13 +105,21 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
   } catch (error: any) {
-    console.error('Brevo API Error:', error);
+    // Log detailed error only in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('[Contact API] Brevo API Error:', error);
+    } else {
+      // Log minimal error info in production
+      console.error('[Contact API] Failed to send email:', error.message);
+    }
     
     const errorMessage = error?.message || 'Failed to send email';
     
-    return NextResponse.json(
-      { error: 'Failed to send email', details: errorMessage },
-      { status: 500 }
-    );
+    // Don't expose detailed errors in production
+    const publicError = process.env.NODE_ENV === 'development' 
+      ? { error: 'Failed to send email', details: errorMessage }
+      : { error: 'Failed to send email' };
+    
+    return NextResponse.json(publicError, { status: 500 });
   }
 }

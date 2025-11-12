@@ -1,0 +1,23 @@
+# Robots.txt pour IA-Solution
+# https://www.ia-solution.fr
+
+User-agent: *
+Allow: /
+
+# Pages principales
+Allow: /
+
+# Pages légales
+Allow: /politique-confidentialite
+Allow: /politique-cookies
+Allow: /mentions-legales
+Allow: /privacy-policy
+Allow: /cookies-policy
+Allow: /legal-notice
+
+# Interdire l'indexation des ressources Next.js
+Disallow: /_next/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://www.ia-solution.fr/sitemap.xml
