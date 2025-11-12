@@ -30,13 +30,20 @@ export function ContactSection() {
       const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
       const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
+      console.log('EmailJS Config:', { 
+        serviceId: serviceId ? 'Defined' : 'Missing',
+        templateId: templateId ? 'Defined' : 'Missing',
+        publicKey: publicKey ? 'Defined' : 'Missing'
+      });
+
       // Vérifier que les variables d'environnement sont définies
       if (!serviceId || !templateId || !publicKey) {
         throw new Error('EmailJS configuration is missing. Please check your environment variables.');
       }
 
       // Envoyer l'email via EmailJS
-      await emailjs.sendForm(serviceId, templateId, form, publicKey);
+      const result = await emailjs.sendForm(serviceId, templateId, form, publicKey);
+      console.log('EmailJS Success:', result);
 
       setSubmitStatus('success');
       setStatusMessage(
@@ -45,14 +52,32 @@ export function ContactSection() {
           : 'Message sent successfully! We will respond to you as soon as possible.'
       );
       form.reset();
-    } catch (error) {
-      console.error('Erreur lors de l\'envoi:', error);
+    } catch (error: any) {
+      console.error('Erreur complète EmailJS:', error);
+      console.error('Error details:', {
+        message: error?.message,
+        text: error?.text,
+        status: error?.status
+      });
+      
       setSubmitStatus('error');
-      setStatusMessage(
-        language === 'fr'
-          ? 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement.'
-          : 'An error occurred. Please try again or contact us directly.'
-      );
+      
+      // Message d'erreur plus détaillé
+      let errorMsg = language === 'fr'
+        ? 'Une erreur est survenue. '
+        : 'An error occurred. ';
+      
+      if (error?.text) {
+        errorMsg += error.text;
+      } else if (error?.message) {
+        errorMsg += error.message;
+      } else {
+        errorMsg += language === 'fr'
+          ? 'Veuillez réessayer ou nous contacter directement.'
+          : 'Please try again or contact us directly.';
+      }
+      
+      setStatusMessage(errorMsg);
     } finally {
       setIsSubmitting(false);
       // Réinitialiser le message après 5 secondes
