@@ -1,349 +1,343 @@
-# IAS Solution
+# HCS-U7 — Human Cognitive Signature
 
-**Corporate Website & Digital Solutions Platform**
+<div align="center">
 
-Official website of IAS Solution - Enterprise-grade web development, mobile applications, and artificial intelligence solutions.
+**Premier système d'authentification biométrique cognitive résistant à l'IA générative**
 
-[![Website](https://img.shields.io/badge/Website-ia--solution.fr-0052CC?style=flat-square)](https://ia-solution.fr)
-[![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-3-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-[![Vercel](https://img.shields.io/badge/Vercel-Production-000000?style=flat-square&logo=vercel)](https://vercel.com)
+*First cognitive biometric authentication system resistant to generative AI*
 
----
+[![Website](https://img.shields.io/badge/Website-ia--solution.fr-8B5CF6?style=for-the-badge)](https://ia-solution.fr)
+[![Next.js](https://img.shields.io/badge/Next.js-14.2-000000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Patents](https://img.shields.io/badge/INPI_Patents-2-10B981?style=for-the-badge)](https://www.inpi.fr/)
+[![Tests](https://img.shields.io/badge/Tests-230+-22C55E?style=for-the-badge)](https://vitest.dev/)
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Core Services](#core-services)
-- [Technical Stack](#technical-stack)
-- [Project Structure](#project-structure)
-- [Development Setup](#development-setup)
-- [Mobile Applications](#mobile-applications)
-- [Legal Compliance](#legal-compliance)
-- [Internationalization](#internationalization)
-- [Deployment](#deployment)
-- [Contact](#contact)
+</div>
 
 ---
 
-## Overview
+## 🎯 Problème Résolu
 
-IAS Solution provides comprehensive digital transformation services with a focus on modern web technologies, mobile development, and artificial intelligence integration. Our platform demonstrates enterprise-level architecture and GDPR-compliant solutions.
+> **94% des CAPTCHAs traditionnels sont contournés par GPT-4V** (ETH Zurich, 2024)
 
-### Key Features
-
-- Modern, responsive design with advanced animations
-- Mobile-first architecture
-- SEO optimization
-- High performance (Lighthouse score 95+)
-- Full GDPR compliance
-- Bilingual support (French/English)
-- Continuous deployment pipeline
+Les systèmes d'authentification actuels (mots de passe, CAPTCHA, 2FA) sont vulnérables aux IA génératives modernes. HCS-U7 propose une solution fondamentalement différente basée sur la **biométrie cognitive** — des patterns neurologiques impossibles à simuler par une IA.
 
 ---
 
-## Core Services
+## 🧠 Solution : Biométrie Cognitive
 
-**IAS Solution** specializes in:
+HCS-U7 mesure **6 tests cognitifs validés scientifiquement** :
 
-- **Web Development**: Modern, high-performance platforms built with cutting-edge technologies
-- **Mobile Applications**: Native and cross-platform solutions for iOS & Android (including Equi Saddles on Play Store)
-- **Artificial Intelligence**: RPA automation and custom AI solutions
-- **Cybersecurity**: GDPR compliance consulting and data protection strategies
-- **Strategic Consulting**: Digital transformation advisory services
+| Test | Origine | Ce qu'il mesure |
+|------|---------|-----------------|
+| **Stroop** | 1935 | Interférence cognitive, latence incongruence |
+| **N-Back** | 1958 | Mémoire de travail, capacité 7±2 éléments |
+| **Trail Making** | 1938 | Flexibilité cognitive, switching cost |
+| **Digit Span** | 1939 | Empan mnésique, rétention court terme |
+| **Reaction Time** | 1868 | Variabilité temporelle 50-150ms |
+| **RAN Vocal** | 1974 | Dénomination rapide, pauses, hésitations |
 
----
+### Pourquoi l'IA ne peut pas tricher
 
-## Technical Stack
-
-### Frontend Architecture
-
-- **Framework**: [Next.js 14](https://nextjs.org/) with React 18
-- **Language**: [TypeScript 5](https://www.typescriptlang.org/)
-- **Styling**: [TailwindCSS 3](https://tailwindcss.com/)
-- **Components**: React Server Components
-- **Font Optimization**: Next/Font
-
-### Infrastructure & Deployment
-
-- **Hosting Provider**: [Vercel](https://vercel.com)
-- **CI/CD Pipeline**: Automated GitHub Actions
-- **Domain**: [ia-solution.fr](https://ia-solution.fr)
-- **SSL/TLS**: Automatic certificate management
-
-### Compliance & Security
-
-- **GDPR**: Comprehensive privacy policy implementation
-- **Cookie Management**: Consent-based system with localStorage
-- **Legal Documentation**: French and European regulatory compliance
+- **Humain** : Temps de réponse 50-150ms avec variabilité naturelle
+- **IA** : Répond en <30ms avec régularité >80%
+- **Effet fatigue** : Humain ralentit après 2min, IA reste stable
+- **Stroop** : Humain +50ms sur items incongruents, IA instantanée
 
 ---
 
-## Project Structure
+## 📊 Performances Validées
+
+<div align="center">
+
+| Métrique | Valeur | Description |
+|----------|--------|-------------|
+| **Précision globale** | 98.9% | True Positive Rate |
+| **Détection bots** | 99.6% | True Negative Rate |
+| **Détection IA** | >99% | GPT-4V, Claude 3, Gemini |
+| **Latence P95** | <50ms | Temps de réponse |
+| **Tests unitaires** | 230+ | Couverture Vitest |
+| **AUC-ROC** | 0.994 | Qualité du modèle |
+
+</div>
+
+---
+
+## 🔐 Brevets INPI
+
+**2 brevets déposés** — Protection 20 ans
+
+| N° Brevet | Date | Titre |
+|-----------|------|-------|
+| **FR2514274** | 30/11/2025 | Système d'authentification biométrique cognitive multi-couches résistant à l'IA générative |
+| **FR2514546** | 04/12/2025 | Système de sécurité cognitive multi-signaux intégrant biométrie, firewall comportemental, entropie astronomique et moteur SCA adaptatif |
+
+> *Conformément à l'article L. 612-10 du Code de la propriété intellectuelle, le Ministre de la Défense a été habilité à examiner les demandes de manière confidentielle.*
+
+---
+
+## 🏗️ Architecture Technique
+
+### Format U7 — Structure Identitaire
+
+```
+HCS-U7|V:8.0|ALG:QS|E:E|MOD:c25f0m75|COG:F42C22V9S10Cr16|QSIG:...|B3:...
+```
+
+| Segment | Description |
+|---------|-------------|
+| `HCS-U7` | Protocol identifier |
+| `V:x.x` | Version (semantic) |
+| `ALG:QS` | Algorithm (Quantum-Safe) |
+| `MOD:...` | Modality flags (cognitive/form ratio) |
+| `COG:...` | Cognitive axes (F/C/V/S/Cr vectors) |
+| `QSIG:...` | Quantum-safe signature (post-quantum ready) |
+| `B3:...` | Biometric binding hash |
+
+### Algorithmes Cryptographiques
+
+- **QSIG** — Quantum-Safe Signature (NIST-PQC ready)
+- **B3** — Biometric Binding (HMAC-SHA256)
+- **Merkle Trees** — Signatures résistantes et vérifiables
+- **Celestial Entropy Layer** — Entropie basée sur positions planétaires temps réel
+
+### Defense-in-Depth (7 couches)
+
+```
+┌─────────────────────────────────────────┐
+│  L7 DDoS Protection                     │
+├─────────────────────────────────────────┤
+│  WAF Multi-Encoding                     │
+├─────────────────────────────────────────┤
+│  Honeypots (/.env, /admin, /wp-login)   │
+├─────────────────────────────────────────┤
+│  Rate Limiting Distribué                │
+├─────────────────────────────────────────┤
+│  Credential Stuffing Detection          │
+├─────────────────────────────────────────┤
+│  Proof-of-Work Adaptatif                │
+├─────────────────────────────────────────┤
+│  Cognitive Biometric Layer              │
+└─────────────────────────────────────────┘
+```
+
+---
+
+## 🛠️ Stack Technologique
+
+### Backend
+- **Fastify 5** — Framework haute performance
+- **TypeScript** — Typage strict
+- **Zod** — Validation runtime
+- **Vitest** — 230+ tests unitaires
+
+### Persistence
+- **PostgreSQL** — Base de données principale
+- **Prisma ORM** — Migrations et queries
+- **Redis** — Cache et rate limiting distribué
+
+### Cryptographie
+- **HMAC-SHA256** — Signatures
+- **bcrypt** — Hashing sécurisé
+- **JWT** — Tokens d'authentification
+- **Swiss Ephemeris** — Calculs astronomiques haute précision
+
+### Frontend
+- **Next.js 14** — React Server Components
+- **TailwindCSS** — Styling
+- **Framer Motion** — Animations
+- **Lucide React** — Iconographie
+
+---
+
+## 📁 Structure du Projet
 
 ```
 iasolution/
 ├── app/                          # Next.js 14 App Router
-│   ├── layout.tsx               # Root layout component
+│   ├── layout.tsx               # Root layout + LanguageProvider
 │   ├── page.tsx                 # Home page
-│   └── globals.css              # Global styles
-├── components/                   # Reusable React components
-│   ├── header.tsx               # Navigation header
-│   ├── hero.tsx                 # Hero section
-│   ├── services.tsx             # Services section
-│   ├── about.tsx                # About section
-│   ├── projects.tsx             # Projects section
-│   ├── process.tsx              # Process section
-│   ├── contact.tsx              # Contact form
-│   ├── footer.tsx               # Footer component
-│   ├── Card.tsx                 # Card component
-│   ├── ServicesSection.tsx      # Detailed services section
-│   └── section-heading.tsx      # Section heading component
-├── lib/                         # Utilities and data
-│   └── content.ts               # Static content
-├── public/                      # Static assets
-│   ├── politique-confidentialite.html    # French Privacy Policy
-│   ├── politique-cookies.html            # French Cookie Policy
-│   ├── mentions-legales.html             # French Legal Notice
-│   ├── privacy-policy.html               # English Privacy Policy
-│   ├── cookies-policy.html               # English Cookie Policy
-│   └── legal-notice.html                 # English Legal Notice
-├── next.config.js               # Next.js configuration
-├── tailwind.config.js           # Tailwind CSS configuration
-├── tsconfig.json                # TypeScript configuration
-├── package.json                 # npm dependencies
-└── README.md                    # Project documentation
+│   ├── hcs-u7/                  # Product page
+│   ├── technology/              # Technology details
+│   ├── research/                # Research axes
+│   ├── patents/                 # Patents page
+│   ├── contact/                 # Contact form
+│   └── demo/                    # Demo request
+├── components/
+│   ├── sections/                # Page sections
+│   │   ├── Header.tsx          # Navigation + Language switcher
+│   │   ├── Hero.tsx            # Hero section
+│   │   ├── SectionProblem.tsx  # Problem statement
+│   │   ├── SectionSolution.tsx # Solution overview
+│   │   ├── SectionPerformance.tsx
+│   │   ├── SectionTechnology.tsx
+│   │   ├── SectionResearchAxes.tsx
+│   │   ├── SectionProductHCS.tsx
+│   │   ├── SectionArchitecture.tsx
+│   │   ├── SectionU7Format.tsx
+│   │   ├── SectionPatents.tsx
+│   │   ├── SectionPublications.tsx
+│   │   └── Footer.tsx
+│   ├── ui/                      # Reusable UI components
+│   │   ├── Button.tsx
+│   │   ├── Container.tsx
+│   │   └── AnimatedSection.tsx
+│   └── LanguageSwitcher.tsx     # FR/EN toggle
+├── contexts/
+│   └── LanguageContext.tsx      # Bilingual state management
+├── lib/
+│   ├── content.ts               # French content (legacy)
+│   ├── content-bilingual.ts     # FR/EN translations
+│   ├── translations.ts          # UI translations
+│   └── animations.ts            # Framer Motion variants
+├── public/
+│   ├── mentions-legales.html    # Legal notice FR
+│   ├── politique-confidentialite.html
+│   └── privacy-policy.html      # Legal notice EN
+└── docs/
+    ├── BREVO_SETUP.md           # Email configuration
+    └── IMAGES_NEEDED.md         # Asset requirements
 ```
 
 ---
 
-## Development Setup
+## 🌐 Internationalisation
 
-### Prerequisites
+Le site supporte **2 langues** avec basculement dynamique :
 
-- Node.js 18.x or higher
-- npm 9.x or yarn 1.22.x
-- Git
+- 🇫🇷 **Français** (défaut)
+- 🇬🇧 **English**
 
-### Installation Steps
+### Fonctionnalités
 
-**1. Clone the repository**
+- **Détection automatique** de la langue du navigateur
+- **Persistance** dans localStorage
+- **Basculement instantané** sans rechargement
+- **Contenu complet** traduit (navigation, sections, formulaires)
+
+### Implémentation
+
+```tsx
+// Utilisation dans les composants
+const { language, setLanguage, content } = useLanguage();
+
+// Accès au contenu traduit
+<h1>{content.hero.title}</h1>
+```
+
+---
+
+## 🚀 Installation
+
+### Prérequis
+
+- Node.js 18.x+
+- npm 9.x+
+
+### Démarrage rapide
 
 ```bash
+# Clone
 git clone https://github.com/zefparis/iasolution.git
 cd iasolution
-```
 
-**2. Install dependencies**
-
-```bash
+# Installation
 npm install
-# or using yarn
-yarn install
-```
 
-**3. Start development server**
-
-```bash
+# Développement
 npm run dev
-# or using yarn
-yarn dev
-```
 
-**4. Access the application**
-
-Open your browser and navigate to:
-```
-http://localhost:3000
-```
-
-### Production Build
-
-```bash
+# Build production
 npm run build
-npm start
 ```
 
-### Available Scripts
+### Variables d'environnement
 
-- `npm run dev` - Start development server
-- `npm run build` - Create production build
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint checks
-
----
-
-## Mobile Applications
-
-### Equi Saddles
-
-Enterprise mobile application available on Google Play Store, designed for equestrian industry professionals.
-
-**Core Features:**
-
-- Comprehensive saddle catalog
-- Inventory management system
-- Modern, intuitive user interface
-- Full GDPR compliance
-- Real-time synchronization
-
-**Availability:** [Google Play Store](https://play.google.com/store)
-
-**Platform:** Android (iOS version in development)
-
----
-
-## Legal Compliance
-
-All legal pages are fully compliant with **GDPR** and French/European legislation.
-
-### French Version
-
-| Document | URL | Description |
-|----------|-----|-------------|
-| Privacy Policy | `/politique-confidentialite.html` | Personal data protection (GDPR) |
-| Cookie Policy | `/politique-cookies.html` | Cookie consent management |
-| Legal Notice | `/mentions-legales.html` | Mandatory legal information |
-
-### English Version
-
-| Document | URL | Description |
-|----------|-----|-------------|
-| Privacy Policy | `/privacy-policy.html` | Personal data protection (GDPR) |
-| Cookie Policy | `/cookies-policy.html` | Cookie consent management |
-| Legal Notice | `/legal-notice.html` | Mandatory legal information |
-
-### Technical Implementation
-
-- Static HTML/CSS/JavaScript pages
-- Modern design with gradient styling
-- Sticky navigation with language selector
-- Functional cookie consent banner using localStorage
-- Fully responsive and accessible
-- W3C validated markup  
-
----
-
-## Internationalization
-
-The platform currently supports **2 languages**:
-
-- **French** (default)
-- **English**
-
-Each legal page includes a language selector in the top-right corner for seamless switching between versions.
-
-### Implementation Details
-
-- Language preference stored in localStorage
-- Automatic language detection based on browser settings
-- Full content translation for all legal documents
-- URL-based language routing
-
----
-
-## Deployment
-
-The application is automatically deployed to **Vercel** with continuous integration on every push to the `main` branch.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/zefparis/iasolution)
-
-### Deployment Configuration
-
-- **Platform**: Vercel
-- **Branch**: `main` (production)
-- **Build Command**: `npm run build`
-- **Output Directory**: `.next`
-- **Environment Variables**: None required
-
-### CI/CD Pipeline
-
-- Automated testing on pull requests
-- Preview deployments for feature branches
-- Automatic production deployment on merge to main
-- Built-in performance monitoring
-
----
-
-## GDPR Compliance Details
-
-IAS Solution maintains **full GDPR compliance** across all platforms:
-
-- No automatic data collection in applications
-- Explicit cookie consent management
-- Comprehensive privacy policy documentation
-- Clear user rights explanation (access, rectification, deletion, portability)
-- Dedicated data protection contact: support@ia-solution.fr
-- Limited data retention period (maximum 13 months)
-- Regular compliance audits
-- Documented data processing procedures
-
----
-
-## Contributing
-
-We welcome contributions to improve the platform. Please follow these guidelines:
-
-**1. Fork the repository**
-
-**2. Create a feature branch**
-```bash
-git checkout -b feature/your-feature-name
+```env
+# Brevo (email)
+BREVO_API_KEY=your_api_key
+BREVO_SENDER_EMAIL=contact@ia-solution.fr
+BREVO_SENDER_NAME=IA Solution
 ```
 
-**3. Commit your changes**
-```bash
-git commit -m "Add: detailed description of your changes"
-```
+---
 
-**4. Push to your branch**
-```bash
-git push origin feature/your-feature-name
-```
+## 🔬 Axes de Recherche
 
-**5. Open a Pull Request**
+### 1. Biométrie Cognitive
+Identification de l'humain par ses patterns cognitifs uniques. Tests validés scientifiquement depuis 1868.
 
-Provide a clear description of your changes and any related issue numbers.
+### 2. Cryptographie des Croyances
+Fusion Western + BaZi via opérateurs affines déterministes. Swiss Ephemeris pour calculs astronomiques.
 
-### Code Standards
+### 3. Résistance à l'IA Générative
+Détection GPT-4V, Claude 3, Gemini Pro avec >99% de précision. Architecture Defense-in-Depth.
 
-- Follow TypeScript best practices
-- Maintain existing code style
-- Add appropriate tests
-- Update documentation as needed
+### 4. Cryptographie Post-Quantique
+Préparation NIST-PQC. QSIG ready dans le format U7. Production-ready 2026.
 
 ---
 
-## Project Status
+## 📚 Publications
 
-| Component | Status |
-|-----------|--------|
-| Website | Production |
-| Legal Pages | GDPR Compliant |
-| Mobile Apps | Equi Saddles on Play Store |
-| New Features | In Development |
+- **Thèse doctorale** : Authentification cognitive et différenciation humain/IA *(en finalisation)*
+- **Documentation technique** : HCS-U7 Specs & Patent Corpus *(propriétaire)*
+- **Références scientifiques** : Tests cognitifs fondamentaux (Stroop 1935, N-Back 1958, etc.)
+- **Benchmarks** : Résultats validés sur 230+ tests
 
 ---
 
-## Contact
+## 👤 Fondateur
 
-**Email**: support@ia-solution.fr  
-**Website**: [https://ia-solution.fr](https://ia-solution.fr)  
-**GitHub**: [https://github.com/zefparis/iasolution](https://github.com/zefparis/iasolution)
+**Benjamin BARRERE**  
+*Founder & Research Director*
+
+- 3 ans de R&D en neurosciences cognitives et cryptographie
+- 2 brevets INPI déposés
+- Thèse doctorale en cours
 
 ---
 
-## License
+## 📞 Contact
 
-© 2025 IAS Solution. All rights reserved.
+| | |
+|---|---|
+| **Email** | contact@ia-solution.fr |
+| **Website** | [ia-solution.fr](https://ia-solution.fr) |
+| **GitHub** | [github.com/zefparis/iasolution](https://github.com/zefparis/iasolution) |
 
-The source code of this project is proprietary to IAS Solution. Any reproduction, in whole or in part, is prohibited without express written authorization.
+### Collaboration
+
+- **Recherche** : Collaboration R&D, projets conjoints, co-publication
+- **Enterprise** : Licence commerciale, intégration API, support dédié
+- **Académique** : Accès recherche, données anonymisées, co-direction thèse
+
+---
+
+## 📄 Conformité
+
+- **RGPD** : Politique de confidentialité complète
+- **DSP2/PSD2** : Conformité SCA (Strong Customer Authentication)
+- **INPI** : 2 brevets déposés et protégés
+
+---
+
+## 📜 Licence
+
+© 2025 IAS Solution. Tous droits réservés.
+
+Le code source de ce projet est propriétaire. Toute reproduction, totale ou partielle, est interdite sans autorisation écrite expresse.
+
+Les brevets FR2514274 et FR2514546 protègent les innovations technologiques décrites.
 
 ---
 
 <div align="center">
 
-**IAS Solution** | [Website](https://ia-solution.fr) • [Contact](mailto:support@ia-solution.fr) • [GitHub](https://github.com/zefparis/iasolution)
+**HCS-U7** | *Human Cognitive Signature*
+
+[Website](https://ia-solution.fr) • [Contact](mailto:contact@ia-solution.fr) • [GitHub](https://github.com/zefparis/iasolution)
+
+*Authentification cognitive résistante à l'IA générative*
 
 </div>
