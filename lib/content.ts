@@ -541,6 +541,109 @@ export const footer = {
   },
 };
 
+// Solution Section
+export const solution = {
+  title: "Notre solution : HCS-U7",
+  headline: "Mesurer ce que l'IA ne peut pas simuler :\nles contraintes neurobiologiques du cerveau humain.",
+  content: `HCS-U7 exploite 6 tests cognitifs validés scientifiquement depuis les années 1930. Chaque test mesure une limitation fondamentale du cerveau humain — temps de réaction, interférence cognitive, capacité de mémoire de travail — que l'IA ne peut pas reproduire authentiquement.
+
+Le résultat : une précision de 98.9% avec un taux de détection des IA génératives supérieur à 99%.`,
+};
+
+// Technology Section (cognitive tests)
+export const technology = {
+  title: "Tests Cognitifs Validés",
+  subtitle: "6 tests issus de décennies de recherche en neurosciences cognitives",
+  tests: [
+    {
+      icon: "Brain",
+      name: "Test de Stroop",
+      year: "1935",
+      description: "Mesure l'interférence cognitive. L'humain ralentit de 100-200ms sur les items incongruents, l'IA répond instantanément.",
+    },
+    {
+      icon: "RefreshCw",
+      name: "N-Back",
+      year: "1958",
+      description: "Teste la mémoire de travail (7±2 éléments). Performance humaine se dégrade au-delà de 3-back, l'IA reste constante.",
+    },
+    {
+      icon: "Shuffle",
+      name: "Trail Making",
+      year: "1938",
+      description: "Mesure le coût de switching cognitif (200-500ms). L'IA n'a pas de coût de switching mesurable.",
+    },
+    {
+      icon: "Hash",
+      name: "Digit Span",
+      year: "1939",
+      description: "Évalue l'empan mnésique et la rétention court terme. Patterns d'erreurs caractéristiques chez l'humain.",
+    },
+    {
+      icon: "Zap",
+      name: "Reaction Time",
+      year: "1868",
+      description: "Variabilité temporelle 50-150ms chez l'humain. L'IA répond en <30ms avec régularité >80%.",
+    },
+    {
+      icon: "Mic",
+      name: "RAN Vocal",
+      year: "1974",
+      description: "Dénomination rapide avec analyse des pauses et hésitations. Patterns vocaux impossibles à simuler.",
+    },
+  ],
+  architecture: {
+    title: "Architecture Defense-in-Depth",
+    layers: [
+      { level: "L7", name: "Cloudflare WAF — Filtrage applicatif" },
+      { level: "L6", name: "Rate Limiting — Anti-DDoS adaptatif" },
+      { level: "L5", name: "Device Fingerprinting — 50+ signaux" },
+      { level: "L4", name: "Behavioral Analysis — Patterns navigation" },
+      { level: "L3", name: "HCS-U7 Core — Tests cognitifs adaptatifs" },
+      { level: "L2", name: "Trust Graph — Détection réseaux fraude" },
+      { level: "L1", name: "Celestial Entropy — Entropie astronomique" },
+    ],
+  },
+};
+
+// Use Cases Section
+export const useCases = {
+  title: "Cas d'usage",
+  subtitle: "HCS-U7 protège les points d'entrée critiques contre les bots et IA génératives",
+  cases: [
+    {
+      icon: "Building2",
+      title: "Banque & Fintech",
+      description: "Authentification forte PSD2/SCA, protection des virements, détection fraude en temps réel.",
+    },
+    {
+      icon: "ShoppingCart",
+      title: "E-commerce",
+      description: "Protection checkout, anti-scalping, détection comptes frauduleux et abus promotions.",
+    },
+    {
+      icon: "Landmark",
+      title: "Gouvernement",
+      description: "Sécurisation services publics, protection identité numérique, conformité eIDAS.",
+    },
+    {
+      icon: "Plug",
+      title: "API & SaaS",
+      description: "Protection endpoints sensibles, rate limiting intelligent, détection abus automatisés.",
+    },
+    {
+      icon: "Lock",
+      title: "Infrastructure critique",
+      description: "Accès systèmes SCADA/ICS, authentification opérateurs, audit trail complet.",
+    },
+    {
+      icon: "Bot",
+      title: "Anti-bot avancé",
+      description: "Remplacement CAPTCHA, protection formulaires, détection scraping et credential stuffing.",
+    },
+  ],
+};
+
 // Problem Section
 export const problem = {
   title: "Le problème : les CAPTCHA sont obsolètes",
