@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FileText, Book, Microscope, BarChart, ArrowRight } from "lucide-react";
-import { publications } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 
@@ -14,6 +14,9 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export function SectionPublications() {
+  const { content } = useLanguage();
+  const publications = content.publications;
+
   return (
     <section className="section relative overflow-hidden">
       {/* Background */}

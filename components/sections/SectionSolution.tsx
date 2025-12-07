@@ -1,9 +1,12 @@
 "use client";
 
-import { solution } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container, AnimatedSection } from "@/components/ui";
 
 export function SectionSolution() {
+  const { content } = useLanguage();
+  const solution = content.solution;
+
   return (
     <section className="section bg-bg-secondary">
       <Container className="text-center max-w-4xl">

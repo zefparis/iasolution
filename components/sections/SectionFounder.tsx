@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 import { MapPin, User } from "lucide-react";
-import { founder } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 import { Container } from "@/components/ui";
 
 export function SectionFounder() {
+  const { content } = useLanguage();
+  const founder = content.founder;
+
   return (
     <section className="section relative">
       <Container>

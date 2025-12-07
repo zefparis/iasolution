@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { performance as perfContent } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 import { Container, AnimatedSection } from "@/components/ui";
 
@@ -52,6 +52,9 @@ function AnimatedCounter({
 }
 
 export function SectionPerformance() {
+  const { content } = useLanguage();
+  const perfContent = content.performance;
+
   return (
     <section className="section bg-bg-secondary">
       <Container>

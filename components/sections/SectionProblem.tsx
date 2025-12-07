@@ -1,11 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { problem } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 import { Container, AnimatedSection } from "@/components/ui";
 
 export function SectionProblem() {
+  const { content } = useLanguage();
+  const problem = content.problem;
+
   return (
     <section className="section bg-bg-primary">
       <Container>

@@ -1,11 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { u7Format } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 
 export function SectionU7Format() {
+  const { content } = useLanguage();
+  const u7Format = content.u7Format;
+
   return (
     <section className="section relative overflow-hidden">
       {/* Background */}

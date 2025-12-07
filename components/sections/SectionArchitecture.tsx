@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Lock, Shield, Key, Activity, Star, Zap } from "lucide-react";
-import { architecture } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 
@@ -16,6 +16,9 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export function SectionArchitecture() {
+  const { content } = useLanguage();
+  const architecture = content.architecture;
+
   return (
     <section className="section relative">
       <Container>

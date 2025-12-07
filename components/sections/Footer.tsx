@@ -1,10 +1,14 @@
 "use client";
 
 import Link, { LinkProps } from "next/link";
-import { footer, siteConfig } from "@/lib/content";
+import { siteConfig } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 
 export function Footer() {
+  const { content } = useLanguage();
+  const footer = content.footer;
+
   return (
     <footer className="border-t border-white/[0.08] bg-bg-primary">
       <Container>

@@ -3,13 +3,15 @@
 import { useState, useEffect } from "react";
 import Link, { LinkProps } from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { navigation, siteConfig } from "@/lib/content";
+import { Menu, X, Globe } from "lucide-react";
+import { siteConfig } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, content } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,10 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleLanguage = () => {
+    setLanguage(language === "fr" ? "en" : "fr");
+  };
 
   return (
     <header
@@ -41,7 +47,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navigation.main.map((item) => (
+            {content.navigation.main.map((item) => (
               <Link
                 key={item.name}
                 href={item.href as LinkProps<string>["href"]}
@@ -58,13 +64,14 @@ export function Header() {
               Contact
             </Link>
             {/* Language Toggle */}
-            <div className="flex items-center gap-2 text-sm text-text-muted">
-              <span className="text-white font-medium">FR</span>
-              <span className="text-white/30">|</span>
-              <Link href={"/en" as LinkProps<string>["href"]} className="hover:text-white transition-colors">
-                EN
-              </Link>
-            </div>
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.08] hover:border-white/[0.15] transition-colors text-sm font-medium text-text-secondary hover:text-text-primary"
+              aria-label={language === "fr" ? "Switch to English" : "Passer en français"}
+            >
+              <Globe className="w-4 h-4" />
+              <span className="uppercase">{language === "fr" ? "EN" : "FR"}</span>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -90,7 +97,7 @@ export function Header() {
           >
             <Container>
               <div className="py-6 space-y-4">
-                {navigation.main.map((item) => (
+                {content.navigation.main.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href as LinkProps<string>["href"]}
@@ -107,13 +114,16 @@ export function Header() {
                 >
                   Contact
                 </Link>
-                <div className="flex items-center gap-2 text-sm text-text-muted pt-4 border-t border-white/[0.08]">
-                  <span className="text-white font-medium">FR</span>
-                  <span className="text-white/30">|</span>
-                  <Link href={"/en" as LinkProps<string>["href"]} className="hover:text-white transition-colors">
-                    EN
-                  </Link>
-                </div>
+                <button
+                  onClick={() => {
+                    toggleLanguage();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="flex items-center justify-center gap-2 w-full py-3 mt-2 rounded-lg bg-white/[0.03] border border-white/[0.08] text-text-secondary hover:text-white transition-colors"
+                >
+                  <Globe className="w-4 h-4" />
+                  <span>{language === "fr" ? "English" : "Français"}</span>
+                </button>
               </div>
             </Container>
           </motion.div>

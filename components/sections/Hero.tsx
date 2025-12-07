@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 import Link, { LinkProps } from "next/link";
-import { hero } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { heroSequence } from "@/lib/animations";
 import { Container, Button } from "@/components/ui";
 
 export function Hero() {
+  const { content } = useLanguage();
+  const hero = content.hero;
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Effects */}

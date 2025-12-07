@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 import { FileText, ArrowRight } from "lucide-react";
-import { patents } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 import { Container } from "@/components/ui";
 
 export function SectionPatents() {
+  const { content } = useLanguage();
+  const patents = content.patents;
+
   return (
     <section className="section relative">
       <Container>

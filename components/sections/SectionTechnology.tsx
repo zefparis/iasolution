@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Brain, RefreshCw, Shuffle, Hash, Zap, Mic } from "lucide-react";
-import { technology } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { staggerContainer, staggerItem, layerStagger, layerItem, viewportOnce } from "@/lib/animations";
 import { Container, AnimatedSection } from "@/components/ui";
 
@@ -16,6 +16,9 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export function SectionTechnology() {
+  const { content } = useLanguage();
+  const technology = content.technology;
+
   return (
     <section className="section bg-bg-primary">
       <Container>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Building2, ShoppingCart, Landmark, Plug, Lock, Bot } from "lucide-react";
-import { useCases } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 import { Container, AnimatedSection } from "@/components/ui";
 
@@ -16,6 +16,9 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export function SectionUseCases() {
+  const { content } = useLanguage();
+  const useCases = content.useCases;
+
   return (
     <section className="section bg-bg-primary">
       <Container>

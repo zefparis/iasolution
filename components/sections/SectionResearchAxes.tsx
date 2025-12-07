@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Brain, Star, Shield, Atom } from "lucide-react";
-import { researchAxes } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 
@@ -28,6 +28,9 @@ const iconColorMap: Record<string, string> = {
 };
 
 export function SectionResearchAxes() {
+  const { content } = useLanguage();
+  const researchAxes = content.researchAxes;
+
   return (
     <section className="section relative">
       <Container>

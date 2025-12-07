@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 import Link, { LinkProps } from "next/link";
-import { productHCS } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 
 export function SectionProductHCS() {
+  const { content } = useLanguage();
+  const productHCS = content.productHCS;
+
   return (
     <section className="section relative overflow-hidden">
       {/* Background gradient */}

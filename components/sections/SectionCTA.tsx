@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link, { LinkProps } from "next/link";
 import { Microscope, Building, GraduationCap } from "lucide-react";
-import { ctaSection } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 
@@ -14,6 +14,9 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export function SectionCTA() {
+  const { content } = useLanguage();
+  const ctaSection = content.ctaSection;
+
   return (
     <section className="section relative overflow-hidden">
       {/* Background gradient */}

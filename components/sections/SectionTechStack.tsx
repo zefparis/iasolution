@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Code, Database, Lock, Shield, Brain, Star } from "lucide-react";
-import { techStack } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 
@@ -25,6 +25,9 @@ const colorMap: Record<string, { bg: string; icon: string }> = {
 };
 
 export function SectionTechStack() {
+  const { content } = useLanguage();
+  const techStack = content.techStack;
+
   return (
     <section className="section relative">
       <Container>
