@@ -1,6 +1,6 @@
 {
-  "name": "ia-solution-portfolio",
-  "version": "1.0.0",
+  "name": "ia-solution-hcs-u7",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,7 +13,8 @@
     "lucide-react": "^0.476.0",
     "next": "^14.2.33",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-countup": "^6.5.3"
   },
   "devDependencies": {
     "@types/node": "20.11.30",

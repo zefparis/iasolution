@@ -1,0 +1,12 @@
+export { Header } from "./Header";
+export { Footer } from "./Footer";
+export { Hero } from "./Hero";
+export { SectionResearchAxes } from "./SectionResearchAxes";
+export { SectionProductHCS } from "./SectionProductHCS";
+export { SectionArchitecture } from "./SectionArchitecture";
+export { SectionU7Format } from "./SectionU7Format";
+export { SectionTechStack } from "./SectionTechStack";
+export { SectionPatents } from "./SectionPatents";
+export { SectionFounder } from "./SectionFounder";
+export { SectionPublications } from "./SectionPublications";
+export { SectionCTA } from "./SectionCTA";

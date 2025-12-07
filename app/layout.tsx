@@ -1,36 +1,34 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import type { ReactNode } from "react";
-import { LanguageProvider } from "@/contexts/LanguageContext";
+import { seo, siteConfig } from "@/lib/content";
 import "./globals.css";
 
-const font = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-primary",
+  variable: "--font-inter",
   display: "swap",
 });
 
-const siteTitle = "IA-Solution — Agence tech & IA";
-const siteDescription =
-  "IA-Solution accompagne les entreprises avec des sites web modernes, des applications personnalisées, l'automatisation intelligente et l'intégration d'IA.";
-const siteUrl = "https://www.ia-solution.fr";
-const siteImage = "/og-cover.jpg"; // mettre ton image OG dans /public
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
-// ✅ SEO Metadata
+const siteUrl = siteConfig.url;
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: siteTitle,
-  description: siteDescription,
-  keywords: [
-    "IA-Solution",
-    "agence web",
-    "agence IA",
-    "développement Next.js",
-    "applications web",
-    "automatisation",
-    "intelligence artificielle",
-    "design UI",
-  ],
+  title: {
+    default: seo.title,
+    template: "%s | IA Solution",
+  },
+  description: seo.description,
+  keywords: seo.keywords.split(", "),
+  authors: [{ name: "Benjamin Barrere" }],
+  creator: "IA Solution",
+  publisher: "IA Solution",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -38,43 +36,80 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: siteTitle,
-    description: siteDescription,
-    siteName: "IA-Solution",
+    title: seo.title,
+    description: seo.description,
+    siteName: siteConfig.name,
     locale: "fr_FR",
     images: [
       {
-        url: siteImage,
+        url: seo.ogImage,
         width: 1200,
         height: 630,
-        alt: "IA-Solution — Agence tech & IA",
-        type: "image/jpeg",
+        alt: "HCS-U7 — Authentification Cognitive Anti-IA",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteTitle,
-    description: siteDescription,
-    images: [siteImage],
+    title: seo.title,
+    description: seo.description,
+    images: [seo.ogImage],
   },
   alternates: {
     canonical: siteUrl,
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
-// ✅ Viewport (themeColor déplacé ici)
 export const viewport: Viewport = {
-  themeColor: "#0f172a", // cohérence mobile (bg-midnight)
+  themeColor: "#0D0D1A",
+  width: "device-width",
+  initialScale: 1,
+};
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/logo.png`,
+  founder: {
+    "@type": "Person",
+    name: "Benjamin Barrere",
+  },
+  description: seo.description,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2 rue du Sabotier",
+    addressLocality: "Saint-Bénézet",
+    postalCode: "30350",
+    addressRegion: "Occitanie",
+    addressCountry: "FR",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
+    contactType: "customer service",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr" dir="ltr" className="dark">
-      <body className={`${font.variable} bg-midnight text-white`}>
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}>
+        {children}
       </body>
     </html>
   );
