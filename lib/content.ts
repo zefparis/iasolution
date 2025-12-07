@@ -541,6 +541,20 @@ export const footer = {
   },
 };
 
+// Performance Section
+export const performance = {
+  title: "Performance & Résultats",
+  subtitle: "Métriques validées sur 230+ tests unitaires et benchmarks réels",
+  metrics: [
+    { value: 98.9, suffix: "%", label: "Précision globale", sublabel: "True Positive Rate" },
+    { value: 99.6, suffix: "%", label: "Détection bots", sublabel: "True Negative Rate" },
+    { value: 99, prefix: ">", suffix: "%", label: "Détection IA", sublabel: "GPT-4V, Claude 3, Gemini" },
+    { value: 50, prefix: "<", suffix: "ms", label: "Latence P95", sublabel: "Temps de réponse" },
+    { value: 230, suffix: "+", label: "Tests unitaires", sublabel: "Vitest coverage" },
+    { value: 2, suffix: "", label: "Brevets INPI", sublabel: "FR2514274, FR2514546" },
+  ],
+};
+
 // SEO Metadata
 export const seo = {
   title: "HCS-U7 — Authentification Cognitive Anti-IA | IA Solution",
