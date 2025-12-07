@@ -541,6 +541,34 @@ export const footer = {
   },
 };
 
+// Problem Section
+export const problem = {
+  title: "Le problème : les CAPTCHA sont obsolètes",
+  content: `En 2024, les chercheurs de l'ETH Zurich ont démontré que **les IA génératives contournent 94% des CAPTCHA** traditionnels. GPT-4V, Claude 3 et Gemini Pro résolvent instantanément les tests visuels conçus pour bloquer les bots.
+
+Les systèmes d'authentification actuels reposent sur des défis que l'IA maîtrise désormais mieux que les humains : reconnaissance d'images, lecture de texte déformé, puzzles logiques.
+
+**Le paradigme doit changer.** Au lieu de tester ce que l'IA fait bien, nous devons mesurer ce qu'elle ne peut pas simuler : les contraintes neurobiologiques fondamentales du cerveau humain.`,
+  source: "Source : ETH Zurich, 2024 — « Breaking CAPTCHA with Vision-Language Models »",
+  stats: [
+    {
+      value: "94%",
+      label: "des CAPTCHA contournés par l'IA",
+      source: "ETH Zurich, 2024",
+    },
+    {
+      value: "<30ms",
+      label: "temps de réponse des IA génératives",
+      source: "Benchmark interne HCS-U7",
+    },
+    {
+      value: "$5.4B",
+      label: "pertes annuelles dues aux bots",
+      source: "Imperva Bad Bot Report, 2024",
+    },
+  ],
+};
+
 // Performance Section
 export const performance = {
   title: "Performance & Résultats",
