@@ -47,13 +47,18 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {content.navigation.main.map((item) => (
+            {content.navigation.main.map((item: { name: string; href: string; badge?: string }) => (
               <Link
                 key={item.name}
                 href={item.href as LinkProps<string>["href"]}
-                className="text-sm text-text-secondary hover:text-white transition-colors relative group"
+                className="text-sm text-text-secondary hover:text-white transition-colors relative group flex items-center gap-1"
               >
                 {item.name}
+                {item.badge && (
+                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-accent-purple/20 text-accent-purple border border-accent-purple/30">
+                    {item.badge}
+                  </span>
+                )}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-accent-purple to-accent-blue group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
@@ -97,14 +102,19 @@ export function Header() {
           >
             <Container>
               <div className="py-6 space-y-4">
-                {content.navigation.main.map((item) => (
+                {content.navigation.main.map((item: { name: string; href: string; badge?: string }) => (
                   <Link
                     key={item.name}
                     href={item.href as LinkProps<string>["href"]}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-base text-text-secondary hover:text-white transition-colors py-2"
+                    className="flex items-center gap-2 text-base text-text-secondary hover:text-white transition-colors py-2"
                   >
                     {item.name}
+                    {item.badge && (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-accent-purple/20 text-accent-purple border border-accent-purple/30">
+                        {item.badge}
+                      </span>
+                    )}
                   </Link>
                 ))}
                 <Link

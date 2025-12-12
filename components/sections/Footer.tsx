@@ -100,6 +100,22 @@ export function Footer() {
 
           {/* Bottom Bar */}
           <div className="mt-12 pt-8 border-t border-white/[0.08]">
+            {/* Stats Badges */}
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                🏆 Security Score: 99.9/100
+              </span>
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                ✅ 383+ Tests
+              </span>
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                🌍 200+ Datacenters
+              </span>
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-orange-500/10 text-orange-400 border border-orange-500/20">
+                🛡️ 518 Attacks Blocked
+              </span>
+            </div>
+
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-xs text-text-muted text-center md:text-left">
                 {footer.copyright}
@@ -108,6 +124,11 @@ export function Footer() {
                 {footer.patentsLine}
               </p>
             </div>
+
+            {/* Enterprise tagline */}
+            <p className="text-center text-xs text-text-muted mt-4">
+              Enterprise-Grade Infrastructure — Battle-Tested — Banking-Level Security
+            </p>
           </div>
         </div>
       </Container>

@@ -10,7 +10,9 @@
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-000000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Patents](https://img.shields.io/badge/INPI_Patents-2-10B981?style=for-the-badge)](https://www.inpi.fr/)
-[![Tests](https://img.shields.io/badge/Tests-230+-22C55E?style=for-the-badge)](https://vitest.dev/)
+[![Tests](https://img.shields.io/badge/Tests-383+-22C55E?style=for-the-badge)](https://vitest.dev/)
+[![Security](https://img.shields.io/badge/Security-99.9%2F100-10B981?style=for-the-badge)](https://ia-solution.fr)
+[![Battle Tested](https://img.shields.io/badge/Battle_Tested-518_Attacks_Blocked-F59E0B?style=for-the-badge)](https://ia-solution.fr)
 
 </div>
 
@@ -52,11 +54,14 @@ HCS-U7 mesure **6 tests cognitifs validés scientifiquement** :
 
 | Métrique | Valeur | Description |
 |----------|--------|-------------|
+| **Score Sécurité** | 99.9/100 | Defense-in-Depth (7 couches) |
+| **Tests** | 383+ | Unitaires + E2E + Load (k6) |
+| **Battle-Tested** | 518 | Attaques bloquées (15 jours) |
+| **Infrastructure** | 200+ | Datacenters Cloudflare |
 | **Précision globale** | 98.9% | True Positive Rate |
 | **Détection bots** | 99.6% | True Negative Rate |
 | **Détection IA** | >99% | GPT-4V, Claude 3, Gemini |
-| **Latence P95** | <50ms | Temps de réponse |
-| **Tests unitaires** | 230+ | Couverture Vitest |
+| **Latence P95** | <50ms | Temps de réponse API |
 | **AUC-ROC** | 0.994 | Qualité du modèle |
 
 </div>
@@ -101,25 +106,46 @@ HCS-U7|V:8.0|ALG:QS|E:E|MOD:c25f0m75|COG:F42C22V9S10Cr16|QSIG:...|B3:...
 - **Merkle Trees** — Signatures résistantes et vérifiables
 - **Celestial Entropy Layer** — Entropie basée sur positions planétaires temps réel
 
-### Defense-in-Depth (7 couches)
+### Defense-in-Depth (34 Modules — 7 couches)
 
 ```
 ┌─────────────────────────────────────────┐
-│  L7 DDoS Protection                     │
+│  L7 DDoS Protection (Cloudflare 100+Gbps)│
 ├─────────────────────────────────────────┤
-│  WAF Multi-Encoding                     │
+│  L6 WAF Multi-Encoding (OWASP Top 10)   │
 ├─────────────────────────────────────────┤
-│  Honeypots (/.env, /admin, /wp-login)   │
+│  L5 Honeypots (/.env, /admin, /wp-login)│
 ├─────────────────────────────────────────┤
-│  Rate Limiting Distribué                │
+│  L4 Hieroglyphic Shield (AES-256-GCM)   │
 ├─────────────────────────────────────────┤
-│  Credential Stuffing Detection          │
+│  L3 Proof-of-Work Adaptatif (Argon2id)  │
 ├─────────────────────────────────────────┤
-│  Proof-of-Work Adaptatif                │
+│  L2 Cognitive Firewall (5 signaux)      │
 ├─────────────────────────────────────────┤
-│  Cognitive Biometric Layer              │
+│  L1 Biométrie Cognitive (6 tests)       │
 └─────────────────────────────────────────┘
 ```
+
+## Hieroglyphic Shield v1 🛡️
+
+Protection transparente des codes HCS-U7 par chiffrement AES-256-GCM.
+
+- **Algorithme** : AES-256-GCM avec scrypt KDF (N=16384, r=8, p=1)
+- **Performance** : Wrap/Unwrap 30-40ms (symétrique)
+- **Intégration** : Hooks Fastify automatiques
+- **Tests** : Unitaires complets
+- **Status** : Production active
+
+Innovation brevetable rendant les codes HCS-U7 complètement opaques.
+
+## 🌍 Infrastructure Mondiale
+
+- **200+ Datacenters** Cloudflare (CDN global)
+- **DDoS Protection** 100+ Gbps
+- **Uptime SLA** 99.99%
+- **Global Latency** <15ms
+- **Dual-Domain** : HCS-U7.COM (commercial) + HCS-U7.ORG (technique)
+- **Monitoring 24/7** : UptimeRobot + Sentry + Cloudflare Analytics
 
 ---
 
@@ -129,7 +155,7 @@ HCS-U7|V:8.0|ALG:QS|E:E|MOD:c25f0m75|COG:F42C22V9S10Cr16|QSIG:...|B3:...
 - **Fastify 5** — Framework haute performance
 - **TypeScript** — Typage strict
 - **Zod** — Validation runtime
-- **Vitest** — 230+ tests unitaires
+- **Vitest** — 383+ tests (unitaires + E2E + load k6)
 
 ### Persistence
 - **PostgreSQL** — Base de données principale

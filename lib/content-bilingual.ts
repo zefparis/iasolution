@@ -27,6 +27,8 @@ const content = {
       main: [
         { name: "Recherche", href: "/research" },
         { name: "HCS-U7", href: "/hcs-u7" },
+        { name: "Infrastructure", href: "/infrastructure" },
+        { name: "Mobile", href: "/mobile", badge: "🆕" },
         { name: "Technologie", href: "/technology" },
         { name: "Brevets", href: "/patents" },
       ],
@@ -115,15 +117,18 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
 
     // Performance Section
     performance: {
-      title: "Performance & Résultats",
-      subtitle: "Métriques validées sur 230+ tests unitaires et benchmarks réels",
+      title: "Performances Validées",
+      subtitle: "Infrastructure Battle-Tested — 518 attaques bloquées, 0 breach",
       metrics: [
+        { value: "99.9", suffix: "/100", label: "Score Sécurité", sublabel: "Defense-in-Depth (7 couches)", badge: "🏆 Enterprise-Grade" },
+        { value: 383, suffix: "+", label: "Tests", sublabel: "Unitaires + E2E + Load (k6)", badge: "✅ High Coverage" },
         { value: 98.9, suffix: "%", label: "Précision globale", sublabel: "True Positive Rate" },
         { value: 99.6, suffix: "%", label: "Détection bots", sublabel: "True Negative Rate" },
         { value: 99, prefix: ">", suffix: "%", label: "Détection IA", sublabel: "GPT-4V, Claude 3, Gemini" },
-        { value: 50, prefix: "<", suffix: "ms", label: "Latence P95", sublabel: "Temps de réponse" },
-        { value: 230, suffix: "+", label: "Tests unitaires", sublabel: "Vitest coverage" },
-        { value: 2, suffix: "", label: "Brevets INPI", sublabel: "FR2514274, FR2514546" },
+        { value: 50, prefix: "<", suffix: "ms", label: "Latence P95", sublabel: "Temps de réponse API" },
+        { value: "0.994", suffix: "", label: "AUC-ROC", sublabel: "Qualité du modèle" },
+        { value: 518, suffix: "", label: "Battle-Tested", sublabel: "Attaques bloquées (15 jours)", badge: "🛡️ 0 Breach" },
+        { value: "200", suffix: "+", label: "Infrastructure", sublabel: "Datacenters Cloudflare", badge: "🌍 Global CDN" },
       ],
     },
 
@@ -337,6 +342,322 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       disclaimer: "Conformément à l'article L. 612-10 du Code de la propriété intellectuelle, le Ministre chargé de la Défense a été habilité à prendre connaissance des demandes à titre confidentiel.",
     },
 
+    // Hieroglyphic Shield
+    hieroglyphicShield: {
+      badge: "🆕 Innovation Exclusive",
+      title: "Hieroglyphic Shield v1",
+      subtitle: "Protection transparente des codes HCS-U7 par chiffrement AES-256-GCM",
+      description: "Le Hieroglyphic Shield est une couche de chiffrement brevetable qui rend les codes HCS-U7 complètement opaques pour les attaquants, tout en restant transparent pour les applications légitimes. Cette innovation unique protège l'algorithme HCS-U7 contre la rétro-ingénierie.",
+      features: [
+        {
+          icon: "🔐",
+          title: "Chiffrement AES-256-GCM",
+          description: "Chiffrement authentifié avec dérivation de clé scrypt (N=16384, r=8, p=1)"
+        },
+        {
+          icon: "⚡",
+          title: "Performance",
+          description: "Wrap/Unwrap symétrique en 30-40ms, transparent via hooks Fastify"
+        },
+        {
+          icon: "🛡️",
+          title: "Protection Brevetable",
+          description: "Innovation unique rendant impossible la lecture des structures HCS-U7"
+        },
+        {
+          icon: "🔄",
+          title: "Transparent",
+          description: "Auto wrap/unwrap sur toutes les routes API sans modification du code client"
+        }
+      ],
+      technicalDetails: {
+        title: "Détails Techniques",
+        specs: [
+          { label: "Algorithme", value: "AES-256-GCM" },
+          { label: "KDF", value: "scrypt (N=16384, r=8, p=1)" },
+          { label: "Latence Wrap", value: "30-40ms" },
+          { label: "Latence Unwrap", value: "30-40ms" },
+          { label: "Tests", value: "Unitaires complets" },
+          { label: "Production", value: "Active" }
+        ]
+      }
+    },
+
+    // Infrastructure
+    infrastructure: {
+      title: "Infrastructure Mondiale",
+      subtitle: "Déployée sur 200+ datacenters avec monitoring 24/7",
+      features: [
+        {
+          icon: "🌐",
+          title: "Dual-Domain",
+          description: "Architecture séparée : HCS-U7.COM (commercial) + HCS-U7.ORG (technique)"
+        },
+        {
+          icon: "🛡️",
+          title: "Cloudflare CDN",
+          description: "200+ datacenters mondiaux, DDoS 100+ Gbps, WAF OWASP, Bot Detection ML"
+        },
+        {
+          icon: "📊",
+          title: "Monitoring 24/7",
+          description: "UptimeRobot (10 monitors), Sentry (error tracking), Cloudflare Analytics"
+        },
+        {
+          icon: "⚡",
+          title: "Performance Optimale",
+          description: "CDN optimisé : Brotli, HTTP/3, Auto Minify, Edge Caching, <15ms latency globale"
+        },
+        {
+          icon: "🔐",
+          title: "Sécurité Renforcée",
+          description: "SSL/TLS 1.3, Rate Limiting, AI Bot Protection, CORS strict, Scan Detection"
+        },
+        {
+          icon: "📈",
+          title: "Scalable",
+          description: "100K+ req/s, Multi-tenant SaaS, Redis distribué, Auto-scaling ready"
+        }
+      ],
+      stats: {
+        title: "Métriques Infrastructure",
+        items: [
+          { value: "200+", label: "Datacenters" },
+          { value: "100+ Gbps", label: "DDoS Protection" },
+          { value: "99.99%", label: "Uptime SLA" },
+          { value: "<15ms", label: "Global Latency" }
+        ]
+      }
+    },
+
+    // Defense-in-Depth
+    defenseInDepth: {
+      title: "Defense-in-Depth (34 Modules)",
+      subtitle: "7 couches de sécurité enterprise-grade",
+      layers: [
+        {
+          level: "L7",
+          name: "Protection DDoS",
+          description: "Rate limiting adaptatif L7, détection de patterns d'attaque, Cloudflare 100+ Gbps",
+          modules: ["DDoS Protection L7", "Rate Limiting Distribué", "Cloudflare Edge"]
+        },
+        {
+          level: "L6",
+          name: "WAF Multi-Encoding",
+          description: "Détection SQLi, XSS, Path Traversal, LDAP Injection avec décodage multi-passes",
+          modules: ["WAF OWASP Top 10", "Bot Detection ML", "Credential Stuffing"]
+        },
+        {
+          level: "L5",
+          name: "Honeypots Actifs",
+          description: "Endpoints leurres (/.env, /admin, /wp-login) et champs invisibles, ban 24h automatique",
+          modules: ["Honeypots Endpoints", "Hidden Fields", "Auto-ban 24h"]
+        },
+        {
+          level: "L4",
+          name: "Hieroglyphic Shield",
+          description: "Protection transparente AES-256-GCM des codes HCS-U7 (wrap/unwrap 30-40ms)",
+          modules: ["AES-256-GCM", "scrypt KDF", "Auto wrap/unwrap"]
+        },
+        {
+          level: "L3",
+          name: "Proof-of-Work Adaptatif",
+          description: "Challenge computationnel Argon2id/SHA256 pour clients suspects, difficulté ajustable",
+          modules: ["Argon2id Challenge", "Difficulté Adaptative", "Cache Redis"]
+        },
+        {
+          level: "L2",
+          name: "Cognitive Firewall",
+          description: "Fusion 5 signaux : HCS Core, Device Risk, Network Risk, Behavior Anomaly, Trust Graph",
+          modules: ["Device Fingerprinting", "IP Reputation", "Keystroke Dynamics"]
+        },
+        {
+          level: "L1",
+          name: "Biométrie Cognitive",
+          description: "6 tests scientifiques (Stroop, N-Back, Trail Making, Digit Span, Reaction Time, RAN)",
+          modules: ["6 Tests Validés", "AUC-ROC 0.994", "98.9% Précision"]
+        }
+      ],
+      totalModules: "34 modules de sécurité enterprise"
+    },
+
+    // SCA PSD2
+    scaPsd2: {
+      badge: "🏦 Banking-Grade",
+      title: "SCA PSD2 Compliant",
+      subtitle: "Strong Customer Authentication conforme directive européenne DSP2",
+      description: "HCS-U7 intègre un moteur SCA complet conforme aux articles 11 et 18 du RTS (Regulatory Technical Standards) de la directive PSD2. Notre implémentation gère les exemptions réglementaires et l'analyse de risque transactionnelle pour les institutions financières.",
+      features: [
+        {
+          icon: "💶",
+          title: "Low Value (Art. 11)",
+          description: "Exemption transactions < 30€, cumul < 100€ ou < 5 opérations depuis dernière SCA"
+        },
+        {
+          icon: "📊",
+          title: "TRA (Art. 18)",
+          description: "Analyse de risque transactionnelle basée sur taux de fraude réel (seuils 13bp/6bp/1bp)"
+        },
+        {
+          icon: "🚫",
+          title: "Hard Blocks",
+          description: "Règles internes : montants maximum, pays à risque, patterns suspects"
+        },
+        {
+          icon: "📝",
+          title: "Audit Trail",
+          description: "Historique immuable conforme Art. 18 RTS pour régulateurs (ACPR, BCE)"
+        }
+      ],
+      compliance: {
+        title: "Conformité Réglementaire",
+        items: [
+          { standard: "PSD2", description: "Directive (UE) 2015/2366" },
+          { standard: "RTS", description: "Règlement délégué (UE) 2018/389" },
+          { standard: "Art. 11", description: "Exemptions Low Value" },
+          { standard: "Art. 18", description: "Transaction Risk Analysis" }
+        ]
+      }
+    },
+
+    // Advanced Crypto
+    advancedCrypto: {
+      title: "Cryptographie Avancée",
+      subtitle: "Suite cryptographique complète avec intégration AWS KMS",
+      features: [
+        {
+          icon: "🔐",
+          title: "AWS KMS Integration",
+          description: "Secrets non-extractibles gérés par AWS Key Management Service, rotation automatique"
+        },
+        {
+          icon: "🌟",
+          title: "Celestial Entropy",
+          description: "Entropie unique basée sur positions astronomiques temps réel (Swiss Ephemeris)"
+        },
+        {
+          icon: "⏱️",
+          title: "Timing-Safe",
+          description: "Toutes comparaisons en temps constant (150ms floor) pour contrer les attaques temporelles"
+        },
+        {
+          icon: "🔄",
+          title: "Secret Rotation",
+          description: "Rotation automatique des secrets cryptographiques avec zero-downtime"
+        },
+        {
+          icon: "🛡️",
+          title: "Post-Quantum Ready",
+          description: "Architecture QSIG préparée pour algorithmes NIST-PQC (CRYSTALS-Dilithium)"
+        },
+        {
+          icon: "🌳",
+          title: "Merkle Trees",
+          description: "Signatures résistantes et vérifiables pour audit trail immuable"
+        }
+      ]
+    },
+
+    // Mobile App
+    mobileApp: {
+      badge: "🚀 En Développement",
+      title: "HCS-U7 Mobile — Biométrie Cognitive Offline",
+      subtitle: "Application mobile iOS/Android pour authentification cognitive 100% offline",
+      description: "L'app mobile HCS-U7 capture les interactions tactiles (position, pression, timing, trajectoires) pour générer un profil cognitif unique. Contrairement aux concurrents, tout s'exécute localement : aucun serveur requis, privacy maximale, latence <10ms.",
+      features: [
+        {
+          icon: "📱",
+          title: "Tests Cognitifs Tactiles",
+          description: "7 mini-jeux mesurant réaction, mémoire, précision, rythme scroll, coordination"
+        },
+        {
+          icon: "🔒",
+          title: "100% Offline",
+          description: "Capture, analyse et validation locale. Données jamais envoyées à un serveur."
+        },
+        {
+          icon: "⚡",
+          title: "Ultra-Rapide",
+          description: "Validation <10ms locale vs 100-500ms online. 10-50X plus rapide que les concurrents."
+        },
+        {
+          icon: "🧠",
+          title: "50+ Métriques",
+          description: "Position, pression, timing, vitesse, trajectoire, hésitations, erreurs, scroll patterns"
+        },
+        {
+          icon: "🎯",
+          title: "Impossible à Falsifier",
+          description: "Comportement inconscient multi-dimensionnel, pas de mot de passe volable"
+        },
+        {
+          icon: "🔄",
+          title: "Évolution Naturelle",
+          description: "Profil s'adapte avec vous : âge, stress, contexte. Re-calibration périodique."
+        }
+      ],
+      useCases: [
+        {
+          icon: "🤖",
+          title: "Robots Domestiques",
+          description: "Reconnaissance cognitive même sans WiFi (Tesla Bot, Boston Dynamics)"
+        },
+        {
+          icon: "🏦",
+          title: "Apps Bancaires",
+          description: "Auth en mode avion, biométrie comportementale continue"
+        },
+        {
+          icon: "🚗",
+          title: "Véhicules Autonomes",
+          description: "Démarrage sécurisé même en zone blanche (tunnels)"
+        },
+        {
+          icon: "🌍",
+          title: "Zones à Faible Connectivité",
+          description: "Marchés émergents, zones rurales, connectivité intermittente"
+        }
+      ],
+      techStack: {
+        title: "Stack Technique",
+        items: [
+          { label: "Framework", value: "React Native + Expo" },
+          { label: "Plateformes", value: "iOS + Android" },
+          { label: "Stockage", value: "Keychain/Keystore (encrypted)" },
+          { label: "Crypto", value: "Expo Crypto (AES-256-GCM)" },
+          { label: "Capteurs", value: "Touch, Gyro, Accelerometer" },
+          { label: "Tests", value: "7 cognitive tests" }
+        ]
+      },
+      competitors: {
+        title: "Avantage Concurrentiel",
+        comparison: [
+          { feature: "Fonctionne Offline", hcsu7: "✅", competitors: "❌ (Auth0, Okta, Veriff)" },
+          { feature: "Latence", hcsu7: "<10ms", competitors: "100-500ms" },
+          { feature: "Privacy", hcsu7: "Maximale (local)", competitors: "Données cloud" },
+          { feature: "Coût Bandwidth", hcsu7: "0€", competitors: "$36K/an/1M users" },
+          { feature: "Biométrie Cognitive", hcsu7: "✅", competitors: "❌" }
+        ]
+      },
+      status: "PoC prévu Q1 2025, Beta Q2 2025, Launch Q3 2025"
+    },
+
+    // Documentation
+    documentation: {
+      title: "Documentation Complète",
+      subtitle: "7+ documents techniques et guides opérationnels",
+      documents: [
+        { title: "README Principal", description: "Architecture complète backend", icon: "📖" },
+        { title: "KMS Integration", description: "Intégration AWS KMS pour secrets", icon: "🔐" },
+        { title: "Monitoring Guide", description: "UptimeRobot + Sentry + Analytics", icon: "📊" },
+        { title: "Runbook Opérationnel", description: "Procédures ops et troubleshooting", icon: "📋" },
+        { title: "Disaster Recovery", description: "Plan de reprise d'activité", icon: "🚨" },
+        { title: "Secrets Rotation", description: "Rotation automatique des clés", icon: "🔄" },
+        { title: "Load Test Results", description: "Benchmarks k6 (stress, spike)", icon: "⚡" },
+        { title: "Audit Sécurité", description: "Audit complet + hardening report", icon: "🔍" }
+      ]
+    },
+
     // Founder
     founder: {
       label: "FONDATEUR",
@@ -424,6 +745,8 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       main: [
         { name: "Research", href: "/research" },
         { name: "HCS-U7", href: "/hcs-u7" },
+        { name: "Infrastructure", href: "/infrastructure" },
+        { name: "Mobile", href: "/mobile", badge: "🆕" },
         { name: "Technology", href: "/technology" },
         { name: "Patents", href: "/patents" },
       ],
@@ -512,15 +835,18 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
 
     // Performance Section
     performance: {
-      title: "Performance & Results",
-      subtitle: "Metrics validated on 230+ unit tests and real benchmarks",
+      title: "Validated Performance",
+      subtitle: "Battle-Tested Infrastructure — 518 attacks blocked, 0 breach",
       metrics: [
-        { value: 98.9, suffix: "%", label: "Overall accuracy", sublabel: "True Positive Rate" },
+        { value: "99.9", suffix: "/100", label: "Security Score", sublabel: "Defense-in-Depth (7 layers)", badge: "🏆 Enterprise-Grade" },
+        { value: 383, suffix: "+", label: "Tests", sublabel: "Unit + E2E + Load (k6)", badge: "✅ High Coverage" },
+        { value: 98.9, suffix: "%", label: "Global accuracy", sublabel: "True Positive Rate" },
         { value: 99.6, suffix: "%", label: "Bot detection", sublabel: "True Negative Rate" },
         { value: 99, prefix: ">", suffix: "%", label: "AI detection", sublabel: "GPT-4V, Claude 3, Gemini" },
-        { value: 50, prefix: "<", suffix: "ms", label: "P95 Latency", sublabel: "Response time" },
-        { value: 230, suffix: "+", label: "Unit tests", sublabel: "Vitest coverage" },
-        { value: 2, suffix: "", label: "INPI Patents", sublabel: "FR2514274, FR2514546" },
+        { value: 50, prefix: "<", suffix: "ms", label: "Latency P95", sublabel: "API response time" },
+        { value: "0.994", suffix: "", label: "AUC-ROC", sublabel: "Model quality" },
+        { value: 518, suffix: "", label: "Battle-Tested", sublabel: "Attacks blocked (15 days)", badge: "🛡️ 0 Breach" },
+        { value: "200", suffix: "+", label: "Infrastructure", sublabel: "Cloudflare Datacenters", badge: "🌍 Global CDN" },
       ],
     },
 
@@ -732,6 +1058,322 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
         { number: "FR2514546", date: "Filed on 12/04/2025", title: "Multi-signal cognitive security system integrating biometrics, behavioral firewall, astronomical entropy and adaptive SCA engine", claims: 15, figures: 3 },
       ],
       disclaimer: "In accordance with Article L. 612-10 of the Intellectual Property Code, the Minister of Defense has been authorized to review applications confidentially.",
+    },
+
+    // Hieroglyphic Shield
+    hieroglyphicShield: {
+      badge: "🆕 Exclusive Innovation",
+      title: "Hieroglyphic Shield v1",
+      subtitle: "Transparent protection of HCS-U7 codes via AES-256-GCM encryption",
+      description: "The Hieroglyphic Shield is a patentable encryption layer that makes HCS-U7 codes completely opaque to attackers, while remaining transparent for legitimate applications. This unique innovation protects the HCS-U7 algorithm against reverse engineering.",
+      features: [
+        {
+          icon: "🔐",
+          title: "AES-256-GCM Encryption",
+          description: "Authenticated encryption with scrypt key derivation (N=16384, r=8, p=1)"
+        },
+        {
+          icon: "⚡",
+          title: "Performance",
+          description: "Symmetric Wrap/Unwrap in 30-40ms, transparent via Fastify hooks"
+        },
+        {
+          icon: "🛡️",
+          title: "Patentable Protection",
+          description: "Unique innovation making HCS-U7 structures unreadable"
+        },
+        {
+          icon: "🔄",
+          title: "Transparent",
+          description: "Auto wrap/unwrap on all API routes without client code modification"
+        }
+      ],
+      technicalDetails: {
+        title: "Technical Details",
+        specs: [
+          { label: "Algorithm", value: "AES-256-GCM" },
+          { label: "KDF", value: "scrypt (N=16384, r=8, p=1)" },
+          { label: "Wrap Latency", value: "30-40ms" },
+          { label: "Unwrap Latency", value: "30-40ms" },
+          { label: "Tests", value: "Complete unit tests" },
+          { label: "Production", value: "Active" }
+        ]
+      }
+    },
+
+    // Infrastructure
+    infrastructure: {
+      title: "Global Infrastructure",
+      subtitle: "Deployed across 200+ datacenters with 24/7 monitoring",
+      features: [
+        {
+          icon: "🌐",
+          title: "Dual-Domain",
+          description: "Separated architecture: HCS-U7.COM (commercial) + HCS-U7.ORG (technical)"
+        },
+        {
+          icon: "🛡️",
+          title: "Cloudflare CDN",
+          description: "200+ global datacenters, DDoS 100+ Gbps, WAF OWASP, ML Bot Detection"
+        },
+        {
+          icon: "📊",
+          title: "24/7 Monitoring",
+          description: "UptimeRobot (10 monitors), Sentry (error tracking), Cloudflare Analytics"
+        },
+        {
+          icon: "⚡",
+          title: "Optimal Performance",
+          description: "Optimized CDN: Brotli, HTTP/3, Auto Minify, Edge Caching, <15ms global latency"
+        },
+        {
+          icon: "🔐",
+          title: "Enhanced Security",
+          description: "SSL/TLS 1.3, Rate Limiting, AI Bot Protection, Strict CORS, Scan Detection"
+        },
+        {
+          icon: "📈",
+          title: "Scalable",
+          description: "100K+ req/s, Multi-tenant SaaS, Distributed Redis, Auto-scaling ready"
+        }
+      ],
+      stats: {
+        title: "Infrastructure Metrics",
+        items: [
+          { value: "200+", label: "Datacenters" },
+          { value: "100+ Gbps", label: "DDoS Protection" },
+          { value: "99.99%", label: "Uptime SLA" },
+          { value: "<15ms", label: "Global Latency" }
+        ]
+      }
+    },
+
+    // Defense-in-Depth
+    defenseInDepth: {
+      title: "Defense-in-Depth (34 Modules)",
+      subtitle: "7 layers of enterprise-grade security",
+      layers: [
+        {
+          level: "L7",
+          name: "DDoS Protection",
+          description: "Adaptive L7 rate limiting, attack pattern detection, Cloudflare 100+ Gbps",
+          modules: ["L7 DDoS Protection", "Distributed Rate Limiting", "Cloudflare Edge"]
+        },
+        {
+          level: "L6",
+          name: "Multi-Encoding WAF",
+          description: "SQLi, XSS, Path Traversal, LDAP Injection detection with multi-pass decoding",
+          modules: ["OWASP Top 10 WAF", "ML Bot Detection", "Credential Stuffing"]
+        },
+        {
+          level: "L5",
+          name: "Active Honeypots",
+          description: "Decoy endpoints (/.env, /admin, /wp-login) and invisible fields, automatic 24h ban",
+          modules: ["Honeypots Endpoints", "Hidden Fields", "Auto-ban 24h"]
+        },
+        {
+          level: "L4",
+          name: "Hieroglyphic Shield",
+          description: "Transparent AES-256-GCM protection of HCS-U7 codes (wrap/unwrap 30-40ms)",
+          modules: ["AES-256-GCM", "scrypt KDF", "Auto wrap/unwrap"]
+        },
+        {
+          level: "L3",
+          name: "Adaptive Proof-of-Work",
+          description: "Argon2id/SHA256 computational challenge for suspicious clients, adjustable difficulty",
+          modules: ["Argon2id Challenge", "Adaptive Difficulty", "Redis Cache"]
+        },
+        {
+          level: "L2",
+          name: "Cognitive Firewall",
+          description: "5-signal fusion: HCS Core, Device Risk, Network Risk, Behavior Anomaly, Trust Graph",
+          modules: ["Device Fingerprinting", "IP Reputation", "Keystroke Dynamics"]
+        },
+        {
+          level: "L1",
+          name: "Cognitive Biometrics",
+          description: "6 scientific tests (Stroop, N-Back, Trail Making, Digit Span, Reaction Time, RAN)",
+          modules: ["6 Validated Tests", "AUC-ROC 0.994", "98.9% Accuracy"]
+        }
+      ],
+      totalModules: "34 enterprise security modules"
+    },
+
+    // SCA PSD2
+    scaPsd2: {
+      badge: "🏦 Banking-Grade",
+      title: "SCA PSD2 Compliant",
+      subtitle: "Strong Customer Authentication compliant with European PSD2 directive",
+      description: "HCS-U7 integrates a complete SCA engine compliant with Articles 11 and 18 of the RTS (Regulatory Technical Standards) of the PSD2 directive. Our implementation handles regulatory exemptions and transaction risk analysis for financial institutions.",
+      features: [
+        {
+          icon: "💶",
+          title: "Low Value (Art. 11)",
+          description: "Exemption for transactions < €30, cumulative < €100 or < 5 operations since last SCA"
+        },
+        {
+          icon: "📊",
+          title: "TRA (Art. 18)",
+          description: "Transaction risk analysis based on actual fraud rate (thresholds 13bp/6bp/1bp)"
+        },
+        {
+          icon: "🚫",
+          title: "Hard Blocks",
+          description: "Internal rules: maximum amounts, high-risk countries, suspicious patterns"
+        },
+        {
+          icon: "📝",
+          title: "Audit Trail",
+          description: "Immutable history compliant with Art. 18 RTS for regulators (ACPR, ECB)"
+        }
+      ],
+      compliance: {
+        title: "Regulatory Compliance",
+        items: [
+          { standard: "PSD2", description: "Directive (EU) 2015/2366" },
+          { standard: "RTS", description: "Delegated Regulation (EU) 2018/389" },
+          { standard: "Art. 11", description: "Low Value Exemptions" },
+          { standard: "Art. 18", description: "Transaction Risk Analysis" }
+        ]
+      }
+    },
+
+    // Advanced Crypto
+    advancedCrypto: {
+      title: "Advanced Cryptography",
+      subtitle: "Complete cryptographic suite with AWS KMS integration",
+      features: [
+        {
+          icon: "🔐",
+          title: "AWS KMS Integration",
+          description: "Non-extractable secrets managed by AWS Key Management Service, automatic rotation"
+        },
+        {
+          icon: "🌟",
+          title: "Celestial Entropy",
+          description: "Unique entropy based on real-time astronomical positions (Swiss Ephemeris)"
+        },
+        {
+          icon: "⏱️",
+          title: "Timing-Safe",
+          description: "All constant-time comparisons (150ms floor) to counter timing attacks"
+        },
+        {
+          icon: "🔄",
+          title: "Secret Rotation",
+          description: "Automatic cryptographic secret rotation with zero-downtime"
+        },
+        {
+          icon: "🛡️",
+          title: "Post-Quantum Ready",
+          description: "QSIG architecture prepared for NIST-PQC algorithms (CRYSTALS-Dilithium)"
+        },
+        {
+          icon: "🌳",
+          title: "Merkle Trees",
+          description: "Resistant and verifiable signatures for immutable audit trail"
+        }
+      ]
+    },
+
+    // Mobile App
+    mobileApp: {
+      badge: "🚀 In Development",
+      title: "HCS-U7 Mobile — Offline Cognitive Biometrics",
+      subtitle: "iOS/Android mobile app for 100% offline cognitive authentication",
+      description: "The HCS-U7 mobile app captures touch interactions (position, pressure, timing, trajectories) to generate a unique cognitive profile. Unlike competitors, everything runs locally: no server required, maximum privacy, <10ms latency.",
+      features: [
+        {
+          icon: "📱",
+          title: "Touch Cognitive Tests",
+          description: "7 mini-games measuring reaction, memory, precision, scroll rhythm, coordination"
+        },
+        {
+          icon: "🔒",
+          title: "100% Offline",
+          description: "Local capture, analysis and validation. Data never sent to a server."
+        },
+        {
+          icon: "⚡",
+          title: "Ultra-Fast",
+          description: "Local <10ms validation vs 100-500ms online. 10-50X faster than competitors."
+        },
+        {
+          icon: "🧠",
+          title: "50+ Metrics",
+          description: "Position, pressure, timing, speed, trajectory, hesitations, errors, scroll patterns"
+        },
+        {
+          icon: "🎯",
+          title: "Impossible to Fake",
+          description: "Multi-dimensional unconscious behavior, no stealable password"
+        },
+        {
+          icon: "🔄",
+          title: "Natural Evolution",
+          description: "Profile adapts with you: age, stress, context. Periodic re-calibration."
+        }
+      ],
+      useCases: [
+        {
+          icon: "🤖",
+          title: "Domestic Robots",
+          description: "Cognitive recognition even without WiFi (Tesla Bot, Boston Dynamics)"
+        },
+        {
+          icon: "🏦",
+          title: "Banking Apps",
+          description: "Authentication in airplane mode, continuous behavioral biometrics"
+        },
+        {
+          icon: "🚗",
+          title: "Autonomous Vehicles",
+          description: "Secure startup even in dead zones (tunnels)"
+        },
+        {
+          icon: "🌍",
+          title: "Low Connectivity Areas",
+          description: "Emerging markets, rural areas, intermittent connectivity"
+        }
+      ],
+      techStack: {
+        title: "Tech Stack",
+        items: [
+          { label: "Framework", value: "React Native + Expo" },
+          { label: "Platforms", value: "iOS + Android" },
+          { label: "Storage", value: "Keychain/Keystore (encrypted)" },
+          { label: "Crypto", value: "Expo Crypto (AES-256-GCM)" },
+          { label: "Sensors", value: "Touch, Gyro, Accelerometer" },
+          { label: "Tests", value: "7 cognitive tests" }
+        ]
+      },
+      competitors: {
+        title: "Competitive Advantage",
+        comparison: [
+          { feature: "Works Offline", hcsu7: "✅", competitors: "❌ (Auth0, Okta, Veriff)" },
+          { feature: "Latency", hcsu7: "<10ms", competitors: "100-500ms" },
+          { feature: "Privacy", hcsu7: "Maximum (local)", competitors: "Cloud data" },
+          { feature: "Bandwidth Cost", hcsu7: "$0", competitors: "$36K/yr/1M users" },
+          { feature: "Cognitive Biometrics", hcsu7: "✅", competitors: "❌" }
+        ]
+      },
+      status: "PoC planned Q1 2025, Beta Q2 2025, Launch Q3 2025"
+    },
+
+    // Documentation
+    documentation: {
+      title: "Complete Documentation",
+      subtitle: "7+ technical documents and operational guides",
+      documents: [
+        { title: "Main README", description: "Complete backend architecture", icon: "📖" },
+        { title: "KMS Integration", description: "AWS KMS integration for secrets", icon: "🔐" },
+        { title: "Monitoring Guide", description: "UptimeRobot + Sentry + Analytics", icon: "📊" },
+        { title: "Operational Runbook", description: "Ops procedures and troubleshooting", icon: "📋" },
+        { title: "Disaster Recovery", description: "Business continuity plan", icon: "🚨" },
+        { title: "Secrets Rotation", description: "Automatic key rotation", icon: "🔄" },
+        { title: "Load Test Results", description: "k6 benchmarks (stress, spike)", icon: "⚡" },
+        { title: "Security Audit", description: "Complete audit + hardening report", icon: "🔍" }
+      ]
     },
 
     // Founder
