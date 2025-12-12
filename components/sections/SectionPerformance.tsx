@@ -12,27 +12,29 @@ function AnimatedCounter({
   prefix = "",
   decimals = 0,
 }: {
-  value: number;
+  value: number | string;
   suffix?: string;
   prefix?: string;
   decimals?: number;
 }) {
+  const numericValue = typeof value === 'string' ? parseFloat(value) : value;
+  const isNumeric = !isNaN(numericValue);
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || !isNumeric) return;
 
     const duration = 2000;
     const steps = 60;
-    const stepValue = value / steps;
+    const stepValue = numericValue / steps;
     let current = 0;
 
     const timer = setInterval(() => {
       current += stepValue;
-      if (current >= value) {
-        setCount(value);
+      if (current >= numericValue) {
+        setCount(numericValue);
         clearInterval(timer);
       } else {
         setCount(current);
@@ -40,7 +42,15 @@ function AnimatedCounter({
     }, duration / steps);
 
     return () => clearInterval(timer);
-  }, [isInView, value]);
+  }, [isInView, numericValue, isNumeric]);
+
+  if (!isNumeric) {
+    return (
+      <span ref={ref} className="font-mono text-4xl lg:text-5xl font-medium text-text-primary">
+        {prefix}{value}{suffix}
+      </span>
+    );
+  }
 
   return (
     <span ref={ref} className="font-mono text-4xl lg:text-5xl font-medium text-text-primary">
@@ -84,7 +94,7 @@ export function SectionPerformance() {
                 value={metric.value}
                 suffix={metric.suffix}
                 prefix={metric.prefix || ""}
-                decimals={metric.value % 1 !== 0 ? 1 : 0}
+                decimals={typeof metric.value === 'number' && metric.value % 1 !== 0 ? 1 : (typeof metric.value === 'string' && metric.value.includes('.') ? 1 : 0)}
               />
               <p className="mt-3 text-sm font-medium text-text-primary">
                 {metric.label}
