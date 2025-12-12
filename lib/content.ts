@@ -62,7 +62,7 @@ export const researchAxes = {
         "Rotating codes signés HMAC-SHA256 (anti-replay)",
       ],
       product: "HCS-U7 — 2 brevets INPI (FR2514274, FR2514546)",
-      stats: "Précision : 98.9% | Détection IA : >99% | 230+ tests",
+      stats: "Précision : 98.9% | Détection IA : >99% | 383+ tests",
       gradient: "purple",
     },
     {
@@ -153,7 +153,7 @@ export const productHCS = {
     { value: "98.9", suffix: "%", label: "Précision" },
     { value: ">99", suffix: "%", label: "Détection IA" },
     { value: "2", suffix: "", label: "Brevets INPI" },
-    { value: "230", suffix: "+", label: "Tests" },
+    { value: "383", suffix: "+", label: "Tests" },
   ],
 };
 
@@ -162,46 +162,45 @@ export const architecture = {
   label: "ARCHITECTURE",
   title: "Defense-in-Depth",
   subtitle: "Pare-feu Cognitif Multi-Signaux — Niveau Sécurité 99.9/100",
-  diagram: `┌─────────────────────────────────────────────────────────────────────────────┐
-│  HCS-U7 COGNITIVE FIREWALL                                                  │
-│  Backend Fastify 5 · TypeScript · 230+ Tests                                │
-│                                                                             │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐            │
-│  │  HCS Core   │ │   Device    │ │   Network   │ │  Behavior   │            │
-│  │   Score     │ │    Risk     │ │    Risk     │ │   Anomaly   │            │
-│  │             │ │             │ │             │ │             │            │
-│  │ Stroop      │ │ WebDriver   │ │ VPN/Tor     │ │ Keystroke   │            │
-│  │ N-Back      │ │ Headless    │ │ Datacenter  │ │ Mouse dyn.  │            │
-│  │ Trail Making│ │ Emulator/VM │ │ High-risk   │ │ Form speed  │            │
-│  │ Vocal RAN   │ │ Automation  │ │ Geo-IP      │ │ Scroll pat. │            │
-│  └──────┬──────┘ └──────┬──────┘ └──────┬──────┘ └──────┬──────┘            │
-│         │              │              │              │                      │
-│         └──────────────┴──────────────┴──────────────┘                      │
-│                                │                                            │
-│                    ┌───────────▼───────────┐                                │
-│                    │    TRUST GRAPH        │                                │
-│                    │  Relations user/      │                                │
-│                    │  device/IP · Fraud    │                                │
-│                    │  rings detection      │                                │
-│                    └───────────┬───────────┘                                │
-│                                │                                            │
-│                    ┌───────────▼───────────┐                                │
-│                    │    SCORE COMBINER     │                                │
-│                    │  Fusion multi-signaux │                                │
-│                    │  + Pondération adapt. │                                │
-│                    └───────────┬───────────┘                                │
-│                                │                                            │
-│                    ┌───────────▼───────────┐                                │
-│                    │     SCA ENGINE        │                                │
-│                    │  PSD2 RTS Art.11/18   │                                │
-│                    │  Low-value · TRA      │                                │
-│                    └───────────┬───────────┘                                │
-│                                │                                            │
-│              ┌─────────────────┼─────────────────┐                          │
-│              ▼                 ▼                 ▼                          │
-│           ALLOW           CHALLENGE            DENY                         │
-│         (exempt)          (step-up)          (block)                        │
-└─────────────────────────────────────────────────────────────────────────────┘`,
+  diagram: `
+    ╔══════════════════════════════════════════════════════════════════════════════╗
+    ║  🛡️  HCS-U7 COGNITIVE FIREWALL — Defense-in-Depth (34 Modules)              ║
+    ║      Fastify 5 · TypeScript · 383+ Tests · 518 Attacks Blocked              ║
+    ╠══════════════════════════════════════════════════════════════════════════════╣
+    ║                                                                              ║
+    ║   L7 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║   ┃  🌐 DDoS Protection — Cloudflare 100+ Gbps · Rate Limiting L7          ┃   ║
+    ║   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║                                     ▼                                        ║
+    ║   L6 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║   ┃  🔥 WAF Multi-Encoding — OWASP Top 10 · SQLi · XSS · ML Bot Detection  ┃   ║
+    ║   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║                                     ▼                                        ║
+    ║   L5 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║   ┃  🍯 Honeypots Actifs — /.env · /admin · /wp-login · Auto-ban 24h       ┃   ║
+    ║   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║                                     ▼                                        ║
+    ║   L4 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║   ┃  🔐 Hieroglyphic Shield — AES-256-GCM · scrypt KDF · 30-40ms wrap      ┃   ║
+    ║   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║                                     ▼                                        ║
+    ║   L3 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║   ┃  ⚡ Proof-of-Work Adaptatif — Argon2id/SHA256 · Difficulté dynamique   ┃   ║
+    ║   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║                                     ▼                                        ║
+    ║   L2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║   ┃  🧠 Cognitive Firewall — 5 Signaux Fusion · Trust Graph · SCA PSD2     ┃   ║
+    ║   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║                                     ▼                                        ║
+    ║   L1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║   ┃  🎯 Biométrie Cognitive — 6 Tests Validés · AUC-ROC 0.994 · 98.9%      ┃   ║
+    ║   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+    ║                                     ▼                                        ║
+    ║         ┌──────────────┬──────────────────┬──────────────┐                   ║
+    ║         │   ✅ ALLOW   │   ⚠️ CHALLENGE   │   🚫 DENY    │                   ║
+    ║         │   (exempt)   │    (step-up)     │   (block)    │                   ║
+    ║         └──────────────┴──────────────────┴──────────────┘                   ║
+    ╚══════════════════════════════════════════════════════════════════════════════╝`,
   modules: [
     {
       icon: "Lock",
@@ -261,7 +260,7 @@ export const architecture = {
       points: [
         "Fastify 5 · TypeScript strict",
         "Zod validation · PostgreSQL + Prisma",
-        "Redis cache · 230+ tests Vitest",
+        "Redis cache · 383+ tests Vitest",
         "Latence P95 <50ms",
       ],
     },
@@ -345,7 +344,7 @@ export const techStack = {
     {
       icon: "Code",
       title: "Backend",
-      description: "Fastify 5, TypeScript, Zod validation, 230+ tests Vitest.",
+      description: "Fastify 5, TypeScript, Zod validation, 383+ tests Vitest.",
     },
     {
       icon: "Database",
@@ -675,13 +674,13 @@ Les systèmes d'authentification actuels reposent sur des défis que l'IA maîtr
 // Performance Section
 export const performance = {
   title: "Performance & Résultats",
-  subtitle: "Métriques validées sur 230+ tests unitaires et benchmarks réels",
+  subtitle: "Métriques validées sur 383+ tests unitaires et benchmarks réels",
   metrics: [
     { value: 98.9, suffix: "%", label: "Précision globale", sublabel: "True Positive Rate" },
     { value: 99.6, suffix: "%", label: "Détection bots", sublabel: "True Negative Rate" },
     { value: 99, prefix: ">", suffix: "%", label: "Détection IA", sublabel: "GPT-4V, Claude 3, Gemini" },
     { value: 50, prefix: "<", suffix: "ms", label: "Latence P95", sublabel: "Temps de réponse" },
-    { value: 230, suffix: "+", label: "Tests unitaires", sublabel: "Vitest coverage" },
+    { value: 383, suffix: "+", label: "Tests unitaires", sublabel: "Vitest coverage" },
     { value: 2, suffix: "", label: "Brevets INPI", sublabel: "FR2514274, FR2514546" },
   ],
 };
