@@ -342,6 +342,364 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       disclaimer: "Conformément à l'article L. 612-10 du Code de la propriété intellectuelle, le Ministre chargé de la Défense a été habilité à prendre connaissance des demandes à titre confidentiel.",
     },
 
+    // HCS-SHIELD
+    hcsShield: {
+      hero: {
+        badge: {
+          fr: "Combat-Ready • Offline-First • GPS-Denied",
+          en: "Combat-Ready • Offline-First • GPS-Denied"
+        },
+        title: {
+          fr: "HCS-SHIELD",
+          en: "HCS-SHIELD"
+        },
+        subtitle: {
+          fr: "Planification Tactique pour Drones Autonomes",
+          en: "Tactical Drone Mission Planning"
+        },
+        description: {
+          fr: "Planification de missions sécurisée pour drones autonomes en environnement GPS-denied. Authentification hardware-bound, QR éphémère, protection anti-capture.",
+          en: "Secure mission planning for autonomous drones in GPS-denied environments. Hardware-bound authentication, ephemeral QR, anti-capture protection."
+        },
+        ctaPrimary: {
+          fr: "Voir la Démo",
+          en: "Watch Demo"
+        },
+        ctaSecondary: {
+          fr: "Procurement Militaire",
+          en: "Military Procurement"
+        }
+      },
+      stats: {
+        offline: {
+          value: "100%",
+          label: {
+            fr: "Capacité Offline",
+            en: "Offline Capable"
+          }
+        },
+        layers: {
+          value: "7",
+          label: {
+            fr: "Couches Sécurité",
+            en: "Security Layers"
+          }
+        },
+        wipe: {
+          value: "<3s",
+          label: {
+            fr: "Destruction Panique",
+            en: "Panic Wipe"
+          }
+        },
+        emission: {
+          value: "0 dBm",
+          label: {
+            fr: "Émission RF",
+            en: "RF Emission"
+          }
+        }
+      },
+      problem: {
+        title: {
+          fr: "Le Problème Tactique",
+          en: "The Tactical Problem"
+        },
+        subtitle: {
+          fr: "Opérations en Environnement GPS-Denied",
+          en: "Operations in GPS-Denied Environments"
+        },
+        items: [
+          {
+            icon: "SatelliteOff",
+            title: {
+              fr: "GPS Brouillé",
+              en: "GPS Jamming"
+            },
+            description: {
+              fr: "La guerre électronique moderne rend le GPS inutilisable. Les drones perdent leur navigation satellite.",
+              en: "Modern electronic warfare makes GPS unusable. Drones lose their satellite navigation."
+            }
+          },
+          {
+            icon: "Radio",
+            title: {
+              fr: "Liaisons Interceptées",
+              en: "Intercepted Links"
+            },
+            description: {
+              fr: "Les communications radio révèlent la position du pilote et peuvent être prises de contrôle.",
+              en: "Radio communications reveal pilot position and can be hijacked."
+            }
+          },
+          {
+            icon: "Cable",
+            title: {
+              fr: "Fibre Optique Limitée",
+              en: "Limited Fiber Optic"
+            },
+            description: {
+              fr: "Les drones guidés par câble ont un rayon d'action limité (500m-5km max).",
+              en: "Cable-guided drones have limited range (500m-5km max)."
+            }
+          },
+          {
+            icon: "Eye",
+            title: {
+              fr: "Détection RF",
+              en: "RF Detection"
+            },
+            description: {
+              fr: "Toute émission radio-fréquence est détectable et géolocalisable par l'adversaire.",
+              en: "Any radio-frequency emission is detectable and geolocatable by adversaries."
+            }
+          }
+        ]
+      },
+      security: {
+        title: {
+          fr: "Architecture 7-Couches",
+          en: "7-Layer Architecture"
+        },
+        subtitle: {
+          fr: "Defense-in-Depth pour Opérations Sensibles",
+          en: "Defense-in-Depth for Sensitive Operations"
+        },
+        layers: [
+          {
+            number: 1,
+            name: {
+              fr: "Liaison Hardware",
+              en: "Hardware Binding"
+            },
+            tech: "WebAuthn (TPM/Secure Enclave)",
+            description: {
+              fr: "Clés cryptographiques non-extractibles, liées au hardware du smartphone",
+              en: "Non-extractible cryptographic keys, bound to smartphone hardware"
+            }
+          },
+          {
+            number: 2,
+            name: {
+              fr: "Clés Éphémères",
+              en: "Ephemeral Keys"
+            },
+            tech: "HKDF + AES-256-GCM",
+            description: {
+              fr: "QR code auto-destructible après 30 min ou première lecture",
+              en: "Self-destructing QR code after 30 min or first read"
+            }
+          },
+          {
+            number: 3,
+            name: {
+              fr: "Déni Plausible",
+              en: "Plausible Deniability"
+            },
+            tech: "Duress Mode (Dual PIN)",
+            description: {
+              fr: "Profil leurre avec missions factices, cryptographiquement indistinguable",
+              en: "Decoy profile with fake missions, cryptographically indistinguishable"
+            }
+          },
+          {
+            number: 4,
+            name: {
+              fr: "Crypto-Destruction",
+              en: "Crypto-Shredding"
+            },
+            tech: "DoD 5220.22-M (3-pass)",
+            description: {
+              fr: "Destruction irréversible en <3s (bouton panique)",
+              en: "Irreversible destruction in <3s (panic button)"
+            }
+          },
+          {
+            number: 5,
+            name: {
+              fr: "Logs Anonymes",
+              en: "Anonymous Logs"
+            },
+            tech: "Zero-Knowledge History",
+            description: {
+              fr: "Fingerprint rotatif quotidien, GPS arrondi ~1km, pas d'identification pilote",
+              en: "Daily rotating fingerprint, GPS rounded ~1km, no pilot identification"
+            }
+          },
+          {
+            number: 6,
+            name: {
+              fr: "Preuve de Présence",
+              en: "Proof-of-Presence"
+            },
+            tech: "Quick Stroop Test (15s)",
+            description: {
+              fr: "Re-challenge cognitif avant actions sensibles (détection bot)",
+              en: "Cognitive re-challenge before sensitive actions (bot detection)"
+            }
+          },
+          {
+            number: 7,
+            name: {
+              fr: "Garde Anti-Intrusion",
+              en: "Tamper Guard"
+            },
+            tech: "Runtime Integrity Checks",
+            description: {
+              fr: "Détection debugger, DevTools, modification storage → Auto-wipe",
+              en: "Debugger, DevTools, storage tampering detection → Auto-wipe"
+            }
+          }
+        ]
+      },
+      useCases: {
+        title: {
+          fr: "Cas d'Usage Terrain",
+          en: "Field Use Cases"
+        },
+        subtitle: {
+          fr: "Validation Combat-Proven",
+          en: "Combat-Proven Validation"
+        },
+        cases: [
+          {
+            flag: "🇺🇦",
+            country: {
+              fr: "Ukraine",
+              en: "Ukraine"
+            },
+            title: {
+              fr: "Reconnaissance Furtive",
+              en: "Stealth Reconnaissance"
+            },
+            description: {
+              fr: "Drones DJI modifiés pour missions ISR en zones contestées. Navigation inertielle + SLAM, pas de GPS.",
+              en: "Modified DJI drones for ISR missions in contested areas. Inertial navigation + SLAM, no GPS."
+            },
+            metrics: [
+              { fr: "Rayon: 8-12 km", en: "Range: 8-12 km" },
+              { fr: "Durée: 20-30 min", en: "Duration: 20-30 min" },
+              { fr: "Émission RF: 0 dBm", en: "RF Emission: 0 dBm" }
+            ]
+          },
+          {
+            flag: "🇮🇱",
+            country: {
+              fr: "Israël",
+              en: "Israel"
+            },
+            title: {
+              fr: "Strike Précis",
+              en: "Precision Strike"
+            },
+            description: {
+              fr: "Munitions rôdeuses autonomes (type Switchblade). Waypoints pré-programmés, pas de liaison pilote.",
+              en: "Autonomous loitering munitions (Switchblade-type). Pre-programmed waypoints, no pilot link."
+            },
+            metrics: [
+              { fr: "Précision: <1m CEP", en: "Accuracy: <1m CEP" },
+              { fr: "Autonomie: 15-40 min", en: "Endurance: 15-40 min" },
+              { fr: "Anti-brouillage: 100%", en: "Anti-jamming: 100%" }
+            ]
+          },
+          {
+            flag: "🇫🇷",
+            country: {
+              fr: "Forces Spéciales",
+              en: "Special Forces"
+            },
+            title: {
+              fr: "Opérations Discrètes",
+              en: "Covert Operations"
+            },
+            description: {
+              fr: "Planification mission sur smartphone (mode avion), transfert QR vers drone. Zéro trace électronique.",
+              en: "Mission planning on smartphone (airplane mode), QR transfer to drone. Zero electronic trace."
+            },
+            metrics: [
+              { fr: "OPSEC: EMCON Niveau 1", en: "OPSEC: EMCON Level 1" },
+              { fr: "Mode Duress: Actif", en: "Duress Mode: Active" },
+              { fr: "Destruction: <3s", en: "Panic Wipe: <3s" }
+            ]
+          }
+        ]
+      },
+      tech: {
+        title: {
+          fr: "Architecture Offline-First",
+          en: "Offline-First Architecture"
+        },
+        subtitle: {
+          fr: "Zéro Dépendance Réseau",
+          en: "Zero Network Dependency"
+        },
+        features: [
+          {
+            icon: "MapPin",
+            title: {
+              fr: "Cartes Pré-Chargées",
+              en: "Pre-Cached Maps"
+            },
+            description: {
+              fr: "10,000+ tiles OpenStreetMap en cache (Service Worker). Zones opérationnelles téléchargées avant déploiement.",
+              en: "10,000+ OpenStreetMap tiles cached (Service Worker). Operational areas downloaded before deployment."
+            }
+          },
+          {
+            icon: "Database",
+            title: {
+              fr: "Stockage Local",
+              en: "Local Storage"
+            },
+            description: {
+              fr: "IndexedDB chiffré (AES-256-GCM). Profil, missions, historique : 100% local, jamais de cloud.",
+              en: "Encrypted IndexedDB (AES-256-GCM). Profile, missions, history: 100% local, never cloud."
+            }
+          },
+          {
+            icon: "Cpu",
+            title: {
+              fr: "Crypto Embarquée",
+              en: "Embedded Crypto"
+            },
+            description: {
+              fr: "Web Crypto API (native navigateur). PBKDF2, HKDF, AES-GCM, SHA-256 : pas de dépendance externe.",
+              en: "Web Crypto API (native browser). PBKDF2, HKDF, AES-GCM, SHA-256: no external dependencies."
+            }
+          },
+          {
+            icon: "Smartphone",
+            title: {
+              fr: "PWA Cross-Platform",
+              en: "PWA Cross-Platform"
+            },
+            description: {
+              fr: "Installation iOS/Android sans App Store. URL directe, updates instantanées, 0% commission stores.",
+              en: "iOS/Android installation without App Store. Direct URL, instant updates, 0% store commission."
+            }
+          }
+        ]
+      },
+      cta: {
+        title: {
+          fr: "Prêt pour le Déploiement Tactique ?",
+          en: "Ready for Tactical Deployment?"
+        },
+        description: {
+          fr: "Demandez une démonstration en direct ou discutez des options de procurement militaire.",
+          en: "Request a live demonstration or discuss military procurement options."
+        },
+        primaryButton: {
+          fr: "Planifier une Démo",
+          en: "Schedule Demo"
+        },
+        secondaryButton: {
+          fr: "Contacter l'Équipe Défense",
+          en: "Contact Defense Team"
+        }
+      }
+    },
+
     // Hieroglyphic Shield
     hieroglyphicShield: {
       badge: "🆕 Innovation Exclusive",
@@ -1058,6 +1416,364 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
         { number: "FR2514546", date: "Filed on 12/04/2025", title: "Multi-signal cognitive security system integrating biometrics, behavioral firewall, astronomical entropy and adaptive SCA engine", claims: 15, figures: 3 },
       ],
       disclaimer: "In accordance with Article L. 612-10 of the Intellectual Property Code, the Minister of Defense has been authorized to review applications confidentially.",
+    },
+
+    // HCS-SHIELD
+    hcsShield: {
+      hero: {
+        badge: {
+          fr: "Combat-Ready • Offline-First • GPS-Denied",
+          en: "Combat-Ready • Offline-First • GPS-Denied"
+        },
+        title: {
+          fr: "HCS-SHIELD",
+          en: "HCS-SHIELD"
+        },
+        subtitle: {
+          fr: "Planification Tactique pour Drones Autonomes",
+          en: "Tactical Drone Mission Planning"
+        },
+        description: {
+          fr: "Planification de missions sécurisée pour drones autonomes en environnement GPS-denied. Authentification hardware-bound, QR éphémère, protection anti-capture.",
+          en: "Secure mission planning for autonomous drones in GPS-denied environments. Hardware-bound authentication, ephemeral QR, anti-capture protection."
+        },
+        ctaPrimary: {
+          fr: "Voir la Démo",
+          en: "Watch Demo"
+        },
+        ctaSecondary: {
+          fr: "Procurement Militaire",
+          en: "Military Procurement"
+        }
+      },
+      stats: {
+        offline: {
+          value: "100%",
+          label: {
+            fr: "Capacité Offline",
+            en: "Offline Capable"
+          }
+        },
+        layers: {
+          value: "7",
+          label: {
+            fr: "Couches Sécurité",
+            en: "Security Layers"
+          }
+        },
+        wipe: {
+          value: "<3s",
+          label: {
+            fr: "Destruction Panique",
+            en: "Panic Wipe"
+          }
+        },
+        emission: {
+          value: "0 dBm",
+          label: {
+            fr: "Émission RF",
+            en: "RF Emission"
+          }
+        }
+      },
+      problem: {
+        title: {
+          fr: "Le Problème Tactique",
+          en: "The Tactical Problem"
+        },
+        subtitle: {
+          fr: "Opérations en Environnement GPS-Denied",
+          en: "Operations in GPS-Denied Environments"
+        },
+        items: [
+          {
+            icon: "SatelliteOff",
+            title: {
+              fr: "GPS Brouillé",
+              en: "GPS Jamming"
+            },
+            description: {
+              fr: "La guerre électronique moderne rend le GPS inutilisable. Les drones perdent leur navigation satellite.",
+              en: "Modern electronic warfare makes GPS unusable. Drones lose their satellite navigation."
+            }
+          },
+          {
+            icon: "Radio",
+            title: {
+              fr: "Liaisons Interceptées",
+              en: "Intercepted Links"
+            },
+            description: {
+              fr: "Les communications radio révèlent la position du pilote et peuvent être prises de contrôle.",
+              en: "Radio communications reveal pilot position and can be hijacked."
+            }
+          },
+          {
+            icon: "Cable",
+            title: {
+              fr: "Fibre Optique Limitée",
+              en: "Limited Fiber Optic"
+            },
+            description: {
+              fr: "Les drones guidés par câble ont un rayon d'action limité (500m-5km max).",
+              en: "Cable-guided drones have limited range (500m-5km max)."
+            }
+          },
+          {
+            icon: "Eye",
+            title: {
+              fr: "Détection RF",
+              en: "RF Detection"
+            },
+            description: {
+              fr: "Toute émission radio-fréquence est détectable et géolocalisable par l'adversaire.",
+              en: "Any radio-frequency emission is detectable and geolocatable by adversaries."
+            }
+          }
+        ]
+      },
+      security: {
+        title: {
+          fr: "Architecture 7-Couches",
+          en: "7-Layer Architecture"
+        },
+        subtitle: {
+          fr: "Defense-in-Depth pour Opérations Sensibles",
+          en: "Defense-in-Depth for Sensitive Operations"
+        },
+        layers: [
+          {
+            number: 1,
+            name: {
+              fr: "Liaison Hardware",
+              en: "Hardware Binding"
+            },
+            tech: "WebAuthn (TPM/Secure Enclave)",
+            description: {
+              fr: "Clés cryptographiques non-extractibles, liées au hardware du smartphone",
+              en: "Non-extractible cryptographic keys, bound to smartphone hardware"
+            }
+          },
+          {
+            number: 2,
+            name: {
+              fr: "Clés Éphémères",
+              en: "Ephemeral Keys"
+            },
+            tech: "HKDF + AES-256-GCM",
+            description: {
+              fr: "QR code auto-destructible après 30 min ou première lecture",
+              en: "Self-destructing QR code after 30 min or first read"
+            }
+          },
+          {
+            number: 3,
+            name: {
+              fr: "Déni Plausible",
+              en: "Plausible Deniability"
+            },
+            tech: "Duress Mode (Dual PIN)",
+            description: {
+              fr: "Profil leurre avec missions factices, cryptographiquement indistinguable",
+              en: "Decoy profile with fake missions, cryptographically indistinguishable"
+            }
+          },
+          {
+            number: 4,
+            name: {
+              fr: "Crypto-Destruction",
+              en: "Crypto-Shredding"
+            },
+            tech: "DoD 5220.22-M (3-pass)",
+            description: {
+              fr: "Destruction irréversible en <3s (bouton panique)",
+              en: "Irreversible destruction in <3s (panic button)"
+            }
+          },
+          {
+            number: 5,
+            name: {
+              fr: "Logs Anonymes",
+              en: "Anonymous Logs"
+            },
+            tech: "Zero-Knowledge History",
+            description: {
+              fr: "Fingerprint rotatif quotidien, GPS arrondi ~1km, pas d'identification pilote",
+              en: "Daily rotating fingerprint, GPS rounded ~1km, no pilot identification"
+            }
+          },
+          {
+            number: 6,
+            name: {
+              fr: "Preuve de Présence",
+              en: "Proof-of-Presence"
+            },
+            tech: "Quick Stroop Test (15s)",
+            description: {
+              fr: "Re-challenge cognitif avant actions sensibles (détection bot)",
+              en: "Cognitive re-challenge before sensitive actions (bot detection)"
+            }
+          },
+          {
+            number: 7,
+            name: {
+              fr: "Garde Anti-Intrusion",
+              en: "Tamper Guard"
+            },
+            tech: "Runtime Integrity Checks",
+            description: {
+              fr: "Détection debugger, DevTools, modification storage → Auto-wipe",
+              en: "Debugger, DevTools, storage tampering detection → Auto-wipe"
+            }
+          }
+        ]
+      },
+      useCases: {
+        title: {
+          fr: "Cas d'Usage Terrain",
+          en: "Field Use Cases"
+        },
+        subtitle: {
+          fr: "Validation Combat-Proven",
+          en: "Combat-Proven Validation"
+        },
+        cases: [
+          {
+            flag: "🇺🇦",
+            country: {
+              fr: "Ukraine",
+              en: "Ukraine"
+            },
+            title: {
+              fr: "Reconnaissance Furtive",
+              en: "Stealth Reconnaissance"
+            },
+            description: {
+              fr: "Drones DJI modifiés pour missions ISR en zones contestées. Navigation inertielle + SLAM, pas de GPS.",
+              en: "Modified DJI drones for ISR missions in contested areas. Inertial navigation + SLAM, no GPS."
+            },
+            metrics: [
+              { fr: "Rayon: 8-12 km", en: "Range: 8-12 km" },
+              { fr: "Durée: 20-30 min", en: "Duration: 20-30 min" },
+              { fr: "Émission RF: 0 dBm", en: "RF Emission: 0 dBm" }
+            ]
+          },
+          {
+            flag: "🇮🇱",
+            country: {
+              fr: "Israël",
+              en: "Israel"
+            },
+            title: {
+              fr: "Strike Précis",
+              en: "Precision Strike"
+            },
+            description: {
+              fr: "Munitions rôdeuses autonomes (type Switchblade). Waypoints pré-programmés, pas de liaison pilote.",
+              en: "Autonomous loitering munitions (Switchblade-type). Pre-programmed waypoints, no pilot link."
+            },
+            metrics: [
+              { fr: "Précision: <1m CEP", en: "Accuracy: <1m CEP" },
+              { fr: "Autonomie: 15-40 min", en: "Endurance: 15-40 min" },
+              { fr: "Anti-brouillage: 100%", en: "Anti-jamming: 100%" }
+            ]
+          },
+          {
+            flag: "🇫🇷",
+            country: {
+              fr: "Forces Spéciales",
+              en: "Special Forces"
+            },
+            title: {
+              fr: "Opérations Discrètes",
+              en: "Covert Operations"
+            },
+            description: {
+              fr: "Planification mission sur smartphone (mode avion), transfert QR vers drone. Zéro trace électronique.",
+              en: "Mission planning on smartphone (airplane mode), QR transfer to drone. Zero electronic trace."
+            },
+            metrics: [
+              { fr: "OPSEC: EMCON Niveau 1", en: "OPSEC: EMCON Level 1" },
+              { fr: "Mode Duress: Actif", en: "Duress Mode: Active" },
+              { fr: "Destruction: <3s", en: "Panic Wipe: <3s" }
+            ]
+          }
+        ]
+      },
+      tech: {
+        title: {
+          fr: "Architecture Offline-First",
+          en: "Offline-First Architecture"
+        },
+        subtitle: {
+          fr: "Zéro Dépendance Réseau",
+          en: "Zero Network Dependency"
+        },
+        features: [
+          {
+            icon: "MapPin",
+            title: {
+              fr: "Cartes Pré-Chargées",
+              en: "Pre-Cached Maps"
+            },
+            description: {
+              fr: "10,000+ tiles OpenStreetMap en cache (Service Worker). Zones opérationnelles téléchargées avant déploiement.",
+              en: "10,000+ OpenStreetMap tiles cached (Service Worker). Operational areas downloaded before deployment."
+            }
+          },
+          {
+            icon: "Database",
+            title: {
+              fr: "Stockage Local",
+              en: "Local Storage"
+            },
+            description: {
+              fr: "IndexedDB chiffré (AES-256-GCM). Profil, missions, historique : 100% local, jamais de cloud.",
+              en: "Encrypted IndexedDB (AES-256-GCM). Profile, missions, history: 100% local, never cloud."
+            }
+          },
+          {
+            icon: "Cpu",
+            title: {
+              fr: "Crypto Embarquée",
+              en: "Embedded Crypto"
+            },
+            description: {
+              fr: "Web Crypto API (native navigateur). PBKDF2, HKDF, AES-GCM, SHA-256 : pas de dépendance externe.",
+              en: "Web Crypto API (native browser). PBKDF2, HKDF, AES-GCM, SHA-256: no external dependencies."
+            }
+          },
+          {
+            icon: "Smartphone",
+            title: {
+              fr: "PWA Cross-Platform",
+              en: "PWA Cross-Platform"
+            },
+            description: {
+              fr: "Installation iOS/Android sans App Store. URL directe, updates instantanées, 0% commission stores.",
+              en: "iOS/Android installation without App Store. Direct URL, instant updates, 0% store commission."
+            }
+          }
+        ]
+      },
+      cta: {
+        title: {
+          fr: "Prêt pour le Déploiement Tactique ?",
+          en: "Ready for Tactical Deployment?"
+        },
+        description: {
+          fr: "Demandez une démonstration en direct ou discutez des options de procurement militaire.",
+          en: "Request a live demonstration or discuss military procurement options."
+        },
+        primaryButton: {
+          fr: "Planifier une Démo",
+          en: "Schedule Demo"
+        },
+        secondaryButton: {
+          fr: "Contacter l'Équipe Défense",
+          en: "Contact Defense Team"
+        }
+      }
     },
 
     // Hieroglyphic Shield

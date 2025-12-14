@@ -1,284 +1,150 @@
-# HCS-U7 — Human Cognitive Signature
+# IA-SOLUTION — Cognitive Security Technologies
 
 <div align="center">
 
-**Premier système d'authentification biométrique cognitive résistant à l'IA générative**
+**Laboratoire de Recherche en IA Cognitive**
 
-*First cognitive biometric authentication system resistant to generative AI*
+*Cognitive AI Research Laboratory*
 
 [![Website](https://img.shields.io/badge/Website-ia--solution.fr-8B5CF6?style=for-the-badge)](https://ia-solution.fr)
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-000000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Patents](https://img.shields.io/badge/INPI_Patents-2-10B981?style=for-the-badge)](https://www.inpi.fr/)
-[![Tests](https://img.shields.io/badge/Tests-383+-22C55E?style=for-the-badge)](https://vitest.dev/)
-[![Security](https://img.shields.io/badge/Security-99.9%2F100-10B981?style=for-the-badge)](https://ia-solution.fr)
-[![Battle Tested](https://img.shields.io/badge/Battle_Tested-518_Attacks_Blocked-F59E0B?style=for-the-badge)](https://ia-solution.fr)
 
 </div>
 
 ---
 
-## 🎯 Problème Résolu
+## 🚀 Product Portfolio
 
-> **94% des CAPTCHAs traditionnels sont contournés par GPT-4V** (ETH Zurich, 2024)
+### 🛡️ HCS-U7 — Cognitive Authentication Engine
 
-Les systèmes d'authentification actuels (mots de passe, CAPTCHA, 2FA) sont vulnérables aux IA génératives modernes. HCS-U7 propose une solution fondamentalement différente basée sur la **biométrie cognitive** — des patterns neurologiques impossibles à simuler par une IA.
+[![Backend Tests](https://img.shields.io/badge/Backend-383%20tests-brightgreen)]()
+[![Security Score](https://img.shields.io/badge/Security-99.9%2F100-brightgreen)]()
+[![Battle Tested](https://img.shields.io/badge/Attacks_Blocked-518-yellow)]()
+[![PSD2 Compliant](https://img.shields.io/badge/PSD2-compliant-green)]()
 
----
+**Core Platform:** Biometric cognitive authentication resistant to generative AI.
 
-## 🧠 Solution : Biométrie Cognitive
+**Key Features:**
+- 7 cognitive dimensions (Stroop, N-Back, Trail Making, etc.)
+- 99.6% bot detection accuracy
+- 34 security modules (Defense-in-Depth)
+- PSD2 SCA compliance engine
+- 383+ tests (unit + E2E + load k6)
 
-HCS-U7 mesure **6 tests cognitifs validés scientifiquement** :
+**Markets:**
+- Fintech & Banking (fraud prevention, SCA)
+- E-commerce (bot protection, checkout security)
+- Gaming & Gambling (anti-cheat, fair play)
 
-| Test | Origine | Ce qu'il mesure |
-|------|---------|-----------------|
-| **Stroop** | 1935 | Interférence cognitive, latence incongruence |
-| **N-Back** | 1958 | Mémoire de travail, capacité 7±2 éléments |
-| **Trail Making** | 1938 | Flexibilité cognitive, switching cost |
-| **Digit Span** | 1939 | Empan mnésique, rétention court terme |
-| **Reaction Time** | 1868 | Variabilité temporelle 50-150ms |
-| **RAN Vocal** | 1974 | Dénomination rapide, pauses, hésitations |
+**Deployment:** API Backend + Admin Dashboard  
+**Revenue Model:** SaaS (€99-€2499/month)
 
-### Pourquoi l'IA ne peut pas tricher
-
-- **Humain** : Temps de réponse 50-150ms avec variabilité naturelle
-- **IA** : Répond en <30ms avec régularité >80%
-- **Effet fatigue** : Humain ralentit après 2min, IA reste stable
-- **Stroop** : Humain +50ms sur items incongruents, IA instantanée
-
----
-
-## 📊 Performances Validées
-
-<div align="center">
-
-| Métrique | Valeur | Description |
-|----------|--------|-------------|
-| **Score Sécurité** | 99.9/100 | Defense-in-Depth (7 couches) |
-| **Tests** | 383+ | Unitaires + E2E + Load (k6) |
-| **Battle-Tested** | 518 | Attaques bloquées (15 jours) |
-| **Infrastructure** | 200+ | Datacenters Cloudflare |
-| **Précision globale** | 98.9% | True Positive Rate |
-| **Détection bots** | 99.6% | True Negative Rate |
-| **Détection IA** | >99% | GPT-4V, Claude 3, Gemini |
-| **Latence P95** | <50ms | Temps de réponse API |
-| **AUC-ROC** | 0.994 | Qualité du modèle |
-
-</div>
+📂 [View Backend Repository →](https://github.com/zefparis/hcs-u7-backend)  
+🌐 [Live Demo →](https://hcs-u7.com)
 
 ---
 
-## 🔐 Brevets INPI
+### 🚁 HCS-SHIELD — Tactical Mission Planning
 
-**2 brevets déposés** — Protection 20 ans
+[![PWA Tests](https://img.shields.io/badge/PWA-92%20tests-brightgreen)]()
+[![Offline Capability](https://img.shields.io/badge/Offline-100%25-brightgreen)]()
+[![Combat Ready](https://img.shields.io/badge/Status-Combat--Ready-orange)]()
+[![Security Layers](https://img.shields.io/badge/Security-7--Layers-emerald)]()
 
-| N° Brevet | Date | Titre |
-|-----------|------|-------|
-| **FR2514274** | 30/11/2025 | Système d'authentification biométrique cognitive multi-couches résistant à l'IA générative |
-| **FR2514546** | 04/12/2025 | Système de sécurité cognitive multi-signaux intégrant biométrie, firewall comportemental, entropie astronomique et moteur SCA adaptatif |
+**Tactical Application:** Secure mission planning for drones in GPS-denied environments.
 
-> *Conformément à l'article L. 612-10 du Code de la propriété intellectuelle, le Ministre de la Défense a été habilité à examiner les demandes de manière confidentielle.*
+**Key Features:**
+- 100% offline capability (10,000+ cached map tiles)
+- Hardware-bound authentication (WebAuthn TPM/Secure Enclave)
+- Ephemeral QR (30-min auto-destruct, anti-replay)
+- Duress Mode (plausible deniability with decoy profile)
+- Panic Wipe (DoD 5220.22-M compliant <3s destruction)
+- Anonymous History (zero-knowledge logs)
+- Tamper Guard (runtime integrity monitoring)
 
----
+**Markets:**
+- Defense & Military (special operations, tactical drones)
+- Critical Infrastructure (firefighters, search & rescue)
+- Commercial (film production, agricultural drones)
 
-## 🏗️ Architecture Technique
+**Deployment:** Progressive Web App (iOS/Android)  
+**Revenue Model:** Device Licenses (€79-€499/device/year)
 
-### Format U7 — Structure Identitaire
-
-```
-HCS-U7|V:8.0|ALG:QS|E:E|MOD:c25f0m75|COG:F42C22V9S10Cr16|QSIG:...|B3:...
-```
-
-| Segment | Description |
-|---------|-------------|
-| `HCS-U7` | Protocol identifier |
-| `V:x.x` | Version (semantic) |
-| `ALG:QS` | Algorithm (Quantum-Safe) |
-| `MOD:...` | Modality flags (cognitive/form ratio) |
-| `COG:...` | Cognitive axes (F/C/V/S/Cr vectors) |
-| `QSIG:...` | Quantum-safe signature (post-quantum ready) |
-| `B3:...` | Biometric binding hash |
-
-### Algorithmes Cryptographiques
-
-- **QSIG** — Quantum-Safe Signature (NIST-PQC ready)
-- **B3** — Biometric Binding (HMAC-SHA256)
-- **Merkle Trees** — Signatures résistantes et vérifiables
-- **Celestial Entropy Layer** — Entropie basée sur positions planétaires temps réel
-
-### Defense-in-Depth (34 Modules — 7 couches)
-
-```
-┌─────────────────────────────────────────┐
-│  L7 DDoS Protection (Cloudflare 100+Gbps)│
-├─────────────────────────────────────────┤
-│  L6 WAF Multi-Encoding (OWASP Top 10)   │
-├─────────────────────────────────────────┤
-│  L5 Honeypots (/.env, /admin, /wp-login)│
-├─────────────────────────────────────────┤
-│  L4 Hieroglyphic Shield (AES-256-GCM)   │
-├─────────────────────────────────────────┤
-│  L3 Proof-of-Work Adaptatif (Argon2id)  │
-├─────────────────────────────────────────┤
-│  L2 Cognitive Firewall (5 signaux)      │
-├─────────────────────────────────────────┤
-│  L1 Biométrie Cognitive (6 tests)       │
-└─────────────────────────────────────────┘
-```
-
-## Hieroglyphic Shield v1 🛡️
-
-Protection transparente des codes HCS-U7 par chiffrement AES-256-GCM.
-
-- **Algorithme** : AES-256-GCM avec scrypt KDF (N=16384, r=8, p=1)
-- **Performance** : Wrap/Unwrap 30-40ms (symétrique)
-- **Intégration** : Hooks Fastify automatiques
-- **Tests** : Unitaires complets
-- **Status** : Production active
-
-Innovation brevetable rendant les codes HCS-U7 complètement opaques.
-
-## 🌍 Infrastructure Mondiale
-
-- **200+ Datacenters** Cloudflare (CDN global)
-- **DDoS Protection** 100+ Gbps
-- **Uptime SLA** 99.99%
-- **Global Latency** <15ms
-- **Dual-Domain** : HCS-U7.COM (commercial) + HCS-U7.ORG (technique)
-- **Monitoring 24/7** : UptimeRobot + Sentry + Cloudflare Analytics
+📂 [View Mobile Repository →](https://github.com/zefparis/hcs-shield-mobile)  
+🎥 [Watch Demo Video →](https://ia-solution.fr/hcs-shield#demo)
 
 ---
 
-## 🛠️ Stack Technologique
+### 🔐 Patent Coverage
 
-### Backend
-- **Fastify 5** — Framework haute performance
-- **TypeScript** — Typage strict
-- **Zod** — Validation runtime
-- **Vitest** — 383+ tests (unitaires + E2E + load k6)
+**Both products protected by:**
+- **FR2514274** (INPI Certified) — Multi-layer cognitive biometric authentication resistant to generative AI
+- **FR2514546** (INPI Certified) — Multi-signal cognitive security system with behavioral firewall, astronomical entropy, and adaptive SCA engine
 
-### Persistence
-- **PostgreSQL** — Base de données principale
-- **Prisma ORM** — Migrations et queries
-- **Redis** — Cache et rate limiting distribué
-
-### Cryptographie
-- **HMAC-SHA256** — Signatures
-- **bcrypt** — Hashing sécurisé
-- **JWT** — Tokens d'authentification
-- **Swiss Ephemeris** — Calculs astronomiques haute précision
-
-### Frontend
-- **Next.js 14** — React Server Components
-- **TailwindCSS** — Styling
-- **Framer Motion** — Animations
-- **Lucide React** — Iconographie
+**Protection:** 20 years (until 2045)  
+**Licensing:** Available for commercial use ([contact@ia-solution.fr](mailto:contact@ia-solution.fr))
 
 ---
 
-## 📁 Structure du Projet
+## 🏗️ Website Architecture
 
-```
-iasolution/
-├── app/                          # Next.js 14 App Router
-│   ├── layout.tsx               # Root layout + LanguageProvider
-│   ├── page.tsx                 # Home page
-│   ├── hcs-u7/                  # Product page
-│   ├── technology/              # Technology details
-│   ├── research/                # Research axes
-│   ├── patents/                 # Patents page
-│   ├── contact/                 # Contact form
-│   └── demo/                    # Demo request
-├── components/
-│   ├── sections/                # Page sections
-│   │   ├── Header.tsx          # Navigation + Language switcher
-│   │   ├── Hero.tsx            # Hero section
-│   │   ├── SectionProblem.tsx  # Problem statement
-│   │   ├── SectionSolution.tsx # Solution overview
-│   │   ├── SectionPerformance.tsx
-│   │   ├── SectionTechnology.tsx
-│   │   ├── SectionResearchAxes.tsx
-│   │   ├── SectionProductHCS.tsx
-│   │   ├── SectionArchitecture.tsx
-│   │   ├── SectionU7Format.tsx
-│   │   ├── SectionPatents.tsx
-│   │   ├── SectionPublications.tsx
-│   │   └── Footer.tsx
-│   ├── ui/                      # Reusable UI components
-│   │   ├── Button.tsx
-│   │   ├── Container.tsx
-│   │   └── AnimatedSection.tsx
-│   └── LanguageSwitcher.tsx     # FR/EN toggle
-├── contexts/
-│   └── LanguageContext.tsx      # Bilingual state management
-├── lib/
-│   ├── content.ts               # French content (legacy)
-│   ├── content-bilingual.ts     # FR/EN translations
-│   ├── translations.ts          # UI translations
-│   └── animations.ts            # Framer Motion variants
-├── public/
-│   ├── mentions-legales.html    # Legal notice FR
-│   ├── politique-confidentialite.html
-│   └── privacy-policy.html      # Legal notice EN
-└── docs/
-    ├── BREVO_SETUP.md           # Email configuration
-    └── IMAGES_NEEDED.md         # Asset requirements
-```
+This repository contains the main **IA-SOLUTION corporate website** (Next.js 14 App Router).
+
+**Stack:**
+- Next.js 14.2 (App Router + React Server Components)
+- TypeScript 5
+- TailwindCSS 4
+- Framer Motion (animations)
+- Bilingual (FR/EN) with custom i18n
+
+**Key Pages:**
+- `/` — Homepage (Hero + Product Tabs + Industries)
+- `/hcs-u7` — HCS-U7 Product Page
+- `/hcs-shield` — HCS-SHIELD Product Page (🆕)
+- `/technology` — Technical Deep-Dive
+- `/research` — Research Axes
+- `/patents` — Patent Details
+- `/contact` — Contact Form (Brevo integration)
+
+**Deployment:** [https://ia-solution.fr](https://ia-solution.fr)
 
 ---
 
-## 🌐 Internationalisation
+## 📊 Business Metrics
 
-Le site supporte **2 langues** avec basculement dynamique :
-
-- 🇫🇷 **Français** (défaut)
-- 🇬🇧 **English**
-
-### Fonctionnalités
-
-- **Détection automatique** de la langue du navigateur
-- **Persistance** dans localStorage
-- **Basculement instantané** sans rechargement
-- **Contenu complet** traduit (navigation, sections, formulaires)
-
-### Implémentation
-
-```tsx
-// Utilisation dans les composants
-const { language, setLanguage, content } = useLanguage();
-
-// Accès au contenu traduit
-<h1>{content.hero.title}</h1>
-```
+| Metric | HCS-U7 | HCS-SHIELD |
+|--------|--------|------------|
+| **Target Market** | €50M (auth software) | €50M (tactical drones software) |
+| **Pricing** | €99-€2499/mo (SaaS) | €79-€499/device/year |
+| **POC Clients** | 12 (in discussion) | 5 (military contacts) |
+| **Certifications** | ISO 27001 (Q2 2025) | Common Criteria EAL4+ (Q3 2026) |
+| **Status** | Production-ready | Combat-ready (POC phase) |
 
 ---
 
-## 🚀 Installation
-
-### Prérequis
-
-- Node.js 18.x+
-- npm 9.x+
-
-### Démarrage rapide
+## 🚀 Quick Start
 
 ```bash
 # Clone
 git clone https://github.com/zefparis/iasolution.git
 cd iasolution
 
-# Installation
+# Install
 npm install
 
-# Développement
+# Dev
 npm run dev
 
-# Build production
+# Build
 npm run build
+
+# Start production
+npm start
 ```
 
-### Variables d'environnement
-
+**Environment Variables:**
 ```env
 # Brevo (email)
 BREVO_API_KEY=your_api_key
@@ -288,62 +154,27 @@ BREVO_SENDER_NAME=IA Solution
 
 ---
 
-## 🔬 Axes de Recherche
+## � Contact
 
-### 1. Biométrie Cognitive
-Identification de l'humain par ses patterns cognitifs uniques. Tests validés scientifiquement depuis 1868.
+**IA-SOLUTION**  
+Benjamin BARRÈRE, CTO & Founder
 
-### 2. Cryptographie des Croyances
-Fusion Western + BaZi via opérateurs affines déterministes. Swiss Ephemeris pour calculs astronomiques.
+- **Email:** contact@ia-solution.fr
+- **Defense:** defense@ia-solution.fr
+- **Licensing:** licensing@ia-solution.fr
+- **Tel:** +33 7 44 14 96 17
+- **SIRET:** 438 055 097 00029
 
-### 3. Résistance à l'IA Générative
-Détection GPT-4V, Claude 3, Gemini Pro avec >99% de précision. Architecture Defense-in-Depth.
-
-### 4. Cryptographie Post-Quantique
-Préparation NIST-PQC. QSIG ready dans le format U7. Production-ready 2026.
-
----
-
-## 📚 Publications
-
-- **Thèse doctorale** : Authentification cognitive et différenciation humain/IA *(en finalisation)*
-- **Documentation technique** : HCS-U7 Specs & Patent Corpus *(propriétaire)*
-- **Références scientifiques** : Tests cognitifs fondamentaux (Stroop 1935, N-Back 1958, etc.)
-- **Benchmarks** : Résultats validés sur 230+ tests
+**Patents:** FR2514274 | FR2514546 (INPI Certified)
 
 ---
 
-## 👤 Fondateur
+## � License
 
-**Benjamin BARRERE**  
-*Founder & Research Director*
+© 2025 IA Solution. All rights reserved.
 
-- 3 ans de R&D en neurosciences cognitives et cryptographie
-- 2 brevets INPI déposés
-- Thèse doctorale en cours
-
----
-
-## 📞 Contact
-
-| | |
-|---|---|
-| **Email** | contact@ia-solution.fr |
-| **Website** | [ia-solution.fr](https://ia-solution.fr) |
-| **GitHub** | [github.com/zefparis/iasolution](https://github.com/zefparis/iasolution) |
-
-### Collaboration
-
-- **Recherche** : Collaboration R&D, projets conjoints, co-publication
-- **Enterprise** : Licence commerciale, intégration API, support dédié
-- **Académique** : Accès recherche, données anonymisées, co-direction thèse
-
----
-
-## 📄 Conformité
-
-- **RGPD** : Politique de confidentialité complète
-- **DSP2/PSD2** : Conformité SCA (Strong Customer Authentication)
+Proprietary software. Patents FR2514274 & FR2514546 protect innovations.  
+Commercial licensing: contact@ia-solution.fr
 - **INPI** : 2 brevets déposés et protégés
 
 ---

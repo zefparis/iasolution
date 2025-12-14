@@ -7,8 +7,10 @@ import { Header, Footer } from "@/components/sections";
 import { Container } from "@/components/ui";
 import { contactPage, siteConfig } from "@/lib/content";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactPage() {
+  const { language } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -178,7 +180,7 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
-                        Sujet *
+                        {language === 'fr' ? 'Sujet' : 'Subject'} *
                       </label>
                       <select
                         id="subject"
@@ -188,12 +190,42 @@ export default function ContactPage() {
                         onChange={handleChange}
                         className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-lg text-white focus:border-accent-purple focus:outline-none transition-colors"
                       >
-                        <option value="" className="bg-bg-primary">Sélectionnez un sujet</option>
-                        <option value="demo" className="bg-bg-primary">Demande de démo HCS-U7</option>
-                        <option value="partnership" className="bg-bg-primary">Partenariat recherche</option>
-                        <option value="license" className="bg-bg-primary">Licence commerciale</option>
-                        <option value="academic" className="bg-bg-primary">Collaboration académique</option>
-                        <option value="other" className="bg-bg-primary">Autre</option>
+                        <option value="" className="bg-bg-primary">
+                          {language === 'fr' ? 'Sélectionner un sujet' : 'Select subject'}
+                        </option>
+                        <optgroup label="HCS-U7" className="bg-bg-primary">
+                          <option value="hcs-u7-demo" className="bg-bg-primary">
+                            {language === 'fr' ? 'Demande de démo HCS-U7' : 'HCS-U7 Demo Request'}
+                          </option>
+                          <option value="hcs-u7-enterprise" className="bg-bg-primary">
+                            {language === 'fr' ? 'Licence Enterprise HCS-U7' : 'HCS-U7 Enterprise License'}
+                          </option>
+                          <option value="hcs-u7-api" className="bg-bg-primary">
+                            {language === 'fr' ? 'Intégration API HCS-U7' : 'HCS-U7 API Integration'}
+                          </option>
+                        </optgroup>
+                        <optgroup label="HCS-SHIELD" className="bg-bg-primary">
+                          <option value="hcs-shield-demo" className="bg-bg-primary">
+                            {language === 'fr' ? 'Demande de démo HCS-SHIELD' : 'HCS-SHIELD Demo Request'}
+                          </option>
+                          <option value="hcs-shield-military" className="bg-bg-primary">
+                            {language === 'fr' ? 'Procurement Militaire HCS-SHIELD' : 'HCS-SHIELD Military Procurement'}
+                          </option>
+                          <option value="hcs-shield-enterprise" className="bg-bg-primary">
+                            {language === 'fr' ? 'Déploiement Enterprise HCS-SHIELD' : 'HCS-SHIELD Enterprise Deployment'}
+                          </option>
+                        </optgroup>
+                        <optgroup label={language === 'fr' ? 'Autre' : 'Other'} className="bg-bg-primary">
+                          <option value="research" className="bg-bg-primary">
+                            {language === 'fr' ? 'Collaboration Recherche' : 'Research Collaboration'}
+                          </option>
+                          <option value="partnership" className="bg-bg-primary">
+                            {language === 'fr' ? 'Partenariat' : 'Partnership Inquiry'}
+                          </option>
+                          <option value="other" className="bg-bg-primary">
+                            {language === 'fr' ? 'Autre' : 'Other'}
+                          </option>
+                        </optgroup>
                       </select>
                     </div>
 

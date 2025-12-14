@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link, { LinkProps } from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, ShieldCheck, Plane } from "lucide-react";
 import { siteConfig } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
@@ -11,7 +11,29 @@ import { Container } from "@/components/ui";
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const { language, setLanguage, content } = useLanguage();
+
+  const products = [
+    {
+      href: '/hcs-u7',
+      icon: ShieldCheck,
+      name: 'HCS-U7',
+      description: language === 'fr' 
+        ? 'Authentification Cognitive' 
+        : 'Cognitive Authentication',
+      color: 'purple',
+    },
+    {
+      href: '/hcs-shield',
+      icon: Plane,
+      name: 'HCS-SHIELD',
+      description: language === 'fr' 
+        ? 'Planification Tactique' 
+        : 'Tactical Mission Planning',
+      color: 'emerald',
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +69,60 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {content.navigation.main.map((item: { name: string; href: string; badge?: string }) => (
+            {/* Products Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsProductsOpen(true)}
+              onMouseLeave={() => setIsProductsOpen(false)}
+            >
+              <button className="text-sm text-text-secondary hover:text-white transition-colors flex items-center gap-1 group">
+                {language === 'fr' ? 'Produits' : 'Products'}
+                <ChevronDown size={14} className="group-hover:translate-y-0.5 transition-transform" />
+              </button>
+
+              <AnimatePresence>
+                {isProductsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-80 backdrop-blur-xl bg-bg-primary/95 rounded-lg shadow-xl border border-white/[0.08] overflow-hidden"
+                  >
+                    {products.map((product) => {
+                      const Icon = product.icon;
+                      return (
+                        <Link
+                          key={product.href}
+                          href={product.href as LinkProps<string>["href"]}
+                          className="block px-4 py-3 hover:bg-white/[0.05] transition-colors"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center ${
+                              product.color === 'purple' 
+                                ? 'bg-accent-purple/10' 
+                                : 'bg-emerald-500/10'
+                            }`}>
+                              <Icon className={product.color === 'purple' ? 'text-accent-purple' : 'text-emerald-400'} size={20} />
+                            </div>
+                            <div>
+                              <div className="font-semibold text-white">{product.name}</div>
+                              <div className="text-sm text-text-secondary">
+                                {product.description}
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {content.navigation.main.filter((item: { name: string }) => 
+              !['HCS-U7', 'HCS-SHIELD'].includes(item.name)
+            ).map((item: { name: string; href: string; badge?: string }) => (
               <Link
                 key={item.name}
                 href={item.href as LinkProps<string>["href"]}
@@ -102,21 +177,56 @@ export function Header() {
           >
             <Container>
               <div className="py-6 space-y-4">
-                {content.navigation.main.map((item: { name: string; href: string; badge?: string }) => (
-                  <Link
-                    key={item.name}
-                    href={item.href as LinkProps<string>["href"]}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center gap-2 text-base text-text-secondary hover:text-white transition-colors py-2"
-                  >
-                    {item.name}
-                    {item.badge && (
-                      <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-accent-purple/20 text-accent-purple border border-accent-purple/30">
-                        {item.badge}
-                      </span>
-                    )}
-                  </Link>
-                ))}
+                {/* Products in Mobile */}
+                <div className="space-y-2">
+                  <div className="text-xs font-semibold text-text-secondary uppercase tracking-wider px-2 mb-2">
+                    {language === 'fr' ? 'Produits' : 'Products'}
+                  </div>
+                  {products.map((product) => {
+                    const Icon = product.icon;
+                    return (
+                      <Link
+                        key={product.href}
+                        href={product.href as LinkProps<string>["href"]}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="flex items-center gap-3 px-2 py-2 hover:bg-white/[0.05] rounded-lg transition-colors"
+                      >
+                        <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center ${
+                          product.color === 'purple' 
+                            ? 'bg-accent-purple/10' 
+                            : 'bg-emerald-500/10'
+                        }`}>
+                          <Icon className={product.color === 'purple' ? 'text-accent-purple' : 'text-emerald-400'} size={18} />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-white text-sm">{product.name}</div>
+                          <div className="text-xs text-text-secondary">{product.description}</div>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+
+                <div className="border-t border-white/[0.08] pt-4 space-y-2">
+                  {content.navigation.main.filter((item: { name: string }) => 
+                    !['HCS-U7', 'HCS-SHIELD'].includes(item.name)
+                  ).map((item: { name: string; href: string; badge?: string }) => (
+                    <Link
+                      key={item.name}
+                      href={item.href as LinkProps<string>["href"]}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center gap-2 text-base text-text-secondary hover:text-white transition-colors py-2 px-2"
+                    >
+                      {item.name}
+                      {item.badge && (
+                        <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-accent-purple/20 text-accent-purple border border-accent-purple/30">
+                          {item.badge}
+                        </span>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
