@@ -2,9 +2,9 @@
 
 <div align="center">
 
-**Laboratoire de Recherche en IA Cognitive**
+**Authentification cognitive SaaS**
 
-*Cognitive AI Research Laboratory*
+*Cognitive authentication SaaS*
 
 [![Website](https://img.shields.io/badge/Website-ia--solution.fr-8B5CF6?style=for-the-badge)](https://ia-solution.fr)
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-000000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
@@ -19,19 +19,11 @@
 
 ### 🛡️ HCS-U7 — Cognitive Authentication Engine
 
-[![Backend Tests](https://img.shields.io/badge/Backend-383%20tests-brightgreen)]()
-[![Security Score](https://img.shields.io/badge/Security-99.9%2F100-brightgreen)]()
-[![Battle Tested](https://img.shields.io/badge/Attacks_Blocked-518-yellow)]()
-[![PSD2 Compliant](https://img.shields.io/badge/PSD2-compliant-green)]()
-
-**Core Platform:** Biometric cognitive authentication resistant to generative AI.
+**Core Platform:** Cognitive authentication designed to reduce online fraud (bots, impersonation) with a smooth user journey.
 
 **Key Features:**
-- 7 cognitive dimensions (Stroop, N-Back, Trail Making, etc.)
-- 99.6% bot detection accuracy
-- 34 security modules (Defense-in-Depth)
-- PSD2 SCA compliance engine
-- 383+ tests (unit + E2E + load k6)
+- Cognitive tests + multi-signal scoring (concept & product details in website)
+- SaaS/API integration approach (POC → integration → scale)
 
 **Markets:**
 - Fintech & Banking (fraud prevention, SCA)
@@ -41,33 +33,24 @@
 **Deployment:** API Backend + Admin Dashboard  
 **Revenue Model:** SaaS (€99-€2499/month)
 
-📂 [View Backend Repository →](https://github.com/zefparis/hcs-u7-backend)  
+📂 [View Backend Repository →](https://github.com/zefparis/hcs-u7-backend) (source of truth for backend code, tests, security and compliance claims)  
 🌐 [Live Demo →](https://hcs-u7.com)
 
 ---
 
-### 🚁 HCS-SHIELD — Tactical Mission Planning
+### 🚁 HCS-SHIELD — Secure Offline App (R&D)
 
-[![PWA Tests](https://img.shields.io/badge/PWA-92%20tests-brightgreen)]()
-[![Offline Capability](https://img.shields.io/badge/Offline-100%25-brightgreen)]()
-[![Combat Ready](https://img.shields.io/badge/Status-Combat--Ready-orange)]()
-[![Security Layers](https://img.shields.io/badge/Security-7--Layers-emerald)]()
+**R&D Application:** Secure offline planning and information sharing in constrained environments.
 
-**Tactical Application:** Secure mission planning for drones in GPS-denied environments.
+**Key Features (high-level):**
+- Offline-first UX
+- Secure sharing workflows
+- Authentication and device security primitives
 
-**Key Features:**
-- 100% offline capability (10,000+ cached map tiles)
-- Hardware-bound authentication (WebAuthn TPM/Secure Enclave)
-- Ephemeral QR (30-min auto-destruct, anti-replay)
-- Duress Mode (plausible deniability with decoy profile)
-- Panic Wipe (DoD 5220.22-M compliant <3s destruction)
-- Anonymous History (zero-knowledge logs)
-- Tamper Guard (runtime integrity monitoring)
-
-**Markets:**
-- Defense & Military (special operations, tactical drones)
-- Critical Infrastructure (firefighters, search & rescue)
-- Commercial (film production, agricultural drones)
+**Markets (examples):**
+- Critical infrastructure
+- Field operations
+- Enterprise offline workflows
 
 **Deployment:** Progressive Web App (iOS/Android)  
 **Revenue Model:** Device Licenses (€79-€499/device/year)
@@ -91,6 +74,8 @@
 ## 🏗️ Website Architecture
 
 This repository contains the main **IA-SOLUTION corporate website** (Next.js 14 App Router).
+
+**Important:** This repository does **not** contain the HCS-U7 backend implementation. Backend features, endpoints, tests and compliance claims must be verified in the dedicated backend repository.
 
 **Stack:**
 - Next.js 14.2 (App Router + React Server Components)
@@ -154,7 +139,7 @@ BREVO_SENDER_NAME=IA Solution
 
 ---
 
-## � Contact
+## 📫 Contact
 
 **IA-SOLUTION**  
 Benjamin BARRÈRE, CTO & Founder
@@ -169,7 +154,7 @@ Benjamin BARRÈRE, CTO & Founder
 
 ---
 
-## � License
+## 📄 License
 
 © 2025 IA Solution. All rights reserved.
 
