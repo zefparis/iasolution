@@ -3,8 +3,18 @@
 import { motion } from "framer-motion";
 import { heroSequence } from "@/lib/animations";
 import { Container } from "@/components/ui";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+function getShortDateLabel(dateLabel: string) {
+  const match = dateLabel.match(/\d{2}\/\d{2}\/\d{4}/);
+  return match?.[0] ?? dateLabel;
+}
 
 export function PatentsHero() {
+  const { language, content } = useLanguage();
+  const patents = content.patents;
+  const patentsCount = patents.items.length;
+
   return (
     <section className="relative min-h-[50vh] flex items-center pt-32 pb-16 overflow-hidden">
       {/* Background Effects */}
@@ -23,7 +33,7 @@ export function PatentsHero() {
             animate="visible"
           >
             <span className="badge-gradient inline-block px-5 py-2 rounded-full text-xs font-medium uppercase tracking-[0.15em]">
-              PROPRIÉTÉ INTELLECTUELLE
+              {language === "fr" ? "PROPRIÉTÉ INTELLECTUELLE" : "INTELLECTUAL PROPERTY"}
             </span>
           </motion.div>
 
@@ -33,7 +43,7 @@ export function PatentsHero() {
             animate="visible"
             className="mt-8 text-h1-mobile lg:text-h1 font-semibold glow-text"
           >
-            Brevets INPI
+            {language === "fr" ? "Brevets INPI" : "INPI Patents"}
           </motion.h1>
 
           <motion.p
@@ -42,8 +52,9 @@ export function PatentsHero() {
             animate="visible"
             className="mt-6 text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed"
           >
-            2 brevets déposés à l'Institut National de la Propriété Industrielle. 
-            Protection de 20 ans sur nos innovations en authentification cognitive et cryptographie.
+            {language === "fr"
+              ? `${patentsCount} brevets déposés à l'Institut National de la Propriété Industrielle. Protection de 20 ans sur nos innovations en authentification cognitive et cryptographie.`
+              : `${patentsCount} patents filed with the French National Institute of Industrial Property (INPI). 20-year protection for our innovations in cognitive authentication and cryptography.`}
           </motion.p>
 
           {/* Patent numbers */}
@@ -53,14 +64,19 @@ export function PatentsHero() {
             animate="visible"
             className="mt-8 flex flex-wrap justify-center gap-4"
           >
-            <div className="px-6 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08]">
-              <span className="font-mono text-xl font-bold text-accent-purple">FR2514274</span>
-              <p className="text-xs text-text-muted mt-1">30/11/2025</p>
-            </div>
-            <div className="px-6 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08]">
-              <span className="font-mono text-xl font-bold text-accent-purple">FR2514546</span>
-              <p className="text-xs text-text-muted mt-1">04/12/2025</p>
-            </div>
+            {patents.items.map((patent) => (
+              <div
+                key={patent.number}
+                className="px-6 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08]"
+              >
+                <span className="font-mono text-xl font-bold text-accent-purple">
+                  {patent.number}
+                </span>
+                <p className="text-xs text-text-muted mt-1">
+                  {getShortDateLabel(patent.date)}
+                </p>
+              </div>
+            ))}
           </motion.div>
         </div>
       </Container>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link, { LinkProps } from "next/link";
 import { heroSequence } from "@/lib/animations";
 import { Container } from "@/components/ui";
+import { patentsFrItems } from "@/lib/content-bilingual";
 
 export function HCSHero() {
   return (
@@ -89,7 +90,7 @@ export function HCSHero() {
             {[
               { value: "98.9%", label: "Précision" },
               { value: ">99%", label: "Détection IA" },
-              { value: "2", label: "Brevets INPI" },
+              { value: String(patentsFrItems.length), label: "Brevets INPI" },
               { value: "230+", label: "Tests" },
               { value: "<50ms", label: "Latence P95" },
               { value: "7", label: "Couches sécurité" },

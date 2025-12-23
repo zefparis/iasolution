@@ -145,12 +145,12 @@ BREVO_SENDER_NAME=IA Solution
 Benjamin BARRÈRE, CTO & Founder
 
 - **Email:** contact@ia-solution.fr
-- **Defense:** defense@ia-solution.fr
-- **Licensing:** licensing@ia-solution.fr
-- **Tel:** +33 7 44 14 96 17
+- **Defense:** infos@ia-solution.fr
+- **Licensing:** contact@ia-solution.fr
+- **Tel:** +33 7 58 06 05 56
 - **SIRET:** 438 055 097 00029
 
-**Patents:** FR2514274 | FR2514546 (INPI Certified)
+**Patents:** FR2514274 | FR2514546 | FR2515560 (INPI Certified)
 
 ---
 
@@ -158,9 +158,9 @@ Benjamin BARRÈRE, CTO & Founder
 
 © 2025 IA Solution. All rights reserved.
 
-Proprietary software. Patents FR2514274 & FR2514546 protect innovations.  
+Proprietary software. Patents FR2514274, FR2514546 & FR2515560 protect innovations.  
 Commercial licensing: contact@ia-solution.fr
-- **INPI** : 2 brevets déposés et protégés
+- **INPI** : 3 brevets déposés et protégés
 
 ---
 
@@ -170,7 +170,7 @@ Commercial licensing: contact@ia-solution.fr
 
 Le code source de ce projet est propriétaire. Toute reproduction, totale ou partielle, est interdite sans autorisation écrite expresse.
 
-Les brevets FR2514274 et FR2514546 protègent les innovations technologiques décrites.
+Les brevets FR2514274, FR2514546 et FR2515560 protègent les innovations technologiques décrites.
 
 ---
 

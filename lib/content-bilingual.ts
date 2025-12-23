@@ -17,6 +17,18 @@ export function getContentByLanguage(lang: Language) {
   return content[lang];
 }
 
+export const patentsFrItems = [
+  { number: "FR2514274", date: "Déposé le 30/11/2025", title: "Système d'authentification biométrique cognitive multi-couches résistant aux IA génératives", claims: 10, figures: 1 },
+  { number: "FR2514546", date: "Déposé le 04/12/2025", title: "Système de sécurité cognitive multi-signaux intégrant biométrie, pare-feu comportemental, entropie astronomique et moteur SCA adaptatif", claims: 15, figures: 3 },
+  { number: "FR2515560", date: "Déposé le 17/12/2025", title: "Demande de brevet — Détails en cours de publication", claims: undefined, figures: undefined },
+];
+
+export const patentsEnItems = [
+  { number: "FR2514274", date: "Filed on 11/30/2025", title: "Multi-layer cognitive biometric authentication system resistant to generative AI", claims: 10, figures: 1 },
+  { number: "FR2514546", date: "Filed on 12/04/2025", title: "Multi-signal cognitive security system integrating biometrics, behavioral firewall, astronomical entropy and adaptive SCA engine", claims: 15, figures: 3 },
+  { number: "FR2515560", date: "Filed on 12/17/2025", title: "Patent application — Details pending publication", claims: undefined, figures: undefined },
+];
+
 const content = {
   fr: {
     // Site config
@@ -240,7 +252,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
           description: "Recherche sur les marqueurs biologiques de la cognition humaine :",
           points: ["Effet Stroop (1935)", "N-Back (1958)", "Trail Making A/B (1938)"],
           algorithms: ["Score Combiner multi-signaux", "Quick-Auth tokens", "Rotating codes HMAC-SHA256"],
-          product: "HCS-U7 — 2 brevets INPI",
+          product: `HCS-U7 — ${patentsFrItems.length} brevets INPI`,
           stats: "Précision : 98.9% | Détection IA : >99%",
           gradient: "purple",
         },
@@ -302,7 +314,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       stats: [
         { value: "98.9", suffix: "%", label: "Précision" },
         { value: ">99", suffix: "%", label: "Détection IA" },
-        { value: "2", suffix: "", label: "Brevets INPI" },
+        { value: String(patentsFrItems.length), suffix: "", label: "Brevets INPI" },
         { value: "230", suffix: "+", label: "Tests" },
       ],
     },
@@ -428,11 +440,8 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
     patents: {
       label: "BREVETS",
       title: "Propriété Intellectuelle",
-      subtitle: "2 brevets déposés à l'INPI — Protection 20 ans",
-      items: [
-        { number: "FR2514274", date: "Déposé le 30/11/2025", title: "Système d'authentification biométrique cognitive multi-couches résistant aux IA génératives", claims: 10, figures: 1 },
-        { number: "FR2514546", date: "Déposé le 04/12/2025", title: "Système de sécurité cognitive multi-signaux intégrant biométrie, pare-feu comportemental, entropie astronomique et moteur SCA adaptatif", claims: 15, figures: 3 },
-      ],
+      subtitle: `${patentsFrItems.length} brevets déposés à l'INPI — Protection 20 ans`,
+      items: patentsFrItems,
       disclaimer: "Conformément à l'article L. 612-10 du Code de la propriété intellectuelle, le Ministre chargé de la Défense a été habilité à prendre connaissance des demandes à titre confidentiel.",
     },
 
@@ -1118,7 +1127,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       bio: [
         "15+ années d'expérience en développement logiciel, cybersécurité, intelligence artificielle et systèmes symboliques computationnels.",
         "Thèse doctorale en cours sur l'authentification cognitive et la différenciation humain/IA.",
-        "Inventeur des brevets FR2514274 et FR2514546.",
+        "Inventeur des brevets FR2514274, FR2514546 et FR2515560.",
       ],
       location: "Alès, Occitanie, France",
     },
@@ -1128,7 +1137,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       tagline: "Authentification cognitive SaaS",
       madeIn: "Made in France 🇫🇷",
       copyright: `© ${new Date().getFullYear()} IA SOLUTION · SIRET ${siteConfigBilingual.siret} · Tous droits réservés`,
-      patentsLine: "Brevets FR2514274 & FR2514546 déposés INPI · CC BY-NC-SA 4.0",
+      patentsLine: "Brevets FR2514274, FR2514546 & FR2515560 déposés INPI · CC BY-NC-SA 4.0",
       columns: {
         research: {
           title: "Recherche",
@@ -1409,7 +1418,7 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
           description: "Research on biological markers of human cognition:",
           points: ["Stroop Effect (1935)", "N-Back (1958)", "Trail Making A/B (1938)"],
           algorithms: ["Multi-signal Score Combiner", "Quick-Auth tokens", "HMAC-SHA256 rotating codes"],
-          product: "HCS-U7 — 2 INPI patents",
+          product: `HCS-U7 — ${patentsEnItems.length} INPI patents`,
           stats: "Accuracy: 98.9% | AI Detection: >99%",
           gradient: "purple",
         },
@@ -1597,11 +1606,8 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
     patents: {
       label: "PATENTS",
       title: "Intellectual Property",
-      subtitle: "2 patents filed with INPI — 20-year protection",
-      items: [
-        { number: "FR2514274", date: "Filed on 11/30/2025", title: "Multi-layer cognitive biometric authentication system resistant to generative AI", claims: 10, figures: 1 },
-        { number: "FR2514546", date: "Filed on 12/04/2025", title: "Multi-signal cognitive security system integrating biometrics, behavioral firewall, astronomical entropy and adaptive SCA engine", claims: 15, figures: 3 },
-      ],
+      subtitle: `${patentsEnItems.length} patents filed with INPI — 20-year protection`,
+      items: patentsEnItems,
       disclaimer: "In accordance with Article L. 612-10 of the Intellectual Property Code, the Minister of Defense has been authorized to review applications confidentially.",
     },
 
@@ -2287,7 +2293,7 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
       bio: [
         "15+ years of experience in software development, cybersecurity, artificial intelligence, and computational symbolic systems.",
         "Doctoral thesis in progress on cognitive authentication and human/AI differentiation.",
-        "Inventor of patents FR2514274 and FR2514546.",
+        "Inventor of patents FR2514274, FR2514546 and FR2515560.",
       ],
       location: "Alès, Occitanie, France",
     },
@@ -2297,7 +2303,7 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
       tagline: "Cognitive authentication SaaS",
       madeIn: "Made in France 🇫🇷",
       copyright: `© ${new Date().getFullYear()} IA SOLUTION · SIRET ${siteConfigBilingual.siret} · All rights reserved`,
-      patentsLine: "Patents FR2514274 & FR2514546 filed with INPI · CC BY-NC-SA 4.0",
+      patentsLine: "Patents FR2514274, FR2514546 & FR2515560 filed with INPI · CC BY-NC-SA 4.0",
       columns: {
         research: {
           title: "Research",

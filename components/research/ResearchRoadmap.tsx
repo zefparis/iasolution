@@ -22,7 +22,7 @@ const roadmap = [
       "Architecture Defense-in-Depth 7 couches",
       "Intégration Celestial Entropy Layer",
       "230+ tests unitaires et d'intégration",
-      "Dépôt brevets INPI (FR2514274, FR2514546)",
+      "Dépôt brevets INPI (FR2514274, FR2514546, FR2515560)",
     ],
     status: "completed",
   },

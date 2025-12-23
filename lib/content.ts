@@ -1,6 +1,18 @@
 // Content for IA SOLUTION - Laboratoire de Recherche en IA Cognitive
 // All text content externalized for easy translation and maintenance
 
+import { patentsFrItems } from "@/lib/content-bilingual";
+
+const patentNumbers = patentsFrItems.map((p) => p.number).join(", ");
+
+function formatPatentList(numbers: string[]) {
+  if (numbers.length <= 1) return numbers[0] ?? "";
+  if (numbers.length === 2) return `${numbers[0]} & ${numbers[1]}`;
+  return `${numbers.slice(0, -1).join(", ")} & ${numbers[numbers.length - 1]}`;
+}
+
+const patentNumbersDisplay = formatPatentList(patentsFrItems.map((p) => p.number));
+
 export const siteConfig = {
   name: "IA SOLUTION",
   tagline: "Laboratoire de Recherche en IA Cognitive",
@@ -61,7 +73,7 @@ export const researchAxes = {
         "Quick-Auth tokens (métriques comportementales temps réel)",
         "Rotating codes signés HMAC-SHA256 (anti-replay)",
       ],
-      product: "HCS-U7 — 2 brevets INPI (FR2514274, FR2514546)",
+      product: `HCS-U7 — ${patentsFrItems.length} brevets INPI (${patentNumbers})`,
       stats: "Précision : 98.9% | Détection IA : >99% | 383+ tests",
       gradient: "purple",
     },
@@ -152,7 +164,7 @@ export const productHCS = {
   stats: [
     { value: "98.9", suffix: "%", label: "Précision" },
     { value: ">99", suffix: "%", label: "Détection IA" },
-    { value: "2", suffix: "", label: "Brevets INPI" },
+    { value: String(patentsFrItems.length), suffix: "", label: "Brevets INPI" },
     { value: "383", suffix: "+", label: "Tests" },
   ],
 };
@@ -475,7 +487,7 @@ export const ctaSection = {
 export const patents = {
   label: "BREVETS",
   title: "Propriété Intellectuelle",
-  subtitle: "2 brevets déposés à l'INPI — Protection 20 ans",
+  subtitle: `${patentsFrItems.length} brevets déposés à l'INPI — Protection 20 ans`,
   items: [
     {
       number: "FR2514274",
@@ -491,6 +503,13 @@ export const patents = {
       claims: 15,
       figures: 3,
     },
+    {
+      number: "FR2515560",
+      date: "Déposé le 17/12/2025",
+      title: "Demande de brevet — Détails en cours de publication",
+      claims: 0,
+      figures: 0,
+    },
   ],
   disclaimer: "Conformément à l'article L. 612-10 du Code de la propriété intellectuelle, le Ministre chargé de la Défense a été habilité à prendre connaissance des demandes à titre confidentiel.",
 };
@@ -502,7 +521,7 @@ export const founder = {
   bio: [
     "15+ années d'expérience en développement logiciel, cybersécurité, intelligence artificielle et systèmes symboliques computationnels.",
     "Thèse doctorale en cours sur l'authentification cognitive et la différenciation humain/IA.",
-    "Inventeur des brevets FR2514274 et FR2514546.",
+    `Inventeur des brevets ${patentNumbers}.`,
   ],
   location: "Alès, Occitanie, France",
 };
@@ -511,7 +530,7 @@ export const footer = {
   tagline: "Laboratoire de Recherche en IA Cognitive",
   madeIn: "Made in France 🇫🇷",
   copyright: `© ${new Date().getFullYear()} IA SOLUTION · SIRET ${siteConfig.siret} · Tous droits réservés`,
-  patentsLine: "Brevets FR2514274 & FR2514546 déposés INPI · CC BY-NC-SA 4.0",
+  patentsLine: `Brevets ${patentNumbersDisplay} déposés INPI · CC BY-NC-SA 4.0`,
   columns: {
     research: {
       title: "Recherche",
@@ -681,14 +700,14 @@ export const performance = {
     { value: 99, prefix: ">", suffix: "%", label: "Détection IA", sublabel: "GPT-4V, Claude 3, Gemini" },
     { value: 50, prefix: "<", suffix: "ms", label: "Latence P95", sublabel: "Temps de réponse" },
     { value: 383, suffix: "+", label: "Tests unitaires", sublabel: "Vitest coverage" },
-    { value: 2, suffix: "", label: "Brevets INPI", sublabel: "FR2514274, FR2514546" },
+    { value: patentsFrItems.length, suffix: "", label: "Brevets INPI", sublabel: patentNumbers },
   ],
 };
 
 // SEO Metadata
 export const seo = {
   title: "HCS-U7 — Authentification Cognitive Anti-IA | IA Solution",
-  description: "Première solution mondiale d'authentification biométrique cognitive résistante aux IA génératives. 2 brevets INPI. 98.9% précision. Made in France.",
+  description: `Première solution mondiale d'authentification biométrique cognitive résistante aux IA génératives. ${patentsFrItems.length} brevets INPI. 98.9% précision. Made in France.`,
   keywords: "authentification cognitive, anti-IA, CAPTCHA, biométrie, brevets INPI, PSD2, cybersécurité, HCS-U7",
   ogImage: "/og-image.png",
 };
@@ -821,10 +840,20 @@ export const patentsPage = {
       figures: 3,
       status: "En cours d'examen",
     },
+    {
+      number: "FR2515560",
+      depositDate: "17 décembre 2025",
+      title: "Demande de brevet — Détails en cours de publication",
+      abstract: "Demande de brevet déposée à l'INPI. Détails en cours de publication.",
+      claims: [],
+      figures: 0,
+      status: "En cours d'examen",
+    },
   ],
   timeline: [
     { date: "Novembre 2025", event: "Dépôt brevet FR2514274" },
     { date: "Décembre 2025", event: "Dépôt brevet FR2514546" },
+    { date: "Décembre 2025", event: "Dépôt brevet FR2515560" },
     { date: "2026", event: "Examen INPI (prévu)" },
     { date: "2026-2027", event: "Publication (prévu)" },
   ],
@@ -917,6 +946,8 @@ United States
 L'ensemble du contenu de ce site (textes, images, logos, architecture) est protégé par le droit d'auteur et le droit des marques.
 
 Les brevets FR2514274 et FR2514546 sont déposés à l'INPI.
+
+Le brevet FR2515560 est également déposé à l'INPI.
 
 Toute reproduction, même partielle, est interdite sans autorisation préalable.
 

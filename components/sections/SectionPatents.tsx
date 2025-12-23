@@ -7,7 +7,7 @@ import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/anima
 import { Container } from "@/components/ui";
 
 export function SectionPatents() {
-  const { content } = useLanguage();
+  const { content, language } = useLanguage();
   const patents = content.patents;
 
   return (
@@ -36,7 +36,9 @@ export function SectionPatents() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10"
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10 ${
+            patents.items.length >= 3 ? "xl:grid-cols-3" : ""
+          }`}
         >
           {patents.items.map((patent, index) => (
             <motion.div
@@ -65,11 +67,22 @@ export function SectionPatents() {
               {/* Stats */}
               <div className="flex items-center justify-between pt-4 border-t border-white/[0.08]">
                 <div className="flex items-center gap-6 text-sm text-text-muted">
-                  <span>{patent.claims} revendications</span>
-                  <span>{patent.figures} figure{patent.figures > 1 ? "s" : ""}</span>
+                  {typeof patent.claims === "number" && typeof patent.figures === "number" ? (
+                    <>
+                      <span>
+                        {patent.claims} {language === "fr" ? "revendications" : "claims"}
+                      </span>
+                      <span>
+                        {patent.figures} {language === "fr" ? "figure" : "figure"}
+                        {patent.figures > 1 ? "s" : ""}
+                      </span>
+                    </>
+                  ) : (
+                    <span>{language === "fr" ? "Détails en cours" : "Details pending"}</span>
+                  )}
                 </div>
                 <button className="flex items-center gap-2 text-sm text-accent-purple hover:text-accent-pink transition-colors group-hover:gap-3">
-                  Voir les détails
+                  {language === "fr" ? "Voir les détails" : "View details"}
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

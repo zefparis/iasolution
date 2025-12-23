@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Target, Lightbulb, FlaskConical, CheckCircle } from "lucide-react";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
+import { patentsFrItems } from "@/lib/content-bilingual";
 
 const methodology = [
   {
@@ -24,7 +25,7 @@ const methodology = [
   {
     icon: CheckCircle,
     title: "Validation",
-    description: "Précision de 98.9%, détection IA >99%, latence P95 <50ms. 230+ tests unitaires et d'intégration. 2 brevets INPI déposés.",
+    description: `Précision de 98.9%, détection IA >99%, latence P95 <50ms. 230+ tests unitaires et d'intégration. ${patentsFrItems.length} brevets INPI déposés.`,
   },
 ];
 

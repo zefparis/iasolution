@@ -9,10 +9,11 @@ import {
   HCSAPI,
   HCSPricing 
 } from "@/components/hcs-u7";
+import { patentsFrItems } from "@/lib/content-bilingual";
 
 export const metadata: Metadata = {
   title: "HCS-U7 — Human Cognitive Signature | IA Solution",
-  description: "Le premier système d'authentification biométrique cognitive résistant aux IA génératives. 98.9% précision, >99% détection IA, 2 brevets INPI.",
+  description: `Le premier système d'authentification biométrique cognitive résistant aux IA génératives. 98.9% précision, >99% détection IA, ${patentsFrItems.length} brevets INPI.`,
 };
 
 export default function HCSU7Page() {
