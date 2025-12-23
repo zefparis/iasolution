@@ -29,8 +29,8 @@ export function Header() {
       icon: Plane,
       name: 'HCS-SHIELD',
       description: language === 'fr' 
-        ? 'Planification Tactique' 
-        : 'Tactical Mission Planning',
+        ? 'Application offline sécurisée (R&D)' 
+        : 'Secure offline app (R&D)',
       color: 'emerald',
     },
   ];

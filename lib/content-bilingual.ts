@@ -20,7 +20,7 @@ export function getContentByLanguage(lang: Language) {
 const content = {
   fr: {
     // Site config
-    tagline: "Laboratoire de Recherche en IA Cognitive",
+    tagline: "Authentification cognitive SaaS",
     
     // Navigation
     navigation: {
@@ -40,14 +40,110 @@ const content = {
 
     // Hero Section
     hero: {
-      badge: "LABORATOIRE DE RECHERCHE EN IA COGNITIVE",
-      title: "Nous explorons les frontières de l'intelligence artificielle",
-      subtitle: "Biométrie cognitive · Cryptographie des croyances · IA générative · IA quantique",
-      description: "IA SOLUTION développe des technologies de rupture à l'intersection de la cognition humaine, de la cryptographie avancée et de l'intelligence artificielle. Notre mission : créer des systèmes qui comprennent et protègent l'identité cognitive humaine.",
-      cta1: "Découvrir nos recherches",
-      cta1Href: "/research",
-      cta2: "Explorer HCS-U7",
-      cta2Href: "/hcs-u7",
+      badge: "HCS-U7 — AUTHENTIFICATION COGNITIVE SAAS",
+      title: "Authentification cognitive SaaS pour réduire la fraude en ligne",
+      subtitle: "HCS-U7 sécurise l’accès aux services (bots, usurpation) avec un parcours utilisateur fluide.",
+      description: "Pensé pour des déploiements rapides et des projets innovation finançables (POC, intégration, mise à l’échelle).",
+      cta1: "Demander une démo HCS-U7",
+      cta1Href: "/demo",
+      cta2: "Échanger sur l’éligibilité (Innov’Up / CCI)",
+      cta2Href: "/contact",
+    },
+
+    homeProblems: {
+      title: "Réduire la fraude sans complexifier l’accès",
+      subtitle: "Bots, usurpation et automatisation augmentent les coûts et dégradent l’expérience. HCS-U7 vise un gain de sécurité sans alourdir le parcours utilisateur.",
+      items: [
+        {
+          icon: "Bot",
+          title: "Bots & automatisation",
+          description: "Créations de comptes, scraping, abus promotionnels et attaques automatisées sur les parcours critiques.",
+        },
+        {
+          icon: "UserX",
+          title: "Usurpation & fraude d’identité",
+          description: "Réduire les prises de contrôle de comptes et l’accès non autorisé aux actions sensibles.",
+        },
+        {
+          icon: "Gauge",
+          title: "Parcours trop frictionnels",
+          description: "Éviter une sécurité qui pénalise conversion, adoption et satisfaction (support, abandon, coûts indirects).",
+        },
+      ],
+    },
+
+    homeBenefits: {
+      title: "Ce que vous obtenez",
+      subtitle: "Un niveau de protection renforcé, sans compromis sur l’expérience et avec un pilotage simple.",
+      items: [
+        {
+          icon: "ShieldCheck",
+          title: "Moins de fraude",
+          description: "Limiter bots et usurpations sur les parcours à risque (connexion, actions critiques, transactions).",
+        },
+        {
+          icon: "Sparkles",
+          title: "Moins de friction",
+          description: "Réduire la dépendance à des mécanismes intrusifs et améliorer la continuité du parcours.",
+        },
+        {
+          icon: "BarChart3",
+          title: "Pilotage simple",
+          description: "Suivre l’activation, les alertes et l’impact via des indicateurs compréhensibles par les équipes non techniques.",
+        },
+      ],
+    },
+
+    homeDeployment: {
+      title: "Intégration & déploiement (progressif)",
+      subtitle: "Une démarche pragmatique : prouver l’impact sur un périmètre cadré, puis généraliser.",
+      steps: [
+        {
+          title: "POC cadré",
+          description: "Définition du périmètre, critères de succès et mesure d’impact (fraude, friction, conversion).",
+        },
+        {
+          title: "Intégration",
+          description: "Mise en place progressive via SaaS / API, avec accompagnement et paramétrage selon le risque.",
+        },
+        {
+          title: "Mise à l’échelle",
+          description: "Industrialisation, suivi et amélioration continue sur les parcours les plus exposés.",
+        },
+      ],
+    },
+
+    homeInnovUp: {
+      title: "Pourquoi c’est pertinent pour Innov’Up / CCI",
+      subtitle: "Un projet deeptech orienté produit : innovation technologique, marché clair et mise en œuvre mesurable.",
+      points: [
+        "Innovation différenciante sur la sécurisation des accès (bots, usurpation, IA générative).",
+        "Approche compatible avec les dispositifs d’accompagnement : POC, jalons, critères de succès, montée en charge.",
+        "Modèle SaaS B2B : déploiement progressif, intégration maîtrisée, trajectoire de revenus.",
+        "Actifs de crédibilité : brevets INPI et savoir-faire cyber.",
+      ],
+      cta1: "Échanger sur l’éligibilité (Innov’Up / CCI)",
+      cta1Href: "/contact",
+      cta2: "Demander une démo HCS-U7",
+      cta2Href: "/demo",
+    },
+
+    homeRAndD: {
+      title: "R&D (secondaire)",
+      subtitle: "En parallèle de HCS-U7, IA-Solution mène un programme R&D sur la résilience des systèmes et le fonctionnement offline.",
+      cardTitle: "HCS-SHIELD (programme R&D)",
+      cardDescription: "Application offline sécurisée pour préparer et partager des informations en environnement contraint. Projet en maturation, présenté à titre de R&D.",
+      cta: "Découvrir HCS-SHIELD",
+      ctaHref: "/hcs-shield",
+    },
+
+    homeFinalCTA: {
+      title: "Parlons de votre contexte",
+      subtitle: "Organisme d’accompagnement ou entreprise : décrivez votre contexte et vos contraintes. Nous proposons un POC cadré et une démonstration si pertinent.",
+      cta1: "Demander une démo HCS-U7",
+      cta1Href: "/demo",
+      cta2: "Premier échange (Innov’Up / CCI)",
+      cta2Href: "/contact",
     },
 
     // Problem Section
@@ -103,15 +199,13 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
 
     // Use Cases Section
     useCases: {
-      title: "Cas d'usage",
-      subtitle: "HCS-U7 protège les points d'entrée critiques contre les bots et IA génératives",
+      title: "Cas d’usage prioritaires",
+      subtitle: "Exemples de contextes où HCS-U7 apporte une protection tangible sans alourdir l’expérience utilisateur.",
       cases: [
-        { icon: "Building2", title: "Banque & Fintech", description: "Authentification forte PSD2/SCA, protection des virements, détection fraude en temps réel." },
-        { icon: "ShoppingCart", title: "E-commerce", description: "Protection checkout, anti-scalping, détection comptes frauduleux et abus promotions." },
-        { icon: "Landmark", title: "Gouvernement", description: "Sécurisation services publics, protection identité numérique, conformité eIDAS." },
-        { icon: "Plug", title: "API & SaaS", description: "Protection endpoints sensibles, rate limiting intelligent, détection abus automatisés." },
-        { icon: "Lock", title: "Infrastructure critique", description: "Accès systèmes SCADA/ICS, authentification opérateurs, audit trail complet." },
-        { icon: "Bot", title: "Anti-bot avancé", description: "Remplacement CAPTCHA, protection formulaires, détection scraping et credential stuffing." },
+        { icon: "Building2", title: "Banque & Fintech", description: "Sécurisation de l’accès et des opérations sensibles, réduction du risque de fraude." },
+        { icon: "ShoppingCart", title: "E-commerce", description: "Protection des comptes et des parcours à risque (connexion, checkout, abus automatisés)." },
+        { icon: "Plug", title: "Plateformes & SaaS", description: "Protection des points d’entrée critiques et limitation des abus automatisés." },
+        { icon: "Landmark", title: "Services & portails", description: "Renforcer la confiance sur les accès aux services en ligne et limiter l’usurpation." },
       ],
     },
 
@@ -194,17 +288,17 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       label: "PRODUIT",
       title: "HCS-U7",
       subtitle: "Human Cognitive Signature",
-      headline: "Le premier système d'authentification biométrique cognitive résistant aux intelligences artificielles génératives.",
+      headline: "Authentification cognitive résistante aux bots et à l’IA générative, livrée en SaaS / API.",
       description: [
-        "Issu de 3 ans de recherche en neurosciences cognitives et en cryptographie.",
-        "6 tests cognitifs validés scientifiquement depuis les années 1930.",
-        "Architecture Defense-in-Depth à 7 couches.",
-        "Conformité native PSD2/SCA.",
+        "Déploiement progressif : POC cadré, puis généralisation.",
+        "Réduction de la fraude (bots, usurpation) sans alourdir l’expérience utilisateur.",
+        "Pilotage via un tableau de bord et des règles d’activation selon le risque.",
+        "Technologie protégée (brevets INPI).",
       ],
-      cta1: "Documentation technique",
-      cta1Href: "/technology",
+      cta1: "Découvrir HCS-U7",
+      cta1Href: "/hcs-u7",
       cta2: "Demander une démo",
-      cta2Href: "/contact",
+      cta2Href: "/demo",
       stats: [
         { value: "98.9", suffix: "%", label: "Précision" },
         { value: ">99", suffix: "%", label: "Détection IA" },
@@ -1031,7 +1125,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
 
     // Footer
     footer: {
-      tagline: "Laboratoire de Recherche en IA Cognitive",
+      tagline: "Authentification cognitive SaaS",
       madeIn: "Made in France 🇫🇷",
       copyright: `© ${new Date().getFullYear()} IA SOLUTION · SIRET ${siteConfigBilingual.siret} · Tous droits réservés`,
       patentsLine: "Brevets FR2514274 & FR2514546 déposés INPI · CC BY-NC-SA 4.0",
@@ -1096,7 +1190,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
 
   en: {
     // Site config
-    tagline: "Cognitive AI Research Laboratory",
+    tagline: "Cognitive authentication SaaS",
     
     // Navigation
     navigation: {
@@ -1116,14 +1210,110 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
 
     // Hero Section
     hero: {
-      badge: "COGNITIVE AI RESEARCH LABORATORY",
-      title: "We explore the frontiers of artificial intelligence",
-      subtitle: "Cognitive biometrics · Belief cryptography · Generative AI · Quantum AI",
-      description: "IA SOLUTION develops breakthrough technologies at the intersection of human cognition, advanced cryptography, and artificial intelligence. Our mission: create systems that understand and protect human cognitive identity.",
-      cta1: "Discover our research",
-      cta1Href: "/research",
-      cta2: "Explore HCS-U7",
-      cta2Href: "/hcs-u7",
+      badge: "HCS-U7 — COGNITIVE AUTHENTICATION SAAS",
+      title: "Cognitive authentication SaaS to reduce online fraud",
+      subtitle: "HCS-U7 secures access to online services (bots, account takeover) with a smooth user journey.",
+      description: "Designed for fast rollouts and fundable innovation projects (POC, integration, scaling).",
+      cta1: "Request an HCS-U7 demo",
+      cta1Href: "/demo",
+      cta2: "Discuss eligibility (Innov’Up / CCI)",
+      cta2Href: "/contact",
+    },
+
+    homeProblems: {
+      title: "Reduce fraud without adding friction",
+      subtitle: "Bots, account takeover and automation increase costs and hurt user experience. HCS-U7 aims to raise security without slowing users down.",
+      items: [
+        {
+          icon: "Bot",
+          title: "Bots & automation",
+          description: "Account creation, scraping, promo abuse and automated attacks on critical flows.",
+        },
+        {
+          icon: "UserX",
+          title: "Impersonation & identity fraud",
+          description: "Reduce account takeover and unauthorized access to sensitive actions.",
+        },
+        {
+          icon: "Gauge",
+          title: "Too much friction",
+          description: "Avoid security that hurts conversion and adoption (support load, drop-off, indirect costs).",
+        },
+      ],
+    },
+
+    homeBenefits: {
+      title: "What you get",
+      subtitle: "Stronger protection, a smoother experience, and simple operational steering.",
+      items: [
+        {
+          icon: "ShieldCheck",
+          title: "Less fraud",
+          description: "Limit bots and impersonation on high-risk flows (login, sensitive actions, transactions).",
+        },
+        {
+          icon: "Sparkles",
+          title: "Less friction",
+          description: "Reduce reliance on intrusive mechanisms and keep the user journey consistent.",
+        },
+        {
+          icon: "BarChart3",
+          title: "Simple steering",
+          description: "Track activation, alerts and impact with indicators that work for non-technical teams.",
+        },
+      ],
+    },
+
+    homeDeployment: {
+      title: "Integration & rollout (progressive)",
+      subtitle: "A pragmatic approach: prove impact on a defined scope, then scale.",
+      steps: [
+        {
+          title: "Scoped POC",
+          description: "Define scope, success criteria and impact measurement (fraud, friction, conversion).",
+        },
+        {
+          title: "Integration",
+          description: "Progressive rollout via SaaS / API, with configuration based on risk.",
+        },
+        {
+          title: "Scaling",
+          description: "Industrialize, monitor and continuously improve on the most exposed flows.",
+        },
+      ],
+    },
+
+    homeInnovUp: {
+      title: "Why it fits Innov’Up / CCI",
+      subtitle: "A product-driven deeptech project: technical differentiation, clear market and measurable implementation.",
+      points: [
+        "Differentiating innovation for securing access (bots, impersonation, generative AI).",
+        "Compatible with support programs: POC, milestones, success criteria, scaling plan.",
+        "B2B SaaS model: controlled integration, progressive deployment, revenue trajectory.",
+        "Credibility assets: INPI patents and cybersecurity know-how.",
+      ],
+      cta1: "Discuss eligibility (Innov’Up / CCI)",
+      cta1Href: "/contact",
+      cta2: "Request an HCS-U7 demo",
+      cta2Href: "/demo",
+    },
+
+    homeRAndD: {
+      title: "R&D (secondary)",
+      subtitle: "Alongside HCS-U7, IA-Solution runs an R&D program on system resilience and offline operation.",
+      cardTitle: "HCS-SHIELD (R&D program)",
+      cardDescription: "A secure offline application to prepare and share information in constrained environments. Presented as an R&D initiative.",
+      cta: "Discover HCS-SHIELD",
+      ctaHref: "/hcs-shield",
+    },
+
+    homeFinalCTA: {
+      title: "Let’s discuss your context",
+      subtitle: "Support organization or company: share your context and constraints. We propose a scoped POC and a demo if relevant.",
+      cta1: "Request an HCS-U7 demo",
+      cta1Href: "/demo",
+      cta2: "First call (Innov’Up / CCI)",
+      cta2Href: "/contact",
     },
 
     // Problem Section
@@ -1176,18 +1366,15 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
         ],
       },
     },
-
     // Use Cases Section
     useCases: {
-      title: "Use Cases",
-      subtitle: "HCS-U7 protects critical entry points against bots and generative AI",
+      title: "Priority use cases",
+      subtitle: "Examples where HCS-U7 provides measurable protection without adding friction.",
       cases: [
-        { icon: "Building2", title: "Banking & Fintech", description: "Strong PSD2/SCA authentication, wire transfer protection, real-time fraud detection." },
-        { icon: "ShoppingCart", title: "E-commerce", description: "Checkout protection, anti-scalping, fraudulent account and promotion abuse detection." },
-        { icon: "Landmark", title: "Government", description: "Public service security, digital identity protection, eIDAS compliance." },
-        { icon: "Plug", title: "API & SaaS", description: "Sensitive endpoint protection, intelligent rate limiting, automated abuse detection." },
-        { icon: "Lock", title: "Critical Infrastructure", description: "SCADA/ICS system access, operator authentication, complete audit trail." },
-        { icon: "Bot", title: "Advanced Anti-bot", description: "CAPTCHA replacement, form protection, scraping and credential stuffing detection." },
+        { icon: "Building2", title: "Banking & fintech", description: "Secure access and sensitive actions, reduce fraud risk." },
+        { icon: "ShoppingCart", title: "E-commerce", description: "Protect accounts and high-risk flows (login, checkout, automated abuse)." },
+        { icon: "Plug", title: "Platforms & SaaS", description: "Protect critical entry points and reduce automated abuse." },
+        { icon: "Landmark", title: "Services & portals", description: "Increase trust on access flows and limit impersonation." },
       ],
     },
 
@@ -1270,17 +1457,17 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
       label: "PRODUCT",
       title: "HCS-U7",
       subtitle: "Human Cognitive Signature",
-      headline: "The first cognitive biometric authentication system resistant to generative artificial intelligence.",
+      headline: "Cognitive authentication resilient to bots and generative AI, delivered as SaaS / API.",
       description: [
-        "Result of 3 years of research in cognitive neuroscience and cryptography.",
-        "6 scientifically validated cognitive tests since the 1930s.",
-        "7-layer Defense-in-Depth architecture.",
-        "Native PSD2/SCA compliance.",
+        "Progressive rollout: a scoped POC, then scaling.",
+        "Fraud reduction (bots, impersonation) without adding friction to the user journey.",
+        "Steering via a dashboard and risk-based activation rules.",
+        "Protected technology (INPI patents).",
       ],
-      cta1: "Technical documentation",
-      cta1Href: "/technology",
+      cta1: "Discover HCS-U7",
+      cta1Href: "/hcs-u7",
       cta2: "Request a demo",
-      cta2Href: "/contact",
+      cta2Href: "/demo",
       stats: [
         { value: "98.9", suffix: "%", label: "Accuracy" },
         { value: ">99", suffix: "%", label: "AI Detection" },
@@ -2107,7 +2294,7 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
 
     // Footer
     footer: {
-      tagline: "Cognitive AI Research Laboratory",
+      tagline: "Cognitive authentication SaaS",
       madeIn: "Made in France 🇫🇷",
       copyright: `© ${new Date().getFullYear()} IA SOLUTION · SIRET ${siteConfigBilingual.siret} · All rights reserved`,
       patentsLine: "Patents FR2514274 & FR2514546 filed with INPI · CC BY-NC-SA 4.0",

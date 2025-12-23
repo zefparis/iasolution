@@ -2,15 +2,15 @@ import {
   Header,
   Footer,
   Hero,
-  SectionResearchAxes,
   SectionProductHCS,
-  SectionArchitecture,
-  SectionU7Format,
-  SectionTechStack,
   SectionPatents,
-  SectionFounder,
-  SectionPublications,
-  SectionCTA,
+  SectionUseCases,
+  SectionHomeProblems,
+  SectionHomeBenefits,
+  SectionHomeDeployment,
+  SectionHomeInnovUp,
+  SectionHomeRAndD,
+  SectionHomeFinalCTA,
 } from "@/components/sections";
 
 export default function Home() {
@@ -19,15 +19,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <SectionResearchAxes />
+        <SectionHomeProblems />
         <SectionProductHCS />
-        <SectionArchitecture />
-        <SectionU7Format />
-        <SectionTechStack />
+        <SectionHomeBenefits />
+        <SectionUseCases />
+        <SectionHomeDeployment />
+        <SectionHomeInnovUp />
         <SectionPatents />
-        <SectionFounder />
-        <SectionPublications />
-        <SectionCTA />
+        <SectionHomeRAndD />
+        <SectionHomeFinalCTA />
       </main>
       <Footer />
     </>
