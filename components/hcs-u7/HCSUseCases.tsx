@@ -57,12 +57,12 @@ export function HCSUseCases() {
           viewport={viewportOnce}
           className="text-center mb-12"
         >
-          <span className="badge mb-6 inline-block">CAS D'USAGE</span>
+          <span className="badge mb-6 inline-block">CAS D&apos;USAGE</span>
           <h2 className="text-h2-mobile lg:text-h2 font-semibold glow-text mb-4">
             Applications
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            HCS-U7 protège les points d'entrée critiques dans tous les secteurs.
+            HCS-U7 protège les points d&apos;entrée critiques dans tous les secteurs.
           </p>
         </motion.div>
 

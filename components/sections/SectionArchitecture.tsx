@@ -191,7 +191,7 @@ export function SectionArchitecture() {
                     {endpoint.path}
                   </span>
                   <span className="text-text-muted">
-                    // {endpoint.desc}
+                    {/* // */}{endpoint.desc}
                   </span>
                 </div>
               ))}

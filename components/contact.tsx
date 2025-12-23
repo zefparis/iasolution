@@ -53,7 +53,7 @@ export function ContactSection() {
           : 'Message sent successfully! We will respond to you as soon as possible.'
       );
       form.reset();
-    } catch (error: any) {
+    } catch {
       setSubmitStatus('error');
       
       const errorMsg = language === 'fr'

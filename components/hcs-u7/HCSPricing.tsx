@@ -75,7 +75,7 @@ export function HCSPricing() {
             Plans & Tarification
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            Tarification adaptée à votre volume. Tous les plans incluent l'accès à l'ensemble des tests cognitifs.
+            Tarification adaptée à votre volume. Tous les plans incluent l&apos;accès à l&apos;ensemble des tests cognitifs.
           </p>
         </motion.div>
 

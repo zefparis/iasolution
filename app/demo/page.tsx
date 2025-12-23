@@ -152,7 +152,7 @@ export default function DemoPage() {
 
                   <div>
                     <label htmlFor="useCase" className="block text-sm font-medium text-white mb-2">
-                      Cas d'usage *
+                      Cas d&apos;usage *
                     </label>
                     <select
                       id="useCase"
@@ -162,7 +162,7 @@ export default function DemoPage() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-lg text-white focus:border-accent-purple focus:outline-none transition-colors"
                     >
-                      <option value="" className="bg-bg-primary">Sélectionnez un cas d'usage</option>
+                      <option value="" className="bg-bg-primary">Sélectionnez un cas d&apos;usage</option>
                       {demoPage.form.useCases.map((useCase) => (
                         <option key={useCase} value={useCase} className="bg-bg-primary">
                           {useCase}

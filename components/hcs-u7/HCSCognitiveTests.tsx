@@ -84,7 +84,7 @@ export function HCSCognitiveTests() {
             6 tests validés scientifiquement
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            Chaque test exploite une limitation fondamentale du cerveau humain que l'IA ne peut pas simuler authentiquement.
+            Chaque test exploite une limitation fondamentale du cerveau humain que l&apos;IA ne peut pas simuler authentiquement.
           </p>
         </motion.div>
 

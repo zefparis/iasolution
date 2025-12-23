@@ -55,7 +55,7 @@ export function HCSHero() {
               animate="visible"
               className="mt-6 text-lg text-text-secondary leading-relaxed"
             >
-              Le premier système d'authentification biométrique cognitive résistant aux intelligences artificielles génératives. 
+              Le premier système d&apos;authentification biométrique cognitive résistant aux intelligences artificielles génératives. 
               Issu de 3 ans de recherche en neurosciences cognitives et cryptographie.
             </motion.p>
 

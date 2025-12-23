@@ -43,7 +43,7 @@ export function ResearchHero() {
             className="mt-6 text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed"
           >
             Travaux de recherche fondamentale et appliquée dans quatre domaines interconnectés. 
-            Chaque axe alimente les autres dans une approche systémique de l'authentification cognitive.
+            Chaque axe alimente les autres dans une approche systémique de l&apos;authentification cognitive.
           </motion.p>
         </div>
       </Container>

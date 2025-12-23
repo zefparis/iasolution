@@ -45,7 +45,7 @@ export function ResearchMethodology() {
             Approche scientifique
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            Notre recherche suit une méthodologie rigoureuse, de l'identification du problème à la validation des résultats.
+            Notre recherche suit une méthodologie rigoureuse, de l&apos;identification du problème à la validation des résultats.
           </p>
         </motion.div>
 

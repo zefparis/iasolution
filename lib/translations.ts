@@ -179,12 +179,16 @@ export const translations = {
   },
 };
 
-export function getTranslation(lang: "fr" | "en", key: string): any {
+export function getTranslation(lang: "fr" | "en", key: string): unknown {
   const keys = key.split(".");
-  let value: any = translations[lang];
+  let value: Record<string, unknown> = translations[lang] as Record<string, unknown>;
   
   for (const k of keys) {
-    value = value?.[k];
+    if (value && typeof value === "object" && k in value) {
+      value = value[k] as Record<string, unknown>;
+    } else {
+      return undefined;
+    }
   }
   
   return value;

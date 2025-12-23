@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
     };
 
     // Send both emails using Brevo REST API
-    const sendEmail = async (payload: any) => {
+    const sendEmail = async (payload: Record<string, unknown>) => {
       const response = await fetch('https://api.brevo.com/v3/smtp/email', {
         method: 'POST',
         headers: {
@@ -104,16 +104,16 @@ export async function POST(request: NextRequest) {
       { success: true, message: 'Emails sent successfully' },
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     // Log detailed error only in development
     if (process.env.NODE_ENV === 'development') {
       console.error('[Contact API] Brevo API Error:', error);
     } else {
       // Log minimal error info in production
-      console.error('[Contact API] Failed to send email:', error.message);
+      console.error('[Contact API] Failed to send email:', error instanceof Error ? error.message : String(error));
     }
     
-    const errorMessage = error?.message || 'Failed to send email';
+    const errorMessage = error instanceof Error ? error.message : 'Failed to send email';
     
     // Don't expose detailed errors in production
     const publicError = process.env.NODE_ENV === 'development' 

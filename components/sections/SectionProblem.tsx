@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
+import { staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 import { Container, AnimatedSection } from "@/components/ui";
 
 export function SectionProblem() {

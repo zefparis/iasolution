@@ -1,7 +1,8 @@
 import { Code2, Cpu, Grid, MessageSquare, Rocket, Sparkles, Brain, Zap, Wifi } from "lucide-react";
 import type { Route } from "next";
 
-const iconMap = {
+// Icon map used by content consumers
+export const iconMap = {
   Code2,
   Grid,
   Rocket,

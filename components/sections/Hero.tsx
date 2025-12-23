@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link, { LinkProps } from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { heroSequence } from "@/lib/animations";
-import { Container, Button } from "@/components/ui";
+import { Container } from "@/components/ui";
 
 export function Hero() {
   const { content } = useLanguage();
