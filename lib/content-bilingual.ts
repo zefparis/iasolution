@@ -1221,10 +1221,8 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       title: "Cognitive authentication SaaS to reduce online fraud",
       subtitle: "HCS-U7 secures access to online services (bots, account takeover) with a smooth user journey.",
       description: "Designed for fast rollouts and fundable innovation projects (POC, integration, scaling).",
-      cta1: "Request an HCS-U7 demo",
-      cta1Href: "/demo",
-      cta2: "Discuss eligibility (Innov’Up / CCI)",
-      cta2Href: "/contact",
+      cta: "Request an HCS-U7 demo",
+      ctaHref: "/demo",
     },
 
     homeProblems: {
