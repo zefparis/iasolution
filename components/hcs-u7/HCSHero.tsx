@@ -63,19 +63,13 @@ export function HCSHero() {
               variants={heroSequence.cta}
               initial="hidden"
               animate="visible"
-              className="mt-8 flex flex-col sm:flex-row gap-4"
+              className="mt-8"
             >
               <Link
-                href={"/contact" as LinkProps<string>["href"]}
+                href={"/demo" as LinkProps<string>["href"]}
                 className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-accent-purple to-accent-indigo text-white font-medium hover:shadow-lg hover:shadow-accent-purple/25 transition-all duration-300"
               >
-                Demander une démo
-              </Link>
-              <Link
-                href={"#api" as LinkProps<string>["href"]}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white font-medium hover:bg-white/[0.06] hover:border-accent-purple/30 transition-all duration-300"
-              >
-                Documentation API
+                Demander une démo HCS-U7
               </Link>
             </motion.div>
           </div>

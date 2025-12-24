@@ -56,10 +56,8 @@ const content = {
       title: "Authentification cognitive SaaS pour réduire la fraude en ligne",
       subtitle: "HCS-U7 sécurise l’accès aux services (bots, usurpation) avec un parcours utilisateur fluide.",
       description: "Pensé pour des déploiements rapides et des projets innovation finançables (POC, intégration, mise à l’échelle).",
-      cta1: "Demander une démo HCS-U7",
-      cta1Href: "/demo",
-      cta2: "Échanger sur l’éligibilité (Innov’Up / CCI)",
-      cta2Href: "/contact",
+      cta: "Demander une démo HCS-U7",
+      ctaHref: "/demo",
     },
 
     homeProblems: {
