@@ -14,9 +14,9 @@ const metrics = [
   { value: ">99%", label: "Détection Gemini", sublabel: "Google" },
   { value: ">99.6%", label: "Détection Bots", sublabel: "Automatisés" },
   { value: "<50ms", label: "Latence P95", sublabel: "95th percentile" },
-  { value: "230+", label: "Tests", sublabel: "Vitest" },
+  { value: "699", label: "Tests", sublabel: "Vitest" },
   { value: "99.9/100", label: "Score Sécurité", sublabel: "Defense-in-Depth" },
-  { value: "7", label: "Couches", sublabel: "Protection" },
+  { value: "9", label: "Couches", sublabel: "Protection" },
 ];
 
 export function HCSPerformance() {

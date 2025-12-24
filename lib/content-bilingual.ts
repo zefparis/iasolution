@@ -224,8 +224,8 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       title: "Performances Validées",
       subtitle: "Infrastructure Battle-Tested — 518 attaques bloquées, 0 breach",
       metrics: [
-        { value: "99.9", suffix: "/100", label: "Score Sécurité", sublabel: "Defense-in-Depth (7 couches)", badge: "🏆 Enterprise-Grade" },
-        { value: 383, suffix: "+", label: "Tests", sublabel: "Unitaires + E2E + Load (k6)", badge: "✅ High Coverage" },
+        { value: "99.9", suffix: "/100", label: "Score Sécurité", sublabel: "Defense-in-Depth (9 couches)", badge: "🏆 Enterprise-Grade" },
+        { value: 699, suffix: "", label: "Tests", sublabel: "Unitaires + E2E + Load (k6)", badge: "✅ High Coverage" },
         { value: 98.9, suffix: "%", label: "Précision globale", sublabel: "True Positive Rate" },
         { value: 99.6, suffix: "%", label: "Détection bots", sublabel: "True Negative Rate" },
         { value: 99, prefix: ">", suffix: "%", label: "Détection IA", sublabel: "GPT-4V, Claude 3, Gemini" },
@@ -282,12 +282,12 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
           id: "post-quantum",
           icon: "Atom",
           title: "CRYPTOGRAPHIE POST-QUANTIQUE",
-          subtitle: "Préparation à l'ère quantique",
-          description: "Recherche exploratoire sur la sécurité post-quantique :",
-          points: ["NIST-PQC", "Lattice-based crypto", "QSIG"],
-          algorithms: ["QSIG ready", "Merkle trees", "HSM Integration"],
-          product: "Production-ready 2026",
-          stats: "",
+          subtitle: "Production-ready dès aujourd'hui",
+          description: "Implémentation complète des standards NIST-PQC :",
+          points: ["ML-DSA-65 (Dilithium3)", "ML-KEM-768 (Kyber768)", "QSIG v3 + Shield v3"],
+          algorithms: ["Signatures Dilithium", "Chiffrement Kyber hybride", "62 tests PQC"],
+          product: "Production-ready NOW",
+          stats: "Sign ~12ms | Verify ~8ms | Encaps ~2ms",
           gradient: "cyan",
         },
       ],
@@ -313,7 +313,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
         { value: "98.9", suffix: "%", label: "Précision" },
         { value: ">99", suffix: "%", label: "Détection IA" },
         { value: String(patentsFrItems.length), suffix: "", label: "Brevets INPI" },
-        { value: "230", suffix: "+", label: "Tests" },
+        { value: "699", suffix: "", label: "Tests" },
       ],
     },
 
@@ -324,7 +324,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       subtitle: "Pare-feu Cognitif Multi-Signaux — Niveau Sécurité 99.9/100",
       diagram: `┌─────────────────────────────────────────────────────────────────────────────┐
 │  HCS-U7 COGNITIVE FIREWALL                                                  │
-│  Backend Fastify 5 · TypeScript · 230+ Tests                                │
+│  Backend Fastify 5 · TypeScript · 699 Tests · PQC                           │
 │                                                                             │
 │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐            │
 │  │  HCS Core   │ │   Device    │ │   Network   │ │  Behavior   │            │
@@ -396,9 +396,9 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       title: "Notre stack technologique",
       subtitle: "Une architecture moderne, sécurisée et performante.",
       stacks: [
-        { icon: "Code", title: "Backend", description: "Fastify 5, TypeScript, Zod validation, 230+ tests Vitest." },
+        { icon: "Code", title: "Backend", description: "Fastify 5, TypeScript, Zod validation, 699 tests Vitest." },
         { icon: "Database", title: "Persistence", description: "PostgreSQL, Prisma ORM, Redis cache, rate limiting distribué." },
-        { icon: "Lock", title: "Cryptographie", description: "HMAC-SHA256, bcrypt, JWT, Celestial Entropy, NIST-PQC ready." },
+        { icon: "Lock", title: "Cryptographie", description: "HMAC-SHA256, bcrypt, JWT, Celestial Entropy, ML-DSA + ML-KEM (Post-Quantum)." },
         { icon: "Shield", title: "Sécurité Enterprise", description: "WAF multi-encodings, DDoS L7, Honeypots, Credential Stuffing." },
         { icon: "Brain", title: "Moteur Cognitif", description: "6 tests neurosciences, Score Combiner adaptatif, Quick-Auth tokens." },
         { icon: "Star", title: "Innovation", description: "Celestial Entropy Layer — Entropie astronomique temps réel." },
@@ -414,7 +414,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
         { icon: "FileText", type: "THÈSE DOCTORALE", title: "Authentification cognitive et différenciation humain/IA", chapters: ["Introduction générale", "Celestial Entropy Layer", "Tests cognitifs validés", "Architecture Defense-in-Depth"], status: "En finalisation", cta: "Aperçu" },
         { icon: "Book", type: "DOCUMENTATION TECHNIQUE", title: "HCS-U7 Specs & Patent Corpus", chapters: ["Core specification (v3.2)", "Format U7 (7 segments)", "Algorithmes (QSIG, B3, Merkle)", "Fusion Western + BaZi"], status: "Classification : Propriétaire", cta: "Documentation" },
         { icon: "Microscope", type: "RÉFÉRENCES SCIENTIFIQUES", title: "Tests cognitifs fondamentaux", chapters: ["Stroop (1935)", "N-Back (1958)", "Trail Making (1938)", "Digit Span (1939)"], status: "", cta: "Bibliographie" },
-        { icon: "BarChart", type: "BENCHMARKS & VALIDATION", title: "Résultats validés", chapters: ["Précision : 98.9%", "Détection IA : >99%", "Latence P95 : <50ms", "Tests : 230+"], status: "", cta: "Rapport complet" },
+        { icon: "BarChart", type: "BENCHMARKS & VALIDATION", title: "Résultats validés", chapters: ["Précision : 98.9%", "Détection IA : >99%", "Latence P95 : <50ms", "Tests : 699"], status: "", cta: "Rapport complet" },
       ],
     },
 
@@ -1446,12 +1446,12 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
           id: "post-quantum",
           icon: "Atom",
           title: "POST-QUANTUM CRYPTOGRAPHY",
-          subtitle: "Preparing for the quantum era",
-          description: "Exploratory research on post-quantum security:",
-          points: ["NIST-PQC", "Lattice-based crypto", "QSIG"],
-          algorithms: ["QSIG ready", "Merkle trees", "HSM Integration"],
-          product: "Production-ready 2026",
-          stats: "",
+          subtitle: "Production-ready today",
+          description: "Full implementation of NIST-PQC standards:",
+          points: ["ML-DSA-65 (Dilithium3)", "ML-KEM-768 (Kyber768)", "QSIG v3 + Shield v3"],
+          algorithms: ["Dilithium signatures", "Kyber hybrid encryption", "62 PQC tests"],
+          product: "Production-ready NOW",
+          stats: "Sign ~12ms | Verify ~8ms | Encaps ~2ms",
           gradient: "cyan",
         },
       ],
@@ -1477,7 +1477,7 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
         { value: "98.9", suffix: "%", label: "Accuracy" },
         { value: ">99", suffix: "%", label: "AI Detection" },
         { value: "2", suffix: "", label: "INPI Patents" },
-        { value: "230", suffix: "+", label: "Tests" },
+        { value: "699", suffix: "", label: "Tests" },
       ],
     },
 
@@ -1488,7 +1488,7 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
       subtitle: "Multi-Signal Cognitive Firewall — Security Level 99.9/100",
       diagram: `┌─────────────────────────────────────────────────────────────────────────────┐
 │  HCS-U7 COGNITIVE FIREWALL                                                  │
-│  Backend Fastify 5 · TypeScript · 230+ Tests                                │
+│  Backend Fastify 5 · TypeScript · 699 Tests · PQC                           │
 │                                                                             │
 │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐            │
 │  │  HCS Core   │ │   Device    │ │   Network   │ │  Behavior   │            │
@@ -1560,7 +1560,7 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
       title: "Our technology stack",
       subtitle: "A modern, secure, and high-performance architecture.",
       stacks: [
-        { icon: "Code", title: "Backend", description: "Fastify 5, TypeScript, Zod validation, 230+ Vitest tests." },
+        { icon: "Code", title: "Backend", description: "Fastify 5, TypeScript, Zod validation, 699 Vitest tests." },
         { icon: "Database", title: "Persistence", description: "PostgreSQL, Prisma ORM, Redis cache, distributed rate limiting." },
         { icon: "Lock", title: "Cryptography", description: "HMAC-SHA256, bcrypt, JWT, Celestial Entropy, NIST-PQC ready." },
         { icon: "Shield", title: "Enterprise Security", description: "Multi-encoding WAF, L7 DDoS, Honeypots, Credential Stuffing." },
@@ -1578,7 +1578,7 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
         { icon: "FileText", type: "DOCTORAL THESIS", title: "Cognitive authentication and human/AI differentiation", chapters: ["General introduction", "Celestial Entropy Layer", "Validated cognitive tests", "Defense-in-Depth Architecture"], status: "In finalization", cta: "Preview" },
         { icon: "Book", type: "TECHNICAL DOCUMENTATION", title: "HCS-U7 Specs & Patent Corpus", chapters: ["Core specification (v3.2)", "U7 Format (7 segments)", "Algorithms (QSIG, B3, Merkle)", "Western + BaZi Fusion"], status: "Classification: Proprietary", cta: "Documentation" },
         { icon: "Microscope", type: "SCIENTIFIC REFERENCES", title: "Fundamental cognitive tests", chapters: ["Stroop (1935)", "N-Back (1958)", "Trail Making (1938)", "Digit Span (1939)"], status: "", cta: "Bibliography" },
-        { icon: "BarChart", type: "BENCHMARKS & VALIDATION", title: "Validated results", chapters: ["Accuracy: 98.9%", "AI Detection: >99%", "P95 Latency: <50ms", "Tests: 230+"], status: "", cta: "Full report" },
+        { icon: "BarChart", type: "BENCHMARKS & VALIDATION", title: "Validated results", chapters: ["Accuracy: 98.9%", "AI Detection: >99%", "P95 Latency: <50ms", "Tests: 699"], status: "", cta: "Full report" },
       ],
     },
 

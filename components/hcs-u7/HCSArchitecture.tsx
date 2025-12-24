@@ -5,13 +5,15 @@ import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 
 const layers = [
-  { level: "L7", name: "DDoS Protection", desc: "Cloudflare 100+ Gbps · Rate Limiting L7", icon: "🌐", color: "from-blue-500/20 to-blue-600/10", border: "border-blue-500/30" },
-  { level: "L6", name: "WAF Multi-Encoding", desc: "OWASP Top 10 · SQLi · XSS · ML Bot Detection", icon: "🔥", color: "from-orange-500/20 to-orange-600/10", border: "border-orange-500/30" },
-  { level: "L5", name: "Honeypots Actifs", desc: "/.env · /admin · /wp-login · Auto-ban 24h", icon: "🍯", color: "from-amber-500/20 to-amber-600/10", border: "border-amber-500/30" },
-  { level: "L4", name: "Hieroglyphic Shield", desc: "AES-256-GCM · scrypt KDF · 30-40ms wrap", icon: "🔐", color: "from-emerald-500/20 to-emerald-600/10", border: "border-emerald-500/30" },
-  { level: "L3", name: "Proof-of-Work Adaptatif", desc: "Argon2id/SHA256 · Difficulté dynamique", icon: "⚡", color: "from-yellow-500/20 to-yellow-600/10", border: "border-yellow-500/30" },
-  { level: "L2", name: "Cognitive Firewall", desc: "5 Signaux Fusion · Trust Graph · SCA PSD2", icon: "🧠", color: "from-purple-500/20 to-purple-600/10", border: "border-purple-500/30" },
-  { level: "L1", name: "Biométrie Cognitive", desc: "6 Tests Validés · AUC-ROC 0.994 · 98.9%", icon: "🎯", color: "from-pink-500/20 to-pink-600/10", border: "border-pink-500/30" },
+  { level: "L9", name: "DDoS Protection", desc: "Cloudflare 100+ Gbps · Rate Limiting L7", icon: "🌐", color: "from-blue-500/20 to-blue-600/10", border: "border-blue-500/30" },
+  { level: "L8", name: "WAF Multi-Encoding", desc: "OWASP Top 10 · SQLi · XSS · ML Bot Detection", icon: "🔥", color: "from-orange-500/20 to-orange-600/10", border: "border-orange-500/30" },
+  { level: "L7", name: "Honeypots Actifs", desc: "122 endpoints · /.env · /admin · Auto-ban 30d", icon: "🍯", color: "from-amber-500/20 to-amber-600/10", border: "border-amber-500/30" },
+  { level: "L6", name: "Post-Quantum Crypto", desc: "ML-DSA-65 (Dilithium) · ML-KEM-768 (Kyber)", icon: "🔮", color: "from-cyan-500/20 to-cyan-600/10", border: "border-cyan-500/30" },
+  { level: "L5", name: "Hieroglyphic Shield", desc: "AES-256-GCM · scrypt KDF · Kyber Hybrid", icon: "🔐", color: "from-emerald-500/20 to-emerald-600/10", border: "border-emerald-500/30" },
+  { level: "L4", name: "Proof-of-Work Adaptatif", desc: "Argon2id/SHA256 · Difficulté dynamique", icon: "⚡", color: "from-yellow-500/20 to-yellow-600/10", border: "border-yellow-500/30" },
+  { level: "L3", name: "Anti-Replay Defense", desc: "Redis-atomic · Multi-instance safe · TTL 5min", icon: "🛡️", color: "from-red-500/20 to-red-600/10", border: "border-red-500/30" },
+  { level: "L2", name: "Cognitive Firewall", desc: "9 Signaux Fusion · Trust Graph · SCA PSD2", icon: "🧠", color: "from-purple-500/20 to-purple-600/10", border: "border-purple-500/30" },
+  { level: "L1", name: "Biométrie Cognitive", desc: "7 Tests Validés · AUC-ROC 0.994 · 98.9%", icon: "🎯", color: "from-pink-500/20 to-pink-600/10", border: "border-pink-500/30" },
 ];
 
 const signals = [
@@ -40,7 +42,7 @@ export function HCSArchitecture() {
             Defense-in-Depth
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            34 modules de sécurité · 7 couches empilées · 518 attaques bloquées
+            34 modules de sécurité · 9 couches empilées · 699 tests · Post-Quantum Ready
           </p>
         </motion.div>
 
@@ -58,7 +60,7 @@ export function HCSArchitecture() {
             className="text-center p-4 rounded-xl bg-gradient-to-r from-accent-purple/20 via-accent-blue/20 to-accent-purple/20 border border-accent-purple/30"
           >
             <div className="text-lg font-bold text-white">🛡️ HCS-U7 COGNITIVE FIREWALL</div>
-            <div className="text-sm text-text-secondary">Fastify 5 · TypeScript · 383+ Tests · Battle-Tested</div>
+            <div className="text-sm text-text-secondary">Fastify 5 · TypeScript · 699 Tests · Post-Quantum Ready</div>
           </motion.div>
 
           {/* Layers */}

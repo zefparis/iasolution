@@ -85,9 +85,9 @@ export function HCSHero() {
               { value: "98.9%", label: "Précision" },
               { value: ">99%", label: "Détection IA" },
               { value: String(patentsFrItems.length), label: "Brevets INPI" },
-              { value: "230+", label: "Tests" },
+              { value: "699", label: "Tests" },
               { value: "<50ms", label: "Latence P95" },
-              { value: "7", label: "Couches sécurité" },
+              { value: "9", label: "Couches sécurité" },
             ].map((stat, idx) => (
               <div key={idx} className="glass-card p-6 text-center">
                 <div className="text-3xl font-mono font-bold text-white">
