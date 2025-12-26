@@ -293,16 +293,53 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       ],
     },
 
+    // Research Methodology
+    researchMethodology: {
+      badge: "MÉTHODOLOGIE",
+      title: "Approche scientifique",
+      subtitle: "Notre recherche suit une méthodologie rigoureuse, de l'identification du problème à la validation des résultats.",
+      steps: [
+        { title: "Identification du problème", description: "Analyse des limitations des systèmes d'authentification actuels face aux IA génératives. Étude des taux de contournement CAPTCHA (94% - ETH Zurich 2024)." },
+        { title: "Hypothèse de recherche", description: "Les contraintes cognitives biologiques (temps de réaction, interférence, mémoire de travail) sont des marqueurs fiables de l'humanité que l'IA ne peut pas simuler." },
+        { title: "Expérimentation", description: "Développement et validation de 6 tests cognitifs issus des neurosciences. Collecte de données sur 10,000+ sessions. Entraînement de modèles ML de détection." },
+        { title: "Validation", description: "Précision de 98.9%, détection IA >99%, latence P95 <50ms. 699 tests unitaires et d'intégration. 3 brevets INPI déposés." },
+      ],
+      cta1: "Découvrir HCS-U7",
+      cta1Href: "/hcs-u7",
+      cta2: "Demander une démo",
+      cta2Href: "/demo",
+      stats: [
+        { value: "98.9", suffix: "%", label: "Précision" },
+        { value: ">99", suffix: "%", label: "Détection IA" },
+        { value: String(patentsFrItems.length), suffix: "", label: "Brevets INPI" },
+        { value: "699", suffix: "", label: "Tests" },
+      ],
+    },
+
+    // Research Roadmap
+    researchRoadmap: {
+      badge: "ROADMAP R&D",
+      title: "Feuille de route",
+      subtitle: "Notre progression de la recherche fondamentale vers les applications industrielles.",
+      statusLabels: { completed: "Terminé", in_progress: "En cours", planned: "Planifié" },
+      phases: [
+        { year: "2022-2023", title: "Recherche fondamentale", items: ["Étude des tests cognitifs validés (Stroop, N-Back, Trail Making)", "Analyse des patterns temporels humains vs IA", "Prototypage du Score Combiner"], status: "completed" },
+        { year: "2024", title: "Développement HCS-U7", items: ["Architecture Defense-in-Depth 10 couches", "Intégration Celestial Entropy Layer", "699 tests unitaires et d'intégration", "Dépôt brevets INPI (FR2514274, FR2514546, FR2515560)"], status: "completed" },
+        { year: "2025", title: "Validation & Production", items: ["Conformité PSD2/SCA native", "API publique v1.0", "Premiers clients pilotes", "Finalisation thèse doctorale"], status: "in_progress" },
+        { year: "2026", title: "Expansion", items: ["Cryptographie post-quantique (NIST-PQC)", "SDK multi-plateforme", "Partenariats académiques internationaux", "Extension robotique & IoT"], status: "planned" },
+      ],
+    },
+
     // Product HCS
     productHCS: {
       label: "PRODUIT",
       title: "HCS-U7",
       subtitle: "Human Cognitive Signature",
-      headline: "Authentification cognitive résistante aux bots et à l’IA générative, livrée en SaaS / API.",
+      headline: "Authentification cognitive résistante aux bots et à l'IA générative, livrée en SaaS / API.",
       description: [
         "Déploiement progressif : POC cadré, puis généralisation.",
-        "Réduction de la fraude (bots, usurpation) sans alourdir l’expérience utilisateur.",
-        "Pilotage via un tableau de bord et des règles d’activation selon le risque.",
+        "Réduction de la fraude (bots, usurpation) sans alourdir l'expérience utilisateur.",
+        "Pilotage via un tableau de bord et des règles d'activation selon le risque.",
         "Technologie protégée (brevets INPI).",
       ],
       cta1: "Découvrir HCS-U7",
@@ -1641,6 +1678,33 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
           stats: "Sign ~12ms | Verify ~8ms | Encaps ~2ms",
           gradient: "cyan",
         },
+      ],
+    },
+
+    // Research Methodology
+    researchMethodology: {
+      badge: "METHODOLOGY",
+      title: "Scientific approach",
+      subtitle: "Our research follows a rigorous methodology, from problem identification to results validation.",
+      steps: [
+        { title: "Problem identification", description: "Analysis of current authentication system limitations against generative AI. Study of CAPTCHA bypass rates (94% - ETH Zurich 2024)." },
+        { title: "Research hypothesis", description: "Biological cognitive constraints (reaction time, interference, working memory) are reliable markers of humanity that AI cannot simulate." },
+        { title: "Experimentation", description: "Development and validation of 6 cognitive tests from neuroscience. Data collection on 10,000+ sessions. Training of ML detection models." },
+        { title: "Validation", description: "98.9% accuracy, AI detection >99%, P95 latency <50ms. 699 unit and integration tests. 3 INPI patents filed." },
+      ],
+    },
+
+    // Research Roadmap
+    researchRoadmap: {
+      badge: "R&D ROADMAP",
+      title: "Roadmap",
+      subtitle: "Our progression from fundamental research to industrial applications.",
+      statusLabels: { completed: "Completed", in_progress: "In progress", planned: "Planned" },
+      phases: [
+        { year: "2022-2023", title: "Fundamental research", items: ["Study of validated cognitive tests (Stroop, N-Back, Trail Making)", "Analysis of human vs AI temporal patterns", "Score Combiner prototyping"], status: "completed" },
+        { year: "2024", title: "HCS-U7 Development", items: ["Defense-in-Depth 10-layer architecture", "Celestial Entropy Layer integration", "699 unit and integration tests", "INPI patent filings (FR2514274, FR2514546, FR2515560)"], status: "completed" },
+        { year: "2025", title: "Validation & Production", items: ["Native PSD2/SCA compliance", "Public API v1.0", "First pilot customers", "Doctoral thesis finalization"], status: "in_progress" },
+        { year: "2026", title: "Expansion", items: ["Post-quantum cryptography (NIST-PQC)", "Multi-platform SDK", "International academic partnerships", "Robotics & IoT extension"], status: "planned" },
       ],
     },
 

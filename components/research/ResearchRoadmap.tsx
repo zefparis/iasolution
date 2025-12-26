@@ -3,52 +3,7 @@
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
-
-const roadmap = [
-  {
-    year: "2022-2023",
-    title: "Recherche fondamentale",
-    items: [
-      "Étude des tests cognitifs validés (Stroop, N-Back, Trail Making)",
-      "Analyse des patterns temporels humains vs IA",
-      "Prototypage du Score Combiner",
-    ],
-    status: "completed",
-  },
-  {
-    year: "2024",
-    title: "Développement HCS-U7",
-    items: [
-      "Architecture Defense-in-Depth 7 couches",
-      "Intégration Celestial Entropy Layer",
-      "230+ tests unitaires et d'intégration",
-      "Dépôt brevets INPI (FR2514274, FR2514546, FR2515560)",
-    ],
-    status: "completed",
-  },
-  {
-    year: "2025",
-    title: "Validation & Production",
-    items: [
-      "Conformité PSD2/SCA native",
-      "API publique v1.0",
-      "Premiers clients pilotes",
-      "Finalisation thèse doctorale",
-    ],
-    status: "in_progress",
-  },
-  {
-    year: "2026",
-    title: "Expansion",
-    items: [
-      "Cryptographie post-quantique (NIST-PQC)",
-      "SDK multi-plateforme",
-      "Partenariats académiques internationaux",
-      "Extension robotique & IoT",
-    ],
-    status: "planned",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const statusColors = {
   completed: "bg-green-500/20 text-green-400 border-green-500/30",
@@ -56,13 +11,10 @@ const statusColors = {
   planned: "bg-text-muted/20 text-text-muted border-text-muted/30",
 };
 
-const statusLabels = {
-  completed: "Terminé",
-  in_progress: "En cours",
-  planned: "Planifié",
-};
-
 export function ResearchRoadmap() {
+  const { content } = useLanguage();
+  const roadmap = content.researchRoadmap;
+
   return (
     <section className="section relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-purple/[0.02] to-transparent" />
@@ -75,12 +27,12 @@ export function ResearchRoadmap() {
           viewport={viewportOnce}
           className="text-center mb-12"
         >
-          <span className="badge mb-6 inline-block">ROADMAP R&D</span>
+          <span className="badge mb-6 inline-block">{roadmap.badge}</span>
           <h2 className="text-h2-mobile lg:text-h2 font-semibold glow-text mb-4">
-            Feuille de route
+            {roadmap.title}
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            Notre progression de la recherche fondamentale vers les applications industrielles.
+            {roadmap.subtitle}
           </p>
         </motion.div>
 
@@ -95,7 +47,7 @@ export function ResearchRoadmap() {
           <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-accent-purple/50 via-accent-blue/50 to-transparent hidden lg:block" />
 
           <div className="space-y-8">
-            {roadmap.map((phase, idx) => (
+            {roadmap.phases.map((phase, idx) => (
               <motion.div
                 key={idx}
                 variants={staggerItem}
@@ -110,7 +62,7 @@ export function ResearchRoadmap() {
                       {phase.year}
                     </span>
                     <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${statusColors[phase.status as keyof typeof statusColors]}`}>
-                      {statusLabels[phase.status as keyof typeof statusLabels]}
+                      {roadmap.statusLabels[phase.status as keyof typeof roadmap.statusLabels]}
                     </span>
                   </div>
                   

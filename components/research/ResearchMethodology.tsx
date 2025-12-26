@@ -4,32 +4,14 @@ import { motion } from "framer-motion";
 import { Target, Lightbulb, FlaskConical, CheckCircle } from "lucide-react";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
-import { patentsFrItems } from "@/lib/content-bilingual";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const methodology = [
-  {
-    icon: Target,
-    title: "Identification du problème",
-    description: "Analyse des limitations des systèmes d'authentification actuels face aux IA génératives. Étude des taux de contournement CAPTCHA (94% - ETH Zurich 2024).",
-  },
-  {
-    icon: Lightbulb,
-    title: "Hypothèse de recherche",
-    description: "Les contraintes cognitives biologiques (temps de réaction, interférence, mémoire de travail) sont des marqueurs fiables de l'humanité que l'IA ne peut pas simuler.",
-  },
-  {
-    icon: FlaskConical,
-    title: "Expérimentation",
-    description: "Développement et validation de 6 tests cognitifs issus des neurosciences. Collecte de données sur 10,000+ sessions. Entraînement de modèles ML de détection.",
-  },
-  {
-    icon: CheckCircle,
-    title: "Validation",
-    description: `Précision de 98.9%, détection IA >99%, latence P95 <50ms. 230+ tests unitaires et d'intégration. ${patentsFrItems.length} brevets INPI déposés.`,
-  },
-];
+const icons = [Target, Lightbulb, FlaskConical, CheckCircle];
 
 export function ResearchMethodology() {
+  const { content } = useLanguage();
+  const methodology = content.researchMethodology;
+
   return (
     <section className="section relative">
       <Container>
@@ -40,12 +22,12 @@ export function ResearchMethodology() {
           viewport={viewportOnce}
           className="text-center mb-12"
         >
-          <span className="badge mb-6 inline-block">MÉTHODOLOGIE</span>
+          <span className="badge mb-6 inline-block">{methodology.badge}</span>
           <h2 className="text-h2-mobile lg:text-h2 font-semibold glow-text mb-4">
-            Approche scientifique
+            {methodology.title}
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            Notre recherche suit une méthodologie rigoureuse, de l&apos;identification du problème à la validation des résultats.
+            {methodology.subtitle}
           </p>
         </motion.div>
 
@@ -56,8 +38,8 @@ export function ResearchMethodology() {
           viewport={viewportOnce}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {methodology.map((step, idx) => {
-            const Icon = step.icon;
+          {methodology.steps.map((step, idx) => {
+            const Icon = icons[idx];
             return (
               <motion.div
                 key={idx}
