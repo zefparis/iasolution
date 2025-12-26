@@ -1116,42 +1116,60 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
     // Defense-in-Depth
     defenseInDepth: {
       title: "Defense-in-Depth (34 Modules)",
-      subtitle: "7 couches de sécurité enterprise-grade",
+      subtitle: "10 couches de sécurité enterprise-grade",
       layers: [
         {
-          level: "L7",
+          level: "L10",
+          name: "Shield Module",
+          description: "Détection IMSI catchers, protection géolocalisation, anti-FalconOne defense",
+          modules: ["Anti-IMSI Catcher", "Geolocation Shield", "Brevet FR2515560"]
+        },
+        {
+          level: "L9",
           name: "Protection DDoS",
           description: "Rate limiting adaptatif L7, détection de patterns d'attaque, Cloudflare 100+ Gbps",
           modules: ["DDoS Protection L7", "Rate Limiting Distribué", "Cloudflare Edge"]
         },
         {
-          level: "L6",
+          level: "L8",
           name: "WAF Multi-Encoding",
           description: "Détection SQLi, XSS, Path Traversal, LDAP Injection avec décodage multi-passes",
           modules: ["WAF OWASP Top 10", "Bot Detection ML", "Credential Stuffing"]
         },
         {
-          level: "L5",
+          level: "L7",
           name: "Honeypots Actifs",
           description: "Endpoints leurres (/.env, /admin, /wp-login) et champs invisibles, ban 24h automatique",
           modules: ["Honeypots Endpoints", "Hidden Fields", "Auto-ban 24h"]
         },
         {
-          level: "L4",
+          level: "L6",
+          name: "Post-Quantum Crypto",
+          description: "Cryptographie résistante aux ordinateurs quantiques NIST FIPS 204/203",
+          modules: ["ML-DSA-65 (Dilithium)", "ML-KEM-768 (Kyber)", "QSIG v3"]
+        },
+        {
+          level: "L5",
           name: "Hieroglyphic Shield",
           description: "Protection transparente AES-256-GCM des codes HCS-U7 (wrap/unwrap 30-40ms)",
           modules: ["AES-256-GCM", "scrypt KDF", "Auto wrap/unwrap"]
         },
         {
-          level: "L3",
+          level: "L4",
           name: "Proof-of-Work Adaptatif",
           description: "Challenge computationnel Argon2id/SHA256 pour clients suspects, difficulté ajustable",
           modules: ["Argon2id Challenge", "Difficulté Adaptative", "Cache Redis"]
         },
         {
+          level: "L3",
+          name: "Anti-Replay Defense",
+          description: "Protection contre les attaques de rejeu avec nonces atomiques Redis multi-instance",
+          modules: ["Redis Atomic", "TTL 5min", "Multi-instance Safe"]
+        },
+        {
           level: "L2",
           name: "Cognitive Firewall",
-          description: "Fusion 5 signaux : HCS Core, Device Risk, Network Risk, Behavior Anomaly, Trust Graph",
+          description: "Fusion 9 signaux : HCS Core, Device Risk, Network Risk, Behavior Anomaly, Trust Graph",
           modules: ["Device Fingerprinting", "IP Reputation", "Keystroke Dynamics"]
         },
         {
@@ -2494,42 +2512,60 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
     // Defense-in-Depth
     defenseInDepth: {
       title: "Defense-in-Depth (34 Modules)",
-      subtitle: "7 layers of enterprise-grade security",
+      subtitle: "10 layers of enterprise-grade security",
       layers: [
         {
-          level: "L7",
+          level: "L10",
+          name: "Shield Module",
+          description: "IMSI catcher detection, geolocation protection, anti-FalconOne defense",
+          modules: ["Anti-IMSI Catcher", "Geolocation Shield", "Patent FR2515560"]
+        },
+        {
+          level: "L9",
           name: "DDoS Protection",
           description: "Adaptive L7 rate limiting, attack pattern detection, Cloudflare 100+ Gbps",
           modules: ["L7 DDoS Protection", "Distributed Rate Limiting", "Cloudflare Edge"]
         },
         {
-          level: "L6",
+          level: "L8",
           name: "Multi-Encoding WAF",
           description: "SQLi, XSS, Path Traversal, LDAP Injection detection with multi-pass decoding",
           modules: ["OWASP Top 10 WAF", "ML Bot Detection", "Credential Stuffing"]
         },
         {
-          level: "L5",
+          level: "L7",
           name: "Active Honeypots",
           description: "Decoy endpoints (/.env, /admin, /wp-login) and invisible fields, automatic 24h ban",
           modules: ["Honeypots Endpoints", "Hidden Fields", "Auto-ban 24h"]
         },
         {
-          level: "L4",
+          level: "L6",
+          name: "Post-Quantum Crypto",
+          description: "Quantum-resistant cryptography NIST FIPS 204/203",
+          modules: ["ML-DSA-65 (Dilithium)", "ML-KEM-768 (Kyber)", "QSIG v3"]
+        },
+        {
+          level: "L5",
           name: "Hieroglyphic Shield",
           description: "Transparent AES-256-GCM protection of HCS-U7 codes (wrap/unwrap 30-40ms)",
           modules: ["AES-256-GCM", "scrypt KDF", "Auto wrap/unwrap"]
         },
         {
-          level: "L3",
+          level: "L4",
           name: "Adaptive Proof-of-Work",
           description: "Argon2id/SHA256 computational challenge for suspicious clients, adjustable difficulty",
           modules: ["Argon2id Challenge", "Adaptive Difficulty", "Redis Cache"]
         },
         {
+          level: "L3",
+          name: "Anti-Replay Defense",
+          description: "Replay attack protection with Redis atomic nonces, multi-instance safe",
+          modules: ["Redis Atomic", "TTL 5min", "Multi-instance Safe"]
+        },
+        {
           level: "L2",
           name: "Cognitive Firewall",
-          description: "5-signal fusion: HCS Core, Device Risk, Network Risk, Behavior Anomaly, Trust Graph",
+          description: "9-signal fusion: HCS Core, Device Risk, Network Risk, Behavior Anomaly, Trust Graph",
           modules: ["Device Fingerprinting", "IP Reputation", "Keystroke Dynamics"]
         },
         {
