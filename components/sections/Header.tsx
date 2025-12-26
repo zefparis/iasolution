@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link, { LinkProps } from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, ChevronDown, ShieldCheck, Plane } from "lucide-react";
-import { siteConfig } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Container } from "@/components/ui";
 
@@ -62,9 +62,14 @@ export function Header() {
             href="/"
             className="flex items-center gap-2 group"
           >
-            <span className="text-xl font-semibold tracking-tight text-white group-hover:text-accent-purple transition-colors">
-              {siteConfig.name}
-            </span>
+            <Image
+              src="/image/logo.png"
+              alt="IA SOLUTION"
+              width={140}
+              height={40}
+              className="h-8 w-auto group-hover:opacity-80 transition-opacity"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
