@@ -528,7 +528,7 @@ export const founder = {
 
 export const footer = {
   tagline: "Laboratoire de Recherche en IA Cognitive",
-  madeIn: "Made in France 🇫🇷",
+  madeIn: "Made in France",
   copyright: `© ${new Date().getFullYear()} IA SOLUTION · SIRET ${siteConfig.siret} · Tous droits réservés`,
   patentsLine: `Brevets ${patentNumbersDisplay} déposés INPI · CC BY-NC-SA 4.0`,
   columns: {

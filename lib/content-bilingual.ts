@@ -1375,7 +1375,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
     // Footer
     footer: {
       tagline: "Authentification cognitive SaaS",
-      madeIn: "Made in France 🇫🇷",
+      madeIn: "Made in France",
       copyright: `© ${new Date().getFullYear()} IA SOLUTION · SIRET ${siteConfigBilingual.siret} · Tous droits réservés`,
       patentsLine: "Brevets FR2514274, FR2514546 & FR2515560 déposés INPI · CC BY-NC-SA 4.0",
       columns: {
@@ -2771,7 +2771,7 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
     // Footer
     footer: {
       tagline: "Cognitive authentication SaaS",
-      madeIn: "Made in France 🇫🇷",
+      madeIn: "Made in France",
       copyright: `© ${new Date().getFullYear()} IA SOLUTION · SIRET ${siteConfigBilingual.siret} · All rights reserved`,
       patentsLine: "Patents FR2514274, FR2514546 & FR2515560 filed with INPI · CC BY-NC-SA 4.0",
       columns: {
