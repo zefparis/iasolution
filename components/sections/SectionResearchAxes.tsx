@@ -28,7 +28,7 @@ const iconColorMap: Record<string, string> = {
 };
 
 export function SectionResearchAxes() {
-  const { content } = useLanguage();
+  const { content, language } = useLanguage();
   const researchAxes = content.researchAxes;
 
   return (
@@ -101,7 +101,7 @@ export function SectionResearchAxes() {
                 {/* Algorithms */}
                 <div className="border-t border-white/[0.08] pt-4 mb-4">
                   <p className="text-xs text-text-muted uppercase tracking-wider mb-3">
-                    Algorithmes développés :
+                    {language === "fr" ? "Algorithmes développés :" : "Developed algorithms:"}
                   </p>
                   <ul className="space-y-1.5">
                     {axis.algorithms.map((algo, idx) => (
