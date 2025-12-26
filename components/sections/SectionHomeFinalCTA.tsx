@@ -35,12 +35,14 @@ export function SectionHomeFinalCTA() {
             >
               {section.cta1}
             </Link>
-            <Link
-              href={section.cta2Href as LinkProps<string>["href"]}
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white font-medium hover:bg-white/[0.06] hover:border-accent-purple/30 transition-all duration-300"
-            >
-              {section.cta2}
-            </Link>
+            {section.cta2 && section.cta2Href && (
+              <Link
+                href={section.cta2Href as LinkProps<string>["href"]}
+                className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white font-medium hover:bg-white/[0.06] hover:border-accent-purple/30 transition-all duration-300"
+              >
+                {section.cta2}
+              </Link>
+            )}
           </div>
         </motion.div>
       </Container>

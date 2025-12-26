@@ -124,18 +124,18 @@ const content = {
     },
 
     homeInnovUp: {
-      title: "Pourquoi c’est pertinent pour Innov’Up / CCI",
-      subtitle: "Un projet deeptech orienté produit : innovation technologique, marché clair et mise en œuvre mesurable.",
+      title: "Pourquoi choisir HCS-U7",
+      subtitle: "Une solution deeptech orientée produit : innovation technologique, marché clair et mise en œuvre mesurable.",
       points: [
         "Innovation différenciante sur la sécurisation des accès (bots, usurpation, IA générative).",
-        "Approche compatible avec les dispositifs d’accompagnement : POC, jalons, critères de succès, montée en charge.",
+        "Approche structurée : POC, jalons, critères de succès, montée en charge.",
         "Modèle SaaS B2B : déploiement progressif, intégration maîtrisée, trajectoire de revenus.",
         "Actifs de crédibilité : brevets INPI et savoir-faire cyber.",
       ],
-      cta1: "Échanger sur l’éligibilité (Innov’Up / CCI)",
-      cta1Href: "/contact",
-      cta2: "Demander une démo HCS-U7",
-      cta2Href: "/demo",
+      cta1: "Demander une démo",
+      cta1Href: "/demo",
+      cta2: "",
+      cta2Href: "",
     },
 
     homeRAndD: {
@@ -149,11 +149,11 @@ const content = {
 
     homeFinalCTA: {
       title: "Parlons de votre contexte",
-      subtitle: "Organisme d’accompagnement ou entreprise : décrivez votre contexte et vos contraintes. Nous proposons un POC cadré et une démonstration si pertinent.",
-      cta1: "Demander une démo HCS-U7",
+      subtitle: "Décrivez votre contexte et vos contraintes. Nous proposons un POC cadré et une démonstration personnalisée.",
+      cta1: "Demander une démo",
       cta1Href: "/demo",
-      cta2: "Premier échange (Innov’Up / CCI)",
-      cta2Href: "/contact",
+      cta2: "",
+      cta2Href: "",
     },
 
     // Problem Section
@@ -1531,18 +1531,18 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
     },
 
     homeInnovUp: {
-      title: "Why it fits Innov’Up / CCI",
-      subtitle: "A product-driven deeptech project: technical differentiation, clear market and measurable implementation.",
+      title: "Why choose HCS-U7",
+      subtitle: "A product-driven deeptech solution: technical differentiation, clear market and measurable implementation.",
       points: [
         "Differentiating innovation for securing access (bots, impersonation, generative AI).",
-        "Compatible with support programs: POC, milestones, success criteria, scaling plan.",
+        "Structured approach: POC, milestones, success criteria, scaling plan.",
         "B2B SaaS model: controlled integration, progressive deployment, revenue trajectory.",
         "Credibility assets: INPI patents and cybersecurity know-how.",
       ],
-      cta1: "Discuss eligibility (Innov’Up / CCI)",
-      cta1Href: "/contact",
-      cta2: "Request an HCS-U7 demo",
-      cta2Href: "/demo",
+      cta1: "Request a demo",
+      cta1Href: "/demo",
+      cta2: "",
+      cta2Href: "",
     },
 
     homeRAndD: {
@@ -1555,12 +1555,12 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
     },
 
     homeFinalCTA: {
-      title: "Let’s discuss your context",
-      subtitle: "Support organization or company: share your context and constraints. We propose a scoped POC and a demo if relevant.",
-      cta1: "Request an HCS-U7 demo",
+      title: "Let's discuss your context",
+      subtitle: "Share your context and constraints. We propose a scoped POC and a personalized demo.",
+      cta1: "Request a demo",
       cta1Href: "/demo",
-      cta2: "First call (Innov’Up / CCI)",
-      cta2Href: "/contact",
+      cta2: "",
+      cta2Href: "",
     },
 
     // Problem Section
