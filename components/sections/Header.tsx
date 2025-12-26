@@ -65,9 +65,9 @@ export function Header() {
             <Image
               src="/image/logo.png"
               alt="IA SOLUTION"
-              width={140}
-              height={40}
-              className="h-8 w-auto group-hover:opacity-80 transition-opacity"
+              width={240}
+              height={72}
+              className="h-16 lg:h-[72px] w-auto group-hover:opacity-80 transition-opacity"
               priority
             />
           </Link>
