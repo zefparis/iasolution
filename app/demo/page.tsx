@@ -23,9 +23,32 @@ export default function DemoPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: `Demande de démo - ${formData.company} - ${formData.useCase}`,
+          message: `Entreprise: ${formData.company}\nTéléphone: ${formData.phone || 'Non renseigné'}\nCas d'usage: ${formData.useCase}\n\nMessage:\n${formData.message || 'Aucun message supplémentaire'}`,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send');
+      }
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error sending demo request:', error);
+      alert('Une erreur est survenue. Veuillez réessayer ou nous contacter directement à contact@ia-solution.fr');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
