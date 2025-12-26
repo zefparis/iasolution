@@ -3,6 +3,7 @@
 import { Container } from '@/components/ui/Container';
 import { Plane, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Header, Footer } from '@/components/sections';
 import SectionProblemTactical from '@/components/sections/SectionProblemTactical';
 import SectionSecurity7Layers from '@/components/sections/SectionSecurity7Layers';
 import SectionUseCasesShield from '@/components/sections/SectionUseCasesShield';
@@ -13,6 +14,8 @@ export default function HCSShieldPage() {
   const { hero, stats, cta } = content.hcsShield;
 
   return (
+    <>
+    <Header />
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -121,5 +124,7 @@ export default function HCSShieldPage() {
         </Container>
       </section>
     </main>
+    <Footer />
+    </>
   );
 }
