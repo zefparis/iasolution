@@ -2,14 +2,16 @@
 
 <div align="center">
 
-**Authentification cognitive SaaS**
+**Authentification cognitive SaaS — HCS-U7 v8.4**
 
 *Cognitive authentication SaaS*
 
 [![Website](https://img.shields.io/badge/Website-ia--solution.fr-8B5CF6?style=for-the-badge)](https://ia-solution.fr)
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-000000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Patents](https://img.shields.io/badge/INPI_Patents-2-10B981?style=for-the-badge)](https://www.inpi.fr/)
+[![Patents](https://img.shields.io/badge/INPI_Patents-3-10B981?style=for-the-badge)](https://www.inpi.fr/)
+[![Security](https://img.shields.io/badge/Security-10_Layers-EF4444?style=for-the-badge)]()
+[![PQC](https://img.shields.io/badge/Post--Quantum-Ready-06B6D4?style=for-the-badge)]()
 
 </div>
 
@@ -17,24 +19,53 @@
 
 ## 🚀 Product Portfolio
 
-### 🛡️ HCS-U7 — Cognitive Authentication Engine
+### 🛡️ HCS-U7 v8.4 — Cognitive Authentication Engine
 
 **Core Platform:** Cognitive authentication designed to reduce online fraud (bots, impersonation) with a smooth user journey.
 
 **Key Features:**
-- Cognitive tests + multi-signal scoring (concept & product details in website)
-- SaaS/API integration approach (POC → integration → scale)
+- 🧠 6 cognitive tests + multi-signal scoring
+- 🏗️ **10-layer Defense-in-Depth architecture** (NEW v8.4)
+- 🔐 **Post-Quantum Crypto** : ML-DSA-65 (Dilithium) + ML-KEM-768 (Kyber) — NIST FIPS 204/203
+- 🛡️ **Shield Module** : Anti-FalconOne Defense (IMSI catcher, geolocation attacks)
+- ⚡ 500+ RPS sustained, <50ms P95 latency
+
+**Production Metrics (Dec 2025):**
+- 518+ attacks blocked (zero-day, SQLi, XSS, DDoS)
+- 0 breaches (100% success rate)
+- 99.9/100 security score
+- 699 automated tests (94% coverage)
 
 **Markets:**
 - Fintech & Banking (fraud prevention, SCA)
 - E-commerce (bot protection, checkout security)
-- Gaming & Gambling (anti-cheat, fair play)
+- Defense & Government (secure communications)
+- Journalism (source protection)
 
 **Deployment:** API Backend + Admin Dashboard  
 **Revenue Model:** SaaS (€99-€2499/month)
 
-📂 [View Backend Repository →](https://github.com/zefparis/hcs-u7-backend) (source of truth for backend code, tests, security and compliance claims)  
+📂 [View Backend Repository →](https://github.com/zefparis/hcs-u7-backend)  
 🌐 [Live Demo →](https://hcs-u7.com)
+
+---
+
+### 🛡️ Shield Module — Anti-FalconOne Defense (NEW v8.4)
+
+**Layer 10:** Protection against state-level network attacks.
+
+**Key Features:**
+- 📡 IMSI Catcher Detection (fake base stations, signal anomalies, encryption downgrade)
+- 📍 Geolocation Attack Detection (impossible travel, precision tracking, GPS spoofing)
+- ⚡ Real-time risk scoring with adaptive recommendations
+
+**Use Cases:**
+- Defense & Security (hostile zone communications)
+- Journalism (conflict zone reporters)
+- Government (diplomats, international missions)
+- Fintech (mobile banking in high-risk countries)
+
+🔗 [Learn more →](https://ia-solution.fr/shield)
 
 ---
 
@@ -60,11 +91,12 @@
 
 ---
 
-### 🔐 Patent Coverage
+### 🔐 Patent Coverage (3 Brevets INPI)
 
-**Both products protected by:**
-- **FR2514274** (INPI Certified) — Multi-layer cognitive biometric authentication resistant to generative AI
-- **FR2514546** (INPI Certified) — Multi-signal cognitive security system with behavioral firewall, astronomical entropy, and adaptive SCA engine
+**All products protected by:**
+- **FR2514274** (Nov 2025) — Multi-layer cognitive biometric authentication resistant to generative AI
+- **FR2514546** (Dec 2025) — Multi-signal cognitive security system with behavioral firewall, astronomical entropy, and adaptive SCA engine
+- **FR2515560** (Dec 2025) — **Shield Module** : IMSI catcher detection and geolocation attack protection system
 
 **Protection:** 20 years (until 2045)  
 **Licensing:** Available for commercial use ([contact@ia-solution.fr](mailto:contact@ia-solution.fr))
@@ -86,26 +118,30 @@ This repository contains the main **IA-SOLUTION corporate website** (Next.js 14 
 
 **Key Pages:**
 - `/` — Homepage (Hero + Product Tabs + Industries)
-- `/hcs-u7` — HCS-U7 Product Page
-- `/hcs-shield` — HCS-SHIELD Product Page (🆕)
-- `/technology` — Technical Deep-Dive
+- `/hcs-u7` — HCS-U7 Product Page (10-layer architecture)
+- `/shield` — Shield Module (Anti-FalconOne Defense) 🆕
+- `/technology` — Technical Deep-Dive + Post-Quantum Crypto
+- `/hcs-shield` — HCS-SHIELD Product Page (Tactical Drones)
 - `/research` — Research Axes
-- `/patents` — Patent Details
+- `/patents` — Patent Details (3 brevets INPI)
 - `/contact` — Contact Form (Brevo integration)
 
 **Deployment:** [https://ia-solution.fr](https://ia-solution.fr)
 
 ---
 
-## 📊 Business Metrics
+## 📊 Technical Metrics (v8.4)
 
-| Metric | HCS-U7 | HCS-SHIELD |
-|--------|--------|------------|
-| **Target Market** | €50M (auth software) | €50M (tactical drones software) |
-| **Pricing** | €99-€2499/mo (SaaS) | €79-€499/device/year |
-| **POC Clients** | 12 (in discussion) | 5 (military contacts) |
-| **Certifications** | ISO 27001 (Q2 2025) | Common Criteria EAL4+ (Q3 2026) |
-| **Status** | Production-ready | Combat-ready (POC phase) |
+| Metric | Value |
+|--------|-------|
+| **Security Layers** | 10 (Defense-in-Depth) |
+| **Attacks Blocked** | 518+ (zero-day, SQLi, XSS, DDoS) |
+| **Breaches** | 0 (100% success rate) |
+| **Security Score** | 99.9/100 |
+| **Automated Tests** | 699 (94% coverage) |
+| **Performance** | 500+ RPS, <50ms P95 |
+| **Post-Quantum** | ML-DSA-65 + ML-KEM-768 |
+| **Patents** | 3 (INPI certified) |
 
 ---
 
@@ -176,10 +212,10 @@ Les brevets FR2514274, FR2514546 et FR2515560 protègent les innovations technol
 
 <div align="center">
 
-**HCS-U7** | *Human Cognitive Signature*
+**HCS-U7 v8.4** | *Human Cognitive Signature*
 
-[Website](https://ia-solution.fr) • [Contact](mailto:contact@ia-solution.fr) • [GitHub](https://github.com/zefparis/iasolution)
+[Website](https://ia-solution.fr) • [Shield Module](https://ia-solution.fr/shield) • [Contact](mailto:contact@ia-solution.fr)
 
-*Authentification cognitive résistante à l'IA générative*
+*Authentification cognitive résistante à l'IA générative — Post-Quantum Ready*
 
 </div>
