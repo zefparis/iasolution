@@ -20,13 +20,13 @@ export function getContentByLanguage(lang: Language) {
 export const patentsFrItems = [
   { number: "FR2514274", date: "Déposé le 30/11/2025", title: "Système d'authentification biométrique cognitive multi-couches résistant aux IA génératives", claims: 10, figures: 1 },
   { number: "FR2514546", date: "Déposé le 04/12/2025", title: "Système de sécurité cognitive multi-signaux intégrant biométrie, pare-feu comportemental, entropie astronomique et moteur SCA adaptatif", claims: 15, figures: 3 },
-  { number: "FR2515560", date: "Déposé le 17/12/2025", title: "Demande de brevet — Détails en cours de publication", claims: undefined, figures: undefined },
+  { number: "FR2515560", date: "Déposé le 17/12/2025", title: "Shield Module : Système de détection d'IMSI catchers et d'attaques géolocalisation pour authentification sécurisée", claims: 12, figures: 2 },
 ];
 
 export const patentsEnItems = [
   { number: "FR2514274", date: "Filed on 11/30/2025", title: "Multi-layer cognitive biometric authentication system resistant to generative AI", claims: 10, figures: 1 },
   { number: "FR2514546", date: "Filed on 12/04/2025", title: "Multi-signal cognitive security system integrating biometrics, behavioral firewall, astronomical entropy and adaptive SCA engine", claims: 15, figures: 3 },
-  { number: "FR2515560", date: "Filed on 12/17/2025", title: "Patent application — Details pending publication", claims: undefined, figures: undefined },
+  { number: "FR2515560", date: "Filed on 12/17/2025", title: "Shield Module: IMSI catcher detection and geolocation attack protection system for secure authentication", claims: 12, figures: 2 },
 ];
 
 const content = {
@@ -39,8 +39,8 @@ const content = {
       main: [
         { name: "Recherche", href: "/research" },
         { name: "HCS-U7", href: "/hcs-u7" },
+        { name: "Shield Module", href: "/shield", badge: "🆕" },
         { name: "Infrastructure", href: "/infrastructure" },
-        { name: "Mobile", href: "/mobile", badge: "🆕" },
         { name: "Technologie", href: "/technology" },
         { name: "Brevets", href: "/patents" },
       ],
@@ -1204,8 +1204,8 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       main: [
         { name: "Research", href: "/research" },
         { name: "HCS-U7", href: "/hcs-u7" },
+        { name: "Shield Module", href: "/shield", badge: "🆕" },
         { name: "Infrastructure", href: "/infrastructure" },
-        { name: "Mobile", href: "/mobile", badge: "🆕" },
         { name: "Technology", href: "/technology" },
         { name: "Patents", href: "/patents" },
       ],

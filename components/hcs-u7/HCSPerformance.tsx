@@ -16,7 +16,7 @@ const metrics = [
   { value: "<50ms", label: "Latence P95", sublabel: "95th percentile" },
   { value: "699", label: "Tests", sublabel: "Vitest" },
   { value: "99.9/100", label: "Score Sécurité", sublabel: "Defense-in-Depth" },
-  { value: "9", label: "Couches", sublabel: "Protection" },
+  { value: "10", label: "Couches", sublabel: "Protection v8.4" },
 ];
 
 export function HCSPerformance() {

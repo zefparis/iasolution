@@ -32,7 +32,7 @@ export function PatentsApplications() {
             Domaines couverts
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            Les brevets FR2514274 et FR2514546 couvrent les applications suivantes (Revendication 14).
+            Les brevets FR2514274, FR2514546 et FR2515560 couvrent les applications suivantes.
           </p>
         </motion.div>
 

@@ -7,7 +7,7 @@ import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/anima
 const timeline = [
   { date: "Nov 2025", event: "Dépôt brevet FR2514274 — Authentification cognitive", status: "completed" },
   { date: "Déc 2025", event: "Dépôt brevet FR2514546 — Celestial Entropy Layer", status: "completed" },
-  { date: "Déc 2025", event: "Dépôt brevet FR2515560", status: "completed" },
+  { date: "Déc 2025", event: "Dépôt brevet FR2515560 — Shield Module (Anti-FalconOne Defense)", status: "completed" },
   { date: "2026", event: "Examen INPI (prévu)", status: "pending" },
   { date: "2026-2027", event: "Publication officielle (prévu)", status: "pending" },
   { date: "2045", event: "Expiration protection (20 ans)", status: "future" },
