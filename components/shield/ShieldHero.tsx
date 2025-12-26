@@ -4,8 +4,12 @@ import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
 import { heroSequence } from "@/lib/animations";
 import { Container } from "@/components/ui";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function ShieldHero() {
+  const { content } = useLanguage();
+  const hero = content.shieldPage.hero;
+
   return (
     <section className="relative min-h-[70vh] flex items-center pt-32 pb-20 overflow-hidden">
       {/* Background Effects */}
@@ -25,7 +29,7 @@ export function ShieldHero() {
           >
             <span className="badge-gradient inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-medium uppercase tracking-[0.15em]">
               <Shield className="w-4 h-4" />
-              LAYER 10 — NEW v8.4
+              {hero.badge}
             </span>
           </motion.div>
 
@@ -35,7 +39,7 @@ export function ShieldHero() {
             animate="visible"
             className="mt-8 text-h1-mobile lg:text-h1 font-semibold glow-text"
           >
-            Shield Module
+            {hero.title}
           </motion.h1>
 
           <motion.p
@@ -44,7 +48,7 @@ export function ShieldHero() {
             animate="visible"
             className="mt-4 text-2xl text-accent-purple font-medium"
           >
-            Anti-FalconOne Defense
+            {hero.subtitle}
           </motion.p>
 
           <motion.p
@@ -53,8 +57,7 @@ export function ShieldHero() {
             animate="visible"
             className="mt-6 text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed"
           >
-            La seule solution d&apos;authentification protégeant l&apos;utilisateur 
-            même quand son réseau mobile est compromis par des adversaires state-level.
+            {hero.description}
           </motion.p>
 
           {/* Stats */}
@@ -64,26 +67,13 @@ export function ShieldHero() {
             animate="visible"
             className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4"
           >
-            <div className="glass-card p-4 text-center">
-              <div className="text-2xl font-bold text-accent-purple">📡</div>
-              <div className="text-sm text-text-secondary mt-1">IMSI Catcher</div>
-              <div className="text-xs text-text-muted">Detection</div>
-            </div>
-            <div className="glass-card p-4 text-center">
-              <div className="text-2xl font-bold text-accent-purple">📍</div>
-              <div className="text-sm text-text-secondary mt-1">Geolocation</div>
-              <div className="text-xs text-text-muted">Attack Detection</div>
-            </div>
-            <div className="glass-card p-4 text-center">
-              <div className="text-2xl font-bold text-accent-purple">🛡️</div>
-              <div className="text-sm text-text-secondary mt-1">GPS Spoofing</div>
-              <div className="text-xs text-text-muted">Protection</div>
-            </div>
-            <div className="glass-card p-4 text-center">
-              <div className="text-2xl font-bold text-accent-purple">⚡</div>
-              <div className="text-sm text-text-secondary mt-1">Real-time</div>
-              <div className="text-xs text-text-muted">Alerts</div>
-            </div>
+            {hero.stats.map((stat, idx) => (
+              <div key={idx} className="glass-card p-4 text-center">
+                <div className="text-2xl font-bold text-accent-purple">{stat.icon}</div>
+                <div className="text-sm text-text-secondary mt-1">{stat.label}</div>
+                <div className="text-xs text-text-muted">{stat.sublabel}</div>
+              </div>
+            ))}
           </motion.div>
         </div>
       </Container>

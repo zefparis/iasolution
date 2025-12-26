@@ -4,45 +4,17 @@ import { motion } from "framer-motion";
 import { Shield, Key, Zap, Lock } from "lucide-react";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const algorithms = [
-  {
-    name: "ML-DSA-65",
-    alias: "Dilithium3",
-    purpose: "Signatures (QSIG v3)",
-    nistLevel: "Level 3",
-    keySizes: "pk=1952, sk=4032, sig=3309",
-    icon: Key,
-    color: "from-purple-500/20 to-violet-500/20",
-    iconColor: "text-purple-400",
-  },
-  {
-    name: "ML-KEM-768",
-    alias: "Kyber768",
-    purpose: "Key Encapsulation (Shield v3)",
-    nistLevel: "Level 3",
-    keySizes: "pk=1184, sk=2400, ct=1088",
-    icon: Lock,
-    color: "from-cyan-500/20 to-blue-500/20",
-    iconColor: "text-cyan-400",
-  },
-];
-
-const features = [
-  { label: "Résistant aux attaques quantiques", desc: "Algorithme de Shor" },
-  { label: "Standard NIST FIPS 204/203", desc: "Approuvé 2024" },
-  { label: "Signatures déterministes", desc: "Reproductibles" },
-  { label: "Hybride AES-256-GCM", desc: "Double protection" },
-];
-
-const performance = [
-  { metric: "Sign", value: "~12ms", desc: "ML-DSA-65" },
-  { metric: "Verify", value: "~8ms", desc: "ML-DSA-65" },
-  { metric: "Encaps", value: "~2ms", desc: "ML-KEM-768" },
-  { metric: "Decaps", value: "~3ms", desc: "ML-KEM-768" },
+const algoIcons = [
+  { icon: Key, color: "from-purple-500/20 to-violet-500/20", iconColor: "text-purple-400" },
+  { icon: Lock, color: "from-cyan-500/20 to-blue-500/20", iconColor: "text-cyan-400" },
 ];
 
 export function SectionPostQuantum() {
+  const { content } = useLanguage();
+  const pq = content.technologyPage.postQuantum;
+
   return (
     <section className="section relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-purple/[0.02] to-transparent" />
@@ -56,12 +28,12 @@ export function SectionPostQuantum() {
           viewport={viewportOnce}
           className="text-center mb-12"
         >
-          <span className="badge mb-6 inline-block">POST-QUANTUM</span>
+          <span className="badge mb-6 inline-block">{pq.badge}</span>
           <h2 className="text-h2-mobile lg:text-h2 font-semibold glow-text mb-4">
-            Cryptographie Post-Quantique
+            {pq.title}
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            <span className="text-accent-purple font-semibold">NEW v8.4</span> — Algorithmes NIST approuvés, résistants aux ordinateurs quantiques
+            {pq.subtitle}
           </p>
         </motion.div>
 
@@ -73,8 +45,8 @@ export function SectionPostQuantum() {
           viewport={viewportOnce}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
         >
-          {algorithms.map((algo, idx) => {
-            const Icon = algo.icon;
+          {pq.algorithms.map((algo, idx) => {
+            const Icon = algoIcons[idx].icon;
             return (
               <motion.div
                 key={idx}
@@ -82,8 +54,8 @@ export function SectionPostQuantum() {
                 className="glass-card p-6 group"
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${algo.color} flex items-center justify-center flex-shrink-0`}>
-                    <Icon className={`w-6 h-6 ${algo.iconColor}`} />
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${algoIcons[idx].color} flex items-center justify-center flex-shrink-0`}>
+                    <Icon className={`w-6 h-6 ${algoIcons[idx].iconColor}`} />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
@@ -120,10 +92,10 @@ export function SectionPostQuantum() {
           >
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
               <Shield className="w-5 h-5 text-accent-purple" />
-              Caractéristiques
+              {pq.featuresTitle}
             </h3>
             <div className="space-y-3">
-              {features.map((feature, idx) => (
+              {pq.features.map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-3">
                   <span className="text-green-400">✓</span>
                   <span className="text-text-secondary">
@@ -145,10 +117,10 @@ export function SectionPostQuantum() {
           >
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
               <Zap className="w-5 h-5 text-yellow-400" />
-              Performance (Pure JavaScript)
+              {pq.performanceTitle}
             </h3>
             <div className="grid grid-cols-2 gap-4">
-              {performance.map((perf, idx) => (
+              {pq.performance.map((perf, idx) => (
                 <div key={idx} className="text-center p-3 rounded-lg bg-white/[0.03] border border-white/[0.08]">
                   <div className="text-xl font-mono font-bold text-white">{perf.value}</div>
                   <div className="text-sm text-text-secondary">{perf.metric}</div>
@@ -168,7 +140,7 @@ export function SectionPostQuantum() {
           className="mt-12"
         >
           <div className="glass-card p-6">
-            <h3 className="text-lg font-semibold text-white mb-4">Architecture hybride</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{pq.architectureTitle}</h3>
             <div className="bg-gray-900/50 rounded-lg p-4 font-mono text-sm overflow-x-auto">
               <pre className="text-text-secondary">{`Signature Code HCS-U7:
 ├─ QSIG v3 (ML-DSA-65)     ← Post-Quantum
@@ -179,8 +151,7 @@ Encryption Shield v3:
 └─ AES-256-GCM             ← Classique (encryption)`}</pre>
             </div>
             <p className="text-sm text-text-muted mt-4">
-              <span className="text-accent-purple font-semibold">Protection à long terme</span> : Les signatures et clés générées aujourd&apos;hui 
-              resteront sécurisées même après l&apos;émergence d&apos;ordinateurs quantiques à grande échelle (horizon 2030-2035).
+              {pq.longTermProtection}
             </p>
           </div>
         </motion.div>
@@ -195,7 +166,7 @@ Encryption Shield v3:
         >
           <div className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-accent-purple/20 to-accent-blue/20 border border-accent-purple/30">
             <p className="text-text-secondary">
-              HCS-U7 est l&apos;une des <span className="text-white font-semibold">premières solutions d&apos;authentification cognitive</span> à déployer une cryptographie post-quantique en production.
+              {pq.advantage}
             </p>
           </div>
         </motion.div>

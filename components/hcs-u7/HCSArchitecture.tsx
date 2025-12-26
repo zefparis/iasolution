@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const layers = [
   { level: "L10", name: "🆕 Shield Module", desc: "Anti-FalconOne · IMSI Catcher · Geolocation Attack Detection", icon: "🛡️", color: "from-indigo-500/20 to-indigo-600/10", border: "border-indigo-500/30" },
@@ -26,6 +27,9 @@ const signals = [
 ];
 
 export function HCSArchitecture() {
+  const { content } = useLanguage();
+  const arch = content.hcsU7Page.architecture;
+
   return (
     <section className="section relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-blue/[0.02] to-transparent" />
@@ -38,12 +42,12 @@ export function HCSArchitecture() {
           viewport={viewportOnce}
           className="text-center mb-12"
         >
-          <span className="badge mb-6 inline-block">ARCHITECTURE</span>
+          <span className="badge mb-6 inline-block">{arch.badge}</span>
           <h2 className="text-h2-mobile lg:text-h2 font-semibold glow-text mb-4">
-            Defense-in-Depth
+            {arch.title}
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            34 modules de sécurité · 10 couches empilées · 699 tests · Post-Quantum Ready · v8.4
+            {arch.subtitle}
           </p>
         </motion.div>
 

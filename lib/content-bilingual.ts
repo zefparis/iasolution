@@ -443,6 +443,193 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
       disclaimer: "Conformément à l'article L. 612-10 du Code de la propriété intellectuelle, le Ministre chargé de la Défense a été habilité à prendre connaissance des demandes à titre confidentiel.",
     },
 
+    // HCS-U7 Page
+    hcsU7Page: {
+      hero: {
+        badge: "PRODUIT PHARE",
+        title: "HCS-U7",
+        subtitle: "Human Cognitive Signature",
+        description: "Le premier système d'authentification biométrique cognitive résistant aux intelligences artificielles génératives. Issu de 3 ans de recherche en neurosciences cognitives et cryptographie.",
+        cta: "Demander une démo HCS-U7",
+        stats: [
+          { value: "98.9%", label: "Précision" },
+          { value: ">99%", label: "Détection IA" },
+          { value: "3", label: "Brevets INPI" },
+          { value: "699", label: "Tests" },
+          { value: "<50ms", label: "Latence P95" },
+          { value: "10", label: "Couches sécurité" },
+        ],
+      },
+      cognitiveTests: {
+        badge: "TESTS COGNITIFS",
+        title: "6 tests validés scientifiquement",
+        subtitle: "Chaque test exploite une limitation fondamentale du cerveau humain que l'IA ne peut pas simuler authentiquement.",
+        tests: [
+          { name: "Test de Stroop", year: "1935", author: "John Ridley Stroop", principle: "L'interférence cognitive se produit quand le cerveau doit traiter des informations conflictuelles. Lire le mot 'ROUGE' écrit en bleu crée un délai mesurable.", humanBehavior: "Ralentissement de 100-200ms sur les items incongruents", aiBehavior: "Temps de réponse constant, pas d'effet d'interférence", detection: "Analyse de la variance temporelle et du pattern d'erreurs" },
+          { name: "N-Back", year: "1958", author: "Wayne Kirchner", principle: "La mémoire de travail humaine est limitée à 7±2 éléments (Miller, 1956). Au-delà, les performances chutent de manière prévisible.", humanBehavior: "Dégradation progressive au-delà de 3-back", aiBehavior: "Performance constante quelle que soit la charge", detection: "Courbe de dégradation caractéristique" },
+          { name: "Trail Making A/B", year: "1938", author: "US Army", principle: "Le switching cognitif entre deux tâches (lettres/chiffres) a un coût temporel incompressible chez l'humain.", humanBehavior: "Coût de switching de 200-500ms", aiBehavior: "Pas de coût de switching mesurable", detection: "Ratio temps partie B / partie A" },
+          { name: "Digit Span", year: "1939", author: "David Wechsler", principle: "L'empan mnésique mesure la capacité de rétention à court terme. Limitée biologiquement chez l'humain.", humanBehavior: "Capacité moyenne de 7±2 chiffres", aiBehavior: "Capacité illimitée", detection: "Point de rupture de la performance" },
+          { name: "Reaction Time", year: "1868", author: "Franciscus Donders", principle: "Le temps de réaction humain a une variabilité naturelle due aux processus neuronaux. L'IA répond de manière trop régulière.", humanBehavior: "Variabilité de 50-150ms, effet de fatigue", aiBehavior: "Temps <30ms, régularité >80%", detection: "Coefficient de variation temporelle" },
+          { name: "RAN Vocal", year: "1974", author: "Denckla & Rudel", principle: "La dénomination rapide automatisée révèle les patterns de parole uniques : pauses, hésitations, rythme.", humanBehavior: "Pauses naturelles, variations de débit", aiBehavior: "Fluidité artificielle, timing régulier", detection: "Analyse spectrale et temporelle" },
+        ],
+        labels: { human: "Humain", ai: "IA", detection: "Détection" },
+      },
+      architecture: {
+        badge: "ARCHITECTURE",
+        title: "Defense-in-Depth",
+        subtitle: "34 modules de sécurité · 10 couches empilées · 699 tests · Post-Quantum Ready · v8.4",
+        signalsTitle: "Fusion de 5 signaux",
+      },
+      performance: {
+        badge: "PERFORMANCES",
+        title: "Résultats validés",
+        subtitle: "Métriques obtenues dans le cadre de travaux de recherche doctorale sur 10,000+ sessions.",
+        source: "Référence : ETH Zurich (2024) — CAPTCHA bypass rate 94% par IA générative",
+        metrics: [
+          { value: "98.9%", label: "Précision globale", sublabel: "Accuracy" },
+          { value: "99.6%", label: "True Negative Rate", sublabel: "Vrais négatifs" },
+          { value: "2.2%", label: "False Positive Rate", sublabel: "Faux positifs" },
+          { value: "0.994", label: "AUC-ROC", sublabel: "Area Under Curve" },
+          { value: ">99%", label: "Détection GPT-4V", sublabel: "OpenAI" },
+          { value: ">99%", label: "Détection Claude 3", sublabel: "Anthropic" },
+          { value: ">99%", label: "Détection Gemini", sublabel: "Google" },
+          { value: ">99.6%", label: "Détection Bots", sublabel: "Automatisés" },
+          { value: "<50ms", label: "Latence P95", sublabel: "95th percentile" },
+          { value: "699", label: "Tests", sublabel: "Vitest" },
+          { value: "99.9/100", label: "Score Sécurité", sublabel: "Defense-in-Depth" },
+          { value: "10", label: "Couches", sublabel: "Protection v8.4" },
+        ],
+      },
+    },
+
+    // Shield Module Page
+    shieldPage: {
+      hero: {
+        badge: "LAYER 10 — NEW v8.4",
+        title: "Shield Module",
+        subtitle: "Anti-FalconOne Defense",
+        description: "La seule solution d'authentification protégeant l'utilisateur même quand son réseau mobile est compromis par des adversaires state-level.",
+        stats: [
+          { icon: "📡", label: "IMSI Catcher", sublabel: "Detection" },
+          { icon: "📍", label: "Geolocation", sublabel: "Attack Detection" },
+          { icon: "🛡️", label: "GPS Spoofing", sublabel: "Protection" },
+          { icon: "⚡", label: "Real-time", sublabel: "Alertes" },
+        ],
+      },
+      problem: {
+        badge: "LE PROBLÈME",
+        title: "Le problème non-résolu",
+        subtitle: "Les gouvernements, journalistes et executives sont ciblés par des menaces réseau state-level",
+        threats: [
+          { title: "IMSI catchers", subtitle: "Stingray, FalconOne", description: "Interception des communications mobiles via fausses stations de base" },
+          { title: "Géolocalisation haute précision", subtitle: "Tracking <10m", description: "Suivi de position avec une précision inférieure à 10 mètres" },
+          { title: "Network downgrade attacks", subtitle: "5G → 2G forcé", description: "Forçage vers des protocoles moins sécurisés pour faciliter l'interception" },
+          { title: "VoLTE interception", subtitle: "Écoute voix chiffrée", description: "Interception des communications voix sur LTE" },
+        ],
+        warning: "Aucune solution d'authentification classique ne protège contre ces menaces.",
+        warningDetail: "2FA, biométrie faciale, behavioral analytics → Tous contournables quand le réseau mobile est compromis.",
+      },
+      solution: {
+        badge: "LA SOLUTION",
+        title: "Notre réponse : HCS-Shield (Layer 10)",
+        subtitle: "Détection multi-signaux des menaces réseau en temps réel",
+        imsiTitle: "Détection IMSI Catcher",
+        imsiItems: [
+          "Analyse LAC suspicieux (fake base stations)",
+          "Détection signaux anormaux (>-40 dBm = trop fort)",
+          "Monitoring handover rate (>5/min = suspicious)",
+          "Détection encryption downgrade (A5/3 → A5/0)",
+        ],
+        imsiWarning: "Recommande airplane mode si risque critique (≥70 points)",
+        geoTitle: "Détection Geolocation Attack",
+        geoItems: [
+          "Impossible travel (>900 km/h entre 2 positions)",
+          "Precision tracking (3+ positions <10m accuracy)",
+          "GPS spoofing (coordonnées rondes, accuracy impossible)",
+        ],
+        geoWarning: "Alerte utilisateur + audit log si détection",
+      },
+      useCases: {
+        badge: "CAS D'USAGE",
+        title: "Cas d'usage critiques",
+        subtitle: "Protection des utilisateurs à haut risque contre les menaces réseau state-level",
+        cases: [
+          { icon: "🛡️", title: "Défense & Sécurité", description: "Executives en zone hostile, agents terrain, communications sensibles en environnements non-sécurisés." },
+          { icon: "📰", title: "Journalisme", description: "Reporters en zone de conflit, protection sources, communications sécurisées avec rédactions." },
+          { icon: "🏛️", title: "Gouvernement", description: "Diplomates, missions internationales, communications gouvernementales sensibles." },
+          { icon: "💳", title: "Fintech", description: "Mobile banking en pays à risque, transactions haute valeur, protection contre IMSI catchers." },
+        ],
+      },
+      technical: {
+        badge: "TECHNIQUE",
+        title: "Détails techniques",
+        subtitle: "Algorithme de scoring multi-signaux avec seuils de décision adaptatifs",
+        levels: [
+          { threshold: "≥70", level: "DANGEROUS", action: "Activer le mode avion immédiatement" },
+          { threshold: "≥40", level: "SUSPICIOUS", action: "Éviter les opérations sensibles" },
+          { threshold: "<40", level: "SAFE", action: "Continuer normalement" },
+        ],
+      },
+      patent: {
+        badge: "PROPRIÉTÉ INTELLECTUELLE",
+        title: "Brevet FR2515560",
+        patentTitle: "Shield Module - Anti-FalconOne Defense",
+        filed: "17 décembre 2025",
+        status: "En cours d'examen INPI",
+        protection: "20 ans (jusqu'en 2045)",
+        holder: "IA-SOLUTION / Benjamin BARRÈRE",
+        description: "Premier brevet au monde couvrant la détection d'IMSI catchers et d'attaques géolocalisation dans un système d'authentification.",
+        claims: [
+          "Système de détection d'IMSI catchers par analyse multi-signaux",
+          "Algorithme de détection de géolocalisation haute précision",
+          "Protection contre attaques GPS spoofing",
+          "Recommandations adaptatives selon niveau de risque détecté",
+        ],
+      },
+      cta: {
+        title: "Protégez vos utilisateurs contre les menaces state-level",
+        subtitle: "Le Shield Module est disponible via l'API HCS-U7",
+        primaryCta: "Demander une démo",
+        secondaryCta: "Nous contacter",
+      },
+    },
+
+    // Technology Page
+    technologyPage: {
+      hero: {
+        badge: "TECHNOLOGIE",
+        title: "Stack technique HCS-U7",
+        subtitle: "Une architecture moderne, sécurisée et performante. Backend Fastify 5, TypeScript strict, PostgreSQL, Redis, et notre innovation exclusive : le Celestial Entropy Layer.",
+        techs: ["Fastify 5", "TypeScript", "PostgreSQL", "Redis", "Vitest", "Zod"],
+      },
+      postQuantum: {
+        badge: "POST-QUANTUM",
+        title: "Cryptographie Post-Quantique",
+        subtitle: "NEW v8.4 — Algorithmes NIST approuvés, résistants aux ordinateurs quantiques",
+        algorithms: [
+          { name: "ML-DSA-65", alias: "Dilithium3", purpose: "Signatures (QSIG v3)", nistLevel: "Level 3", keySizes: "pk=1952, sk=4032, sig=3309" },
+          { name: "ML-KEM-768", alias: "Kyber768", purpose: "Key Encapsulation (Shield v3)", nistLevel: "Level 3", keySizes: "pk=1184, sk=2400, ct=1088" },
+        ],
+        featuresTitle: "Caractéristiques",
+        features: [
+          { label: "Résistant aux attaques quantiques", desc: "Algorithme de Shor" },
+          { label: "Standard NIST FIPS 204/203", desc: "Approuvé 2024" },
+          { label: "Signatures déterministes", desc: "Reproductibles" },
+          { label: "Hybride AES-256-GCM", desc: "Double protection" },
+        ],
+        performanceTitle: "Performance (Pure JavaScript)",
+        performance: [
+          { metric: "Sign", value: "~12ms", desc: "ML-DSA-65" },
+          { metric: "Verify", value: "~8ms", desc: "ML-DSA-65" },
+          { metric: "Encaps", value: "~2ms", desc: "ML-KEM-768" },
+          { metric: "Decaps", value: "~3ms", desc: "ML-KEM-768" },
+        ],
+        architectureTitle: "Architecture hybride",
+        advantage: "HCS-U7 est l'une des premières solutions d'authentification cognitive à déployer une cryptographie post-quantique en production.",
+        longTermProtection: "Protection à long terme : Les signatures et clés générées aujourd'hui resteront sécurisées même après l'émergence d'ordinateurs quantiques à grande échelle (horizon 2030-2035).",
+      },
+    },
+
     // HCS-SHIELD
     hcsShield: {
       hero: {
@@ -1605,6 +1792,193 @@ The result: 98.9% accuracy with a generative AI detection rate exceeding 99%.`,
       subtitle: `${patentsEnItems.length} patents filed with INPI — 20-year protection`,
       items: patentsEnItems,
       disclaimer: "In accordance with Article L. 612-10 of the Intellectual Property Code, the Minister of Defense has been authorized to review applications confidentially.",
+    },
+
+    // HCS-U7 Page
+    hcsU7Page: {
+      hero: {
+        badge: "FLAGSHIP PRODUCT",
+        title: "HCS-U7",
+        subtitle: "Human Cognitive Signature",
+        description: "The first cognitive biometric authentication system resistant to generative artificial intelligence. Based on 3 years of research in cognitive neuroscience and cryptography.",
+        cta: "Request an HCS-U7 demo",
+        stats: [
+          { value: "98.9%", label: "Accuracy" },
+          { value: ">99%", label: "AI Detection" },
+          { value: "3", label: "INPI Patents" },
+          { value: "699", label: "Tests" },
+          { value: "<50ms", label: "P95 Latency" },
+          { value: "10", label: "Security Layers" },
+        ],
+      },
+      cognitiveTests: {
+        badge: "COGNITIVE TESTS",
+        title: "6 scientifically validated tests",
+        subtitle: "Each test exploits a fundamental limitation of the human brain that AI cannot authentically simulate.",
+        tests: [
+          { name: "Stroop Test", year: "1935", author: "John Ridley Stroop", principle: "Cognitive interference occurs when the brain must process conflicting information. Reading the word 'RED' written in blue creates a measurable delay.", humanBehavior: "100-200ms slowdown on incongruent items", aiBehavior: "Constant response time, no interference effect", detection: "Analysis of temporal variance and error patterns" },
+          { name: "N-Back", year: "1958", author: "Wayne Kirchner", principle: "Human working memory is limited to 7±2 items (Miller, 1956). Beyond that, performance drops predictably.", humanBehavior: "Progressive degradation beyond 3-back", aiBehavior: "Constant performance regardless of load", detection: "Characteristic degradation curve" },
+          { name: "Trail Making A/B", year: "1938", author: "US Army", principle: "Cognitive switching between two tasks (letters/numbers) has an incompressible time cost in humans.", humanBehavior: "Switching cost of 200-500ms", aiBehavior: "No measurable switching cost", detection: "Part B / Part A time ratio" },
+          { name: "Digit Span", year: "1939", author: "David Wechsler", principle: "Memory span measures short-term retention capacity. Biologically limited in humans.", humanBehavior: "Average capacity of 7±2 digits", aiBehavior: "Unlimited capacity", detection: "Performance breakpoint" },
+          { name: "Reaction Time", year: "1868", author: "Franciscus Donders", principle: "Human reaction time has natural variability due to neural processes. AI responds too regularly.", humanBehavior: "50-150ms variability, fatigue effect", aiBehavior: "Time <30ms, >80% regularity", detection: "Temporal variation coefficient" },
+          { name: "Vocal RAN", year: "1974", author: "Denckla & Rudel", principle: "Rapid automatized naming reveals unique speech patterns: pauses, hesitations, rhythm.", humanBehavior: "Natural pauses, flow variations", aiBehavior: "Artificial fluidity, regular timing", detection: "Spectral and temporal analysis" },
+        ],
+        labels: { human: "Human", ai: "AI", detection: "Detection" },
+      },
+      architecture: {
+        badge: "ARCHITECTURE",
+        title: "Defense-in-Depth",
+        subtitle: "34 security modules · 10 stacked layers · 699 tests · Post-Quantum Ready · v8.4",
+        signalsTitle: "5-signal fusion",
+      },
+      performance: {
+        badge: "PERFORMANCE",
+        title: "Validated results",
+        subtitle: "Metrics obtained from doctoral research on 10,000+ sessions.",
+        source: "Reference: ETH Zurich (2024) — 94% CAPTCHA bypass rate by generative AI",
+        metrics: [
+          { value: "98.9%", label: "Global accuracy", sublabel: "Accuracy" },
+          { value: "99.6%", label: "True Negative Rate", sublabel: "True negatives" },
+          { value: "2.2%", label: "False Positive Rate", sublabel: "False positives" },
+          { value: "0.994", label: "AUC-ROC", sublabel: "Area Under Curve" },
+          { value: ">99%", label: "GPT-4V Detection", sublabel: "OpenAI" },
+          { value: ">99%", label: "Claude 3 Detection", sublabel: "Anthropic" },
+          { value: ">99%", label: "Gemini Detection", sublabel: "Google" },
+          { value: ">99.6%", label: "Bot Detection", sublabel: "Automated" },
+          { value: "<50ms", label: "P95 Latency", sublabel: "95th percentile" },
+          { value: "699", label: "Tests", sublabel: "Vitest" },
+          { value: "99.9/100", label: "Security Score", sublabel: "Defense-in-Depth" },
+          { value: "10", label: "Layers", sublabel: "Protection v8.4" },
+        ],
+      },
+    },
+
+    // Shield Module Page
+    shieldPage: {
+      hero: {
+        badge: "LAYER 10 — NEW v8.4",
+        title: "Shield Module",
+        subtitle: "Anti-FalconOne Defense",
+        description: "The only authentication solution protecting users even when their mobile network is compromised by state-level adversaries.",
+        stats: [
+          { icon: "📡", label: "IMSI Catcher", sublabel: "Detection" },
+          { icon: "📍", label: "Geolocation", sublabel: "Attack Detection" },
+          { icon: "🛡️", label: "GPS Spoofing", sublabel: "Protection" },
+          { icon: "⚡", label: "Real-time", sublabel: "Alerts" },
+        ],
+      },
+      problem: {
+        badge: "THE PROBLEM",
+        title: "The unsolved problem",
+        subtitle: "Governments, journalists and executives are targeted by state-level network threats",
+        threats: [
+          { title: "IMSI catchers", subtitle: "Stingray, FalconOne", description: "Mobile communication interception via fake base stations" },
+          { title: "High-precision geolocation", subtitle: "Tracking <10m", description: "Position tracking with sub-10 meter accuracy" },
+          { title: "Network downgrade attacks", subtitle: "5G → 2G forced", description: "Forcing to less secure protocols to facilitate interception" },
+          { title: "VoLTE interception", subtitle: "Encrypted voice eavesdropping", description: "Voice over LTE communication interception" },
+        ],
+        warning: "No traditional authentication solution protects against these threats.",
+        warningDetail: "2FA, facial biometrics, behavioral analytics → All bypassable when the mobile network is compromised.",
+      },
+      solution: {
+        badge: "THE SOLUTION",
+        title: "Our response: HCS-Shield (Layer 10)",
+        subtitle: "Multi-signal network threat detection in real-time",
+        imsiTitle: "IMSI Catcher Detection",
+        imsiItems: [
+          "Suspicious LAC analysis (fake base stations)",
+          "Abnormal signal detection (>-40 dBm = too strong)",
+          "Handover rate monitoring (>5/min = suspicious)",
+          "Encryption downgrade detection (A5/3 → A5/0)",
+        ],
+        imsiWarning: "Recommends airplane mode if critical risk (≥70 points)",
+        geoTitle: "Geolocation Attack Detection",
+        geoItems: [
+          "Impossible travel (>900 km/h between 2 positions)",
+          "Precision tracking (3+ positions <10m accuracy)",
+          "GPS spoofing (round coordinates, impossible accuracy)",
+        ],
+        geoWarning: "User alert + audit log on detection",
+      },
+      useCases: {
+        badge: "USE CASES",
+        title: "Critical use cases",
+        subtitle: "Protection of high-risk users against state-level network threats",
+        cases: [
+          { icon: "🛡️", title: "Defense & Security", description: "Executives in hostile zones, field agents, sensitive communications in unsecured environments." },
+          { icon: "📰", title: "Journalism", description: "Conflict zone reporters, source protection, secure communications with newsrooms." },
+          { icon: "🏛️", title: "Government", description: "Diplomats, international missions, sensitive government communications." },
+          { icon: "💳", title: "Fintech", description: "Mobile banking in high-risk countries, high-value transactions, IMSI catcher protection." },
+        ],
+      },
+      technical: {
+        badge: "TECHNICAL",
+        title: "Technical details",
+        subtitle: "Multi-signal scoring algorithm with adaptive decision thresholds",
+        levels: [
+          { threshold: "≥70", level: "DANGEROUS", action: "Enable airplane mode immediately" },
+          { threshold: "≥40", level: "SUSPICIOUS", action: "Avoid sensitive operations" },
+          { threshold: "<40", level: "SAFE", action: "Continue normally" },
+        ],
+      },
+      patent: {
+        badge: "INTELLECTUAL PROPERTY",
+        title: "Patent FR2515560",
+        patentTitle: "Shield Module - Anti-FalconOne Defense",
+        filed: "December 17, 2025",
+        status: "Under INPI examination",
+        protection: "20 years (until 2045)",
+        holder: "IA-SOLUTION / Benjamin BARRÈRE",
+        description: "World's first patent covering IMSI catcher detection and geolocation attacks in an authentication system.",
+        claims: [
+          "Multi-signal IMSI catcher detection system",
+          "High-precision geolocation detection algorithm",
+          "GPS spoofing attack protection",
+          "Adaptive recommendations based on detected risk level",
+        ],
+      },
+      cta: {
+        title: "Protect your users against state-level threats",
+        subtitle: "The Shield Module is available via the HCS-U7 API",
+        primaryCta: "Request a demo",
+        secondaryCta: "Contact us",
+      },
+    },
+
+    // Technology Page
+    technologyPage: {
+      hero: {
+        badge: "TECHNOLOGY",
+        title: "HCS-U7 Technical Stack",
+        subtitle: "A modern, secure and performant architecture. Fastify 5 backend, strict TypeScript, PostgreSQL, Redis, and our exclusive innovation: the Celestial Entropy Layer.",
+        techs: ["Fastify 5", "TypeScript", "PostgreSQL", "Redis", "Vitest", "Zod"],
+      },
+      postQuantum: {
+        badge: "POST-QUANTUM",
+        title: "Post-Quantum Cryptography",
+        subtitle: "NEW v8.4 — NIST-approved algorithms, resistant to quantum computers",
+        algorithms: [
+          { name: "ML-DSA-65", alias: "Dilithium3", purpose: "Signatures (QSIG v3)", nistLevel: "Level 3", keySizes: "pk=1952, sk=4032, sig=3309" },
+          { name: "ML-KEM-768", alias: "Kyber768", purpose: "Key Encapsulation (Shield v3)", nistLevel: "Level 3", keySizes: "pk=1184, sk=2400, ct=1088" },
+        ],
+        featuresTitle: "Features",
+        features: [
+          { label: "Resistant to quantum attacks", desc: "Shor's algorithm" },
+          { label: "NIST FIPS 204/203 standard", desc: "Approved 2024" },
+          { label: "Deterministic signatures", desc: "Reproducible" },
+          { label: "Hybrid AES-256-GCM", desc: "Double protection" },
+        ],
+        performanceTitle: "Performance (Pure JavaScript)",
+        performance: [
+          { metric: "Sign", value: "~12ms", desc: "ML-DSA-65" },
+          { metric: "Verify", value: "~8ms", desc: "ML-DSA-65" },
+          { metric: "Encaps", value: "~2ms", desc: "ML-KEM-768" },
+          { metric: "Decaps", value: "~3ms", desc: "ML-KEM-768" },
+        ],
+        architectureTitle: "Hybrid architecture",
+        advantage: "HCS-U7 is one of the first cognitive authentication solutions to deploy post-quantum cryptography in production.",
+        longTermProtection: "Long-term protection: Signatures and keys generated today will remain secure even after the emergence of large-scale quantum computers (2030-2035 horizon).",
+      },
     },
 
     // HCS-SHIELD

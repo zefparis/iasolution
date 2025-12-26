@@ -4,35 +4,14 @@ import { motion } from "framer-motion";
 import { Radio, MapPin, Signal, Volume2 } from "lucide-react";
 import { Container } from "@/components/ui";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const threats = [
-  {
-    icon: Radio,
-    title: "IMSI catchers",
-    subtitle: "Stingray, FalconOne",
-    description: "Interception des communications mobiles via fausses stations de base",
-  },
-  {
-    icon: MapPin,
-    title: "Géolocalisation haute précision",
-    subtitle: "Tracking <10m",
-    description: "Suivi de position avec une précision inférieure à 10 mètres",
-  },
-  {
-    icon: Signal,
-    title: "Network downgrade attacks",
-    subtitle: "5G → 2G forcé",
-    description: "Forçage vers des protocoles moins sécurisés pour faciliter l'interception",
-  },
-  {
-    icon: Volume2,
-    title: "VoLTE interception",
-    subtitle: "Écoute voix chiffrée",
-    description: "Interception des communications voix sur LTE",
-  },
-];
+const iconMap = [Radio, MapPin, Signal, Volume2];
 
 export function ShieldProblem() {
+  const { content } = useLanguage();
+  const problem = content.shieldPage.problem;
+
   return (
     <section className="section relative">
       <Container>
@@ -43,12 +22,12 @@ export function ShieldProblem() {
           viewport={viewportOnce}
           className="text-center mb-12"
         >
-          <span className="badge mb-6 inline-block">LE PROBLÈME</span>
+          <span className="badge mb-6 inline-block">{problem.badge}</span>
           <h2 className="text-h2-mobile lg:text-h2 font-semibold glow-text mb-4">
-            Le problème non-résolu
+            {problem.title}
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            Les gouvernements, journalistes et executives sont ciblés par des menaces réseau state-level
+            {problem.subtitle}
           </p>
         </motion.div>
 
@@ -60,8 +39,8 @@ export function ShieldProblem() {
           viewport={viewportOnce}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
         >
-          {threats.map((threat, idx) => {
-            const Icon = threat.icon;
+          {problem.threats.map((threat, idx) => {
+            const Icon = iconMap[idx];
             return (
               <motion.div
                 key={idx}
@@ -96,10 +75,10 @@ export function ShieldProblem() {
           className="glass-card p-6 border-l-4 border-l-red-500 bg-red-500/5"
         >
           <p className="text-lg font-semibold text-red-400 mb-2">
-            ❌ Aucune solution d&apos;authentification classique ne protège contre ces menaces.
+            ❌ {problem.warning}
           </p>
           <p className="text-text-secondary">
-            2FA, biométrie faciale, behavioral analytics → Tous contournables quand le réseau mobile est compromis.
+            {problem.warningDetail}
           </p>
         </motion.div>
       </Container>
