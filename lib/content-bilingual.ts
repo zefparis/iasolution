@@ -42,6 +42,7 @@ const content = {
         { name: "Shield Module", href: "/shield", badge: "🆕" },
         { name: "Infrastructure", href: "/infrastructure" },
         { name: "Technologie", href: "/technology" },
+        { name: "Démos", href: "/demos" },
         { name: "Brevets", href: "/patents" },
       ],
       legal: [
@@ -1449,6 +1450,7 @@ Le résultat : une précision de 98.9% avec un taux de détection des IA génér
         { name: "Shield Module", href: "/shield", badge: "🆕" },
         { name: "Infrastructure", href: "/infrastructure" },
         { name: "Technology", href: "/technology" },
+        { name: "Demos", href: "/demos" },
         { name: "Patents", href: "/patents" },
       ],
       legal: [

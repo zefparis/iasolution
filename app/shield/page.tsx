@@ -7,7 +7,6 @@ import { ShieldUseCases } from '@/components/shield/ShieldUseCases';
 import { ShieldTechnical } from '@/components/shield/ShieldTechnical';
 import { ShieldPatent } from '@/components/shield/ShieldPatent';
 import { ShieldCTA } from '@/components/shield/ShieldCTA';
-import { ShieldDemoSection } from '@/components/shield/ShieldDemoSection';
 
 export const metadata: Metadata = {
   title: 'Shield Module - Anti-FalconOne Defense | IA-SOLUTION',
@@ -22,9 +21,6 @@ export default function ShieldPage() {
         <ShieldHero />
         <ShieldProblem />
         <ShieldSolution />
-        
-        <ShieldDemoSection />
-
         <ShieldUseCases />
         <ShieldTechnical />
         <ShieldPatent />
