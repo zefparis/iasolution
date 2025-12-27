@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, memo } from 'react';
+import React, { useState, useEffect, useCallback, memo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Zap, Lock, Unlock, AlertTriangle, CheckCircle, Play, Pause, RotateCcw } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -720,6 +720,7 @@ export function PostQuantumCryptoVisual({
   const lang = (language as 'fr' | 'en') || 'en';
   const t = content[lang];
 
+  const containerRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState<'signature' | 'encryption'>('signature');
   const [showQuantumAttack, setShowQuantumAttack] = useState(false);
   const [attackProgress, setAttackProgress] = useState(0);
@@ -743,6 +744,8 @@ export function PostQuantumCryptoVisual({
     setShowQuantumAttack(true);
     setAttackProgress(0);
     setIsPlaying(true);
+    // Scroll to top of component so user can see the attack animation
+    containerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, []);
 
   const handleReset = useCallback(() => {
@@ -751,7 +754,7 @@ export function PostQuantumCryptoVisual({
   }, []);
 
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div ref={containerRef} className="w-full max-w-6xl mx-auto scroll-mt-24">
       {/* Header */}
       <div className="text-center mb-8">
         <motion.div

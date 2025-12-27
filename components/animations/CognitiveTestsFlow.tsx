@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, memo } from 'react';
+import React, { useState, useEffect, useCallback, memo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, SkipForward, RotateCcw, CheckCircle, Clock, Brain } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -709,6 +709,7 @@ export function CognitiveTestsFlow({
   const lang = (language as 'fr' | 'en') || 'en';
   const t = content[lang];
 
+  const containerRef = useRef<HTMLDivElement>(null);
   const [currentTestIndex, setCurrentTestIndex] = useState(0);
   const [testResults, setTestResults] = useState<TestResult[]>([]);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -786,10 +787,12 @@ export function CognitiveTestsFlow({
     setProgress(0);
     setTimeElapsed(0);
     setIsPlaying(true);
+    // Scroll to top of component so user can see the animation
+    containerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, []);
 
   return (
-    <div className="w-full max-w-5xl mx-auto">
+    <div ref={containerRef} className="w-full max-w-5xl mx-auto scroll-mt-24">
       {/* Header */}
       <div className="text-center mb-8">
         <motion.div

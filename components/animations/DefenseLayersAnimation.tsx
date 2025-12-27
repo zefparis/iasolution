@@ -332,27 +332,28 @@ const LayerCard = memo(function LayerCard({
   );
 });
 
-// Decision Engine component
-function DecisionEngine({
-  show,
+// Decision Engine Inline component (for single-view mode)
+function DecisionEngineInline({
   decision,
   language,
+  passedCount,
 }: {
-  show: boolean;
   decision: Decision;
   language: 'fr' | 'en';
+  passedCount: number;
 }) {
-  if (!show) return null;
-
   const config = decision ? decisionConfig[decision] : null;
 
   return (
-    <motion.div
-      className="mt-6 p-6 md:p-8 bg-gray-800/50 backdrop-blur-sm rounded-2xl border-2 border-gray-700"
-      initial={{ opacity: 0, scale: 0.9, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="relative p-6 md:p-8 bg-gray-800/50 backdrop-blur-sm rounded-2xl border-2 border-gray-700">
+      {/* Summary of passed layers */}
+      <div className="flex items-center justify-center gap-2 mb-4">
+        <span className="text-green-400 font-bold">{passedCount}/10</span>
+        <span className="text-gray-400">
+          {language === 'fr' ? 'couches validées' : 'layers validated'}
+        </span>
+      </div>
+
       <h3 className="text-lg md:text-xl font-bold text-center text-white mb-4">
         {language === 'fr' ? 'MOTEUR DE DÉCISION' : 'DECISION ENGINE'}
       </h3>
@@ -378,41 +379,9 @@ function DecisionEngine({
             {config.text[language]}
           </div>
           <p className="text-gray-400 text-sm md:text-base">{config.description[language]}</p>
-
-          {/* Confetti effect for ALLOW */}
-          {decision === 'allow' && (
-            <motion.div
-              className="absolute inset-0 pointer-events-none overflow-hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
-              {[...Array(20)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-2 h-2 rounded-full"
-                  style={{
-                    backgroundColor: ['#10B981', '#8B5CF6', '#F59E0B', '#3B82F6', '#EC4899'][i % 5],
-                    left: `${Math.random() * 100}%`,
-                    top: '-10px',
-                  }}
-                  animate={{
-                    y: [0, 400],
-                    x: [0, (Math.random() - 0.5) * 100],
-                    rotate: [0, 360],
-                    opacity: [1, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    delay: i * 0.1,
-                    ease: 'easeOut',
-                  }}
-                />
-              ))}
-            </motion.div>
-          )}
         </motion.div>
       )}
-    </motion.div>
+    </div>
   );
 }
 
@@ -523,13 +492,16 @@ export function DefenseLayersAnimation({
     };
   }, [animationState, currentSpeed]);
 
+  // Count passed layers for progress
+  const passedCount = layerStates.filter(s => s === 'passed').length;
+
   return (
     <div className="relative w-full max-w-4xl mx-auto">
       {/* User Request Indicator */}
       <AnimatePresence>
-        {animationState !== 'idle' && (
+        {animationState !== 'idle' && currentLayerIndex < 10 && (
           <motion.div
-            className="text-center mb-6"
+            className="text-center mb-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -542,43 +514,92 @@ export function DefenseLayersAnimation({
               <span className="text-xl">👤</span>
               <span>{lang === 'fr' ? 'REQUÊTE UTILISATEUR' : 'USER REQUEST'}</span>
             </motion.div>
-            <motion.div
-              className="text-3xl mt-3 text-gray-400"
-              animate={{ y: [0, 5, 0] }}
-              transition={{ repeat: Infinity, duration: 1 }}
-            >
-              ↓
-            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Layers Container */}
-      <div className="space-y-3">
-        {layers.map((layer, index) => (
-          <React.Fragment key={layer.id}>
-            <LayerCard
-              layer={layer}
-              state={layerStates[index]}
-              isActive={currentLayerIndex === index}
-              language={lang}
+      {/* Progress indicator */}
+      {animationState !== 'idle' && currentLayerIndex < 10 && (
+        <div className="mb-4">
+          <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
+            <span>{lang === 'fr' ? 'Progression' : 'Progress'}</span>
+            <span>{passedCount}/10 {lang === 'fr' ? 'couches validées' : 'layers validated'}</span>
+          </div>
+          <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+            <motion.div
+              className="h-full bg-gradient-to-r from-accent-purple to-accent-indigo"
+              initial={{ width: '0%' }}
+              animate={{ width: `${(passedCount / 10) * 100}%` }}
+              transition={{ duration: 0.3 }}
             />
-            {/* Arrow between layers */}
-            {index < layers.length - 1 && layerStates[index] === 'passed' && (
+          </div>
+          {/* Mini layer indicators */}
+          <div className="flex justify-between mt-2 gap-1">
+            {layers.map((layer, index) => (
               <motion.div
-                className="text-center text-2xl text-gray-500"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-              >
-                ↓
-              </motion.div>
-            )}
-          </React.Fragment>
-        ))}
-      </div>
+                key={layer.id}
+                className={`flex-1 h-1 rounded-full transition-colors ${
+                  layerStates[index] === 'passed' ? 'bg-green-500' :
+                  currentLayerIndex === index ? 'bg-blue-500' :
+                  'bg-gray-700'
+                }`}
+                title={layer.name[lang]}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
-      {/* Decision Engine */}
-      <DecisionEngine show={currentLayerIndex >= 10} decision={finalDecision} language={lang} />
+      {/* Single Layer Display - Fixed height container */}
+      <div className="min-h-[280px] flex flex-col justify-center">
+        <AnimatePresence mode="wait">
+          {currentLayerIndex >= 0 && currentLayerIndex < 10 && (
+            <motion.div
+              key={currentLayerIndex}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.3 }}
+            >
+              <LayerCard
+                layer={layers[currentLayerIndex]}
+                state={layerStates[currentLayerIndex]}
+                isActive={true}
+                language={lang}
+              />
+            </motion.div>
+          )}
+
+          {/* Decision Engine - shown in same container */}
+          {currentLayerIndex >= 10 && (
+            <motion.div
+              key="decision"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+            >
+              <DecisionEngineInline decision={finalDecision} language={lang} passedCount={passedCount} />
+            </motion.div>
+          )}
+
+          {/* Idle state */}
+          {animationState === 'idle' && currentLayerIndex < 0 && (
+            <motion.div
+              key="idle"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12"
+            >
+              <div className="text-6xl mb-4">🛡️</div>
+              <p className="text-gray-400 text-lg">
+                {lang === 'fr' 
+                  ? 'Cliquez sur "Lancer la Démo" pour visualiser les 10 couches de sécurité'
+                  : 'Click "Play Demo" to visualize the 10 security layers'}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
 
       {/* Controls */}
       {showControls && (
