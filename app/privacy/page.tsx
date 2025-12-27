@@ -1,14 +1,25 @@
-import { Metadata } from "next";
+'use client';
+
 import { Header, Footer } from "@/components/sections";
 import { Container } from "@/components/ui";
-import { privacyPage } from "@/lib/content";
+import { useLanguage } from '@/contexts/LanguageContext';
+import { privacyPage } from '@/lib/content';
 
-export const metadata: Metadata = {
-  title: "Politique de confidentialité | IA Solution",
-  description: "Politique de confidentialité et protection des données personnelles d'IA Solution.",
+const content = {
+  fr: {
+    badge: 'CONFIDENTIALITÉ',
+    title: 'Politique de confidentialité',
+  },
+  en: {
+    badge: 'PRIVACY',
+    title: 'Privacy Policy',
+  },
 };
 
 export default function PrivacyPage() {
+  const { language } = useLanguage();
+  const lang = language as 'fr' | 'en';
+  const t = content[lang];
   return (
     <>
       <Header />
@@ -19,10 +30,10 @@ export default function PrivacyPage() {
           
           <Container className="relative z-10 max-w-3xl">
             <span className="badge-gradient inline-block px-5 py-2 rounded-full text-xs font-medium uppercase tracking-[0.15em] mb-6">
-              CONFIDENTIALITÉ
+              {t.badge}
             </span>
             <h1 className="text-h1-mobile lg:text-h1 font-semibold glow-text mb-8">
-              {privacyPage.title}
+              {t.title}
             </h1>
             <div
               className="prose prose-invert prose-sm max-w-none

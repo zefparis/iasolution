@@ -1,14 +1,25 @@
-import { Metadata } from "next";
+'use client';
+
 import { Header, Footer } from "@/components/sections";
 import { Container } from "@/components/ui";
-import { legalPage } from "@/lib/content";
+import { useLanguage } from '@/contexts/LanguageContext';
+import { legalPage } from '@/lib/content';
 
-export const metadata: Metadata = {
-  title: "Mentions légales | IA Solution",
-  description: "Mentions légales et informations juridiques d'IA Solution.",
+const content = {
+  fr: {
+    badge: 'LÉGAL',
+    title: 'Mentions légales',
+  },
+  en: {
+    badge: 'LEGAL',
+    title: 'Legal Notice',
+  },
 };
 
 export default function LegalPage() {
+  const { language } = useLanguage();
+  const lang = language as 'fr' | 'en';
+  const t = content[lang];
   return (
     <>
       <Header />
@@ -19,10 +30,10 @@ export default function LegalPage() {
           
           <Container className="relative z-10 max-w-3xl">
             <span className="badge-gradient inline-block px-5 py-2 rounded-full text-xs font-medium uppercase tracking-[0.15em] mb-6">
-              LÉGAL
+              {t.badge}
             </span>
             <h1 className="text-h1-mobile lg:text-h1 font-semibold glow-text mb-8">
-              {legalPage.title}
+              {t.title}
             </h1>
             <div
               className="prose prose-invert prose-sm max-w-none

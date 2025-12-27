@@ -120,9 +120,9 @@ export default function MobilePage() {
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-white/[0.08]">
-                      <th className="text-left py-4 px-4 text-text-secondary font-medium">Feature</th>
+                      <th className="text-left py-4 px-4 text-text-secondary font-medium">{language === 'fr' ? 'Fonctionnalité' : 'Feature'}</th>
                       <th className="text-center py-4 px-4 text-emerald-400 font-medium">HCS-U7</th>
-                      <th className="text-center py-4 px-4 text-text-muted font-medium">Competitors</th>
+                      <th className="text-center py-4 px-4 text-text-muted font-medium">{language === 'fr' ? 'Concurrents' : 'Competitors'}</th>
                     </tr>
                   </thead>
                   <tbody>
