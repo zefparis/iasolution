@@ -5,12 +5,52 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, CheckCircle } from "lucide-react";
 import { Header, Footer } from "@/components/sections";
 import { Container } from "@/components/ui";
-import { contactPage, siteConfig } from "@/lib/content";
+import { siteConfig } from "@/lib/content";
+import { getContentByLanguage } from "@/lib/content-bilingual";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const content = {
+  fr: {
+    badge: 'CONTACT',
+    phone: 'Téléphone',
+    address: 'Adresse',
+    legalInfo: 'Informations légales',
+    messageSent: 'Message envoyé !',
+    willReply: 'Nous vous répondrons dans les plus brefs délais.',
+    fullName: 'Nom complet',
+    yourName: 'Votre nom',
+    yourEmail: 'votre@email.com',
+    message: 'Message',
+    describeProject: 'Décrivez votre projet ou votre demande...',
+    sending: 'Envoi en cours...',
+    sendMessage: 'Envoyer le message',
+    errorMessage: 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement à contact@ia-solution.fr',
+  },
+  en: {
+    badge: 'CONTACT',
+    phone: 'Phone',
+    address: 'Address',
+    legalInfo: 'Legal Information',
+    messageSent: 'Message sent!',
+    willReply: 'We will reply to you as soon as possible.',
+    fullName: 'Full Name',
+    yourName: 'Your name',
+    yourEmail: 'your@email.com',
+    message: 'Message',
+    describeProject: 'Describe your project or request...',
+    sending: 'Sending...',
+    sendMessage: 'Send Message',
+    errorMessage: 'An error occurred. Please try again or contact us directly at contact@ia-solution.fr',
+  },
+};
+
 export default function ContactPage() {
   const { language } = useLanguage();
+  const lang = language as 'fr' | 'en';
+  const t = content[lang];
+  const pageContent = getContentByLanguage(lang);
+  const contactPage = pageContent.contactPage;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,7 +85,7 @@ export default function ContactPage() {
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error sending message:', error);
-      alert('Une erreur est survenue. Veuillez réessayer ou nous contacter directement à contact@ia-solution.fr');
+      alert(t.errorMessage);
     } finally {
       setIsSubmitting(false);
     }
@@ -75,7 +115,7 @@ export default function ContactPage() {
               className="text-center"
             >
               <span className="badge-gradient inline-block px-5 py-2 rounded-full text-xs font-medium uppercase tracking-[0.15em] mb-6">
-                CONTACT
+                {t.badge}
               </span>
               <h1 className="text-h1-mobile lg:text-h1 font-semibold glow-text mb-4">
                 {contactPage.title}
@@ -119,7 +159,7 @@ export default function ContactPage() {
                       <Phone className="w-5 h-5 text-accent-blue" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Téléphone</h3>
+                      <h3 className="text-lg font-semibold text-white mb-1">{t.phone}</h3>
                       <a
                         href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
                         className="text-text-secondary hover:text-accent-blue transition-colors"
@@ -134,7 +174,7 @@ export default function ContactPage() {
                       <MapPin className="w-5 h-5 text-accent-pink" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Adresse</h3>
+                      <h3 className="text-lg font-semibold text-white mb-1">{t.address}</h3>
                       <p className="text-text-secondary">{siteConfig.address}</p>
                     </div>
                   </motion.div>
@@ -142,7 +182,7 @@ export default function ContactPage() {
 
                 {/* Additional Info */}
                 <motion.div variants={staggerItem} className="mt-8 p-6 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-                  <h3 className="text-lg font-semibold text-white mb-4">Informations légales</h3>
+                  <h3 className="text-lg font-semibold text-white mb-4">{t.legalInfo}</h3>
                   <div className="space-y-2 text-sm text-text-muted">
                     <p>SIRET : {siteConfig.siret}</p>
                     <p>Licence : {siteConfig.license}</p>
@@ -162,16 +202,16 @@ export default function ContactPage() {
                     <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/20 flex items-center justify-center">
                       <CheckCircle className="w-8 h-8 text-green-400" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Message envoyé !</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{t.messageSent}</h3>
                     <p className="text-text-secondary">
-                      Nous vous répondrons dans les plus brefs délais.
+                      {t.willReply}
                     </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="glass-card p-8 space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
-                        Nom complet *
+                        {t.fullName} *
                       </label>
                       <input
                         type="text"
@@ -181,7 +221,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-lg text-white placeholder-text-muted focus:border-accent-purple focus:outline-none transition-colors"
-                        placeholder="Votre nom"
+                        placeholder={t.yourName}
                       />
                     </div>
 
@@ -197,7 +237,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-lg text-white placeholder-text-muted focus:border-accent-purple focus:outline-none transition-colors"
-                        placeholder="votre@email.com"
+                        placeholder={t.yourEmail}
                       />
                     </div>
 
@@ -254,7 +294,7 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                        Message *
+                        {t.message} *
                       </label>
                       <textarea
                         id="message"
@@ -264,7 +304,7 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-lg text-white placeholder-text-muted focus:border-accent-purple focus:outline-none transition-colors resize-none"
-                        placeholder="Décrivez votre projet ou votre demande..."
+                        placeholder={t.describeProject}
                       />
                     </div>
 
@@ -273,7 +313,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                       className="w-full py-4 rounded-xl bg-gradient-to-r from-accent-purple to-accent-indigo text-white font-medium hover:shadow-lg hover:shadow-accent-purple/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
+                      {isSubmitting ? t.sending : t.sendMessage}
                     </button>
                   </form>
                 )}
