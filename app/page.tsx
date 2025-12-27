@@ -33,7 +33,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <BotVsHumanComparison 
               autoPlay={true}
-              loop={true}
+              loop={false}
               speed={1}
               showLabels={true}
             />

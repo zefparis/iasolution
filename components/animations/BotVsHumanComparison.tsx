@@ -351,7 +351,7 @@ const ProfileColumn = memo(function ProfileColumn({
 // Main Component
 export function BotVsHumanComparison({
   autoPlay = true,
-  loop = true,
+  loop = false,
   speed = 1,
   showLabels = true,
 }: BotVsHumanComparisonProps) {
