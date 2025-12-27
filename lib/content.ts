@@ -19,7 +19,7 @@ export const siteConfig = {
   url: "https://ia-solution.fr",
   email: "contact@ia-solution.fr",
   phone: "07 44 14 96 17",
-  address: "2 rue du Sabotier, 30350 Saint-Bénézet, France",
+  address: "IA-Solution, Ales, France",
   siret: "438 055 097",
   license: "CC BY-NC-SA 4.0",
 };
@@ -554,7 +554,7 @@ export const footer = {
       title: "Contact",
       email: siteConfig.email,
       phone: siteConfig.phone,
-      location: "Saint-Bénézet, France",
+      location: "Ales, France",
     },
   },
 };
@@ -923,8 +923,7 @@ export const legalPage = {
 ## Éditeur du site
 
 **IA SOLUTION**
-2 rue du Sabotier
-30350 Saint-Bénézet, France
+Ales, France
 
 SIRET : 438 055 097
 Email : contact@ia-solution.fr

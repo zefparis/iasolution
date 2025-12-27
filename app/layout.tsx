@@ -86,9 +86,9 @@ const jsonLd = {
   description: seo.description,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "2 rue du Sabotier",
-    addressLocality: "Saint-Bénézet",
-    postalCode: "30350",
+    streetAddress: "Ales",
+    addressLocality: "Ales",
+    postalCode: "30100",
     addressRegion: "Occitanie",
     addressCountry: "FR",
   },
