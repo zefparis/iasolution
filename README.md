@@ -114,17 +114,21 @@ This repository contains the main **IA-SOLUTION corporate website** (Next.js 14 
 - TypeScript 5
 - TailwindCSS 4
 - Framer Motion (animations)
-- Bilingual (FR/EN) with custom i18n
+- Lucide React (icons)
+- **Bilingual (FR/EN)** with custom i18n system (`useLanguage` hook + `content-bilingual.ts`)
 
 **Key Pages:**
 - `/` — Homepage (Hero + Product Tabs + Industries)
 - `/hcs-u7` — HCS-U7 Product Page (10-layer architecture)
 - `/shield` — Shield Module (Anti-FalconOne Defense) 🆕
 - `/technology` — Technical Deep-Dive + Post-Quantum Crypto
-- `/hcs-shield` — HCS-SHIELD Product Page (Tactical Drones)
+- `/demos` — Interactive Demos (All technologies) 🆕
+- `/infrastructure` — Infrastructure & Deployment
 - `/research` — Research Axes
 - `/patents` — Patent Details (3 brevets INPI)
 - `/contact` — Contact Form (Brevo integration)
+- `/privacy` — Privacy Policy
+- `/legal` — Legal Notice
 
 **Deployment:** [https://ia-solution.fr](https://ia-solution.fr)
 
@@ -181,10 +185,9 @@ BREVO_SENDER_NAME=IA Solution
 Benjamin BARRÈRE, CTO & Founder
 
 - **Email:** contact@ia-solution.fr
-- **Defense:** infos@ia-solution.fr
-- **Licensing:** contact@ia-solution.fr
-- **Tel:** +33 7 58 06 05 56
-- **SIRET:** 438 055 097 00029
+- **Phone:** 07 44 14 96 17
+- **Address:** IA-Solution, Ales, France
+- **SIRET:** 438 055 097
 
 **Patents:** FR2514274 | FR2514546 | FR2515560 (INPI Certified)
 
@@ -214,7 +217,7 @@ Les brevets FR2514274, FR2514546 et FR2515560 protègent les innovations technol
 
 **HCS-U7 v8.4** | *Human Cognitive Signature*
 
-[Website](https://ia-solution.fr) • [Shield Module](https://ia-solution.fr/shield) • [Contact](mailto:contact@ia-solution.fr)
+[Website](https://ia-solution.fr) • [Demos](https://ia-solution.fr/demos) • [Shield Module](https://ia-solution.fr/shield) • [Contact](mailto:contact@ia-solution.fr)
 
 *Authentification cognitive résistante à l'IA générative — Post-Quantum Ready*
 
